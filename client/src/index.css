@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 25%, 7.8431%);
+  --card: hsl(180, 6.6667%, 97.0588%);
+  --card-foreground: hsl(210, 25%, 7.8431%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 25%, 7.8431%);
+  --primary: hsl(203.8863, 88.2845%, 53.1373%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 25%, 7.8431%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(240, 1.9608%, 90%);
+  --muted-foreground: hsl(210, 25%, 7.8431%);
+  --accent: hsl(211.5789, 51.3514%, 92.7451%);
+  --accent-foreground: hsl(203.8863, 88.2845%, 53.1373%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(201.4286, 30.4348%, 90.9804%);
+  --input: hsl(200, 23.0769%, 97.4510%);
+  --ring: hsl(202.8169, 89.1213%, 53.1373%);
+  --radius: 1.3rem;
+  
+  /* Vixo V3 Brand Colors */
+  --brand-50: hsl(214, 100%, 96.7%);
+  --brand-100: hsl(213, 100%, 94.3%);
+  --brand-200: hsl(214, 100%, 89.6%);
+  --brand-300: hsl(214, 100%, 83.7%);
+  --brand-400: hsl(214, 100%, 74.3%);
+  --brand-500: hsl(220, 100%, 59.2%);
+  --brand-600: hsl(225, 79.1%, 49.6%);
+  --brand-700: hsl(226, 76.7%, 44.9%);
+  --brand-800: hsl(228, 64.1%, 36.3%);
+  --brand-900: hsl(229, 64.5%, 28.2%);
+  --brand-950: hsl(230, 64.3%, 13.7%);
+  
+  /* Dark theme specific */
+  --bg-dark: hsl(230, 16%, 4%);
+  --bg-mesh: radial-gradient(60rem 60rem at -10% -10%, hsla(214, 91%, 61%, 0.08), transparent 60%), 
+             radial-gradient(60rem 60rem at 110% 10%, hsla(238, 69%, 66%, 0.08), transparent 60%), 
+             radial-gradient(60rem 60rem at 50% 120%, hsla(198, 93%, 61%, 0.08), transparent 60%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(200, 6.6667%, 91.1765%);
+  --card: hsl(228, 9.8039%, 10%);
+  --card-foreground: hsl(0, 0%, 85.0980%);
+  --popover: hsl(0, 0%, 0%);
+  --popover-foreground: hsl(200, 6.6667%, 91.1765%);
+  --primary: hsl(203.7736, 87.6033%, 52.5490%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(195.0000, 15.3846%, 94.9020%);
+  --secondary-foreground: hsl(210, 25%, 7.8431%);
+  --muted: hsl(0, 0%, 9.4118%);
+  --muted-foreground: hsl(210, 3.3898%, 46.2745%);
+  --accent: hsl(205.7143, 70%, 7.8431%);
+  --accent-foreground: hsl(203.7736, 87.6033%, 52.5490%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 5.2632%, 14.9020%);
+  --input: hsl(207.6923, 27.6596%, 18.4314%);
+  --ring: hsl(202.8169, 89.1213%, 53.1373%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    background-image: var(--bg-mesh);
+    color: hsl(240, 5%, 83%);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition-all;
+    box-shadow: 0 0 0 2px hsla(238, 69%, 66%, 0.3), 0 0 40px hsla(214, 91%, 61%, 0.15);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-brand-400;
+    box-shadow: 0 0 0 2px hsla(238, 69%, 66%, 0.4), 0 0 60px hsla(214, 91%, 61%, 0.25);
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white/5 border border-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition backdrop-blur;
+  }
+  
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-zinc-300 backdrop-blur;
+  }
+  
+  .card {
+    @apply rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur;
+  }
+  
+  .card:hover {
+    @apply bg-white/10;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600;
+  }
+  
+  .bg-mesh-dark {
+    background-image: radial-gradient(60rem 60rem at -10% -10%, hsla(214, 91%, 61%, 0.08), transparent 60%), 
+                      radial-gradient(60rem 60rem at 110% 10%, hsla(238, 69%, 66%, 0.08), transparent 60%), 
+                      radial-gradient(60rem 60rem at 50% 120%, hsla(198, 93%, 61%, 0.08), transparent 60%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(228, 9.8039%, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-500);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-400);
+}
