@@ -28,7 +28,8 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 **4. Streamlined Features Section**
 - Focused on 6 unique capabilities that save development time
 - Removed redundant deployment/ownership messaging (consolidated to earlier sections)
-- Features: Multi-Tenant Architecture, CSV Onboarding, Enterprise RBAC, Global Timeframe Controls, Dashboards, Help System
+- Features: Real-Time Banking Data (Plaid/MX/any aggregator), Multi-Tenant Architecture, CSV Onboarding, Enterprise RBAC, Global Timeframe Controls, Dashboards
+- Real-time banking integration positioned as first feature card to emphasize its importance
 
 **5. Simplified Pricing Section**
 - Focused on commercial terms without repeating earlier messages

@@ -240,12 +240,12 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-white mb-6">Core Features (Ready to Use)</h3>
                 <ul className="space-y-3">
                   {[
+                    'Real-time banking data integration (Plaid-ready)',
                     'CSV onboarding wizard with validation',
                     'Multi-tenant architecture with tenant isolation',
                     'Role-based access control (RBAC) system',
                     'Authentication & session management',
-                    'Global timeframe controls for reporting',
-                    'Responsive UI with dark mode support'
+                    'Global timeframe controls for reporting'
                   ].map((feature, index) => (
                     <li key={index} className="flex items-start gap-3" data-testid={`list-core-${index}`}>
                       <CheckCircle size={20} className="text-brand-400 flex-shrink-0 mt-0.5" />
@@ -300,12 +300,12 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { icon: <Zap size={24} className="text-brand-400" />, title: 'Real-Time Banking Data', body: 'Live financial data integration with Plaid, MX, or any banking aggregator. Transaction syncing, balance monitoring, and account verification built-in.' },
               { icon: <Users size={24} className="text-brand-400" />, title: 'Multi-Tenant Architecture', body: 'Complete tenant isolation with separate data, dashboards, and user management. Admin/Borrower/Broker portals built-in.' },
               { icon: <CheckCircle size={24} className="text-brand-400" />, title: 'CSV Onboarding System', body: 'Smart wizard for importing banking transactions and inventory data. Field mapping, validation, error handling, and preview built-in.' },
               { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="11" width="18" height="11" stroke="currentColor" strokeWidth="2"/><path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="currentColor" strokeWidth="2"/></svg>, title: 'Enterprise RBAC', body: 'Granular role-based permissions with access policies, audit logging, and team hierarchies. Compliance-ready from day one.' },
               { icon: <Clock size={24} className="text-brand-400" />, title: 'Global Timeframe Controls', body: 'Master date range selector that syncs across all charts, tables, and reports. Custom ranges and presets included.' },
               { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3H21V21H3V3Z" stroke="currentColor" strokeWidth="2"/><path d="M9 3V21" stroke="currentColor" strokeWidth="2"/><path d="M3 9H21" stroke="currentColor" strokeWidth="2"/><path d="M3 15H21" stroke="currentColor" strokeWidth="2"/></svg>, title: 'Responsive Dashboards', body: 'Analytics dashboards with charts, KPIs, and data tables. Dark mode, mobile-responsive, and fully accessible.' },
-              { icon: <HelpCircle size={24} className="text-brand-400" />, title: 'Contextual Help System', body: 'Interactive guided tours and tooltips to onboard users. Reduces support tickets and training time.' },
             ].map((feature, index) => (
               <div key={index} className="card group" data-testid={`card-feature-${index}`}>
                 <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition">
