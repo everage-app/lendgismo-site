@@ -75,38 +75,44 @@ export default function Home() {
               
               {/* Heading */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight" data-testid="text-hero-heading">
-                Own the code.<br/>
-                Ship in <span className="text-gradient">weeks</span>, not quarters.
+                Save <span className="text-gradient">$300k–$600k</span><br/>
+                and 6 months of dev time
               </h1>
               
               {/* Description */}
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl" data-testid="text-hero-description">
-                <strong className="text-white">Lendgismo</strong> is a modern lender foundation built on Next.js + TypeScript. 
-                Skip the scratch-build and hand your team a production-ready starting point: auth, RBAC, CSV onboarding, 
-                lender workflows, and beautiful dashboards.
+                Get a complete, production-ready lender platform codebase <strong className="text-white">delivered instantly</strong>. 
+                Next.js + TypeScript foundation with auth, RBAC, multi-tenant architecture, CSV onboarding, 
+                and polished dashboards — ready for your dev team to deploy <em>today</em>.
               </p>
               
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="#pricing" 
-                  onClick={(e) => scrollToSection(e, '#pricing')}
+                  href="#what-you-get" 
+                  onClick={(e) => scrollToSection(e, '#what-you-get')}
                   className="btn-primary"
                   data-testid="button-hero-pricing"
                 >
-                  <span>$150,000 — Code Ownership</span>
+                  <span>See What You Get Instantly</span>
                   <ArrowRight size={20} />
                 </a>
                 <Link href="/overview" className="btn-ghost" data-testid="button-hero-overview">
-                  See Overview
+                  View Tech Details
                 </Link>
               </div>
               
               {/* Value Prop */}
-              <p className="text-sm text-zinc-400 flex items-center gap-2" data-testid="text-hero-value-prop">
-                <CheckCircle size={16} className="text-brand-500" />
-                Save $300k–$600k in effort and 4–6 months vs. building from scratch
-              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <p className="text-sm text-zinc-400 flex items-center gap-2" data-testid="text-hero-value-prop">
+                  <CheckCircle size={16} className="text-brand-500" />
+                  $150,000 one-time — Own the code forever
+                </p>
+                <p className="text-sm text-zinc-400 flex items-center gap-2" data-testid="text-hero-value-prop-2">
+                  <CheckCircle size={16} className="text-brand-500" />
+                  4x–6x ROI vs. building in-house
+                </p>
+              </div>
             </div>
             
             {/* Right Column - Visual */}
@@ -168,36 +174,138 @@ export default function Home() {
               </div>
               
               {/* Floating Stats Card */}
-              <div className="hidden lg:block absolute -right-8 top-1/4 w-48 rounded-xl border border-white/10 bg-card/90 backdrop-blur p-4 shadow-xl">
-                <div className="text-xs uppercase text-zinc-400 tracking-wide" data-testid="text-floating-label">Build Time</div>
-                <div className="text-2xl font-bold text-white mt-1" data-testid="text-floating-value">4-6 months</div>
-                <div className="text-xs text-zinc-400 mt-1" data-testid="text-floating-description">Time saved</div>
+              <div className="hidden lg:block absolute -right-8 top-1/4 w-52 rounded-xl border border-white/10 bg-card/90 backdrop-blur p-4 shadow-xl">
+                <div className="text-xs uppercase text-zinc-400 tracking-wide" data-testid="text-floating-label">Your Savings</div>
+                <div className="text-2xl font-bold text-gradient mt-1" data-testid="text-floating-value">$300k–$600k</div>
+                <div className="text-xs text-zinc-400 mt-1" data-testid="text-floating-description">+ 6 months faster to market</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* What You Get Day 1 Section */}
+      <section id="what-you-get" className="py-20 md:py-32 bg-gradient-to-b from-brand-950/30 to-transparent">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-instant-heading">
+              Complete codebase <span className="text-gradient">delivered instantly</span>
+            </h2>
+            <p className="text-lg text-zinc-300" data-testid="text-instant-description">
+              Everything your dev team needs to deploy a production-ready lending platform — available the moment you purchase
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { 
+                title: '15,000+ Lines', 
+                description: 'Production-tested TypeScript code',
+                value: '15k+',
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3L4 7L8 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="M16 3L20 7L16 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="M4 17H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/><path d="M4 21H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+              },
+              { 
+                title: '40+ Components', 
+                description: 'shadcn/ui + custom UI library',
+                value: '40+',
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" strokeWidth="2"/><rect x="3" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2"/><rect x="14" y="14" width="7" height="7" stroke="currentColor" strokeWidth="2"/></svg>
+              },
+              { 
+                title: '3 Portal Types', 
+                description: 'Admin, Borrower, Broker dashboards',
+                value: '3',
+                icon: <Users size={24} />
+              },
+              { 
+                title: 'Full Auth + RBAC', 
+                description: 'Complete security & permissions',
+                value: '✓',
+                icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="11" width="18" height="11" stroke="currentColor" strokeWidth="2"/><path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="currentColor" strokeWidth="2"/></svg>
+              },
+            ].map((item, index) => (
+              <div key={index} className="card text-center" data-testid={`card-instant-${index}`}>
+                <div className="w-14 h-14 rounded-xl bg-brand-500/20 flex items-center justify-center mx-auto mb-4 text-brand-400">
+                  {item.icon}
+                </div>
+                <div className="text-3xl font-bold text-white mb-2" data-testid={`text-instant-value-${index}`}>{item.value}</div>
+                <h3 className="text-white font-semibold mb-2" data-testid={`text-instant-title-${index}`}>{item.title}</h3>
+                <p className="text-sm text-zinc-400" data-testid={`text-instant-description-${index}`}>{item.description}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12 backdrop-blur">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Core Features (Ready to Use)</h3>
+                <ul className="space-y-3">
+                  {[
+                    'CSV onboarding wizard with validation',
+                    'Multi-tenant architecture with tenant isolation',
+                    'Role-based access control (RBAC) system',
+                    'Authentication & session management',
+                    'Global timeframe controls for reporting',
+                    'Responsive UI with dark mode support'
+                  ].map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3" data-testid={`list-core-${index}`}>
+                      <CheckCircle size={20} className="text-brand-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-zinc-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">What's Included</h3>
+                <ul className="space-y-3">
+                  {[
+                    'Complete Next.js 14 source code',
+                    'Database schemas & migration files',
+                    'API routes & server-side logic',
+                    'Deployment configurations (Netlify/Vercel/Azure)',
+                    'Full technical documentation',
+                    'Demo data & sample tenants'
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3" data-testid={`list-included-${index}`}>
+                      <CheckCircle size={20} className="text-brand-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-zinc-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-8 border-t border-white/10 text-center">
+              <p className="text-lg text-white mb-4">
+                <strong>Delivery:</strong> GitHub repository access within 24 hours of purchase + live handoff session
+              </p>
+              <p className="text-sm text-zinc-400">
+                Your dev team can start customizing and deploying immediately
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Capabilities Section */}
       <section id="features" className="py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-features-heading">
-              Everything you need to <span className="text-gradient">launch faster</span>
+              Built-in capabilities that <span className="text-gradient">save months</span>
             </h2>
             <p className="text-lg text-zinc-300" data-testid="text-features-description">
-              A complete foundation with modern patterns, production-ready features, and enterprise-grade architecture
+              Complex features that would take your team months to build are already complete and battle-tested
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: <Zap size={24} className="text-brand-400" />, title: 'Modern Stack', body: 'Next.js 14, TypeScript, Tailwind, shadcn/ui patterns. Built with the latest web technologies.' },
-              { icon: <CheckCircle size={24} className="text-brand-400" />, title: 'Onboarding Wizard', body: 'CSV imports (banking + inventory) and sample tenants. Streamlined data migration.' },
-              { icon: <Users size={24} className="text-brand-400" />, title: 'RBAC & Multi-Tenant', body: 'Admin/Applicant portals, role dashboards, access guardrails. Secure by design.' },
-              { icon: <Clock size={24} className="text-brand-400" />, title: 'Timeframe Master', body: 'Global time range controls synced with charts + tables. Unified date handling.' },
-              { icon: <HelpCircle size={24} className="text-brand-400" />, title: 'Help Tour', body: 'Built-in UX coach to guide borrowers, brokers, and staff through workflows.' },
-              { icon: <Package size={24} className="text-brand-400" />, title: 'Deploy Ready', body: 'Replit → GitHub → Netlify/Azure; CI-friendly and scalable infrastructure.' },
+              { icon: <Users size={24} className="text-brand-400" />, title: 'Multi-Tenant Architecture', body: 'Complete tenant isolation with separate data, dashboards, and user management. Admin/Borrower/Broker portals built-in.' },
+              { icon: <CheckCircle size={24} className="text-brand-400" />, title: 'CSV Onboarding System', body: 'Smart wizard for importing banking transactions and inventory data. Field mapping, validation, error handling, and preview built-in.' },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="11" width="18" height="11" stroke="currentColor" strokeWidth="2"/><path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="currentColor" strokeWidth="2"/></svg>, title: 'Enterprise RBAC', body: 'Granular role-based permissions with access policies, audit logging, and team hierarchies. Compliance-ready from day one.' },
+              { icon: <Clock size={24} className="text-brand-400" />, title: 'Global Timeframe Controls', body: 'Master date range selector that syncs across all charts, tables, and reports. Custom ranges and presets included.' },
+              { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3H21V21H3V3Z" stroke="currentColor" strokeWidth="2"/><path d="M9 3V21" stroke="currentColor" strokeWidth="2"/><path d="M3 9H21" stroke="currentColor" strokeWidth="2"/><path d="M3 15H21" stroke="currentColor" strokeWidth="2"/></svg>, title: 'Responsive Dashboards', body: 'Analytics dashboards with charts, KPIs, and data tables. Dark mode, mobile-responsive, and fully accessible.' },
+              { icon: <HelpCircle size={24} className="text-brand-400" />, title: 'Contextual Help System', body: 'Interactive guided tours and tooltips to onboard users. Reduces support tickets and training time.' },
             ].map((feature, index) => (
               <div key={index} className="card group" data-testid={`card-feature-${index}`}>
                 <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition">
@@ -211,82 +319,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ROI Metrics Section */}
+      {/* ROI Comparison Section */}
       <section id="roi" className="py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-roi-heading">
-              Proven <span className="text-gradient">ROI</span> from day one
+              The math is simple: <span className="text-gradient">Save $300k–$600k</span>
             </h2>
             <p className="text-lg text-zinc-300" data-testid="text-roi-description">
-              Skip months of engineering work and hundreds of thousands in development costs
+              See exactly how much your team saves by purchasing vs. building from scratch
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="card text-center" data-testid="card-roi-time">
-              <div className="text-sm uppercase tracking-wide text-zinc-400 mb-4">Build Time Saved</div>
-              <div className="text-5xl md:text-6xl font-bold text-gradient mb-2" data-testid="text-roi-time-value">
-                4-6
+          {/* Comparison Table */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Build from Scratch */}
+            <div className="rounded-2xl border border-red-500/20 bg-red-950/10 p-8 backdrop-blur">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white">Build from Scratch</h3>
+                <span className="text-sm uppercase tracking-wide text-red-400 bg-red-500/10 px-3 py-1 rounded-full">Expensive</span>
               </div>
-              <div className="text-2xl font-semibold text-white mb-3">months</div>
-              <p className="text-sm text-zinc-400">
-                Launch faster than building from scratch
-              </p>
-              <div className="mt-6 h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full w-4/5 bg-gradient-to-r from-brand-500 to-brand-400 rounded-full"></div>
+              <div className="space-y-4 mb-6">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Senior Engineers (2)</span>
+                  <span className="text-white font-semibold">$180/hr × 1,500 hrs</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Product Manager</span>
+                  <span className="text-white font-semibold">$150/hr × 800 hrs</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Designer</span>
+                  <span className="text-white font-semibold">$120/hr × 400 hrs</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Timeline</span>
+                  <span className="text-white font-semibold">6-8 months</span>
+                </div>
+              </div>
+              <div className="pt-6 border-t border-white/10">
+                <div className="flex justify-between items-baseline mb-2">
+                  <span className="text-lg text-white font-semibold">Total Cost:</span>
+                  <span className="text-3xl font-bold text-red-400">$450k–$750k</span>
+                </div>
+                <p className="text-sm text-zinc-400">Plus opportunity cost of delayed launch</p>
               </div>
             </div>
             
-            <div className="card text-center" data-testid="card-roi-cost">
-              <div className="text-sm uppercase tracking-wide text-zinc-400 mb-4">Cost Avoidance</div>
-              <div className="text-5xl md:text-6xl font-bold text-gradient mb-2" data-testid="text-roi-cost-value">
-                $300k-$600k
+            {/* Buy Lendgismo */}
+            <div className="rounded-2xl border border-brand-500/40 bg-brand-950/20 p-8 backdrop-blur relative">
+              <div className="absolute -top-4 -right-4 bg-brand-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-glow">Best Value</div>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white">Get Lendgismo</h3>
+                <span className="text-sm uppercase tracking-wide text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full">Smart</span>
               </div>
-              <div className="text-xl font-semibold text-white mb-3">Engineering & PM hours</div>
-              <p className="text-sm text-zinc-400">
-                Compared to internal development costs
-              </p>
-              <div className="mt-6 h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-r from-brand-500 to-brand-400 rounded-full"></div>
+              <div className="space-y-4 mb-6">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Lendgismo License</span>
+                  <span className="text-white font-semibold">$150,000 one-time</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Customization (est.)</span>
+                  <span className="text-white font-semibold">2-4 weeks</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Deployment</span>
+                  <span className="text-white font-semibold">Ready day 1</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-zinc-400">Timeline</span>
+                  <span className="text-white font-semibold">4-6 weeks</span>
+                </div>
               </div>
-            </div>
-            
-            <div className="card text-center" data-testid="card-roi-ownership">
-              <div className="text-sm uppercase tracking-wide text-zinc-400 mb-4">Ownership Model</div>
-              <div className="text-5xl md:text-6xl font-bold text-gradient mb-2" data-testid="text-roi-ownership-value">
-                100%
-              </div>
-              <div className="text-2xl font-semibold text-white mb-3">Perpetual</div>
-              <p className="text-sm text-zinc-400">
-                Bring it in-house from day one
-              </p>
-              <div className="mt-6 h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-r from-brand-500 to-brand-400 rounded-full"></div>
+              <div className="pt-6 border-t border-white/10">
+                <div className="flex justify-between items-baseline mb-2">
+                  <span className="text-lg text-white font-semibold">Total Cost:</span>
+                  <span className="text-3xl font-bold text-gradient">$150k</span>
+                </div>
+                <p className="text-sm text-brand-300">6 months faster to market</p>
               </div>
             </div>
           </div>
           
-          <div className="mt-16 grid md:grid-cols-2 gap-6">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg bg-brand-500/20 flex items-center justify-center flex-shrink-0">
-                <Package size={20} className="text-brand-400" />
-              </div>
+          {/* Savings Highlight */}
+          <div className="text-center">
+            <div className="inline-flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 px-8 py-6 backdrop-blur">
               <div>
-                <h4 className="text-white font-semibold mb-2" data-testid="text-benefit-1-title">Zero Vendor Lock-in</h4>
-                <p className="text-sm text-zinc-400" data-testid="text-benefit-1-description">Own the source code outright. No recurring license fees or platform dependencies.</p>
+                <div className="text-sm uppercase text-zinc-400 mb-1">You Save</div>
+                <div className="text-4xl md:text-5xl font-bold text-gradient">$300k–$600k</div>
               </div>
-            </div>
-            
-            <div className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg bg-brand-500/20 flex items-center justify-center flex-shrink-0">
-                <CheckCircle size={20} className="text-brand-400" />
-              </div>
+              <div className="h-16 w-px bg-white/10"></div>
               <div>
-                <h4 className="text-white font-semibold mb-2" data-testid="text-benefit-2-title">Production-Ready</h4>
-                <p className="text-sm text-zinc-400" data-testid="text-benefit-2-description">Battle-tested patterns and best practices. Deploy to your infrastructure immediately.</p>
+                <div className="text-sm uppercase text-zinc-400 mb-1">ROI</div>
+                <div className="text-4xl md:text-5xl font-bold text-white">3x–5x</div>
+              </div>
+              <div className="h-16 w-px bg-white/10"></div>
+              <div>
+                <div className="text-sm uppercase text-zinc-400 mb-1">Time Saved</div>
+                <div className="text-4xl md:text-5xl font-bold text-white">6 months</div>
               </div>
             </div>
           </div>
@@ -382,16 +514,15 @@ export default function Home() {
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-8" data-testid="text-pricing-heading">
-                Simple pricing — <br/>
-                <span className="text-gradient">your code is yours</span>
+                One price. <span className="text-gradient">Own it forever.</span>
               </h2>
               
               <div className="space-y-6">
                 {[
-                  { title: '$150,000 one-time', description: 'For the Lendgismo codebase with perpetual license. No recurring fees.' },
-                  { title: "What's included", description: 'Complete source code, comprehensive setup documentation, demo data sets, and basic handoff session with your team.' },
-                  { title: 'Optional add-ons', description: 'Integration support (Plaid/QuickBooks), custom RBAC configurations, additional modules, and extended training sessions.' },
-                  { title: 'Keep your stack', description: 'Bring your own cloud infrastructure, database, and CI/CD pipelines. Full flexibility to deploy anywhere.' },
+                  { title: 'Flexible payment terms', description: 'Standard payment, or split across 2-3 milestones. Enterprise invoicing and PO supported.' },
+                  { title: 'Optional add-ons', description: 'Custom integrations (Plaid, Stripe, QuickBooks), white-label deployment assistance, extended training sessions.' },
+                  { title: '30-day email support', description: 'Technical questions answered within 24 hours. Extended support packages available.' },
+                  { title: 'NDA & IP assignment', description: 'We provide standard NDA and full intellectual property assignment documents upon request.' },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4" data-testid={`item-pricing-${index}`}>
                     <div className="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center flex-shrink-0 mt-1">
