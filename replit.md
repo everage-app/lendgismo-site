@@ -52,11 +52,14 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 - More compact, professional layout optimized for conversion
 
 ### Branding & Logo Implementation
-- Replaced placeholder SVG logos with actual Lendgismo brand assets
-- Navigation logo: Uses full Lendgismo logo (icon + text) from `attached_assets/Lendgismo logo_1759341471694.png`
-- Footer logo: Uses full Lendgismo logo matching navigation for brand consistency
-- Both logos sized at `h-10 w-auto` for consistent height with preserved aspect ratio
-- Accessibility: Navigation logo alt text "Lendgismo home" for screen reader clarity, Footer logo "Lendgismo"
+- Replaced placeholder SVG logos with clean, professional Lendgismo branding
+- **Logo Design:** Icon + Text composition for stunning, no-background appearance
+- **Icon Asset:** Uses `attached_assets/Lendgismo Icon_1759341471693.png` (clean, no gray box)
+- **Text Styling:** "LENDGISMO" in white, bold, xl font with tight tracking
+- **Navigation Logo:** Icon + text with hover effect (text changes to brand-300 color)
+- **Footer Logo:** Matching icon + text with same hover effect for consistency
+- **Sizing:** Icon at `h-10 w-auto` for consistent height with preserved aspect ratio
+- **Accessibility:** Icon marked decorative with `aria-hidden="true"`, text provides context
 - Logo assets imported via `@assets/` alias path for proper Vite asset handling
 
 ### Accessibility
