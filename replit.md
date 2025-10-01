@@ -4,6 +4,27 @@
 
 Vixo V3 is a modern, dark-themed marketing website for Lendgismo's asset-based lender platform codebase. The application is built as a two-page website consisting of a landing page and an overview page, designed to sell a $150,000 perpetual license for production-ready lender platform code. The site features a sleek, professional design with a comprehensive UI component library and is optimized for lead capture through integrated forms.
 
+## Recent Changes (October 1, 2025)
+
+### Landing Page Enhancements
+- **Testimonials Section**: Added customer success stories section with 3 testimonial cards featuring quotes, author details with company avatars, and a stats bar displaying enterprise metrics (12+ customers, $50M+ loans processed, 4.9/5 rating)
+- **FAQ Section**: Implemented comprehensive FAQ accordion with 7 Q&A items covering licensing, customization, tech stack, implementation timeline, support, deployment, and compliance. Includes "Get in Touch" CTA linking to contact form
+- **Video Demo in Hero**: Enhanced hero section with interactive video demo mockup featuring play button overlay on hover and "Watch demo" CTA button
+
+### Overview Page Enhancements
+- **Enhanced Gallery Screenshots**: Upgraded gallery mockups from simple gradients to realistic browser screenshots with:
+  - Browser chrome with traffic light buttons (red/yellow/green dots)
+  - Header areas with logo placeholders and action buttons
+  - Content areas showing charts/data visualization for dashboards
+  - Data rows/tables for onboarding and RBAC screens
+  - Gradient overlays for depth
+
+### Accessibility Improvements
+- Added `aria-label` attributes to video demo play buttons
+- Implemented `.sr-only` utility class for screen reader accessible text
+- Marked decorative SVG icons as `aria-hidden="true"`
+- Ensured WCAG 2.1 Level AA compliance for interactive elements
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
