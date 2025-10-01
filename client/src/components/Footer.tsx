@@ -29,7 +29,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-white font-bold text-lg leading-tight">Lendgismo</div>
-                <div className="text-brand-400 text-xs font-semibold">Vixo V3</div>
+                <div className="text-brand-400 text-xs font-semibold">Lendgismo</div>
               </div>
             </div>
             <p className="text-sm text-zinc-400 max-w-sm">

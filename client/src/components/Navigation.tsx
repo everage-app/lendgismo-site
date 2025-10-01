@@ -35,7 +35,7 @@ export default function Navigation() {
                 </div>
                 <div>
                   <div className="text-white font-bold text-lg leading-tight">Lendgismo</div>
-                  <div className="text-brand-400 text-xs font-semibold">Vixo V3</div>
+                  <div className="text-brand-400 text-xs font-semibold">Lendgismo</div>
                 </div>
               </div>
             </div>

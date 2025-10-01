@@ -61,11 +61,11 @@ export default function Overview() {
           
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-testid="text-overview-heading">
-              Vixo V3 Platform <br/>
+              Lendgismo Platform <br/>
               <span className="text-gradient">Complete Overview</span>
             </h1>
             <p className="text-xl text-zinc-300 leading-relaxed" data-testid="text-overview-description">
-              A deep dive into the architecture, features, and capabilities of the Vixo V3 platform. 
+              A deep dive into the architecture, features, and capabilities of the Lendgismo platform. 
               Explore our modern tech stack, see real screenshots, and understand how this foundation 
               can accelerate your lending platform development.
             </p>
@@ -219,7 +219,7 @@ export default function Overview() {
             Ready to accelerate your <span className="text-gradient">development timeline?</span>
           </h2>
           <p className="text-lg text-zinc-300 mb-10 max-w-2xl mx-auto" data-testid="text-cta-description">
-            Get started with Vixo V3 today and launch your lending platform in weeks instead of months.
+            Get started with Lendgismo today and launch your lending platform in weeks instead of months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#contact" className="btn-primary" data-testid="button-cta-handoff">

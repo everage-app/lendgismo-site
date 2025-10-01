@@ -81,7 +81,7 @@ export default function Home() {
               
               {/* Description */}
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl" data-testid="text-hero-description">
-                <strong className="text-white">Vixo V3</strong> by Lendgismo is a modern lender foundation built on Next.js + TypeScript. 
+                <strong className="text-white">Lendgismo</strong> is a modern lender foundation built on Next.js + TypeScript. 
                 Skip the scratch-build and hand your team a production-ready starting point: auth, RBAC, CSV onboarding, 
                 lender workflows, and beautiful dashboards.
               </p>
@@ -301,14 +301,14 @@ export default function Home() {
               Trusted by <span className="text-gradient">industry leaders</span>
             </h2>
             <p className="text-lg text-zinc-300" data-testid="text-testimonials-description">
-              See how leading financial institutions accelerated their lending platforms with Vixo V3
+              See how leading financial institutions accelerated their lending platforms with Lendgismo
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                quote: "Vixo V3 reduced our development timeline by 5 months. The codebase quality is exceptional, and having full ownership means we can customize everything to our exact needs.",
+                quote: "Lendgismo reduced our development timeline by 5 months. The codebase quality is exceptional, and having full ownership means we can customize everything to our exact needs.",
                 author: "Sarah Chen",
                 role: "CTO",
                 company: "FinTech Capital",
@@ -388,7 +388,7 @@ export default function Home() {
               
               <div className="space-y-6">
                 {[
-                  { title: '$150,000 one-time', description: 'For the Vixo V3 codebase with perpetual license. No recurring fees.' },
+                  { title: '$150,000 one-time', description: 'For the Lendgismo codebase with perpetual license. No recurring fees.' },
                   { title: "What's included", description: 'Complete source code, comprehensive setup documentation, demo data sets, and basic handoff session with your team.' },
                   { title: 'Optional add-ons', description: 'Integration support (Plaid/QuickBooks), custom RBAC configurations, additional modules, and extended training sessions.' },
                   { title: 'Keep your stack', description: 'Bring your own cloud infrastructure, database, and CI/CD pipelines. Full flexibility to deploy anywhere.' },
@@ -499,7 +499,7 @@ export default function Home() {
                   What exactly do I get with the $150,000 license?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  You receive the complete Vixo V3 source code with a perpetual license, giving you full ownership. This includes all frontend components, backend APIs, database schemas, authentication system, RBAC implementation, CSV onboarding tools, documentation, demo data, and a comprehensive handoff session with our team. There are no recurring fees or usage limits.
+                  You receive the complete Lendgismo source code with a perpetual license, giving you full ownership. This includes all frontend components, backend APIs, database schemas, authentication system, RBAC implementation, CSV onboarding tools, documentation, demo data, and a comprehensive handoff session with our team. There are no recurring fees or usage limits.
                 </AccordionContent>
               </AccordionItem>
               
@@ -517,7 +517,7 @@ export default function Home() {
                   What technology stack is used?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  Vixo V3 is built with Next.js 14 (App Router), React 18, TypeScript, and Tailwind CSS for the frontend. The backend uses Next.js API routes with TypeScript. For databases, it's designed to work with PostgreSQL but can be adapted to other databases. All components use modern patterns like shadcn/ui, Radix UI primitives, and Zod for validation.
+                  Lendgismo is built with Next.js 14 (App Router), React 18, TypeScript, and Tailwind CSS for the frontend. The backend uses Next.js API routes with TypeScript. For databases, it's designed to work with PostgreSQL but can be adapted to other databases. All components use modern patterns like shadcn/ui, Radix UI primitives, and Zod for validation.
                 </AccordionContent>
               </AccordionItem>
               
@@ -553,7 +553,7 @@ export default function Home() {
                   Is this suitable for regulated financial institutions?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  Vixo V3 is designed with enterprise and regulated environments in mind. It includes RBAC for access control, audit logging capabilities, secure authentication patterns, and follows security best practices. However, you'll need to implement specific compliance requirements (SOC 2, PCI, etc.) based on your regulatory needs. We can provide guidance during the handoff session.
+                  Lendgismo is designed with enterprise and regulated environments in mind. It includes RBAC for access control, audit logging capabilities, secure authentication patterns, and follows security best practices. However, you'll need to implement specific compliance requirements (SOC 2, PCI, etc.) based on your regulatory needs. We can provide guidance during the handoff session.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

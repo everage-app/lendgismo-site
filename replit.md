@@ -1,8 +1,8 @@
-# Vixo V3 - Lendgismo Asset-Based Lender Platform
+# Lendgismo - Asset-Based Lender Platform
 
 ## Overview
 
-Vixo V3 is a modern, dark-themed marketing website for Lendgismo's asset-based lender platform codebase. The application is built as a two-page website consisting of a landing page and an overview page, designed to sell a $150,000 perpetual license for production-ready lender platform code. The site features a sleek, professional design with a comprehensive UI component library and is optimized for lead capture through integrated forms.
+Lendgismo is a modern, dark-themed marketing website for an asset-based lender platform codebase. The application is built as a two-page website consisting of a landing page and an overview page, designed to sell a $150,000 perpetual license for production-ready lender platform code. The site features a sleek, professional design with a comprehensive UI component library and is optimized for lead capture through integrated forms.
 
 ## Recent Changes (October 1, 2025)
 
