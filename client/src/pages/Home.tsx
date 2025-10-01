@@ -63,10 +63,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 pt-12 pb-16 md:pt-20 md:pb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-wide text-zinc-300 backdrop-blur">
                 <div className="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></div>
@@ -185,9 +185,9 @@ export default function Home() {
       </section>
 
       {/* What You Get Day 1 Section */}
-      <section id="what-you-get" className="py-20 md:py-32 bg-gradient-to-b from-brand-950/30 to-transparent">
+      <section id="what-you-get" className="py-16 md:py-24 bg-gradient-to-b from-brand-950/30 to-transparent">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-instant-heading">
               Complete codebase <span className="text-gradient">delivered instantly</span>
             </h2>
@@ -287,9 +287,9 @@ export default function Home() {
       </section>
 
       {/* Key Capabilities Section */}
-      <section id="features" className="py-20 md:py-32">
+      <section id="features" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-features-heading">
               Built-in capabilities that <span className="text-gradient">save months</span>
             </h2>
@@ -320,11 +320,11 @@ export default function Home() {
       </section>
 
       {/* ROI Comparison Section */}
-      <section id="roi" className="py-20 md:py-32 relative overflow-hidden">
+      <section id="roi" className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-roi-heading">
               The math is simple: <span className="text-gradient">Save $300k–$600k</span>
             </h2>
@@ -426,9 +426,9 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 md:py-32">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-testimonials-heading">
               Trusted by <span className="text-gradient">industry leaders</span>
             </h2>
@@ -509,7 +509,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 md:py-32">
+      <section id="pricing" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
             <div>
@@ -592,7 +592,7 @@ export default function Home() {
       </section>
 
       {/* Overview Link Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-brand-950/30 via-transparent to-brand-950/30"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative">
@@ -612,7 +612,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-faq-heading">
@@ -706,7 +706,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="py-20 md:py-32">
+      <section id="contact" className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-contact-heading">
