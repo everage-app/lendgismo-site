@@ -51,10 +51,19 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 - ~20% reduction in vertical padding while maintaining readability and visual hierarchy
 - More compact, professional layout optimized for conversion
 
+### Branding & Logo Implementation
+- Replaced placeholder SVG logos with actual Lendgismo brand assets
+- Navigation logo: Uses full Lendgismo logo (icon + text) from `attached_assets/Lendgismo logo_1759341471694.png`
+- Footer logo: Uses full Lendgismo logo matching navigation for brand consistency
+- Both logos sized at `h-10 w-auto` for consistent height with preserved aspect ratio
+- Accessibility: Navigation logo alt text "Lendgismo home" for screen reader clarity, Footer logo "Lendgismo"
+- Logo assets imported via `@assets/` alias path for proper Vite asset handling
+
 ### Accessibility
 - Added `aria-label` attributes to interactive elements
 - Implemented `.sr-only` utility class for screen readers
 - Marked decorative SVG as `aria-hidden="true"`
+- Logo images include descriptive alt text for screen readers
 - WCAG 2.1 Level AA compliant
 
 ## User Preferences
