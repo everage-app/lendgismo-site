@@ -6,24 +6,46 @@ Lendgismo is a modern, dark-themed marketing website for an asset-based lender p
 
 ## Recent Changes (October 1, 2025)
 
-### Landing Page Enhancements
-- **Testimonials Section**: Added customer success stories section with 3 testimonial cards featuring quotes, author details with company avatars, and a stats bar displaying enterprise metrics (12+ customers, $50M+ loans processed, 4.9/5 rating)
-- **FAQ Section**: Implemented comprehensive FAQ accordion with 7 Q&A items covering licensing, customization, tech stack, implementation timeline, support, deployment, and compliance. Includes "Get in Touch" CTA linking to contact form
-- **Video Demo in Hero**: Enhanced hero section with interactive video demo mockup featuring play button overlay on hover and "Watch demo" CTA button
+### Major Value Proposition Redesign
+Complete overhaul of landing page structure to eliminate content overlaps and create a compelling ROI narrative:
 
-### Overview Page Enhancements
-- **Enhanced Gallery Screenshots**: Upgraded gallery mockups from simple gradients to realistic browser screenshots with:
-  - Browser chrome with traffic light buttons (red/yellow/green dots)
-  - Header areas with logo placeholders and action buttons
-  - Content areas showing charts/data visualization for dashboards
-  - Data rows/tables for onboarding and RBAC screens
-  - Gradient overlays for depth
+**1. Hero Section - Front-loaded Savings**
+- Headline emphasizes quantified value: "Save $300k–$600k and 6 months of dev time"
+- Two value props: "$150,000 one-time — Own the code forever" and "4x–6x ROI vs. building in-house"
+- Primary CTA changed to "See What You Get Instantly" linking to instant delivery section
+- Floating savings card: "$300k–$600k + 6 months faster to market"
 
-### Accessibility Improvements
-- Added `aria-label` attributes to video demo play buttons
-- Implemented `.sr-only` utility class for screen reader accessible text
-- Marked decorative SVG icons as `aria-hidden="true"`
-- Ensured WCAG 2.1 Level AA compliance for interactive elements
+**2. New "What You Get Day 1" Section**
+- 4 stat cards showing concrete deliverables: 15k+ LOC, 40+ Components, 3 Portal Types, Full Auth + RBAC
+- Two-column layout: Core Features (Ready to Use) and What's Included
+- Delivery timeline: "GitHub repository access within 24 hours + live handoff session"
+
+**3. Visual ROI Comparison Section**
+- Side-by-side comparison cards: "Build from Scratch" ($450k–$750k, 6-8 months) vs "Get Lendgismo" ($150k, 4-6 weeks)
+- Build from Scratch breaks down costs: 2 senior engineers, PM, designer with hourly rates
+- Savings highlight bar showing: $300k–$600k saved, 3x–5x ROI, 6 months time saved
+
+**4. Streamlined Features Section**
+- Focused on 6 unique capabilities that save development time
+- Removed redundant deployment/ownership messaging (consolidated to earlier sections)
+- Features: Multi-Tenant Architecture, CSV Onboarding, Enterprise RBAC, Global Timeframe Controls, Dashboards, Help System
+
+**5. Simplified Pricing Section**
+- Focused on commercial terms without repeating earlier messages
+- Covers: Payment flexibility, optional add-ons, support packages, NDA/IP assignment
+- Eliminates redundant ownership/delivery messaging
+
+**6. Other Enhancements**
+- Testimonials section with 3 customer quotes and enterprise stats bar
+- FAQ section with 7 comprehensive Q&A items
+- Video demo in hero with interactive play button
+- Enhanced Overview page gallery with realistic browser screenshots
+
+### Accessibility
+- Added `aria-label` attributes to interactive elements
+- Implemented `.sr-only` utility class for screen readers
+- Marked decorative SVG as `aria-hidden="true"`
+- WCAG 2.1 Level AA compliant
 
 ## User Preferences
 
