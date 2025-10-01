@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/Lendgismo logo_1759341471694.png";
+import logoIcon from "@assets/Lendgismo Icon_1759341471693.png";
 
 export default function Footer() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -21,13 +21,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4 group cursor-pointer">
               <img 
-                src={logoImage} 
-                alt="Lendgismo" 
+                src={logoIcon} 
+                alt="" 
                 className="h-10 w-auto"
-                data-testid="img-footer-logo"
+                aria-hidden="true"
+                data-testid="img-footer-logo-icon"
               />
+              <span className="text-white font-bold text-xl tracking-tight group-hover:text-brand-300 transition-colors" data-testid="text-footer-logo">
+                LENDGISMO
+              </span>
             </div>
             <p className="text-sm text-zinc-400 max-w-sm">
               Production-ready lender platform foundation. Own the code, ship faster.
