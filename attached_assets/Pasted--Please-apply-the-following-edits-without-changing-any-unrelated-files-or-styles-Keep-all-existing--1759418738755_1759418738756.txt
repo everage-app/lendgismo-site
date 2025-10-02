@@ -1,0 +1,137 @@
+“Please apply the following edits without changing any unrelated files or styles. Keep all existing layout/header markup. Only add/modify the files below.”
+
+/public/brand/
+Create this folder and put my two logo files in it (use best available assets, prefer SVG; if I only have PNGs, keep the exact names below):
+
+logo-light.svg (white/mono version for dark headers; if PNG then logo-light.png)
+
+logo-dark.svg (dark/charcoal version for light headers; if PNG then logo-dark.png)
+
+If my current logo has a visible background: convert to transparent.
+
+If SVG: remove any <rect>/background fills and set all fills to currentColor when possible.
+
+If PNG: erase background to alpha (no matte), export @2x size for crispness.
+
+/components/SiteLogo.tsx (add this new component)
+
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
+type Props = {
+  className?: string;
+  size?: number; // height in px
+  glow?: boolean;
+  ariaLabel?: string;
+};
+
+export default function SiteLogo({
+  className,
+  size = 24,
+  glow = true,
+  ariaLabel = "Lendgismo Home",
+}: Props) {
+  const pathname = usePathname();
+
+  // Prefer SVGs; fall back to PNGs if SVG not present (Next will handle).
+  const lightSrc = "/brand/logo-light.svg"; // for dark header/backgrounds
+  const darkSrc  = "/brand/logo-dark.svg";  // for light backgrounds
+
+  const height = size;
+  const width = Math.round(size * 5.2); // adjust aspect ratio to your logo (w:h ~5.2:1 is common)
+  const base = "inline-flex items-center select-none";
+
+  return (
+    <Link
+      href="/"
+      aria-label={ariaLabel}
+      className={clsx(base, className)}
+      prefetch={false}
+    >
+      {/* Dark header version (logo appears light) */}
+      <span
+        className={clsx(
+          "block dark:inline",
+          "hidden",
+          glow && "lglogo-glow"
+        )}
+        style={{ lineHeight: 0 }}
+      >
+        <Image
+          src={lightSrc}
+          alt="Lendgismo"
+          width={width}
+          height={height}
+          priority={pathname === "/"}
+        />
+      </span>
+
+      {/* Light header version (logo appears dark) */}
+      <span className="block dark:hidden" style={{ lineHeight: 0 }}>
+        <Image
+          src={darkSrc}
+          alt="Lendgismo"
+          width={width}
+          height={height}
+          priority={pathname === "/"}
+        />
+      </span>
+    </Link>
+  );
+}
+
+
+/app/globals.css (or your main Tailwind/CSS file) — append these utilities:
+
+/* Ensure any leftover matte is neutralized */
+.logo img, .logo svg, .lglogo img, .lglogo svg {
+  background: transparent !important;
+}
+
+/* Subtle glow so the white mark sits nicely on a dark header. */
+.lglogo-glow img, .lglogo-glow svg, .lglogo-glow {
+  filter: drop-shadow(0 0 6px rgba(66, 133, 244, 0.20))
+          drop-shadow(0 0 20px rgba(66, 133, 244, 0.12));
+}
+
+/* Sharper rendering */
+img[src*="/brand/"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+
+Use the component in your header (Navbar)
+Find your header/nav component (e.g., /components/Header.tsx or /app/(site)/_components/Header.tsx). Replace the current logo markup with:
+
+import SiteLogo from "@/components/SiteLogo";
+
+// inside the header left area
+<div className="flex items-center gap-2">
+  <SiteLogo size={28} glow className="logo" />
+</div>
+
+
+(Optional) If your current logo is a single-color SVG and you want it to auto-tint to match text:
+
+Open /public/brand/logo-light.svg and set fill="currentColor" on the paths.
+
+Then in the header container, ensure text color is already correct (e.g., text-white for dark header). The logo will inherit and match perfectly, no raster glow needed. You can keep .lglogo-glow for a soft halo.
+
+Quality checks to enforce transparency & consistency:
+
+Make sure there’s no <rect> background in the SVGs.
+
+Export PNGs with alpha channel only (no white/black matte).
+
+Keep logo height between 24–32px in navbar for crispness; the component size prop controls that.
+
+If your header has a gradient or hover lighting, the glow helps the logo stay readable without looking “boxed.”
+
+Do not change any routes, menus, or layout spacing. Only replace the logo element as instructed.
+
+End of edits.

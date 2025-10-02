@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
-import logoImage from "@assets/Lendgismo logo_1759370117760.png";
+import SiteLogo from "./SiteLogo";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,20 +25,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" data-testid="link-home">
-            <div className="cursor-pointer">
-              <img 
-                src={logoImage} 
-                alt="Lendgismo" 
-                className="h-10 w-auto"
-                style={{ 
-                  mixBlendMode: 'screen',
-                  filter: 'contrast(1.2) brightness(1.1)'
-                }}
-                data-testid="img-logo"
-              />
-            </div>
-          </Link>
+          <SiteLogo size={40} glow className="logo" />
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">

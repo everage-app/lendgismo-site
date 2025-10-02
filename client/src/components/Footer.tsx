@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoImage from "@assets/Lendgismo logo_1759370117760.png";
+import SiteLogo from "./SiteLogo";
 
 export default function Footer() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -22,15 +22,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <img 
-                src={logoImage} 
-                alt="Lendgismo" 
-                className="h-10 w-auto"
-                style={{ 
-                  mixBlendMode: 'screen',
-                  filter: 'contrast(1.2) brightness(1.1)'
-                }}
-                data-testid="img-footer-logo"
+              <SiteLogo 
+                size={40} 
+                glow 
+                className="logo"
+                linkTestId="link-footer-logo"
+                imgTestId="img-footer-logo"
               />
             </div>
             <p className="text-sm text-zinc-400 max-w-sm">
