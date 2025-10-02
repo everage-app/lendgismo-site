@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import logoWhite from "@assets/lendgismo-logo-white.png";
 
 type Props = {
   className?: string;
@@ -26,7 +27,7 @@ export default function SiteLogo({
     <Link href="/" aria-label={ariaLabel} data-testid={linkTestId}>
       <div className={`${baseClasses} ${glowClasses} ${className}`}>
         <img
-          src="/brand/lendgismo-logo-white.png"
+          src={logoWhite}
           alt="Lendgismo"
           className="logo-img"
           width={width}

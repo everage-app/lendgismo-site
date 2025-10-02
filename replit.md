@@ -54,8 +54,9 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 ### Branding & Logo Implementation
 - Created reusable `SiteLogo` component for clean, professional Lendgismo branding
 - **Logo Assets:** 
-  - Full logo: `/public/brand/lendgismo-logo-white.png` (408x150, transparent PNG)
-  - Icon only: `/public/brand/lendgismo-icon-white.png` (79x96, transparent PNG)
+  - Full logo: `attached_assets/lendgismo-logo-white.png` (420x160, transparent PNG)
+  - Icon only: `attached_assets/lendgismo-icon-white.png` (79x96, transparent PNG)
+- **Import Method:** Uses Vite's `@assets` alias for proper asset handling: `import logoWhite from "@assets/lendgismo-logo-white.png"`
 - **Transparent Design:** White logo on fully transparent background - no CSS tricks needed
 - **Visual Enhancement:** Optional subtle indigo drop-shadow glow for better visibility on dark backgrounds
 - **Component Props:** Configurable size, glow effect, aria labels, and test IDs
