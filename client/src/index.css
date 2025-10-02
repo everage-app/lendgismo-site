@@ -143,18 +143,16 @@
     border-width: 0;
   }
 
-  /* Logo background removal and enhancement */
+  /* Logo enhancement */
   .logo-img {
-    background: transparent !important;
-    mix-blend-mode: screen;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
   }
 
   /* Subtle glow for logo on dark backgrounds */
   .lglogo-glow .logo-img {
-    filter: drop-shadow(0 0 6px rgba(66, 133, 244, 0.20))
-            drop-shadow(0 0 20px rgba(66, 133, 244, 0.12));
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3))
+            drop-shadow(0 0 24px rgba(99, 102, 241, 0.15));
   }
 }
 

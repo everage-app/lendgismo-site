@@ -53,13 +53,15 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 
 ### Branding & Logo Implementation
 - Created reusable `SiteLogo` component for clean, professional Lendgismo branding
-- **Logo Asset:** Uses `attached_assets/Lendgismo logo_1759370117760.png` (actual logo file)
-- **Background Removal:** CSS `mix-blend-mode: screen` makes dark background invisible/transparent
-- **Visual Enhancement:** Subtle blue drop-shadow glow for better visibility on dark backgrounds
+- **Logo Assets:** 
+  - Full logo: `/public/brand/lendgismo-logo-white.png` (408x150, transparent PNG)
+  - Icon only: `/public/brand/lendgismo-icon-white.png` (79x96, transparent PNG)
+- **Transparent Design:** White logo on fully transparent background - no CSS tricks needed
+- **Visual Enhancement:** Optional subtle indigo drop-shadow glow for better visibility on dark backgrounds
 - **Component Props:** Configurable size, glow effect, aria labels, and test IDs
-- **Navigation Logo:** `<SiteLogo size={40} glow />` with blue glow effect and default test IDs
+- **Navigation Logo:** `<SiteLogo size={40} glow />` with glow effect and default test IDs
 - **Footer Logo:** `<SiteLogo size={40} glow />` with matching glow and custom test IDs
-- **CSS Utilities:** `.logo-img` for background removal and crisp rendering, `.lglogo-glow` for glow effect
+- **CSS Utilities:** `.logo-img` for crisp rendering, `.lglogo-glow` for optional glow effect
 - **Accessibility:** Proper aria-labels on links, descriptive alt text on images
 - **Testing:** All logos have data-testid attributes for automated testing
 - Logo component uses wouter Link for routing, fully compatible with React + Vite stack
