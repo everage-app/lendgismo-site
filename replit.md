@@ -52,15 +52,17 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 - More compact, professional layout optimized for conversion
 
 ### Branding & Logo Implementation
-- Replaced placeholder SVG logos with clean, professional Lendgismo branding
-- **Logo Design:** Icon + Text composition for stunning, no-background appearance
-- **Icon Asset:** Uses `attached_assets/Lendgismo Icon_1759341471693.png` (clean, no gray box)
-- **Text Styling:** "LENDGISMO" in white, bold, xl font with tight tracking
-- **Navigation Logo:** Icon + text with hover effect (text changes to brand-300 color)
-- **Footer Logo:** Matching icon + text with same hover effect for consistency
-- **Sizing:** Icon at `h-10 w-auto` for consistent height with preserved aspect ratio
-- **Accessibility:** Icon marked decorative with `aria-hidden="true"`, text provides context
-- Logo assets imported via `@assets/` alias path for proper Vite asset handling
+- Created reusable `SiteLogo` component for clean, professional Lendgismo branding
+- **Logo Asset:** Uses `attached_assets/Lendgismo logo_1759370117760.png` (actual logo file)
+- **Background Removal:** CSS `mix-blend-mode: screen` makes dark background invisible/transparent
+- **Visual Enhancement:** Subtle blue drop-shadow glow for better visibility on dark backgrounds
+- **Component Props:** Configurable size, glow effect, aria labels, and test IDs
+- **Navigation Logo:** `<SiteLogo size={40} glow />` with blue glow effect and default test IDs
+- **Footer Logo:** `<SiteLogo size={40} glow />` with matching glow and custom test IDs
+- **CSS Utilities:** `.logo-img` for background removal and crisp rendering, `.lglogo-glow` for glow effect
+- **Accessibility:** Proper aria-labels on links, descriptive alt text on images
+- **Testing:** All logos have data-testid attributes for automated testing
+- Logo component uses wouter Link for routing, fully compatible with React + Vite stack
 
 ### Accessibility
 - Added `aria-label` attributes to interactive elements
