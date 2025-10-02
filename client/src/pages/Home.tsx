@@ -872,8 +872,8 @@ export default function Home() {
           <div className="mt-8 text-center">
             <p className="text-sm text-zinc-400" data-testid="text-email-contact">
               Prefer email? Reach us directly at{' '}
-              <a href="mailto:sales@lendgismo.com" className="text-brand-400 hover:text-brand-300 transition" data-testid="link-email">
-                sales@lendgismo.com
+              <a href="mailto:lendgismo@gmail.com" className="text-brand-400 hover:text-brand-300 transition" data-testid="link-email">
+                lendgismo@gmail.com
               </a>
             </p>
           </div>
