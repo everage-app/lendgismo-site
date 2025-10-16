@@ -4,6 +4,34 @@
 
 Lendgismo is a modern, dark-themed marketing website for an asset-based lender platform codebase. The application is built as a two-page website consisting of a landing page and an overview page, designed to sell a $150,000 perpetual license for production-ready lender platform code. The site features a sleek, professional design with a comprehensive UI component library and is optimized for lead capture through integrated forms.
 
+## Recent Changes (October 16, 2025)
+
+### Documentation System with Lendgismo Logo Integration
+Complete buildless documentation viewer with premium Lendgismo branding:
+
+**Documentation Topbar Design:**
+- **Logo Integration:** Lendgismo icon (32x32px) from `/docs/assets/lendgismo-icon.png`
+- **Branding Format:** "Lendgismo / Docs" (main) and "Lendgismo / API" (API reference)
+- **Visual Effects:** 
+  - Logo has blue drop-shadow glow: `filter: drop-shadow(0 2px 8px rgba(96, 165, 250, 0.3))`
+  - Hover intensifies glow: `drop-shadow(0 2px 12px rgba(96, 165, 250, 0.5))`
+  - Subtle background tint on hover: `rgba(96, 165, 250, 0.1)`
+- **Accessibility (WCAG 2.1 Level AA):**
+  - Focus-visible outline: 2px solid brand-500 with 2px offset
+  - No opacity fade - maintains full brightness for contrast
+  - Larger clickable area with padding adjustments
+  - Keyboard navigation fully supported
+
+**Documentation System Features:**
+- Buildless viewer at `/docs/` with 15 auto-generated markdown pages
+- Swagger UI at `/docs/api/` for OpenAPI documentation
+- Real-time search filtering across sidebar
+- Client-side routing with marked.js markdown parsing
+- Prism.js syntax highlighting for code blocks
+- Dark theme matching main site (brand-500 blue, Inter font, glass morphism)
+- Footer integration: "Documentation" link in Product section
+- Static file serving configured in Express before Vite middleware
+
 ## Recent Changes (October 1, 2025)
 
 ### Major Value Proposition Redesign

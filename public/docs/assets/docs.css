@@ -92,10 +92,49 @@ body {
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  transition: background-color 0.2s;
 }
 
-.topbar-brand svg {
+.topbar-brand:hover {
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.topbar-brand:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 2px;
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(96, 165, 250, 0.3));
+  transition: filter 0.2s;
+}
+
+.topbar-brand:hover .brand-logo {
+  filter: drop-shadow(0 2px 12px rgba(96, 165, 250, 0.5));
+}
+
+.brand-name {
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.brand-divider {
+  color: var(--fg-muted);
+  font-weight: 300;
+  margin: 0 -0.25rem;
+}
+
+.brand-section {
   color: var(--brand-400);
+  font-weight: 500;
 }
 
 .topbar-actions {
