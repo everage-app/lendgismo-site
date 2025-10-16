@@ -57,6 +57,11 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Serve static files from public directory (for /docs and other static assets)
+  // This must be BEFORE Vite middleware to prevent React router from intercepting
+  const publicPath = "public";
+  app.use(express.static(publicPath));
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
