@@ -12,8 +12,6 @@ type FeaturedDemosProps = {
 export default function FeaturedDemos({ maxVideos = 2, className = '', variant = 'hero' }: FeaturedDemosProps) {
   const [items, setItems] = useState<ShowcaseItem[]>([])
   const videoRef = useRef<HTMLVideoElement>(null)
-  // Keep the player simple and robust across browsers
-  // Track last progress to detect early stalls (<5s) and gently nudge forward
   const lastTickRef = useRef<{ t: number; ts: number }>({ t: 0, ts: 0 })
 
   useEffect(() => {
@@ -25,7 +23,6 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
 
   const videos = useMemo(() => {
     const vids: ShowcaseItem[] = (items ?? []).filter((it: ShowcaseItem) => (it.type === 'video') || /(\.webm|\.mp4)$/i.test(it.src))
-    // Prefer most recent timestamped folders and then by filename desc
     vids.sort((a: ShowcaseItem, b: ShowcaseItem) => {
       const at = a.timestamp || ''
       const bt = b.timestamp || ''
@@ -35,32 +32,19 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
     return vids.slice(0, maxVideos)
   }, [items, maxVideos])
 
-  // Keep hooks order stable regardless of variant by computing prioritization before any conditional returns.
-  // Prioritize "full_tour" videos for both primary and secondary to ensure the smaller card is also a full overview.
   const prioritized = useMemo(() => {
     const fullTours = videos.filter(v => /full[_-]?tour/i.test(v.src))
     const others = videos.filter(v => !/full[_-]?tour/i.test(v.src))
     return [...fullTours, ...others].slice(0, maxVideos)
   }, [videos, maxVideos])
 
-  // Compute primary video source
   const [primary] = prioritized
   const primarySrc = primary?.src
 
-  // Don't break the page if no videos - show fallback or placeholder
-  if (!primarySrc && variant === 'hero') {
-    return (
-      <section className={`${className}`}>
-        <div className="w-full aspect-[16/9] bg-gradient-to-br from-brand-950 to-black rounded-lg flex items-center justify-center border border-white/10">
-          <p className="text-zinc-400">Loading demo video...</p>
-        </div>
-      </section>
-    )
-  }
-
-  if (videos.length === 0 && variant === 'grid') return null
-
+  // GRID VARIANT - show multiple videos
   if (variant === 'grid') {
+    if (videos.length === 0) return null
+    
     return (
       <section className={`py-12 md:py-16 ${className}`}>
         <div className="max-w-7xl mx-auto px-6">
@@ -101,7 +85,20 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
     )
   }
 
-  // Default: hero variant (single main video, full width, STUNNING presentation)
+  // HERO VARIANT - single large video (default)
+  // If no video yet, show loading state but don't break the page
+  if (!primarySrc) {
+    return (
+      <section className={`${className}`}>
+        <div className="w-full aspect-[16/9] bg-gradient-to-br from-brand-950 to-black rounded-lg flex items-center justify-center border border-white/10">
+          <div className="text-center">
+            <div className="w-12 h-12 border-4 border-brand-500/30 border-t-brand-500 rounded-full animate-spin mx-auto mb-3"></div>
+            <p className="text-sm text-zinc-400">Loading demo video...</p>
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   // Safe version of sources - only apply if we have a primary source
   const webmSrc = primarySrc ? primarySrc.replace(/\.mp4$/i, '.webm') : null
