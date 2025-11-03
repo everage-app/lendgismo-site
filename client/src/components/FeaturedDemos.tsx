@@ -12,12 +12,6 @@ type FeaturedDemosProps = {
 export default function FeaturedDemos({ maxVideos = 2, className = '', variant = 'hero' }: FeaturedDemosProps) {
   const [items, setItems] = useState<ShowcaseItem[]>([])
   const videoRef = useRef<HTMLVideoElement>(null)
-  // Track if user explicitly paused to avoid auto-resume fighting user intent
-  const userPausedRef = useRef<boolean>(false)
-  const lastProgressRef = useRef<{ time: number; timestamp: number }>({ time: 0, timestamp: 0 })
-  const [videoBlobUrl, setVideoBlobUrl] = useState<string | null>(null)
-  const objectUrlRef = useRef<string | null>(null)
-  const [isBuffering, setIsBuffering] = useState<boolean>(false)
 
   useEffect(() => {
     fetch('/assets/showcase/manifest.json')
@@ -46,75 +40,9 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
     return [...fullTours, ...others].slice(0, maxVideos)
   }, [videos, maxVideos])
 
-  // Compute primary and its webm source UNCONDITIONALLY before any early returns
-  // to keep hook order stable across renders (avoid conditional hooks).
+  // Compute primary video source
   const [primary] = prioritized
   const primarySrc = primary?.src
-
-  useEffect(() => {
-    if (!primarySrc) {
-      setVideoBlobUrl(null)
-      return
-    }
-
-    let isActive = true
-    const controller = new AbortController()
-    setIsBuffering(true)
-
-    fetch(primarySrc, { signal: controller.signal })
-      .then((res) => {
-        if (!res.ok) throw new Error(`Failed to load video ${primarySrc}`)
-        return res.blob()
-      })
-      .then((blob) => {
-        if (!isActive) return
-        if (objectUrlRef.current) {
-          URL.revokeObjectURL(objectUrlRef.current)
-        }
-        const url = URL.createObjectURL(blob)
-        objectUrlRef.current = url
-        setVideoBlobUrl(url)
-      })
-      .catch((err) => {
-        if (controller.signal.aborted) return
-        console.error('Video fetch error:', err)
-        setVideoBlobUrl(primarySrc) // fallback to direct stream
-      })
-      .finally(() => {
-        if (isActive) setIsBuffering(false)
-      })
-
-    return () => {
-      isActive = false
-      controller.abort()
-      if (objectUrlRef.current) {
-        URL.revokeObjectURL(objectUrlRef.current)
-        objectUrlRef.current = null
-      }
-      setVideoBlobUrl(null)
-    }
-  }, [primarySrc])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const video = videoRef.current
-      if (!video) return
-      if (video.paused || video.ended) return
-      const now = Date.now()
-      const { time, timestamp } = lastProgressRef.current
-      const stagnated = now - timestamp > 3000 && video.currentTime <= time + 0.05
-      if (stagnated) {
-        console.warn('Video stagnated, nudging playback at', video.currentTime)
-        try {
-          video.currentTime = Math.max(0, video.currentTime - 0.2)
-        } catch {}
-        video.play().catch(() => {})
-        lastProgressRef.current = { time: video.currentTime, timestamp: Date.now() }
-      }
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [])
 
   if (videos.length === 0) return null
 
@@ -164,90 +92,27 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   return (
     <section className={`${className}`}>
       <div className="w-full">
-        {/* Premium video player - OPTIMIZED for large MP4 files */}
+        {/* Premium video player - SIMPLIFIED for reliability */}
         <div className="aspect-[16/9] bg-black relative rounded-lg overflow-hidden">
           <video
-            key={videoBlobUrl || primarySrc}
+            key={primarySrc}
             ref={videoRef}
             className="w-full h-full object-contain"
             playsInline
             controls
             preload="auto"
-            crossOrigin="anonymous"
-            // Force basic HTML5 player, disable fancy browser optimizations that might cause early stops
-            controlsList="nodownload"
-            disablePictureInPicture={false}
-            src={videoBlobUrl || primarySrc || ''}
+            src={primarySrc || ''}
             poster={posterFromVideo(primarySrc)}
             onLoadedMetadata={(e) => {
               console.log('Video loaded:', e.currentTarget.duration, 'seconds')
               applyCaptionPlacement(e.currentTarget)
-              lastProgressRef.current = { time: 0, timestamp: Date.now() }
             }}
             onError={(e) => {
               const video = e.currentTarget
               console.error('Video error:', video.error?.code, video.error?.message)
             }}
-            onPause={(e) => {
-              // Aggressive auto-resume for early buffering pauses
-              const v = e.currentTarget
-              // If pause was within first 15s and not user-initiated, force resume
-              if (!userPausedRef.current && v.currentTime > 0 && v.currentTime < 15 && v.readyState >= 2) {
-                console.log('Auto-resuming from early pause at', v.currentTime)
-                setTimeout(() => {
-                  if (!userPausedRef.current) {
-                    v.play().catch(() => {})
-                  }
-                }, 50)
-              }
-            }}
-            onPlay={(e) => {
-              userPausedRef.current = false
-              lastProgressRef.current = { time: e.currentTarget.currentTime, timestamp: Date.now() }
-              setIsBuffering(false)
-            }}
-            onStalled={(e) => {
-              const v = e.currentTarget
-              console.warn('Video stalled at', v.currentTime)
-              // Aggressive recovery: force resume immediately
-              setTimeout(() => {
-                if (v.paused && !userPausedRef.current) {
-                  v.play().catch(() => {})
-                }
-              }, 100)
-              setIsBuffering(true)
-            }}
-            onWaiting={(e) => {
-              const v = e.currentTarget
-              console.warn('Video waiting at', v.currentTime)
-              // Force playback to continue
-              setTimeout(() => {
-                if (v.paused && !userPausedRef.current) {
-                  v.play().catch(() => {})
-                }
-              }, 100)
-              setIsBuffering(true)
-            }}
-            onTimeUpdate={(e) => {
-              lastProgressRef.current = { time: e.currentTarget.currentTime, timestamp: Date.now() }
-              if (!e.currentTarget.paused) {
-                setIsBuffering(false)
-              }
-            }}
-            onEnded={() => {
-              userPausedRef.current = true
-            }}
-            onSeeking={() => { userPausedRef.current = false }}
-            onVolumeChange={() => { /* noop */ }}
-            onClick={(e) => {
-              // Let default controls handle play/pause; detect user pause
-              const v = e.currentTarget
-              userPausedRef.current = v.paused
-            }}
           >
-            {/* MP4 ONLY - maximum reliability */}
-            {videoBlobUrl ? null : primarySrc ? <source src={primarySrc} type="video/mp4" /> : null}
-            {/* Subtitles are optional; don't make them blocking if missing */}
+            <source src={primarySrc} type="video/mp4" />
             {primarySrc ? (
               <track kind="subtitles" src={subtitleFromVideo(primarySrc)} label="English" srcLang="en" default={false} />
             ) : null}
