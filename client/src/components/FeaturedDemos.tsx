@@ -89,10 +89,14 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
 
   // Default: hero variant (single main video, full width, STUNNING presentation)
 
+  // Prefer WebM for smaller file size, fallback to MP4
+  const webmSrc = primarySrc?.replace(/\.mp4$/i, '.webm')
+  const mp4Src = primarySrc
+
   return (
     <section className={`${className}`}>
       <div className="w-full">
-        {/* Premium video player - SIMPLIFIED for reliability */}
+        {/* Premium video player - OPTIMIZED for large files with proper streaming */}
         <div className="aspect-[16/9] bg-black relative rounded-lg overflow-hidden">
           <video
             key={primarySrc}
@@ -100,8 +104,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             className="w-full h-full object-contain"
             playsInline
             controls
-            preload="auto"
-            src={primarySrc || ''}
+            preload="metadata"
             poster={posterFromVideo(primarySrc)}
             onLoadedMetadata={(e) => {
               console.log('Video loaded:', e.currentTarget.duration, 'seconds')
@@ -111,8 +114,13 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
               const video = e.currentTarget
               console.error('Video error:', video.error?.code, video.error?.message)
             }}
+            onCanPlay={(e) => {
+              console.log('Video can play - ready state:', e.currentTarget.readyState)
+            }}
           >
-            <source src={primarySrc} type="video/mp4" />
+            {/* WebM first for smaller file size (15MB vs 81MB) */}
+            {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
+            {mp4Src ? <source src={mp4Src} type="video/mp4" /> : null}
             {primarySrc ? (
               <track kind="subtitles" src={subtitleFromVideo(primarySrc)} label="English" srcLang="en" default={false} />
             ) : null}
