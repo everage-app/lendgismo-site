@@ -61,7 +61,7 @@ async function postToInternal({ url, payload, secret }) {
 }
 
 async function sendEmailViaSendGrid(fields) {
-  const { SENDGRID_KEY, SENDGRID_FROM = 'no-reply@lendgismo.com', SENDGRID_TO = 'sales@lendgismo.com' } = process.env;
+  const { SENDGRID_KEY, SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
   
   if (!SENDGRID_KEY) {
     console.log('SendGrid not configured - skipping email');
@@ -90,7 +90,12 @@ async function sendEmailViaSendGrid(fields) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: SENDGRID_TO }], cc: [{ email: 'brysen@lendgismo.com' }] }],
+        personalizations: [{
+          to: [
+            { email: 'sales@lendgismo.com' },
+            { email: 'brysen@lendgismo.com' }
+          ]
+        }],
         from: { email: SENDGRID_FROM, name: 'Lendgismo Contact Form' },
         reply_to: { email: fields.email, name: `${fields.firstName} ${fields.lastName}`.trim() },
         subject: `New Contact: ${fields.firstName} ${fields.lastName} - ${fields.company}`,
