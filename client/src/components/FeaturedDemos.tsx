@@ -92,14 +92,11 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
 
   // Default: hero variant (single main video, full width, STUNNING presentation)
 
-  // Prefer WebM for smaller file size, fallback to MP4
-  const webmSrcRaw = primarySrc?.replace(/\.mp4$/i, '.webm')
-  const mp4SrcRaw = primarySrc
-  const webmSrc = withVersion(webmSrcRaw)
-  const mp4Src = withVersion(mp4SrcRaw)
-  const poster = withVersion(posterFromVideo(primarySrc))
-
-  // Hint the browser/CDN to preload the smaller WebM asset
+  // Safe version of sources - only apply if we have a primary source
+  const webmSrc = primarySrc ? primarySrc.replace(/\.mp4$/i, '.webm') : null
+  const mp4Src = primarySrc || null
+  
+  // Preload the WebM for faster initial load
   useEffect(() => {
     if (!webmSrc) return
     const link = document.createElement('link')
@@ -126,7 +123,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             playsInline
             controls
             preload="auto"
-            poster={poster}
+            poster={primarySrc ? posterFromVideo(primarySrc) : undefined}
             onLoadedMetadata={(e) => {
               console.log('Video metadata loaded:', e.currentTarget.duration, 'seconds')
               applyCaptionPlacement(e.currentTarget)
@@ -157,7 +154,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
             {mp4Src ? <source src={mp4Src} type="video/mp4" /> : null}
             {primarySrc ? (
-              <track kind="subtitles" src={withVersion(subtitleFromVideo(primarySrc))} label="English" srcLang="en" default={false} />
+              <track kind="subtitles" src={subtitleFromVideo(primarySrc)} label="English" srcLang="en" default={false} />
             ) : null}
             Your browser does not support the video tag.
           </video>
