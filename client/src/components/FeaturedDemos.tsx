@@ -12,6 +12,8 @@ type FeaturedDemosProps = {
 export default function FeaturedDemos({ maxVideos = 2, className = '', variant = 'hero' }: FeaturedDemosProps) {
   const [items, setItems] = useState<ShowcaseItem[]>([])
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [canPlay, setCanPlay] = useState(false)
 
   useEffect(() => {
     fetch('/assets/showcase/manifest.json')
@@ -98,6 +100,16 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
       <div className="w-full">
         {/* Premium video player - OPTIMIZED for large files with proper streaming */}
         <div className="aspect-[16/9] bg-black relative rounded-lg overflow-hidden">
+          {/* Loading spinner overlay */}
+          {isLoading && !canPlay && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-10">
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-12 h-12 border-4 border-brand-500/30 border-t-brand-500 rounded-full animate-spin"></div>
+                <p className="text-sm text-zinc-400">Loading video...</p>
+              </div>
+            </div>
+          )}
+          
           <video
             key={primarySrc}
             ref={videoRef}
@@ -106,16 +118,39 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             controls
             preload="metadata"
             poster={posterFromVideo(primarySrc)}
+            onLoadStart={() => {
+              setIsLoading(true)
+              setCanPlay(false)
+            }}
             onLoadedMetadata={(e) => {
-              console.log('Video loaded:', e.currentTarget.duration, 'seconds')
+              console.log('Video metadata loaded:', e.currentTarget.duration, 'seconds')
               applyCaptionPlacement(e.currentTarget)
+            }}
+            onLoadedData={() => {
+              console.log('Video data loaded')
+              setIsLoading(false)
+            }}
+            onCanPlay={(e) => {
+              console.log('Video can play - ready state:', e.currentTarget.readyState)
+              setCanPlay(true)
+              setIsLoading(false)
+            }}
+            onCanPlayThrough={() => {
+              console.log('Video can play through without buffering')
+              setCanPlay(true)
+              setIsLoading(false)
+            }}
+            onWaiting={() => {
+              console.log('Video buffering...')
+              setIsLoading(true)
+            }}
+            onPlaying={() => {
+              setIsLoading(false)
             }}
             onError={(e) => {
               const video = e.currentTarget
               console.error('Video error:', video.error?.code, video.error?.message)
-            }}
-            onCanPlay={(e) => {
-              console.log('Video can play - ready state:', e.currentTarget.readyState)
+              setIsLoading(false)
             }}
           >
             {/* WebM first for smaller file size (15MB vs 81MB) */}
