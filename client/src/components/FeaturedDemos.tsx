@@ -94,8 +94,11 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   // Default: hero variant (single main video, full width, STUNNING presentation)
 
   // Prefer WebM for smaller file size, fallback to MP4
-  const webmSrc = primarySrc?.replace(/\.mp4$/i, '.webm')
-  const mp4Src = primarySrc
+  const webmSrcRaw = primarySrc?.replace(/\.mp4$/i, '.webm')
+  const mp4SrcRaw = primarySrc
+  const webmSrc = withVersion(webmSrcRaw)
+  const mp4Src = withVersion(mp4SrcRaw)
+  const poster = withVersion(posterFromVideo(primarySrc))
 
   // Hint the browser/CDN to preload the smaller WebM asset
   useEffect(() => {
@@ -133,7 +136,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             playsInline
             controls
             preload="auto"
-            poster={posterFromVideo(primarySrc)}
+            poster={poster}
             onLoadStart={() => {
               setIsLoading(true)
               setCanPlay(false)
@@ -187,7 +190,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
             {mp4Src ? <source src={mp4Src} type="video/mp4" /> : null}
             {primarySrc ? (
-              <track kind="subtitles" src={subtitleFromVideo(primarySrc)} label="English" srcLang="en" default={false} />
+              <track kind="subtitles" src={withVersion(subtitleFromVideo(primarySrc))} label="English" srcLang="en" default={false} />
             ) : null}
             Your browser does not support the video tag.
           </video>
@@ -229,6 +232,19 @@ function subtitleFromVideo(src?: string) {
   // By convention, pair a WebVTT file next to the video: demo_full_tour.mp4 -> demo_full_tour_en.vtt
   const base = src.replace(/\.(webm|mp4)$/i, '')
   return `${base}_en.vtt`
+}
+
+// Extract version hint from showcase directory (e.g., /assets/showcase/20251030-0830/...) => v=20251030-0830
+function versionFromSrc(src?: string) {
+  if (!src) return 'v1'
+  const m = src.match(/showcase\/(.*?)\//)
+  return m?.[1] || 'v1'
+}
+
+function withVersion(url?: string) {
+  if (!url) return ''
+  const v = versionFromSrc(url)
+  return url.includes('?') ? `${url}&v=${v}` : `${url}?v=${v}`
 }
 
 function prettyVideoTitle(src: string, fallback?: string) {
