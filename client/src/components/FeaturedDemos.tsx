@@ -47,7 +47,18 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   const [primary] = prioritized
   const primarySrc = primary?.src
 
-  if (videos.length === 0) return null
+  // Don't break the page if no videos - show fallback or placeholder
+  if (!primarySrc && variant === 'hero') {
+    return (
+      <section className={`${className}`}>
+        <div className="w-full aspect-[16/9] bg-gradient-to-br from-brand-950 to-black rounded-lg flex items-center justify-center border border-white/10">
+          <p className="text-zinc-400">Loading demo video...</p>
+        </div>
+      </section>
+    )
+  }
+
+  if (videos.length === 0 && variant === 'grid') return null
 
   if (variant === 'grid') {
     return (
