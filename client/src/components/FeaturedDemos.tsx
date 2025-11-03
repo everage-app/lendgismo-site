@@ -14,6 +14,8 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [canPlay, setCanPlay] = useState(false)
+  // Track last progress to detect early stalls (<5s)
+  const lastTickRef = useRef<{ t: number; ts: number }>({ t: 0, ts: 0 })
 
   useEffect(() => {
     fetch('/assets/showcase/manifest.json')
@@ -95,6 +97,20 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   const webmSrc = primarySrc?.replace(/\.mp4$/i, '.webm')
   const mp4Src = primarySrc
 
+  // Hint the browser/CDN to preload the smaller WebM asset
+  useEffect(() => {
+    if (!webmSrc) return
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'video'
+    link.href = webmSrc
+    link.type = 'video/webm'
+    document.head.appendChild(link)
+    return () => {
+      try { document.head.removeChild(link) } catch {}
+    }
+  }, [webmSrc])
+
   return (
     <section className={`${className}`}>
       <div className="w-full">
@@ -116,7 +132,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             className="w-full h-full object-contain"
             playsInline
             controls
-            preload="metadata"
+            preload="auto"
             poster={posterFromVideo(primarySrc)}
             onLoadStart={() => {
               setIsLoading(true)
@@ -125,6 +141,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             onLoadedMetadata={(e) => {
               console.log('Video metadata loaded:', e.currentTarget.duration, 'seconds')
               applyCaptionPlacement(e.currentTarget)
+              lastTickRef.current = { t: 0, ts: Date.now() }
             }}
             onLoadedData={() => {
               console.log('Video data loaded')
@@ -146,6 +163,19 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
             }}
             onPlaying={() => {
               setIsLoading(false)
+            }}
+            onTimeUpdate={(e) => {
+              const v = e.currentTarget
+              const now = Date.now()
+              const { t, ts } = lastTickRef.current
+              if (v.currentTime <= 5) {
+                // If we haven't advanced for > 2000ms within the first 5 seconds, nudge forward slightly
+                if (Math.abs(v.currentTime - t) < 0.02 && now - ts > 2000 && !v.paused) {
+                  try { v.currentTime = Math.min(5, v.currentTime + 0.15) } catch {}
+                  v.play().catch(() => {})
+                }
+              }
+              lastTickRef.current = { t: v.currentTime, ts: now }
             }}
             onError={(e) => {
               const video = e.currentTarget
