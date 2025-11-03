@@ -3,14 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="description" content="Own the code. Ship faster. A production-ready lender platform foundation built on Next.js + TypeScript. $150k perpetual license.">
-    <title>Lendgismo · Vixo V3 — Asset-Based Lender Codebase</title>
+    <meta name="description" content="Production‑ready lending platform codebase. Full source code, docs, demo data, RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid). One‑time code handoff. Deploy fast on Netlify, Vercel, or Azure.">
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="canonical" href="https://lendgismo.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="fetch" href="/docs/search-index.json" crossorigin>
+  <title>Lendgismo — Lending Platform Codebase (React/TypeScript, RBAC, Plaid, Stripe)</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lendgismo" />
+    <meta property="og:title" content="Lendgismo — Lending Platform Codebase" />
+    <meta property="og:description" content="Own the code. Ship faster. Production‑ready lending platform with RBAC, CSV onboarding, analytics, and Plaid/Stripe/Twilio/SendGrid integrations." />
+    <meta property="og:url" content="https://lendgismo.com/" />
+    <meta property="og:image" content="/assets/showcase/20251023-0938/02_dashboard--desktop.png" />
+    <meta property="og:locale" content="en_US" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lendgismo — Lending Platform Codebase" />
+    <meta name="twitter:description" content="Own the code. Ship faster. Production‑ready lending platform with RBAC, CSV onboarding, analytics, and Plaid/Stripe/Twilio/SendGrid integrations." />
+    <meta name="twitter:image" content="/assets/showcase/20251023-0938/02_dashboard--desktop.png" />
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="root"></div>
+    <!-- Netlify Forms registration for SPA: ensures the 'contact' form exists at build time -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="role" />
+      <input type="text" name="interest" />
+      <textarea name="message"></textarea>
+    </form>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Lendgismo",
+        "url": "https://lendgismo.com/",
+        "logo": "/favicon.svg",
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Lendgismo",
+        "url": "https://lendgismo.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://lendgismo.com/docs/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Lendgismo Lending Platform Codebase",
+        "brand": {
+          "@type": "Brand",
+          "name": "Lendgismo"
+        },
+        "description": "Production‑ready lending platform codebase with RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid). One‑time code handoff.",
+        "url": "https://lendgismo.com/",
+        "offers": {
+          "@type": "Offer",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "USD"
+          },
+          "availability": "https://schema.org/InStock",
+          "url": "https://lendgismo.com/#contact"
+        }
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

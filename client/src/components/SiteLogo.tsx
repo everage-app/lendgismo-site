@@ -1,5 +1,7 @@
 import { Link } from "wouter";
-import logoWhite from "@assets/lendgismo-logo-white.png";
+// Use the attached brand logo for headers/footers (keep favicon as-is elsewhere)
+// Import as URL to ensure optimal bundling and caching (transparent background version)
+import logoUrl from "@assets/lendgismo-logo-white-transparent.svg?url";
 
 type Props = {
   className?: string;
@@ -18,20 +20,20 @@ export default function SiteLogo({
   linkTestId = "link-home",
   imgTestId = "img-logo",
 }: Props) {
-  const height = size;
-  const width = Math.round((size * 408) / 150);
+  const height = size; // treat `size` as the intended pixel height
   const baseClasses = "inline-flex items-center select-none";
   const glowClasses = glow ? "lglogo-glow" : "";
+  const logoSrc = logoUrl;
 
   return (
     <Link href="/" aria-label={ariaLabel} data-testid={linkTestId}>
       <div className={`${baseClasses} ${glowClasses} ${className}`}>
         <img
-          src={logoWhite}
+          src={logoSrc}
           alt="Lendgismo"
           className="logo-img"
-          width={width}
-          height={height}
+          style={{ height: `${height}px`, width: "auto" }}
+          decoding="async"
           data-testid={imgTestId}
         />
       </div>

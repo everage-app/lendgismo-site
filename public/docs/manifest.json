@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "__PROGRESS_REPORT",
+    "file": "__PROGRESS_REPORT.md",
+    "title": "Documentation Generation - Progress Report",
+    "updatedAt": "2025-10-17T20:23:02.784Z",
+    "hidden": false
+  },
+  {
+    "slug": "_DOC_TEMPLATE",
+    "file": "_DOC_TEMPLATE.md",
+    "title": "<Title>",
+    "updatedAt": "2025-10-17T16:44:59.139Z",
+    "hidden": true
+  },
+  {
+    "slug": "_STYLE_GUIDE",
+    "file": "_STYLE_GUIDE.md",
+    "title": "Docs Style Guide (Engineers)",
+    "updatedAt": "2025-10-17T16:44:58.990Z",
+    "hidden": false
+  },
+  {
+    "slug": "00_repo-inventory",
+    "file": "00_repo-inventory.md",
+    "title": "Repository Inventory",
+    "updatedAt": "2025-10-17T12:40:21.197Z",
+    "hidden": false
+  },
+  {
+    "slug": "10_architecture",
+    "file": "10_architecture.md",
+    "title": "System Architecture",
+    "updatedAt": "2025-10-17T16:44:59.289Z",
+    "hidden": false
+  },
+  {
+    "slug": "11_architecture-diagrams",
+    "file": "11_architecture-diagrams.md",
+    "title": "Architecture Diagrams",
+    "updatedAt": "2025-10-17T12:40:21.178Z",
+    "hidden": false
+  },
+  {
+    "slug": "12_rbac-matrix",
+    "file": "12_rbac-matrix.md",
+    "title": "Role-Based Access Control (RBAC) Matrix",
+    "updatedAt": "2025-10-17T12:40:21.176Z",
+    "hidden": false
+  },
+  {
+    "slug": "20_data-model",
+    "file": "20_data-model.md",
+    "title": "Data Model",
+    "updatedAt": "2025-10-17T12:40:21.192Z",
+    "hidden": false
+  },
+  {
+    "slug": "22_seed-and-migrations",
+    "file": "22_seed-and-migrations.md",
+    "title": "Database Seeds & Migrations",
+    "updatedAt": "2025-10-17T12:40:21.207Z",
+    "hidden": false
+  },
+  {
+    "slug": "30_configuration",
+    "file": "30_configuration.md",
+    "title": "Configuration Reference",
+    "updatedAt": "2025-10-17T16:46:32.179Z",
+    "hidden": false
+  },
+  {
+    "slug": "31_secrets-and-keys",
+    "file": "31_secrets-and-keys.md",
+    "title": "Secrets and API Keys",
+    "updatedAt": "2025-10-17T12:40:21.184Z",
+    "hidden": false
+  },
+  {
+    "slug": "40_features-overview",
+    "file": "40_features-overview.md",
+    "title": "Features Overview",
+    "updatedAt": "2025-10-23T15:09:28.727Z",
+    "hidden": false
+  },
+  {
+    "slug": "40_integrations",
+    "file": "40_integrations.md",
+    "title": "Integrations Overview",
+    "updatedAt": "2025-10-17T21:18:36.093Z",
+    "hidden": false
+  },
+  {
+    "slug": "50_api-quickstart",
+    "file": "50_api-quickstart.md",
+    "title": "API Quick Start Guide",
+    "updatedAt": "2025-10-17T21:10:24.378Z",
+    "hidden": false
+  },
+  {
+    "slug": "60_local-dev",
+    "file": "60_local-dev.md",
+    "title": "Local Development Guide",
+    "updatedAt": "2025-10-23T15:09:28.759Z",
+    "hidden": false
+  },
+  {
+    "slug": "99_docs-readiness-report",
+    "file": "99_docs-readiness-report.md",
+    "title": "Documentation Readiness Report",
+    "updatedAt": "2025-10-17T20:23:02.829Z",
+    "hidden": false
+  },
+  {
+    "slug": "account-settings-architecture",
+    "file": "account-settings-architecture.md",
+    "title": "Account Settings — Architecture and Wiring (Lender App)",
+    "updatedAt": "2025-10-17T12:40:21.195Z",
+    "hidden": false
+  },
+  {
+    "slug": "account-settings-v2",
+    "file": "account-settings-v2.md",
+    "title": "Account Settings Documentation",
+    "updatedAt": "2025-10-17T12:40:21.174Z",
+    "hidden": false
+  },
+  {
+    "slug": "notifications-page",
+    "file": "notifications-page.md",
+    "title": "Notifications Page",
+    "updatedAt": "2025-10-17T12:40:21.201Z",
+    "hidden": false
+  },
+  {
+    "slug": "README",
+    "file": "README.md",
+    "title": "Lendgismo Developer Docs",
+    "updatedAt": "2025-10-17T16:44:58.845Z",
+    "hidden": false
+  }
+]

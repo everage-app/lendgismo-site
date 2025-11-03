@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "brand": "Lendgismo",
+    "style": "dark",
+    "viewport": { "width": 1440, "height": 900 },
+    "mobileViewport": { "width": 390, "height": 844 }
+  },
+  "base": {
+    "app": "http://localhost:5000",
+    "docs": "http://localhost:5100"
+  },
+  "auth": {
+    "origin": "app",
+    "loginPath": "/login",
+    "emailSelector": "input[type=email]",
+    "passwordSelector": "input[type=password]",
+    "submitSelector": "button[type=submit]",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "postLoginWait": { "state": "networkidle", "delayMs": 400 }
+  },
+  "screenshots": [
+    { "name": "01_home_app", "url": "/", "origin": "app", "wait": { "state": "load", "delayMs": 400 } },
+    { "name": "02_dashboard", "url": "/dashboard", "origin": "app", "wait": { "state": "networkidle", "delayMs": 400 } },
+    { "name": "03_analytics", "url": "/analytics", "origin": "app", "wait": { "state": "networkidle", "delayMs": 400 } },
+    { "name": "04_borrowers", "url": "/borrowers", "origin": "app", "wait": { "state": "networkidle", "delayMs": 400 } },
+    { "name": "05_applications", "url": "/applications", "origin": "app", "wait": { "state": "networkidle", "delayMs": 400 } },
+    { "name": "06_onboarding", "url": "/onboarding", "origin": "app", "wait": { "state": "domcontentloaded", "delayMs": 400 } },
+    { "name": "07_settings", "origin": "app", "candidates": ["/settings", "/account", "/account-settings", "/lender/settings"], "wait": { "state": "networkidle", "delayMs": 400 } },
+  { "name": "10_docs_home", "origin": "docs", "candidates": ["/docs", "/docs/"], "wait": { "state": "domcontentloaded", "delayMs": 300 } },
+  { "name": "11_docs_search", "origin": "docs", "candidates": ["/docs", "/docs/"], "wait": { "state": "domcontentloaded", "delayMs": 300 }, "injectSearch": "loan" }
+  ],
+  "videos": [
+    { "name": "demo_full_tour_40s", "steps": [
+      { "origin": "app", "url": "/dashboard", "wait": { "state": "networkidle", "delayMs": 2000 } },
+      { "origin": "app", "action": "scrollBy", "y": 400, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "scrollBy", "y": -400, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "pause", "ms": 800 },
+      { "origin": "app", "action": "clickText", "text": "Analytics", "fallbackHref": "/analytics", "wait": { "state": "networkidle", "delayMs": 1800 } },
+      { "origin": "app", "action": "scrollBy", "y": 500, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "scrollBy", "y": -300, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "pause", "ms": 800 },
+      { "origin": "app", "action": "clickText", "text": "Borrowers", "fallbackHref": "/borrowers", "wait": { "state": "networkidle", "delayMs": 1800 } },
+      { "origin": "app", "action": "scrollBy", "y": 400, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "scrollBy", "y": -250, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "clickText", "text": "View|Details|Open|Profile", "wait": { "state": "domcontentloaded", "delayMs": 900 } },
+      { "origin": "app", "action": "pause", "ms": 600 },
+      { "origin": "app", "action": "pause", "ms": 800 },
+      { "origin": "app", "action": "clickText", "text": "Applications", "fallbackHref": "/applications", "wait": { "state": "networkidle", "delayMs": 1800 } },
+      { "origin": "app", "action": "scrollBy", "y": 400, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "scrollBy", "y": -250, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "clickText", "text": "View|Details|Open", "wait": { "state": "domcontentloaded", "delayMs": 900 } },
+      { "origin": "app", "action": "pause", "ms": 600 },
+      { "origin": "app", "action": "pause", "ms": 800 },
+      { "origin": "app", "action": "clickText", "text": "Account Settings|Settings", "fallbackHref": "/settings", "wait": { "state": "networkidle", "delayMs": 1800 } },
+      { "origin": "app", "url": "/settings", "wait": { "state": "networkidle", "delayMs": 1200 } },
+      { "origin": "app", "action": "scrollBy", "y": 500, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "scrollBy", "y": 500, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "scrollBy", "y": -1000, "wait": { "state": "domcontentloaded", "delayMs": 700 } },
+      { "origin": "app", "action": "pause", "ms": 1500 }
+    ]},
+    { "name": "demo_onboarding_flow", "steps": [
+      { "origin": "app", "url": "/onboarding", "wait": { "state": "domcontentloaded", "delayMs": 2200 } },
+      { "origin": "app", "action": "scrollBy", "y": 400, "wait": { "state": "domcontentloaded", "delayMs": 900 } },
+      { "origin": "app", "action": "clickText", "text": "Get Started|Start Onboarding|Begin", "fallbackHref": "/onboarding", "wait": { "state": "domcontentloaded", "delayMs": 1500 } },
+      { "origin": "app", "action": "clickText", "text": "Next|Continue|Save and Continue", "wait": { "state": "domcontentloaded", "delayMs": 1500 } },
+      { "origin": "app", "action": "scrollBy", "y": 300, "wait": { "state": "domcontentloaded", "delayMs": 900 } },
+      { "origin": "app", "action": "clickText", "text": "Next|Continue", "wait": { "state": "domcontentloaded", "delayMs": 1500 } },
+      { "origin": "app", "action": "clickText", "text": "Submit|Finish|Complete", "wait": { "state": "networkidle", "delayMs": 2000 } },
+      { "origin": "app", "action": "pause", "ms": 1000 },
+      { "origin": "app", "action": "clickText", "text": "Applications", "fallbackHref": "/applications", "wait": { "state": "networkidle", "delayMs": 1500 } },
+      { "origin": "app", "action": "clickText", "text": "Borrowers", "fallbackHref": "/borrowers", "wait": { "state": "networkidle", "delayMs": 1500 } },
+      { "origin": "app", "action": "clickText", "text": "Dashboard", "fallbackHref": "/dashboard", "wait": { "state": "networkidle", "delayMs": 1500 } }
+    ]}
+  ]
+}

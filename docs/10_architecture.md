@@ -4,6 +4,25 @@
 **Version**: 1.0.0  
 **Status**: Production
 
+## At a glance
+- Audience: Architects and senior developers
+- Repo areas: `client/`, `server/` (planned), `shared/` (planned)
+- Key docs: `11_architecture-diagrams.md`, `12_rbac-matrix.md`
+- Related: `20_data-model.md`, `21_erd.mmd`
+
+## Quick links
+- [High-Level Architecture](#high-level-architecture)
+- [Request Flow](#request-flow)
+- [Component Architecture](#component-architecture)
+- [Security Architecture](#security-architecture)
+- [Tenancy Model](#tenancy-model)
+- [Scalability Considerations](#scalability-considerations)
+- [Deployment Architecture](#deployment-architecture)
+- [Monitoring & Observability](#monitoring--observability)
+- [Technology Decisions](#technology-decisions)
+- [Future Architecture Enhancements](#future-architecture-enhancements)
+- [References](#references)
+
 ---
 
 ## Executive Summary

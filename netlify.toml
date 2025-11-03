@@ -1,11 +1,75 @@
 [build]
-  command = "npm install && npm run build"
-  publish = "dist/public"
+  command = "npm install && npm run docs:mirror && npm run showcase:gen && npm run build"
+  publish = "public"
 
 [build.environment]
   NODE_VERSION = "20"
 
+# Local dev: run Vite and proxy Functions
+[dev]
+  command = "vite --port 5100 --strictPort"
+  port = 5100
+  targetPort = 5100
+  publish = "public"
+
+# Clean API routes mapped to Netlify Functions
+[[redirects]]
+  from = "/api/plaid/link-token"
+  to = "/.netlify/functions/plaid-link-token"
+  status = 200
+
+[[redirects]]
+  from = "/api/plaid/exchange-token"
+  to = "/.netlify/functions/plaid-exchange-token"
+  status = 200
+
+[[redirects]]
+  from = "/api/stripe/payment-intent"
+  to = "/.netlify/functions/stripe-payment-intent"
+  status = 200
+
+[[redirects]]
+  from = "/api/stripe/webhook"
+  to = "/.netlify/functions/stripe-webhook"
+  status = 200
+
+[[redirects]]
+  from = "/api/twilio/send"
+  to = "/.netlify/functions/twilio-send"
+  status = 200
+
+[[redirects]]
+  from = "/api/sendgrid/send"
+  to = "/.netlify/functions/sendgrid-send"
+  status = 200
+
+[[redirects]]
+  from = "/api/csv/upload"
+  to = "/.netlify/functions/csv-upload"
+  status = 200
+
+[[redirects]]
+  from = "/api/integrations/status"
+  to = "/.netlify/functions/integrations-status"
+  status = 200
+
+[[redirects]]
+  from = "/api/contact/email"
+  to = "/.netlify/functions/contact-email"
+  status = 200
+
+# SPA fallback must come last
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/"
+  status = 301
+
+[[redirects]]
+  from = "/doc"
+  to = "/docs/"
+  status = 301

@@ -1,0 +1,16 @@
+{
+  "when": "2025-10-17T18:33:30.947Z",
+  "files": [
+    {
+      "file": "50_api-quickstart.md",
+      "findings": [
+        {
+          "rule": "generic-http-keys",
+          "desc": "HTTP URL with key param",
+          "index": 10132,
+          "snippet": "viteToken\": \"abc123def456\", \"inviteLink\": \"http://localhost:5000/invite/accept?token=abc123def456\", \"expiresAt\": \"2025-02-15T10:00:00Z"
+        }
+      ]
+    }
+  ]
+}

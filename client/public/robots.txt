@@ -1,0 +1,5 @@
+# Robots.txt for Lendgismo
+User-agent: *
+Allow: /
+
+Sitemap: https://lendgismo.com/sitemap.xml

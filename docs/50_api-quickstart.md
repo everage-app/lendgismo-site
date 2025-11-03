@@ -4,6 +4,27 @@
 **API Version**: v1.0.0  
 **Base URL**: `https://app.lendgismo.com` (production) or `http://localhost:5000` (local)
 
+## At a glance
+- Auth: Session cookie after POST /api/login (see examples)
+- Formats: JSON requests/responses; multipart for uploads
+- Third-party: Plaid (banking), Stripe (payments), Twilio (SMS), SendGrid (email)
+- Rate limits: 100 req/15m; pagination via limit/offset
+- Roles: Lender vs Borrower access on certain endpoints
+
+## Quick links
+- [Authentication](#authentication)
+- [Loan Applications](#loan-applications)
+- [Documents](#documents)
+- [Borrowers](#borrowers-lenders-only)
+- [Invites](#invites-lenders-only)
+- [Dashboard](#dashboard)
+- [Errors](#error-handling)
+- [Rate Limiting](#rate-limiting)
+- [Pagination](#pagination)
+- [Postman Collection](#postman-collection)
+- [Full API Reference](#full-api-reference)
+- [Integrations Overview](/docs/40_integrations)
+
 ---
 
 ## Getting Started
@@ -737,6 +758,33 @@ Import this collection into Postman for easy testing:
 ---
 
 ## Full API Reference
+
+---
+
+## Third-Party Integrations (Summary)
+
+See the full guide: [Integrations Overview](/docs/40_integrations).
+
+Plaid
+
+- POST /api/plaid/link-token — create Link token
+- POST /api/plaid/exchange-token — exchange public_token
+- GET /api/plaid/accounts/:id — account metadata
+- GET /api/plaid/transactions/:id — transactions
+
+Stripe
+
+- POST /api/stripe/payment-intent — create a payment intent
+- POST /api/stripe/webhook — webhook handler
+
+Twilio
+
+- POST /api/notifications/sms — send SMS
+
+SendGrid
+
+- POST /api/notifications/email — send email
+
 
 For complete API documentation with all endpoints, request/response schemas, and examples:
 

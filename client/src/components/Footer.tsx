@@ -1,3 +1,4 @@
+import type React from 'react'
 import { Link } from "wouter";
 import SiteLogo from "./SiteLogo";
 
@@ -31,7 +32,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-zinc-400 max-w-sm">
-              Production-ready lender platform foundation. Own the code, ship faster.
+              Production‑ready lending platform foundation. Full source code, docs & diagrams, demo data, and a live
+              handoff. Multi‑tenant RBAC, CSV onboarding, analytics, and first‑class integrations (Plaid, Stripe,
+              Twilio, SendGrid). Deploy anywhere: AWS, Azure, Google Cloud, or any modern cloud platform.
             </p>
           </div>
           
@@ -39,6 +42,17 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm text-zinc-400">
+              <li>
+                <a
+                  href="https://platform.lendgismo.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                  data-testid="link-footer-platform"
+                >
+                  Try the App
+                </a>
+              </li>
               <li>
                 <a href="#features" onClick={(e) => scrollToSection(e, '#features')} className="hover:text-white transition" data-testid="link-footer-features">
                   Features
@@ -50,12 +64,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/overview" className="hover:text-white transition" data-testid="link-footer-overview">
-                  Overview
-                </Link>
+              <Link href="/overview" className="hover:text-white transition" data-testid="link-footer-overview">
+                Overview
+              </Link>
               </li>
               <li>
-                <a href="/docs/" className="hover:text-white transition" data-testid="link-footer-documentation">
+                <a href="/docs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition" data-testid="link-footer-documentation">
                   Documentation
                 </a>
               </li>
@@ -71,8 +85,13 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-zinc-400">
-              <li><a href="#" className="hover:text-white transition" data-testid="link-footer-about">About</a></li>
-              <li><a href="#" className="hover:text-white transition" data-testid="link-footer-privacy">Privacy</a></li>
+              <li><a href="/legal/privacy" className="hover:text-white transition" data-testid="link-footer-privacy">Privacy</a></li>
+              <li><a href="/legal/privacy-choices" className="hover:text-white transition" data-testid="link-footer-privacy-choices">Your Privacy Choices</a></li>
+              <li><a href="/legal/terms" className="hover:text-white transition" data-testid="link-footer-terms-menu">Terms</a></li>
+              <li><a href="/legal/license" className="hover:text-white transition" data-testid="link-footer-license-menu">License</a></li>
+              <li><a href="/legal/dmca" className="hover:text-white transition" data-testid="link-footer-dmca">DMCA</a></li>
+              <li><a href="/legal/dpa" className="hover:text-white transition" data-testid="link-footer-dpa">DPA</a></li>
+              <li><a href="/legal/cookies" className="hover:text-white transition" data-testid="link-footer-cookies">Cookies</a></li>
             </ul>
           </div>
         </div>
@@ -82,9 +101,13 @@ export default function Footer() {
             © {new Date().getFullYear()} Lendgismo. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm text-zinc-400">
-            <a href="#" className="hover:text-white transition" data-testid="link-footer-terms">Terms</a>
-            <a href="#" className="hover:text-white transition" data-testid="link-footer-privacy-link">Privacy</a>
-            <a href="#" className="hover:text-white transition" data-testid="link-footer-license">License</a>
+            <a href="/legal/terms" className="hover:text-white transition" data-testid="link-footer-terms">Terms</a>
+            <a href="/legal/privacy" className="hover:text-white transition" data-testid="link-footer-privacy-link">Privacy</a>
+            <a href="/legal/privacy-choices" className="hover:text-white transition" data-testid="link-footer-privacy-choices-inline">Your Privacy Choices</a>
+            <a href="/legal/license" className="hover:text-white transition" data-testid="link-footer-license">License</a>
+            <a href="/legal/dmca" className="hover:text-white transition" data-testid="link-footer-dmca-inline">DMCA</a>
+            <a href="/legal/dpa" className="hover:text-white transition" data-testid="link-footer-dpa-inline">DPA</a>
+            <a href="/legal/cookies" className="hover:text-white transition" data-testid="link-footer-cookies-inline">Cookies</a>
           </div>
         </div>
       </div>

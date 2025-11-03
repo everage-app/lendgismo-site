@@ -3,6 +3,21 @@
 **Last Updated**: October 16, 2025  
 **Configuration Method**: Environment Variables (.env)
 
+## At a glance
+- Envs: `.env.local` (dev), `.env.staging`, `.env.production`
+- Required: `DATABASE_URL`, `SESSION_SECRET`
+- Security: Prefer a secrets manager in production
+
+## Quick links
+- [Environment Variables](#environment-variables)
+- [Environment-Specific Configuration](#environment-specific-configuration)
+- [Secrets Management](#secrets-management)
+- [Validation](#validation)
+- [Runtime Configuration](#runtime-configuration)
+- [Configuration Best Practices](#configuration-best-practices)
+- [Troubleshooting](#troubleshooting)
+- [Configuration Checklist](#configuration-checklist)
+
 ---
 
 ## Environment Variables

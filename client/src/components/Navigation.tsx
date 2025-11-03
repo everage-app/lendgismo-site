@@ -1,21 +1,27 @@
+import type React from "react";
 import { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import SiteLogo from "./SiteLogo";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const element = document.querySelector(id);
+    const hash = id.startsWith('#') ? id : `#${id}`;
+    const element = document.querySelector(hash);
     if (element) {
+      // Smooth in-page scroll
+      e.preventDefault();
       const offset = 80;
       const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    } else {
+      // Fallback: navigate to the homepage anchor if the section isn't on this page
+      // This ensures header links always work from any route.
+      const target = `/${hash}`;
+      window.location.href = target;
       setMobileMenuOpen(false);
     }
   };
@@ -56,6 +62,20 @@ export default function Navigation() {
             <Link href="/overview" className="text-sm text-zinc-300 hover:text-white transition-colors" data-testid="link-overview">
               Overview
             </Link>
+            <a href="/docs" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-300 hover:text-white transition-colors" data-testid="link-docs">
+              Docs
+            </a>
+            <a
+              href="https://platform.lendgismo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1"
+              data-testid="link-platform"
+              title="Open the live platform in a new tab"
+            >
+              Try the App
+              <ExternalLink size={14} />
+            </a>
             <a 
               href="#contact" 
               onClick={(e) => scrollToSection(e, '#contact')}
@@ -109,6 +129,20 @@ export default function Navigation() {
             <Link href="/overview" className="block text-sm text-zinc-300 hover:text-white transition-colors py-2" data-testid="link-mobile-overview">
               Overview
             </Link>
+            <a href="/docs" target="_blank" rel="noopener noreferrer" className="block text-sm text-zinc-300 hover:text-white transition-colors py-2" data-testid="link-mobile-docs">
+              Docs
+            </a>
+            <a 
+              href="https://platform.lendgismo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm text-zinc-300 hover:text-white transition-colors py-2 inline-flex items-center gap-1"
+              data-testid="link-mobile-platform"
+              title="Open the live platform in a new tab"
+            >
+              Try the App
+              <ExternalLink size={14} />
+            </a>
             <a 
               href="#contact" 
               onClick={(e) => scrollToSection(e, '#contact')}

@@ -1,0 +1,39 @@
+Welcome to Lendgismo — a complete, zero‑code asset‑based lending platform that you fully own.
+
+Let’s walk through the experience end‑to‑end.
+
+We’ll start with the landing pages. Use these out of the box or plug in your own website and keep our login — your choice.
+
+Now let’s sign in. You can use demo credentials, or sign up and try it live. Multi‑factor is built‑in using your own Twilio and SendGrid keys.
+
+After sign‑in you land on the dashboard. Here you’ll see analytics, applications in flight, portfolio performance and quick actions.
+
+Open any application to review the details, approve or decline, and collaborate with your team. Borrowers are guided through a streamlined invite flow to upload files and securely link bank data with Plaid — just add your Plaid keys.
+
+As applications move forward, convert them into borrowers and monitor clients over time. View documents, preview, download or remove them as needed.
+
+Tasks help your team stay on track. Use the Kanban board to assign owners, set due dates and move work forward.
+
+Reporting is flexible: generate on‑demand or schedule recurring reports for anything in the platform.
+
+Analytics break down portfolio health, risk, benchmarks and projections with clean, informative charts.
+
+In Account Settings, manage users and fine‑grained permissions. Two‑factor security is available using your own provider keys. Billing integrates with Stripe if you’d like to invoice clients.
+
+Customize branding — logos, colors and landing options — so everything matches your identity.
+
+Add users, choose Admin or User roles, and give each person exactly the access they need.
+
+API Keys centralize your credentials for Plaid, Twilio, SendGrid and Stripe. Add your keys once and you’re set.
+
+The Activity Log shows what’s happening across the platform so Admins get the full picture while individual users see only their own work.
+
+Notifications surface important events, and global search lets you jump to any borrower in seconds.
+
+There’s also a guided tour you can run anytime to explore the app at your pace.
+
+Everything you just saw can be fully branded and configured for your business.
+
+This is Lendgismo. You own this code. When you’re ready, request a handoff and we’ll get you live.
+
+Visit lendgismo.com to learn more or to schedule a full demo.

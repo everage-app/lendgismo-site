@@ -3,6 +3,22 @@
 **Last Updated**: October 16, 2025  
 **Target Audience**: Developers
 
+## At a glance
+- Node 20.x; npm 10.x; VS Code recommended
+- Frontend: Vite dev at http://localhost:5100
+- Backend: Express at http://localhost:5000 (planned)
+- Database: SQLite for dev; Postgres for prod
+
+## Quick links
+- [Prerequisites](#prerequisites)
+- [Initial Setup](#initial-setup)
+- [Development Workflow](#development-workflow)
+- [Database Tools](#database-tools)
+- [Testing](#testing)
+- [Troubleshooting](#troubleshooting)
+- [Development Tips](#development-tips)
+- [Quick Commands Reference](#quick-commands-reference)
+
 ---
 
 ## Prerequisites
@@ -100,19 +116,18 @@ npm run db:seed
 npm run dev
 ```
 
-**Expected output**:
+**Expected output (Frontend docs UI)**:
 ```
-Server running on http://localhost:5000
-Database: SQLite (file:./test.db)
-Environment: development
-Press Ctrl+C to stop
+VITE v5.x  ready in Xs
+➜  Local:   http://localhost:5100/
+➜  Network: http://<your-ip>:5100/
 ```
 
 ### 6. Open Browser
 
 Navigate to:
-- **Frontend**: `http://localhost:5173` (Vite dev server)
-- **Backend**: `http://localhost:5000` (Express API)
+- Frontend (Docs UI): `http://localhost:5100` (Vite dev server)
+- Backend API (if running separately): `http://localhost:5000`
 
 **Demo Credentials**:
 - Email: `admin@example.com`
@@ -369,33 +384,26 @@ export function MyPage() {
 }
 ```
 
-### Add a New Route
+### Add a New Route (Wouter)
 
-1. **Define route** in `client/src/App.tsx`:
+1. Define route in `client/src/App.tsx` (Wouter):
 
 ```typescript
 // client/src/App.tsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'wouter'
 import { MyPage } from './pages/MyPage'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* ... existing routes ... */}
-        <Route path="/my-page" element={<MyPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Switch>
+      {/* ... existing routes ... */}
+      <Route path="/my-page" component={MyPage} />
+    </Switch>
   )
 }
-```
 
-2. **Navigate**:
-
-```typescript
-import { Link } from 'react-router-dom'
-
-<Link to="/my-page">Go to My Page</Link>
+// Navigate
+<Link href="/my-page">Go to My Page</Link>
 ```
 
 ---
@@ -448,18 +456,16 @@ console.trace('Stack trace')
 3. **Console** tab → View `console.log()` output
 4. **React DevTools** → Inspect component tree
 
-#### React Query DevTools
+#### React Query DevTools (optional)
 
-Already included in development mode:
+If you install `@tanstack/react-query-devtools`, you can enable the pane in development:
 
 ```typescript
 // client/src/App.tsx
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-
-<ReactQueryDevtools initialIsOpen={false} />
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+// <ReactQueryDevtools initialIsOpen={false} />
 ```
-
-**Usage**: Click floating icon in bottom-right to open
+Usage: Click the floating icon to open (only when the package is installed)
 
 ---
 
@@ -606,12 +612,12 @@ npm install
 Ctrl+Shift+P → "TypeScript: Restart TS Server"
 ```
 
-### CORS Errors
+### CORS Errors (if using a separate backend)
 
 **Error**: `Access to fetch blocked by CORS policy`
 
 **Solution**:
-Ensure frontend is using Vite proxy (configured in `vite.config.ts`):
+If you run a separate backend on 5000, you can set a Vite dev proxy (example):
 
 ```typescript
 // vite.config.ts

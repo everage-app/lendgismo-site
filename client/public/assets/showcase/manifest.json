@@ -1,0 +1,830 @@
+{
+  "items": [
+    {
+      "src": "/assets/showcase/20251023-0930/01_home_app--desktop.png",
+      "title": "01 Home App Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/01_home_app--mobile.png",
+      "title": "01 Home App Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/02_dashboard--desktop.png",
+      "title": "02 Dashboard Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/02_dashboard--mobile.png",
+      "title": "02 Dashboard Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/03_analytics--desktop.png",
+      "title": "03 Analytics Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/03_analytics--mobile.png",
+      "title": "03 Analytics Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/04_borrowers--desktop.png",
+      "title": "04 Borrowers Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/04_borrowers--mobile.png",
+      "title": "04 Borrowers Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/05_applications--desktop.png",
+      "title": "05 Applications Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/05_applications--mobile.png",
+      "title": "05 Applications Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/06_onboarding--desktop.png",
+      "title": "06 Onboarding Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0930/06_onboarding--mobile.png",
+      "title": "06 Onboarding Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0930"
+    },
+    {
+      "src": "/assets/showcase/20251023-0931/demo_docs_search.webm",
+      "title": "Demo Docs Search",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251023-0931"
+    },
+    {
+      "src": "/assets/showcase/20251023-0931/demo_lender_journey.webm",
+      "title": "Demo Lender Journey",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251023-0931"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/01_home_app--desktop.png",
+      "title": "01 Home App Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/01_home_app--mobile.png",
+      "title": "01 Home App Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/02_dashboard--desktop.png",
+      "title": "02 Dashboard Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/02_dashboard--mobile.png",
+      "title": "02 Dashboard Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/03_analytics--desktop.png",
+      "title": "03 Analytics Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/03_analytics--mobile.png",
+      "title": "03 Analytics Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/04_borrowers--desktop.png",
+      "title": "04 Borrowers Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/04_borrowers--mobile.png",
+      "title": "04 Borrowers Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/05_applications--desktop.png",
+      "title": "05 Applications Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/05_applications--mobile.png",
+      "title": "05 Applications Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/06_onboarding--desktop.png",
+      "title": "06 Onboarding Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/06_onboarding--mobile.png",
+      "title": "06 Onboarding Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/07_settings--desktop.png",
+      "title": "07 Settings Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0938/07_settings--mobile.png",
+      "title": "07 Settings Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0938"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/01_home_app--desktop.png",
+      "title": "01 Home App Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/01_home_app--mobile.png",
+      "title": "01 Home App Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/02_dashboard--desktop.png",
+      "title": "02 Dashboard Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/02_dashboard--mobile.png",
+      "title": "02 Dashboard Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/03_analytics--desktop.png",
+      "title": "03 Analytics Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/03_analytics--mobile.png",
+      "title": "03 Analytics Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/04_borrowers--desktop.png",
+      "title": "04 Borrowers Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/04_borrowers--mobile.png",
+      "title": "04 Borrowers Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/05_applications--desktop.png",
+      "title": "05 Applications Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/05_applications--mobile.png",
+      "title": "05 Applications Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/06_onboarding--desktop.png",
+      "title": "06 Onboarding Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/06_onboarding--mobile.png",
+      "title": "06 Onboarding Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/07_settings--desktop.png",
+      "title": "07 Settings Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0953/07_settings--mobile.png",
+      "title": "07 Settings Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0953"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/01_home_app--desktop.png",
+      "title": "01 Home App Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/01_home_app--mobile.png",
+      "title": "01 Home App Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/02_dashboard--desktop.png",
+      "title": "02 Dashboard Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/02_dashboard--mobile.png",
+      "title": "02 Dashboard Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/03_analytics--desktop.png",
+      "title": "03 Analytics Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/03_analytics--mobile.png",
+      "title": "03 Analytics Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/04_borrowers--desktop.png",
+      "title": "04 Borrowers Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/04_borrowers--mobile.png",
+      "title": "04 Borrowers Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/05_applications--desktop.png",
+      "title": "05 Applications Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/05_applications--mobile.png",
+      "title": "05 Applications Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/06_onboarding--desktop.png",
+      "title": "06 Onboarding Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/06_onboarding--mobile.png",
+      "title": "06 Onboarding Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/07_settings--desktop.png",
+      "title": "07 Settings Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0956/07_settings--mobile.png",
+      "title": "07 Settings Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0956"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/01_home_app--desktop.png",
+      "title": "01 Home App Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/01_home_app--mobile.png",
+      "title": "01 Home App Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/02_dashboard--desktop.png",
+      "title": "02 Dashboard Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/02_dashboard--mobile.png",
+      "title": "02 Dashboard Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/03_analytics--desktop.png",
+      "title": "03 Analytics Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/03_analytics--mobile.png",
+      "title": "03 Analytics Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/04_borrowers--desktop.png",
+      "title": "04 Borrowers Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/04_borrowers--mobile.png",
+      "title": "04 Borrowers Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/05_applications--desktop.png",
+      "title": "05 Applications Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/05_applications--mobile.png",
+      "title": "05 Applications Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/06_onboarding--desktop.png",
+      "title": "06 Onboarding Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/06_onboarding--mobile.png",
+      "title": "06 Onboarding Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/07_settings--desktop.png",
+      "title": "07 Settings Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0957/07_settings--mobile.png",
+      "title": "07 Settings Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0957"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/01_home_app--desktop.png",
+      "title": "01 Home App Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/01_home_app--mobile.png",
+      "title": "01 Home App Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/02_dashboard--desktop.png",
+      "title": "02 Dashboard Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/02_dashboard--mobile.png",
+      "title": "02 Dashboard Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/03_analytics--desktop.png",
+      "title": "03 Analytics Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/03_analytics--mobile.png",
+      "title": "03 Analytics Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/04_borrowers--desktop.png",
+      "title": "04 Borrowers Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/04_borrowers--mobile.png",
+      "title": "04 Borrowers Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/05_applications--desktop.png",
+      "title": "05 Applications Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/05_applications--mobile.png",
+      "title": "05 Applications Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/06_onboarding--desktop.png",
+      "title": "06 Onboarding Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/06_onboarding--mobile.png",
+      "title": "06 Onboarding Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/07_settings--desktop.png",
+      "title": "07 Settings Desktop",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251023-0958/07_settings--mobile.png",
+      "title": "07 Settings Mobile",
+      "caption": "",
+      "type": "image",
+      "timestamp": "20251023-0958"
+    },
+    {
+      "src": "/assets/showcase/20251024-0924/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0924"
+    },
+    {
+      "src": "/assets/showcase/20251024-0924/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0924"
+    },
+    {
+      "src": "/assets/showcase/20251024-0941/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0941"
+    },
+    {
+      "src": "/assets/showcase/20251024-0941/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0941"
+    },
+    {
+      "src": "/assets/showcase/20251024-0950/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0950"
+    },
+    {
+      "src": "/assets/showcase/20251024-0950/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0950"
+    },
+    {
+      "src": "/assets/showcase/20251024-0952/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0952"
+    },
+    {
+      "src": "/assets/showcase/20251024-0952/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-0952"
+    },
+    {
+      "src": "/assets/showcase/20251024-1005/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1005"
+    },
+    {
+      "src": "/assets/showcase/20251024-1005/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1005"
+    },
+    {
+      "src": "/assets/showcase/20251024-1007/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1007"
+    },
+    {
+      "src": "/assets/showcase/20251024-1007/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1007"
+    },
+    {
+      "src": "/assets/showcase/20251024-1033/4b759605bc9d2ba29e70fdf9fc851c3f.webm",
+      "title": "4b759605bc9d2ba29e70fdf9fc851c3f",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1033"
+    },
+    {
+      "src": "/assets/showcase/20251024-1034/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1034"
+    },
+    {
+      "src": "/assets/showcase/20251024-1034/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1034"
+    },
+    {
+      "src": "/assets/showcase/20251024-1037/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1037"
+    },
+    {
+      "src": "/assets/showcase/20251024-1037/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1037"
+    },
+    {
+      "src": "/assets/showcase/20251024-1621/c4d631e96fa4ea57589a57e5ed4123a6.webm",
+      "title": "C4d631e96fa4ea57589a57e5ed4123a6",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251024-1621"
+    },
+    {
+      "src": "/assets/showcase/20251027-0659/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251027-0659"
+    },
+    {
+      "src": "/assets/showcase/20251027-0659/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251027-0659"
+    },
+    {
+      "src": "/assets/showcase/20251027-0841/a52ef804528c43e62e6a8dfa949cc407.webm",
+      "title": "A52ef804528c43e62e6a8dfa949cc407",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251027-0841"
+    },
+    {
+      "src": "/assets/showcase/20251027-0841/bbd7f4e8e4701d3d5bd23057185e2f10.webm",
+      "title": "Bbd7f4e8e4701d3d5bd23057185e2f10",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251027-0841"
+    },
+    {
+      "src": "/assets/showcase/20251027-0844/demo_full_tour_40s.webm",
+      "title": "Demo Full Tour 40s",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251027-0844"
+    },
+    {
+      "src": "/assets/showcase/20251027-0844/demo_onboarding_flow.webm",
+      "title": "Demo Onboarding Flow",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251027-0844"
+    },
+    {
+      "src": "/assets/showcase/20251030-0830/demo_full_tour.mp4",
+      "title": "Demo Full Tour",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251030-0830"
+    },
+    {
+      "src": "/assets/showcase/20251030-0830/demo_full_tour.webm",
+      "title": "Demo Full Tour",
+      "caption": "",
+      "type": "video",
+      "timestamp": "20251030-0830"
+    },
+    {
+      "src": "/assets/showcase/overview/docs_after_brand_click.png",
+      "title": "Docs After Brand Click",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/docs_api_top_preview.png",
+      "title": "Docs Api Top Preview",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/docs_search_architecture.png",
+      "title": "Docs Search Architecture",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/docs_top_preview.png",
+      "title": "Docs Top Preview",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/docs_topbar_hover.png",
+      "title": "Docs Topbar Hover",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/full-page.png",
+      "title": "Full Page",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/page-after-load.png",
+      "title": "Page After Load",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    },
+    {
+      "src": "/assets/showcase/overview/page-bottom.png",
+      "title": "Page Bottom",
+      "caption": "",
+      "type": "image",
+      "timestamp": ""
+    }
+  ]
+}

@@ -162,24 +162,23 @@ npx @stoplight/prism-cli mock openapi/openapi.yaml
 
 ## 🎯 Next Steps to Complete Full Documentation Site
 
-### Option 1: Automated Script (Recommended for Speed)
+### Automated Script (optional)
 
-I can create a shell script that:
-1. Generates all remaining Markdown documentation files
-2. Scaffolds Docusaurus with pre-configured settings
-3. Integrates Swagger UI
-4. Creates `netlify.toml`
-5. Runs validation checks
+An automated script can be created to:
+1. Generate remaining Markdown documentation files
+2. Scaffold Docusaurus with pre-configured settings
+3. Integrate Swagger UI
+4. Create `netlify.toml`
+5. Run validation checks
 
-**Estimated time**: 30 minutes (mostly automated)
+Estimated effort: ~30 minutes (primarily automated)
 
-### Option 2: Manual Completion (Recommended for Customization)
+### Manual Completion (for customization)
 
 Follow these commands:
 
 ```bash
 # Phase 2: Create remaining architecture docs
-# (I can generate these files for you in next response)
 
 # Phase 3: Create Docusaurus site
 cd docs-site
@@ -303,15 +302,13 @@ AssetLender/
 
 ## 🤝 How to Continue
 
-**Reply with one of the following**:
+Available follow-ups:
 
-1. **"Generate all remaining docs"** - I'll create all Phase 2-6 files
-2. **"Set up Docusaurus only"** - I'll scaffold the docs site
-3. **"Create architecture docs next"** - I'll do Phase 2
-4. **"Show me the Netlify config"** - I'll create deployment config
-5. **"Generate a summary report"** - I'll create the readiness doc
-
-Or specify exactly what you'd like me to focus on next!
+1. Generate remaining documentation for Phases 2–6
+2. Set up Docusaurus with branding and search
+3. Author the architecture documentation (Phase 2)
+4. Provide production-ready Netlify configuration
+5. Produce an updated readiness summary report
 
 ---
 
@@ -322,4 +319,4 @@ Or specify exactly what you'd like me to focus on next!
 - **Swagger-styled**: Yes (OpenAPI 3.1.0 with examples)
 - **No code changes**: ✅ Read-only operation (no app changes)
 
-*Ready for next phase when you are!*
+

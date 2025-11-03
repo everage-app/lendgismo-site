@@ -4,11 +4,24 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "dev": "vite",
+    "dev:5100": "vite --port 5100 --strictPort",
+    "dev:win:5001": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"[Environment]::SetEnvironmentVariable('NODE_ENV','development','Process'); [Environment]::SetEnvironmentVariable('PORT','5001','Process'); npx tsx server/index.ts\"",
+    "dev:win:5000": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"[Environment]::SetEnvironmentVariable('NODE_ENV','development','Process'); [Environment]::SetEnvironmentVariable('PORT','5000','Process'); npx tsx server/index.ts\"",
+    "build": "vite build",
+    "preview": "vite preview --port 5173",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "docs:sync": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$src='C:\\Lendgismo\\AssetLender\\docs'; $dst='C:\\Lendgismo\\Lendgismo-site\\public\\docs'; if(!(Test-Path $src)){ Write-Host 'SOURCE missing, skipping'; exit 0 }; if(!(Test-Path $dst)){ New-Item -ItemType Directory -Path $dst | Out-Null }; robocopy $src $dst /MIR /XD .git node_modules .next .turbo assets api tools /XF *.tmp *.log index.html 404.html assets\\docs.css assets\\docs.js api\\index.html; if($LASTEXITCODE -lt 8){ exit 0 } else { exit $LASTEXITCODE }\"",
+  "docs:mirror": "node scripts/docs-mirror-maybe.cjs",
+    "showcase:gen": "node scripts/generate-showcase.cjs",
+  "docs:dev": "npm run docs:mirror && npm run showcase:gen && vite --port 5100 --strictPort",
+    "docs:scan": "node scripts/scan-docs-security.cjs",
+    "capture:init": "npx playwright install",
+    "capture:screens": "tsx scripts/capture-demo.ts --mode=screens",
+    "capture:videos": "tsx scripts/capture-demo.ts --mode=videos",
+    "test:e2e": "npx playwright test --config=playwright.config.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -53,10 +66,10 @@
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "framer-motion": "^11.13.1",
+    "fuse.js": "^6.6.2",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.453.0",
     "memorystore": "^1.6.7",
-    "netlify-cli": "^23.9.1",
     "next-themes": "^0.4.6",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
@@ -95,11 +108,13 @@
     "autoprefixer": "^10.4.20",
     "drizzle-kit": "^0.31.4",
     "esbuild": "^0.25.0",
+    "netlify-cli": "^23.9.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.5",
     "typescript": "5.6.3",
-    "vite": "^5.4.20"
+    "vite": "^5.4.20",
+    "@playwright/test": "^1.48.2"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"

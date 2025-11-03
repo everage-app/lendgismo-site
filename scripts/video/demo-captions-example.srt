@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:04,500
+Lendgismo Platform Overview — one-time code handoff. Own the code forever.
+
+2
+00:00:04,500 --> 00:00:09,000
+Admin, Borrower, and Broker portals with RBAC and audit logging.
+
+3
+00:00:09,000 --> 00:00:13,500
+CSV onboarding wizard — map fields, validate, preview, and import.
+
+4
+00:00:13,500 --> 00:00:18,000
+Real-time banking data integration — Plaid-ready flows and account linking.
+
+5
+00:00:18,000 --> 00:00:22,500
+Analytics dashboards with timeframe controls synced across charts and tables.
+
+6
+00:00:22,500 --> 00:00:27,000
+Payments & disbursements — Stripe-ready components and API routes.
+
+7
+00:00:27,000 --> 00:00:31,500
+Notifications via SMS & email — Twilio/SendGrid-ready hooks and UI.
+
+8
+00:00:31,500 --> 00:00:36,000
+Multi-tenant architecture — strict tenant isolation, admin tools included.
+
+9
+00:00:36,000 --> 00:00:40,500
+Documentation & demo data — run locally in minutes and customize quickly.
+
+10
+00:00:40,500 --> 00:00:45,000
+Next steps — schedule your handoff and deploy in weeks, not months.
+
+11
+00:00:45,000 --> 00:00:49,000
+[EDIT ME] Adjust timings and lines to match your exact cut.

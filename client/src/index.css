@@ -151,8 +151,23 @@
 
   /* Subtle glow for logo on dark backgrounds */
   .lglogo-glow .logo-img {
-    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3))
-            drop-shadow(0 0 24px rgba(99, 102, 241, 0.15));
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.2))
+      drop-shadow(0 0 10px rgba(99, 102, 241, 0.35))
+      drop-shadow(0 0 26px rgba(99, 102, 241, 0.18));
+  }
+
+  /* Smooth floating animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
   }
 }
 
@@ -172,4 +187,46 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--brand-400);
+}
+
+/* Blue scrollbar utility for nested containers */
+.scrollbar-blue::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollbar-blue::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-blue::-webkit-scrollbar-thumb {
+  background: var(--brand-500);
+  border-radius: 8px;
+}
+.scrollbar-blue::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-400);
+}
+.scrollbar-blue {
+  scrollbar-color: var(--brand-500) transparent; /* Firefox */
+  scrollbar-width: thin;
+}
+
+/* Subtitles styling: smaller text with subtle black glow for readability */
+video::cue {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.35); /* more translucent for refined look */
+  font-size: 0.75em; /* even smaller */
+  line-height: 1.25;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.01em;
+  padding: 0.15em 0.45em;
+  border-radius: 0.3em;
+  text-shadow:
+    0 1px 0 rgba(0,0,0,0.9),
+    0 0 3px rgba(0,0,0,0.85),
+    0 0 6px rgba(0,0,0,0.7);
+}
+
+/* Print-only clean layout for PDF exports */
+@media print {
+  header, nav, footer, .no-print, .site-chrome { display: none !important; }
+  main, article { max-width: 100% !important; padding: 0 !important; }
+  a[href]:after { content: "" !important; }
 }

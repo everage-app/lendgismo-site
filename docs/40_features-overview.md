@@ -3,6 +3,22 @@
 **Last Updated**: October 16, 2025  
 **Platform Version**: v1.0.0
 
+## At a glance
+- Audience: Product + Engineering leads
+- Scope: What exists now and what’s planned
+- Related: `41_ui-map.md`, `42_theming.md`, `43_accessibility.md`
+
+## Quick links
+- [Core Features](#core-features)
+- [Feature Flags](#feature-flags)
+- [Planned Features](#planned-features)
+- [Feature Comparison Matrix](#feature-comparison-matrix)
+- [Technical Implementation](#technical-implementation)
+- [API Endpoints Summary](#api-endpoints-summary)
+- [Security Features](#security-features)
+- [Performance Optimizations](#performance-optimizations)
+- [Accessibility](#accessibility)
+
 ---
 
 ## Feature Summary
@@ -226,7 +242,7 @@ https://app.lendgismo.com/invite/accept?token=<HMAC_SIGNED_TOKEN>
 - My applications summary
 - Application status
 - Recent activity
-- Next steps/actions required
+- Required actions
 - Document checklist
 
 **Endpoints**:
@@ -485,13 +501,13 @@ export const featureFlags = {
 
 ### Frontend Stack
 
-- **Framework**: React 18 + TypeScript
-- **Routing**: React Router v6
-- **State**: React Query (TanStack Query)
-- **UI**: Radix UI + Tailwind CSS + shadcn/ui
-- **Forms**: React Hook Form + Zod validation
-- **Charts**: Recharts, Chart.js
-- **HTTP**: Axios
+- Framework: React 18 + TypeScript
+- Routing: Wouter
+- State: React Query (TanStack Query)
+- UI: Radix UI + Tailwind CSS + shadcn/ui
+- Forms: React Hook Form + Zod validation
+- Charts: Recharts
+- HTTP: native fetch
 
 ### Backend Stack
 
@@ -612,6 +628,8 @@ See `openapi/openapi.yaml` for full API specification.
 - ⏳ Reduced motion support (in progress)
 
 ---
+
+> Note: Code file paths listed in feature sections refer to the core application repository. This site repository hosts the documentation UI (e.g., `client/src/pages/DocsLayout.tsx`, `DocViewer.tsx`, `DocsHome.tsx`).
 
 **End of Features Overview**  
 *Next*: See `41_ui-map.md` for UI navigation, `42_theming.md` for design system, `43_accessibility.md` for accessibility guide

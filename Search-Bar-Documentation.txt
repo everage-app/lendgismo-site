@@ -1,0 +1,486 @@
+================================================================================
+LENDGISMO SEARCH BAR FUNCTIONALITY - DEVELOPER DOCUMENTATION
+================================================================================
+File: client/src/pages/DocsLayout.tsx
+Date: October 22, 2025
+================================================================================
+
+OVERVIEW
+--------
+This is a production-ready search implementation with fuzzy matching, keyboard
+shortcuts, caching, and excellent UX. Built with React, Fuse.js, and TypeScript.
+
+KEY FEATURES
+------------
+✓ Global keyboard shortcuts (/ and Ctrl/Cmd+K)
+✓ Fuzzy search with Fuse.js (weighted title vs content)
+✓ LocalStorage caching for instant results
+✓ Debounced input (80ms) for performance
+✓ Keyboard navigation (arrow keys, Enter, ESC)
+✓ Click outside to close
+✓ Highlighted search terms
+✓ Multiple fallback strategies
+✓ Loading states
+
+================================================================================
+
+1. SEARCH STATE MANAGEMENT (Lines 30-42)
+================================================================================
+
+// Build a lightweight search index in-memory (title + content)
+const [query, setQuery] = useState("");
+const [index, setIndex] = useState<{ slug: string; title: string; content: string }[]>([]);
+const [loadingIndex, setLoadingIndex] = useState(false);
+const [open, setOpen] = useState(false);
+const inputRef = useRef<HTMLInputElement>(null);
+const containerRef = useRef<HTMLDivElement>(null);
+const [activeIdx, setActiveIdx] = useState(0);
+const [location, navigate] = useLocation();
+const [results, setResults] = useState<{ slug: string; title: string; snippet: string }[]>([]);
+const fuseRef = useRef<any | null>(null);
+const queryRef = useRef(query);
+useEffect(() => { queryRef.current = query; }, [query]);
+
+EXPLANATION:
+- query: Current search term
+- index: Full search index with doc content
+- loadingIndex: Shows loading state while building index
+- open: Controls dropdown visibility
+- inputRef/containerRef: DOM refs for focus/click detection
+- activeIdx: Currently selected result (for keyboard nav)
+- results: Filtered search results to display
+- fuseRef: Reusable Fuse.js instance for performance
+
+
+================================================================================
+
+2. HIGHLIGHT HELPER FUNCTION (Lines 44-61)
+================================================================================
+
+// Highlight helper: wrap matched query terms with <mark>
+const renderSnippet = (snippet: string) => {
+  const q = query.trim();
+  if (!q) return snippet;
+  try {
+    const idx = snippet.toLowerCase().indexOf(q.toLowerCase());
+    if (idx === -1) return snippet;
+    const before = snippet.slice(0, idx);
+    const hit = snippet.slice(idx, idx + q.length);
+    const after = snippet.slice(idx + q.length);
+    return (
+      <>
+        {before}
+        <mark className="bg-amber-500/30 text-amber-200 rounded px-0.5">{hit}</mark>
+        {after}
+      </>
+    );
+  } catch {
+    return snippet;
+  }
+};
+
+EXPLANATION:
+- Finds the search query in the snippet text
+- Wraps matched portion in <mark> tag with amber highlighting
+- Returns JSX with before/match/after portions
+- Gracefully handles errors
+
+
+================================================================================
+
+3. GLOBAL KEYBOARD SHORTCUTS (Lines 63-81)
+================================================================================
+
+// Global hotkeys to focus the search: '/' or Ctrl/Cmd+K
+useEffect(() => {
+  const onKey = (e: KeyboardEvent) => {
+    const target = e.target as HTMLElement | null;
+    const isTyping = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || (target as any).isContentEditable);
+    if (isTyping) return;
+    if (e.key === '/' && !e.shiftKey && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      e.preventDefault();
+      inputRef.current?.focus();
+      setOpen(true);
+    }
+    if ((e.key.toLowerCase() === 'k') && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+      inputRef.current?.focus();
+      setOpen(true);
+    }
+  };
+  window.addEventListener('keydown', onKey);
+  return () => window.removeEventListener('keydown', onKey);
+}, []);
+
+EXPLANATION:
+- Listens for '/' key or 'Ctrl/Cmd+K' combo globally
+- Ignores keypresses when user is typing in inputs
+- Focuses search bar and opens dropdown
+- Prevents default browser behavior
+- Cleans up event listener on unmount
+
+
+================================================================================
+
+4. CLICK OUTSIDE TO CLOSE (Lines 83-95)
+================================================================================
+
+// Close search when clicking outside the search container
+useEffect(() => {
+  const onDown = (e: MouseEvent) => {
+    if (!open) return;
+    const el = containerRef.current;
+    if (el && !el.contains(e.target as Node)) {
+      setOpen(false);
+    }
+  };
+  document.addEventListener('mousedown', onDown);
+  return () => document.removeEventListener('mousedown', onDown);
+}, [open]);
+
+EXPLANATION:
+- Detects clicks outside the search container
+- Closes dropdown when clicking elsewhere
+- Uses containerRef to check if click is inside/outside
+- Only active when dropdown is open
+
+
+================================================================================
+
+5. SEARCH INDEX BUILDING (Lines 107-147)
+================================================================================
+
+useEffect(() => {
+  let cancelled = false;
+  async function hydrate() {
+    if (loadingIndex || index.length > 0) return;
+    setLoadingIndex(true);
+    // 1) Try localStorage cache first for instant availability
+    try {
+      const cached = localStorage.getItem('docs-search-index-v1');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length) {
+          setIndex(parsed);
+        }
+      }
+    } catch {}
+    // 2) Prefer prebuilt search index for speed if present
+    let items: { slug: string; title: string; content: string }[] = [];
+    try {
+      const res = await fetch(`/docs/search-index.json`);
+      if (res.ok) {
+        items = await res.json();
+        try { localStorage.setItem('docs-search-index-v1', JSON.stringify(items)); } catch {}
+      }
+    } catch {}
+    // Fallback: fetch docs inline (already implemented previously)
+    if (items.length === 0 && manifest.length > 0) {
+      for (const d of manifest) {
+        try {
+          const res = await fetch(`/docs/${d.file}`);
+          if (!res.ok) continue;
+          const text = await res.text();
+          items.push({ slug: d.slug, title: d.title, content: text });
+        } catch {}
+      }
+    }
+    if (!cancelled) {
+      if (items.length) setIndex(items);
+      setLoadingIndex(false);
+    }
+  }
+  hydrate();
+  return () => { cancelled = true; };
+}, [manifest, loadingIndex, index.length]);
+
+EXPLANATION:
+Three-tier loading strategy for performance:
+1. localStorage cache - instant if available
+2. Pre-built search-index.json - fast static file
+3. Fallback - fetch each doc individually if needed
+
+Caches results in localStorage for next visit
+Prevents duplicate loads with loadingIndex flag
+Uses cancellation token to prevent state updates after unmount
+
+
+================================================================================
+
+6. MAIN SEARCH LOGIC WITH FUSE.JS (Lines 149-220)
+================================================================================
+
+useEffect(() => {
+  const q = query.trim();
+  if (!q) {
+    setResults([]);
+    setActiveIdx(0);
+    return;
+  }
+  let cancelled = false;
+  const handle = setTimeout(async () => {
+    // Try Fuse for fuzzy ranking
+    try {
+      const Fuse = (await import('fuse.js')).default as any;
+      if (!fuseRef.current) {
+        fuseRef.current = new Fuse(index, {
+          includeMatches: true,
+          threshold: 0.4,
+          ignoreLocation: true,
+          keys: [
+            { name: 'title', weight: 0.7 },
+            { name: 'content', weight: 0.3 },
+          ],
+          minMatchCharLength: 2,
+        });
+      } else if (fuseRef.current._docs?.length !== index.length) {
+        // Recreate instance if index changed size; fast path without deep compare
+        fuseRef.current = new Fuse(index, fuseRef.current.options);
+      }
+      const out = fuseRef.current.search(q).slice(0, 10).map((r: any) => {
+        const pos = r.matches?.find((m: any) => m.key === 'content')?.indices?.[0]?.[0] ?? -1;
+        const content = r.item.content as string;
+        const start = pos > 40 ? pos - 40 : 0;
+        const snippet = content.slice(start, start + 160).replace(/\n/g, ' ');
+        return { slug: r.item.slug, title: r.item.title, snippet };
+      });
+      // If fuzzy yields nothing, do a quick contains fallback
+      const finalOut = out.length > 0 ? out : ((): { slug: string; title: string; snippet: string }[] => {
+        const needle = q.toLowerCase();
+        return index.map((it) => {
+          const pos = it.content.toLowerCase().indexOf(needle);
+          if (it.title.toLowerCase().includes(needle) || pos >= 0) {
+            const start = pos > 40 ? pos - 40 : 0;
+            const snippet = pos >= 0 ? it.content.slice(start, start + 160).replace(/\n/g, ' ') : '';
+            return { slug: it.slug, title: it.title, snippet };
+          }
+          return null;
+        }).filter(Boolean).slice(0, 10) as any;
+      })();
+      if (!cancelled) {
+        setResults(finalOut);
+        setActiveIdx(0);
+      }
+      return;
+    } catch {}
+    // Fallback: simple contains
+    const needle = q.toLowerCase();
+    const basic = index.map((it) => {
+      const pos = it.content.toLowerCase().indexOf(needle);
+      if (it.title.toLowerCase().includes(needle) || pos >= 0) {
+        const start = pos > 40 ? pos - 40 : 0;
+        const snippet = pos >= 0 ? it.content.slice(start, start + 160).replace(/\n/g, ' ') : '';
+        return { slug: it.slug, title: it.title, snippet };
+      }
+      return null;
+    }).filter(Boolean) as { slug: string; title: string; snippet: string }[];
+    if (!cancelled) {
+      setResults(basic.slice(0, 10));
+      setActiveIdx(0);
+    }
+  }, 80); // small debounce for fast typing
+  return () => { cancelled = true; clearTimeout(handle); };
+}, [query, index]);
+
+EXPLANATION:
+SEARCH STRATEGY:
+1. 80ms debounce prevents excessive searching while typing
+2. Uses Fuse.js for fuzzy matching with these settings:
+   - threshold: 0.4 (0=exact, 1=match anything)
+   - title weight: 0.7 (titles matter more)
+   - content weight: 0.3
+   - minimum 2 characters to match
+3. Returns top 10 results with 160-char snippets
+4. If fuzzy search returns nothing, falls back to simple contains search
+5. Final fallback: basic string matching if Fuse.js fails to load
+
+SNIPPET EXTRACTION:
+- Finds position of match in content
+- Shows 40 chars before match for context
+- 160 char total snippet length
+- Removes newlines for clean display
+
+
+================================================================================
+
+7. SEARCH INPUT UI (Lines 295-325)
+================================================================================
+
+<div ref={containerRef} className="ml-auto relative w-full max-w-xl">
+  <input
+    ref={inputRef}
+    value={query}
+    onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
+    onFocus={() => setOpen(true)}
+    onKeyDown={(e) => {
+      if (!open || results.length === 0) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActiveIdx((i) => Math.min(i + 1, results.length - 1)); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); setActiveIdx((i) => Math.max(i - 1, 0)); }
+      if (e.key === 'Enter') { e.preventDefault(); const r = results[activeIdx]; if (r) { setOpen(false); setQuery(""); inputRef.current?.blur(); navigate(`/docs/${r.slug}`); } }
+      if (e.key === 'Escape') { setOpen(false); }
+    }}
+    placeholder={loadingIndex ? "Building index…" : "Search docs ( / )"}
+    className="w-full rounded-lg bg-zinc-900 border border-white/10 px-3 py-2 text-sm outline-none focus:border-brand-500 text-white placeholder:text-zinc-500"
+  />
+  {open && query && (
+    <div className="absolute mt-1 w-full rounded-lg border border-white/10 bg-zinc-950 shadow-lg overflow-hidden">
+      {results.length === 0 ? (
+        <div className="px-3 py-2 text-sm text-zinc-400">{loadingIndex ? 'Indexing…' : 'No results'}</div>
+      ) : results.map((r, i) => (
+        <Link key={r.slug}
+          href={`/docs/${r.slug}`}
+          className={`block px-3 py-2 hover:bg-white/5 ${i === activeIdx ? 'bg-white/5' : ''}`}
+          onMouseEnter={() => setActiveIdx(i)}
+          onClick={() => { setOpen(false); setQuery(""); inputRef.current?.blur(); }}>
+          <div className="text-white text-sm">{r.title}</div>
+          {r.snippet && <div className="text-xs text-zinc-400 line-clamp-2">{renderSnippet(r.snippet)}</div>}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
+
+EXPLANATION:
+INPUT FEATURES:
+- Controlled input (value={query})
+- Opens dropdown on change or focus
+- Keyboard navigation:
+  * ArrowDown/ArrowUp: Navigate results
+  * Enter: Select current result and navigate
+  * Escape: Close dropdown
+- Dynamic placeholder based on loading state
+
+DROPDOWN FEATURES:
+- Only shows when open && query exists
+- Positioned absolutely below input
+- Shows loading/empty states
+- Maps through results with:
+  * Title display
+  * Snippet with highlighted matches
+  * Hover states
+  * Active selection highlighting
+  * Mouse enter updates activeIdx for keyboard sync
+
+
+================================================================================
+
+PERFORMANCE OPTIMIZATIONS
+================================================================================
+
+1. Debouncing (80ms)
+   - Prevents excessive search operations while typing
+   - Cancels pending searches when query changes
+
+2. Caching
+   - localStorage stores index between sessions
+   - Reuses Fuse.js instance instead of recreating
+   - Pre-built search-index.json for static serving
+
+3. Lazy Loading
+   - Fuse.js imported dynamically (import('fuse.js'))
+   - Only loads when actually searching
+   - Reduces initial bundle size
+
+4. Efficient Rendering
+   - Top 10 results only (slice(0, 10))
+   - line-clamp-2 CSS for snippet truncation
+   - Conditional rendering with open flag
+
+5. Cleanup
+   - Cancellation tokens prevent memory leaks
+   - Event listener cleanup on unmount
+   - Timeout cleanup in useEffect return
+
+
+================================================================================
+
+DEPENDENCIES
+================================================================================
+
+Required packages:
+- react (hooks: useState, useEffect, useRef, useMemo)
+- wouter (for routing: Link, useLocation)
+- fuse.js (fuzzy search library)
+
+Optional but recommended:
+- tailwindcss (for styling classes)
+
+
+================================================================================
+
+CUSTOMIZATION GUIDE
+================================================================================
+
+ADJUST SEARCH SENSITIVITY:
+Change threshold in Fuse config (line 163):
+  threshold: 0.4  // 0=exact match, 1=match anything
+
+CHANGE RESULT COUNT:
+Modify slice parameter (line 177):
+  .slice(0, 10)  // Change 10 to desired max results
+
+ADJUST DEBOUNCE TIME:
+Change timeout value (line 148):
+  setTimeout(async () => {}, 80)  // Change 80ms to preferred delay
+
+MODIFY SEARCH WEIGHTS:
+Adjust weights in Fuse config (lines 166-169):
+  { name: 'title', weight: 0.7 },    // Increase for more title weight
+  { name: 'content', weight: 0.3 },  // Increase for more content weight
+
+SNIPPET LENGTH:
+Change snippet extraction (line 180):
+  const start = pos > 40 ? pos - 40 : 0;  // Context before match
+  const snippet = content.slice(start, start + 160)  // Total length
+
+
+================================================================================
+
+STYLING CLASSES (TailwindCSS)
+================================================================================
+
+Search Input:
+- bg-zinc-900: Dark background
+- border border-white/10: Subtle border
+- focus:border-brand-500: Brand color on focus
+- rounded-lg: Rounded corners
+
+Dropdown:
+- bg-zinc-950: Darker background
+- border border-white/10: Subtle border
+- shadow-lg: Drop shadow
+
+Result Items:
+- hover:bg-white/5: Subtle hover effect
+- bg-white/5: Active selection highlight
+- text-white: Title color
+- text-zinc-400: Snippet color
+
+Highlight Mark:
+- bg-amber-500/30: Amber background
+- text-amber-200: Amber text
+- rounded px-0.5: Small rounding and padding
+
+
+================================================================================
+
+TESTING CHECKLIST
+================================================================================
+
+□ Keyboard shortcuts work (/ and Ctrl/Cmd+K)
+□ Arrow keys navigate results
+□ Enter selects and navigates
+□ ESC closes dropdown
+□ Click outside closes dropdown
+□ Search debouncing works (no lag while typing)
+□ Results highlight matched terms
+□ Loading state shows while indexing
+□ Empty state shows when no results
+□ Cache persists between page refreshes
+□ Fuzzy search finds approximate matches
+□ Fallback search works if Fuse.js fails
+
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================

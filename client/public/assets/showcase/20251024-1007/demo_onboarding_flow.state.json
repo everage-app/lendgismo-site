@@ -1,0 +1,37 @@
+{
+  "cookies": [
+    {
+      "name": "user",
+      "value": "%7B%22id%22%3A%22admin-1%22%2C%22email%22%3A%22admin%40example.com%22%2C%22firstName%22%3A%22Demo%22%2C%22lastName%22%3A%22Admin%22%2C%22role%22%3A%22lender%22%2C%22companyName%22%3A%22Platform%20Admin%22%2C%22demo%22%3Atrue%7D",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1761408546.57504,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:5000",
+      "localStorage": [
+        {
+          "name": "dashboard:savedView",
+          "value": "Default"
+        },
+        {
+          "name": "dashboard:views",
+          "value": "[\"Default\",\"Executive\",\"Risk Ops\",\"New Apps\"]"
+        },
+        {
+          "name": "lendgismo-notifications-last-poll",
+          "value": "1761322132026"
+        },
+        {
+          "name": "ui-theme",
+          "value": "light"
+        }
+      ]
+    }
+  ]
+}
