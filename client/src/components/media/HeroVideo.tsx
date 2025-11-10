@@ -10,7 +10,8 @@ type Props = {
 
 export default function HeroVideo({ src, poster = null, className }: Props) {
   const vref = useRef<HTMLVideoElement | null>(null);
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(true);
+  const [status, setStatus] = useState('loading');
   const attemptedRef = useRef(false);
 
   useEffect(() => {
@@ -23,36 +24,93 @@ export default function HeroVideo({ src, poster = null, className }: Props) {
 
     const tryPlay = async () => {
       try {
+        console.log('[HeroVideo] Attempting play, readyState:', v.readyState, 'paused:', v.paused);
         await v.play();
+        console.log('[HeroVideo] Play succeeded');
         setShowOverlay(false);
-      } catch {
+        setStatus('playing');
+      } catch (err) {
+        console.error('[HeroVideo] Play failed:', err);
         setShowOverlay(true);
+        setStatus('blocked');
       }
     };
 
-    tryPlay();
+    const onLoadStart = () => {
+      console.log('[HeroVideo] loadstart');
+      setStatus('loading');
+    };
 
-    const t1 = setTimeout(tryPlay, 100);
-    const t2 = setTimeout(tryPlay, 500);
-    const t3 = setTimeout(tryPlay, 1000);
-    const t4 = setTimeout(tryPlay, 2000);
+    const onLoadedMetadata = () => {
+      console.log('[HeroVideo] loadedmetadata, duration:', v.duration);
+      setStatus('metadata');
+    };
 
-    const onCanPlay = () => tryPlay();
-    const onLoadedData = () => tryPlay();
-    const onPlaying = () => setShowOverlay(false);
+    const onCanPlay = () => {
+      console.log('[HeroVideo] canplay');
+      setStatus('canplay');
+      tryPlay();
+    };
+
+    const onCanPlayThrough = () => {
+      console.log('[HeroVideo] canplaythrough');
+      setStatus('ready');
+      tryPlay();
+    };
+
+    const onLoadedData = () => {
+      console.log('[HeroVideo] loadeddata');
+      tryPlay();
+    };
+
+    const onPlaying = () => {
+      console.log('[HeroVideo] playing event');
+      setShowOverlay(false);
+      setStatus('playing');
+    };
+
+    const onWaiting = () => {
+      console.log('[HeroVideo] waiting/buffering');
+      setStatus('buffering');
+    };
+
+    const onError = (e: any) => {
+      console.error('[HeroVideo] error:', e, v.error);
+      setStatus('error');
+      setShowOverlay(true);
+    };
     
+    v.addEventListener('loadstart', onLoadStart);
+    v.addEventListener('loadedmetadata', onLoadedMetadata);
     v.addEventListener('canplay', onCanPlay);
+    v.addEventListener('canplaythrough', onCanPlayThrough);
     v.addEventListener('loadeddata', onLoadedData);
     v.addEventListener('playing', onPlaying);
+    v.addEventListener('waiting', onWaiting);
+    v.addEventListener('error', onError);
+
+    // Aggressive retries
+    tryPlay();
+    const t1 = setTimeout(tryPlay, 200);
+    const t2 = setTimeout(tryPlay, 600);
+    const t3 = setTimeout(tryPlay, 1200);
+    const t4 = setTimeout(tryPlay, 2500);
+    const t5 = setTimeout(tryPlay, 5000);
 
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(t3);
       clearTimeout(t4);
+      clearTimeout(t5);
+      v.removeEventListener('loadstart', onLoadStart);
+      v.removeEventListener('loadedmetadata', onLoadedMetadata);
       v.removeEventListener('canplay', onCanPlay);
+      v.removeEventListener('canplaythrough', onCanPlayThrough);
       v.removeEventListener('loadeddata', onLoadedData);
       v.removeEventListener('playing', onPlaying);
+      v.removeEventListener('waiting', onWaiting);
+      v.removeEventListener('error', onError);
     };
   }, [src]);
 
@@ -89,26 +147,39 @@ export default function HeroVideo({ src, poster = null, className }: Props) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            background: "rgba(0,0,0,0.3)",
+            flexDirection: "column",
+            background: "rgba(0,0,0,0.5)",
             cursor: "pointer",
-            border: "none"
+            border: "none",
+            zIndex: 10
           }}
         >
           <div style={{
             display: "flex",
             gap: 12,
             alignItems: "center",
-            padding: "16px 24px",
+            padding: "20px 32px",
             borderRadius: 999,
-            background: "rgba(0,0,0,0.8)",
+            background: "rgba(0,0,0,0.9)",
             color: "#fff",
-            fontSize: 18,
-            fontWeight: 600
+            fontSize: 20,
+            fontWeight: 600,
+            boxShadow: "0 4px 20px rgba(0,0,0,0.5)"
           }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
               <path d="M8 5v14l11-7z"/>
             </svg>
-            Play Video
+            {status === 'error' ? 'Video Error - Click to Retry' : 
+             status === 'blocked' ? 'Click to Play Video' :
+             status === 'loading' || status === 'buffering' ? 'Loading Video...' :
+             'Play Video'}
+          </div>
+          <div style={{
+            marginTop: 12,
+            fontSize: 12,
+            color: "rgba(255,255,255,0.6)"
+          }}>
+            Status: {status}
           </div>
         </button>
       )}

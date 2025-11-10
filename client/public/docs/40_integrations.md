@@ -7,7 +7,7 @@ Audience: Product, Engineering, and Buyers evaluating capabilities
 
 ## At a glance
 
-- Turnkey integrations covering banking, payments, messaging, email, and data onboarding
+- Turnkey integrations covering banking, payments, messaging, email, alternative data, fraud detection, and identity verification
 - Environment-driven toggles and minimal endpoint surface
 - Sandbox-first setup instructions and test flows
 - Security and compliance considerations by provider
@@ -18,6 +18,10 @@ Quick links
 - [Stripe (Payments)](#stripe-payments)
 - [Twilio (SMS)](#twilio-sms)
 - [SendGrid (Email)](#sendgrid-email)
+- [QuickBooks (Accounting)](#quickbooks-accounting)
+- [DataMerch (Alternative Data)](#datamerch-alternative-data)
+- [DecisionLogic (Credit & Fraud)](#decisionlogic-credit--fraud)
+- [Socure/Alloy (Identity Verification)](#socurealloy-identity-verification)
 - [CSV Upload & Onboarding](#csv-upload--onboarding)
 
 ---
@@ -144,6 +148,151 @@ Testing
 Security
 
 - Keep keys in secret storage; apply DKIM/SPF for production domains
+
+---
+
+## QuickBooks (Accounting)
+
+Status: Scaffolded (ready for implementation)  
+Purpose: Accounting data sync for underwriting and financial analysis
+
+Environment variables
+
+- QUICKBOOKS_CLIENT_ID
+- QUICKBOOKS_CLIENT_SECRET
+- QUICKBOOKS_REDIRECT_URI
+- QUICKBOOKS_ENV: sandbox | production
+
+Suggested endpoints
+
+- GET /api/quickbooks/auth — initiate OAuth flow
+- POST /api/quickbooks/callback — handle OAuth callback
+- GET /api/quickbooks/company/:id — retrieve company info
+- GET /api/quickbooks/reports/:id — pull P&L, balance sheet, cash flow
+
+Client integration hooks
+
+- Trigger QuickBooks connection in borrower onboarding
+- Display financial statements in underwriting dashboard
+- Auto-refresh data for ongoing monitoring
+
+Testing
+
+- Use QuickBooks sandbox credentials
+- Verify OAuth flow and data retrieval
+
+Security
+
+- Store tokens encrypted; implement token refresh logic
+- Limit scope to read-only financial data
+
+---
+
+## DataMerch (Alternative Data)
+
+Status: Scaffolded (ready for implementation)  
+Purpose: Alternative data analytics for enhanced underwriting decisions
+
+Environment variables
+
+- DATAMERCH_API_KEY
+- DATAMERCH_API_URL
+- DATAMERCH_ENV: sandbox | production
+
+Suggested endpoints
+
+- POST /api/datamerch/analyze — submit business data for analysis
+- GET /api/datamerch/report/:id — retrieve alternative data report
+- GET /api/datamerch/score/:businessId — get alternative credit score
+
+Client integration hooks
+
+- Integrate in underwriting workflow
+- Display alternative data insights alongside traditional credit data
+- Use for thin-file or no-file borrowers
+
+Testing
+
+- Use test API keys and sample business data
+- Validate report parsing and score calculations
+
+Security
+
+- Secure API keys in vault storage
+- Audit all data requests; comply with data privacy regulations
+
+---
+
+## DecisionLogic (Credit & Fraud)
+
+Status: Scaffolded (ready for implementation)  
+Purpose: Credit decisioning and fraud detection for risk mitigation
+
+Environment variables
+
+- DECISIONLOGIC_API_KEY
+- DECISIONLOGIC_API_URL
+- DECISIONLOGIC_ENV: sandbox | production
+
+Suggested endpoints
+
+- POST /api/decisionlogic/verify — verify borrower identity and credit
+- POST /api/decisionlogic/fraud-check — run fraud detection analysis
+- GET /api/decisionlogic/report/:applicationId — retrieve full risk report
+
+Client integration hooks
+
+- Auto-trigger on loan application submission
+- Display fraud scores and risk flags in underwriting dashboard
+- Block high-risk applications with configurable thresholds
+
+Testing
+
+- Use sandbox mode with test identities
+- Verify fraud detection accuracy and response handling
+
+Security
+
+- Encrypt API keys; implement rate limiting
+- Log all verification attempts for audit trail
+- Comply with FCRA and data protection regulations
+
+---
+
+## Socure/Alloy (Identity Verification)
+
+Status: Scaffolded (ready for implementation)  
+Purpose: KYC/KYB identity verification and compliance
+
+Environment variables
+
+- IDENTITY_PROVIDER: socure | alloy
+- SOCURE_API_KEY / ALLOY_API_KEY
+- SOCURE_API_URL / ALLOY_API_URL
+- IDENTITY_ENV: sandbox | production
+
+Suggested endpoints
+
+- POST /api/identity/verify — verify individual or business identity
+- GET /api/identity/status/:verificationId — check verification status
+- POST /api/identity/document-upload — upload ID documents for verification
+
+Client integration hooks
+
+- Integrate in borrower onboarding flow
+- Display verification status in real-time
+- Block unverified users from progressing
+
+Testing
+
+- Use test documents and sandbox identities
+- Verify pass/fail scenarios and edge cases
+
+Security
+
+- Secure API keys; encrypt PII data in transit and at rest
+- Implement data retention policies
+- Comply with KYC/AML regulations and SOC 2 requirements
 
 ---
 

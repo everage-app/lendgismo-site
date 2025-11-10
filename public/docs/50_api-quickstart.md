@@ -507,8 +507,8 @@ curl -X POST http://localhost:5000/api/invites/generate \
     "id": "invite_789",
     "kind": "borrower",
     "inviteEmail": "newborrower@example.com",
-    "inviteToken": "abc123def456",
-    "inviteLink": "http://localhost:5000/invite/accept?token=abc123def456",
+  "inviteToken": "{invite_token}",
+  "inviteLink": "http://localhost:5000/invite/accept?token={invite_token}",
     "expiresAt": "2025-02-15T10:00:00Z",
     "createdAt": "2025-01-16T10:00:00Z"
   }
@@ -524,7 +524,7 @@ curl -X POST http://localhost:5000/api/invites/generate \
 curl -X POST http://localhost:5000/api/invites/accept \
   -H "Content-Type: application/json" \
   -d '{
-    "token": "abc123def456",
+  "token": "{invite_token}",
     "password": "securepassword123",
     "name": "New Borrower"
   }'

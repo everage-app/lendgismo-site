@@ -58,7 +58,14 @@ export async function handler(event) {
       <p style="color:#888;font-size:12px">Submitted at ${new Date().toISOString()}</p>
     `;
 
-    const { SENDGRID_KEY, SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
+    const { SENDGRID_KEY, SENDGRID_FROM } = process.env;
+    // Sensible verified-sender fallbacks if env var isn't set or unverified
+    const FALLBACK_FROM_CHAIN = [
+      SENDGRID_FROM,
+      'sales@lendgismo.com',
+      'brysen@lendgismo.com',
+      'no-reply@lendgismo.com'
+    ].filter(Boolean);
 
     if (!SENDGRID_KEY) {
       return {
@@ -72,42 +79,54 @@ export async function handler(event) {
       };
     }
 
-    const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
-      method: 'POST',
-      headers: { 
-        'Authorization': `Bearer ${SENDGRID_KEY}`, 
-        'Content-Type': 'application/json' 
-      },
-      body: JSON.stringify({
-        personalizations: [{ 
-          to: [
-            { email: 'sales@lendgismo.com' },
-            { email: 'brysen@lendgismo.com' }
-          ]
-        }],
-        from: { email: SENDGRID_FROM, name: 'Lendgismo Site' },
-        subject,
-        content: [
-          { type: 'text/plain', value: text },
-          { type: 'text/html', value: html }
-        ]
-      })
-    });
+    // Try a short chain of from-addresses to avoid Sender Identity issues
+    let lastErrorText = '';
+    for (const fromEmail of FALLBACK_FROM_CHAIN) {
+      try {
+        const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
+          method: 'POST',
+          headers: { 
+            'Authorization': `Bearer ${SENDGRID_KEY}`, 
+            'Content-Type': 'application/json' 
+          },
+          body: JSON.stringify({
+            personalizations: [{ 
+              to: [
+                { email: 'sales@lendgismo.com' },
+                { email: 'brysen@lendgismo.com' }
+              ],
+              reply_to: { email }
+            }],
+            from: { email: fromEmail, name: 'Lendgismo Site' },
+            subject,
+            content: [
+              { type: 'text/plain', value: text },
+              { type: 'text/html', value: html }
+            ]
+          })
+        });
 
-    if (!res.ok) {
-      const errorText = await res.text();
-      console.error('SendGrid error:', res.status, errorText);
-      return {
-        statusCode: res.status,
-        headers: { 'Access-Control-Allow-Origin': '*' },
-        body: JSON.stringify({ error: 'Email send failed', details: errorText })
-      };
+        if (res.ok) {
+          return {
+            statusCode: 200,
+            headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ok: true, usedFrom: fromEmail })
+          };
+        } else {
+          lastErrorText = await res.text();
+          console.error('SendGrid error with from', fromEmail, res.status, lastErrorText);
+        }
+      } catch (e) {
+        lastErrorText = String(e && e.message || e);
+        console.error('SendGrid exception with from', fromEmail, lastErrorText);
+      }
     }
 
+    // Do not fail the user flow; return 200 with details for troubleshooting
     return {
       statusCode: 200,
       headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ok: true })
+      body: JSON.stringify({ ok: false, error: 'All from-address attempts failed', details: lastErrorText })
     };
   } catch (err) {
     console.error('Contact email error:', err);

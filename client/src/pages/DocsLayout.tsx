@@ -301,10 +301,7 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  const [mode, setMode] = useState<{ live: boolean } | null>(null);
-  useEffect(() => {
-    fetch('/api/integrations/status').then(r => r.ok ? r.json() : null).then(setMode).catch(() => setMode(null));
-  }, []);
+  // Removed mode badge (Mock/Live) from docs header to keep presentation official
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-200">
@@ -313,11 +310,7 @@ export function DocsLayout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center gap-4">
           <Link href="/" className="shrink-0"><SiteLogo size={36} glow /></Link>
           <div className="text-lg md:text-xl font-semibold text-brand-400">Docs</div>
-          {mode && (
-            <div className={`ml-2 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded border ${mode.live ? 'text-emerald-300 border-emerald-500/40 bg-emerald-500/10' : 'text-amber-300 border-amber-500/40 bg-amber-500/10'}`} title={mode.live ? 'Live integrations enabled' : 'Mock mode (safe for demos)'}>
-              {mode.live ? 'Live Mode' : 'Mock Mode'}
-            </div>
-          )}
+          {/* Mode badge removed */}
           <a
             href="https://platform.lendgismo.com"
             target="_blank"

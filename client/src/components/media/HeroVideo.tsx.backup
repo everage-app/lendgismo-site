@@ -1,0 +1,519 @@
+"use client";
+import React, { useEffect, useRef, useState, useCallback } from "react";
+import { useVideoDebugParam } from '@/hooks/useVideoDebugParam'
+
+type Props = {
+  src: string;
+  poster?: string | null;
+  className?: string;
+};
+
+export default function HeroVideo({ src, poster = null, className }: Props) {
+  const vref = useRef<HTMLVideoElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const [autoplayFailed, setAutoplayFailed] = useState(false);
+  const [showControls, setShowControls] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isBuffering, setIsBuffering] = useState(true);
+  const [networkError, setNetworkError] = useState(false);
+  const lastTimeRef = useRef(0);
+  const playAttempts = useRef(0);
+  const isDebug = useVideoDebugParam()
+
+  useEffect(() => { setMounted(true); }, []);
+
+  // Simple intersection observer
+  useEffect(() => {
+    if (!containerRef.current) return;
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+        if (isDebug) console.log('[VideoDebug] visibility:', entry.isIntersecting);
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+    
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [mounted, isDebug]);
+
+  // Main video effect - clean and simple
+  useEffect(() => {
+    const video = vref.current;
+    if (!video || !isVisible) return;
+
+    let disposed = false;
+    let stallTimer: NodeJS.Timeout;
+
+    // Simple play function
+    const attemptPlay = async (reason: string) => {
+      if (disposed) return;
+      
+      try {
+        video.muted = true;
+        video.playsInline = true;
+        
+        if (isDebug) console.log('[VideoDebug] play attempt:', reason);
+        
+        await video.play();
+        setPlaying(true);
+        setAutoplayFailed(false);
+        setIsBuffering(false);
+        playAttempts.current = 0;
+        
+        // Remove poster once playing
+        if (video.hasAttribute('poster')) {
+          video.removeAttribute('poster');
+        }
+        
+      } catch (e) {
+        if (isDebug) console.warn('[VideoDebug] play failed:', e);
+        
+        playAttempts.current++;
+        if (playAttempts.current < 3) {
+          setTimeout(() => attemptPlay(`${reason}-retry-${playAttempts.current}`), 300);
+        } else {
+          setAutoplayFailed(true);
+          setShowControls(true);
+          setIsBuffering(false);
+        }
+      }
+    };
+
+    // Simple stall detection - check every 1 second
+    const checkForStalls = () => {
+      if (disposed || video.paused) return;
+      
+      const currentTime = video.currentTime;
+      const lastTime = lastTimeRef.current;
+      
+      // If we're stuck at the same time for too long
+      if (currentTime > 0 && Math.abs(currentTime - lastTime) < 0.01) {
+        if (isDebug) console.warn('[VideoDebug] Stall detected, jumping forward');
+        
+        // Simple fix: jump forward slightly
+        const jumpTo = Math.min(currentTime + 0.2, video.duration || currentTime + 1);
+        video.currentTime = jumpTo;
+        
+        // If still stuck, restart
+        setTimeout(() => {
+          if (video.currentTime === currentTime) {
+            if (isDebug) console.log('[VideoDebug] Still stuck, restarting');
+            video.currentTime = 0;
+            attemptPlay('stall-restart');
+          }
+        }, 200);
+      }
+      
+      lastTimeRef.current = currentTime;
+    };
+
+    // Event handlers
+    const onLoadedData = () => {
+      if (isDebug) console.log('[VideoDebug] loaded data');
+      setIsBuffering(false);
+      attemptPlay('loadeddata');
+    };
+
+    const onCanPlay = () => {
+      if (isDebug) console.log('[VideoDebug] can play');
+      setIsBuffering(false);
+      attemptPlay('canplay');
+    };
+
+    const onPlaying = () => {
+      if (isDebug) console.log('[VideoDebug] playing event');
+      setPlaying(true);
+      setAutoplayFailed(false);
+      setIsBuffering(false);
+      lastTimeRef.current = video.currentTime;
+    };
+
+    const onTimeUpdate = () => {
+      const currentTime = video.currentTime;
+      lastTimeRef.current = currentTime;
+      
+      // Mark as playing once we see progress
+      if (!playing && currentTime > 0.1) {
+        if (isDebug) console.log('[VideoDebug] progress detected, marking as playing');
+        setPlaying(true);
+        setAutoplayFailed(false);
+        setIsBuffering(false);
+      }
+    };
+
+    const onWaiting = () => {
+      if (isDebug) console.log('[VideoDebug] waiting/buffering');
+      setIsBuffering(true);
+    };
+
+    const onStalled = () => {
+      if (isDebug) console.log('[VideoDebug] stalled event');
+      checkForStalls();
+    };
+
+    const onError = (e: Event) => {
+      if (isDebug) console.error('[VideoDebug] error:', e);
+      setNetworkError(true);
+      setAutoplayFailed(true);
+      setShowControls(true);
+      setIsBuffering(false);
+    };
+
+    const onEnded = () => {
+      if (isDebug) console.log('[VideoDebug] ended, restarting');
+      video.currentTime = 0;
+      attemptPlay('ended');
+    };
+
+    const onLoadedData = () => { 
+      if (isDebug) console.log('[VideoDebug] NUCLEAR loadeddata', { readyState: v.readyState }); 
+      setIsBuffering(false);
+      NUCLEAR_ensurePlay("loadeddata"); 
+    };
+    
+    const onCanPlay = () => { 
+      if (isDebug) console.log('[VideoDebug] NUCLEAR canplay', { readyState: v.readyState, duration: v.duration }); 
+      setIsBuffering(false);
+      NUCLEAR_ensurePlay("canplay");
+    };
+    
+    const onLoadedMeta = () => { 
+      if (isDebug) console.log('[VideoDebug] NUCLEAR loadedmetadata', { duration: v.duration, readyState: v.readyState }); 
+      NUCLEAR_ensurePlay("loadedmetadata"); 
+    };
+    
+    const onPlaying = () => { 
+      if (isDebug) console.log('[VideoDebug] NUCLEAR playing', { currentTime: v.currentTime, duration: v.duration }); 
+      setPlaying(true); 
+      setAutoplayFailed(false); 
+      setIsBuffering(false);
+      v.removeAttribute("poster"); 
+      lastPlaybackTime = v.currentTime;
+      lastTimeRef.current = v.currentTime;
+      stallCountRef.current = 0; // Reset stall counter on successful play
+    };
+    
+    const onEnded = () => { 
+      if (isDebug) console.log('[VideoDebug] NUCLEAR ended, looping');
+      v.currentTime = 0; 
+      NUCLEAR_ensurePlay("ended->loop"); 
+    };
+    
+    const onPause = () => {
+      const nearEnd = v.duration && v.currentTime >= (v.duration - 0.25);
+      if (isDebug) console.log('[VideoDebug] paused', { currentTime: v.currentTime, duration: v.duration, nearEnd });
+      if (!nearEnd) setPlaying(false);
+    };
+    
+    const onWaiting = () => { 
+      if (isDebug) console.log('[VideoDebug] waiting/buffering'); 
+      setIsBuffering(true);
+    };
+    
+    const onSeeking = () => {
+      if (isDebug) console.log('[VideoDebug] seeking');
+      setIsBuffering(true);
+    };
+    
+    const onSeeked = () => {
+      if (isDebug) console.log('[VideoDebug] seeked');
+      setIsBuffering(false);
+    };
+    
+    const NUCLEAR_onTimeUpdate = () => {
+      const currentTime = v.currentTime;
+      const lastTime = lastTimeRef.current;
+      
+      // NUCLEAR STALL DETECTION - ultra-sensitive
+      if (Math.abs(currentTime - lastTime) < 0.002 && !v.paused && currentTime > 0) {
+        stallCountRef.current++;
+        if (isDebug) console.error('[VideoDebug] NUCLEAR TIMEUPDATE STALL', { 
+          currentTime, lastTime, diff: Math.abs(currentTime - lastTime), stallCount: stallCountRef.current 
+        });
+        
+        // Immediate stall response
+        NUCLEAR_ensurePlay("timeupdate-stall");
+      } else {
+        // Progress detected - reset counters
+        lastTimeRef.current = currentTime;
+        lastPlaybackTime = currentTime;
+        if (stallCountRef.current > 0) {
+          stallCountRef.current = 0;
+          if (isDebug) console.log('[VideoDebug] NUCLEAR progress resumed, reset stall counter');
+        }
+      }
+      
+      // Mark as playing once we see real progress
+      if (!playing && currentTime > 0.02) {
+        if (isDebug) console.log('[VideoDebug] NUCLEAR timeupdate -> mark playing', { t: currentTime });
+        setPlaying(true);
+        setAutoplayFailed(false);
+        setIsBuffering(false);
+      }
+    };
+    
+    const onError = (ev: Event) => {
+      if (isDebug) console.error('[VideoDebug] error event', ev, { error: v.error });
+      setNetworkError(true);
+      setAutoplayFailed(true);
+      setShowControls(true);
+      setPlaying(false);
+      setIsBuffering(false);
+    };
+    
+    const NUCLEAR_onStalled = () => {
+      stallCountRef.current++;
+      if (isDebug) console.error('[VideoDebug] NUCLEAR STALLED EVENT', { stallCount: stallCountRef.current });
+      setIsBuffering(true);
+      
+      // Immediate nuclear response
+      setTimeout(() => {
+        NUCLEAR_ensurePlay("stalled-event");
+        setIsBuffering(false);
+      }, 50);
+    };
+    
+    const onProgress = () => {
+      if (v.buffered.length > 0) {
+        const bufferedEnd = v.buffered.end(v.buffered.length - 1);
+        const bufferedPercent = (bufferedEnd / v.duration) * 100;
+        if (isDebug) console.log('[VideoDebug] progress', { buffered: bufferedPercent.toFixed(1) + '%' });
+      }
+    };
+
+    v.addEventListener("loadedmetadata", onLoadedMeta);
+    v.addEventListener("loadeddata", onLoadedData);
+    v.addEventListener("canplay", onCanPlay);
+    v.addEventListener("playing", onPlaying);
+    v.addEventListener("ended", onEnded);
+    v.addEventListener("pause", onPause);
+    v.addEventListener("waiting", onWaiting);
+    v.addEventListener("seeking", onSeeking);
+    v.addEventListener("seeked", onSeeked);
+    v.addEventListener("timeupdate", NUCLEAR_onTimeUpdate);
+    v.addEventListener("error", onError);
+    v.addEventListener("stalled", NUCLEAR_onStalled);
+    v.addEventListener("progress", onProgress);
+
+    // NUCLEAR WATCHDOG - ultra-aggressive stall detection every 200ms
+    stallCheckInterval = setInterval(() => {
+      if (!v.paused && v.readyState >= 2 && v.currentTime > 0) {
+        const currentTime = v.currentTime;
+        const lastTime = lastTimeRef.current;
+        const timeDiff = Math.abs(currentTime - lastTime);
+        
+        if (timeDiff < 0.005 && currentTime > 0) {
+          stallCountRef.current++;
+          if (isDebug) console.error('[VideoDebug] NUCLEAR WATCHDOG STALL', { 
+            currentTime, lastTime, diff: timeDiff, stallCount: stallCountRef.current 
+          });
+          
+          NUCLEAR_ensurePlay("watchdog-stall");
+        } else {
+          lastTimeRef.current = currentTime;
+          if (stallCountRef.current > 0) {
+            stallCountRef.current = 0;
+          }
+        }
+      }
+    }, 200);
+
+    // NUCLEAR EMERGENCY INTERVAL - absolute last resort every 100ms
+    emergencyInterval = setInterval(() => {
+      if (stallCountRef.current >= 5 && !v.paused && v.currentTime > 0) {
+        if (isDebug) console.error('[VideoDebug] NUCLEAR EMERGENCY - complete restart');
+        stallCountRef.current = 0;
+        v.load();
+        setTimeout(() => {
+          v.currentTime = 0;
+          v.play();
+        }, 50);
+      }
+    }, 100);
+
+    // NUCLEAR IMMEDIATE START
+    setTimeout(() => {
+      if (!disposed) NUCLEAR_ensurePlay("mount");
+    }, 50);
+
+    // NUCLEAR AGGRESSIVE WATCHDOG - check every 1 second
+    const tick = setInterval(() => {
+      if (v.paused && !autoplayFailed && v.readyState >= 2) {
+        NUCLEAR_ensurePlay("watchdog");
+      }
+    }, 1000);
+
+    // ensure overlay is clearly shown if autoplay didn't start quickly
+    const failTimer = setTimeout(() => {
+      if (!playing && !disposed) { 
+        setAutoplayFailed(true); 
+        setShowControls(true); 
+        if (isDebug) console.log('[VideoDebug] failTimer -> show overlay/controls'); 
+      }
+    }, 800);
+
+    return () => {
+      disposed = true;
+      clearInterval(tick);
+      clearInterval(stallCheckInterval);
+      clearInterval(emergencyInterval);
+      clearTimeout(failTimer);
+      v.removeEventListener("loadedmetadata", onLoadedMeta);
+      v.removeEventListener("loadeddata", onLoadedData);
+      v.removeEventListener("canplay", onCanPlay);
+      v.removeEventListener("playing", onPlaying);
+      v.removeEventListener("ended", onEnded);
+      v.removeEventListener("pause", onPause);
+      v.removeEventListener("waiting", onWaiting);
+      v.removeEventListener("seeking", onSeeking);
+      v.removeEventListener("seeked", onSeeked);
+      v.removeEventListener("timeupdate", NUCLEAR_onTimeUpdate);
+      v.removeEventListener("error", onError);
+      v.removeEventListener("stalled", NUCLEAR_onStalled);
+      v.removeEventListener("progress", onProgress);
+    };
+  }, [src, isVisible, preloadVideo, isDebug]);
+
+  const NUCLEAR_handlePlayClick = useCallback(async () => {
+    if (playing) return;
+    
+    const v = vref.current; 
+    if (!v) return;
+    
+    try {
+      // NUCLEAR USER INTERACTION SETTINGS
+      v.muted = true; 
+      v.playsInline = true;
+      v.autoplay = true;
+      v.loop = true;
+      setIsBuffering(true);
+      
+      // Reset all counters
+      stallCountRef.current = 0;
+      lastTimeRef.current = 0;
+      retryCountRef.current = 0;
+      
+      if (isDebug) console.log('[VideoDebug] NUCLEAR user click play attempt');
+      
+      // Multiple attempts with different strategies
+      let success = false;
+      for (let attempt = 0; attempt < 5; attempt++) {
+        try {
+          if (attempt > 0) {
+            // Force reload on subsequent attempts
+            v.load();
+            await new Promise(resolve => setTimeout(resolve, 100 * attempt));
+          }
+          
+          await v.play();
+          success = true;
+          break;
+        } catch (e) {
+          if (isDebug) console.warn(`[VideoDebug] NUCLEAR play attempt ${attempt + 1} failed:`, e);
+        }
+      }
+      
+      if (success) {
+        setPlaying(true); 
+        setAutoplayFailed(false);
+        setIsBuffering(false);
+      } else {
+        throw new Error('All nuclear play attempts failed');
+      }
+      
+    } catch (e) {
+      if (isDebug) console.error('[VideoDebug] NUCLEAR user click play failed completely', e);
+      setAutoplayFailed(true); 
+      setShowControls(true);
+      setIsBuffering(false);
+    }
+  }, [playing, isDebug]);
+
+  if (!mounted) return null; // avoid hydration flicker
+
+  return (
+    <div
+      ref={containerRef}
+      className={className}
+      style={{ position: "relative" }}
+      onClick={NUCLEAR_handlePlayClick}
+    >
+      <video
+        ref={vref}
+        playsInline
+        muted
+        loop
+        autoPlay
+        preload="auto"
+        controls={showControls}
+        disablePictureInPicture
+        controlsList="nodownload noplaybackrate"
+        poster={poster || undefined}
+        webkit-playsinline="true"
+        x-webkit-airplay="allow"
+        style={{ 
+          width: "100%", 
+          height: "100%", 
+          display: "block", 
+          borderRadius: "inherit", 
+          position: "relative", 
+          zIndex: 1,
+          objectFit: "cover"
+        }}
+        // NUCLEAR: Maximum compatibility attributes
+        crossOrigin="anonymous"
+        data-setup="{}"
+        // IMPORTANT: do not add a dynamic key here
+        src={src}
+      />
+
+      {/* Loading spinner overlay */}
+      {(isBuffering && mounted) && (
+        <div style={{
+          position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center",
+          background: "rgba(0,0,0,0.3)", zIndex: 3, borderRadius: "inherit"
+        }}>
+          <div style={{
+            width: 40, height: 40, border: "3px solid rgba(255,255,255,0.3)", 
+            borderTop: "3px solid #fff", borderRadius: "50%",
+            animation: "spin 1s linear infinite"
+          }} />
+          <style dangerouslySetInnerHTML={{
+            __html: `@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`
+          }} />
+        </div>
+      )}
+
+      {/* Play overlay: shows if autoplay failed or not playing yet */}
+      {(!playing && !isBuffering) && (
+        <button
+          aria-label="Play demo"
+          onClick={NUCLEAR_handlePlayClick}
+          style={{
+            position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center",
+            background: "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))",
+            color: "#fff", fontWeight: 600, fontSize: 16, borderRadius: "inherit", zIndex: 4,
+            transition: "background 0.2s ease"
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.background = "linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6))"}
+          onMouseLeave={(e) => e.currentTarget.style.background = "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))"}
+        >
+          <div style={{
+            display: "flex", gap: 12, alignItems: "center", padding: "16px 24px",
+            borderRadius: 999, background: "rgba(0,0,0,0.7)", backdropFilter: "blur(4px)",
+            border: "1px solid rgba(255,255,255,0.2)"
+          }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            {networkError ? "Retry video" : autoplayFailed ? "Tap to play video" : "Play demo"}
+          </div>
+        </button>
+      )}
+    </div>
+  );
+}

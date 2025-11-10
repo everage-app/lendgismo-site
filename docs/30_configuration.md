@@ -138,16 +138,85 @@ DEMO_USER='{"id":"demo-admin","role":"lender","email":"admin@example.com","demo"
 
 Stored in ephemeral memory via `/api/integrations` endpoints. Can also be configured via env vars:
 
+#### Banking & Payments
+
 | Variable | Type | Required | Default | Description |
 |----------|------|----------|---------|-------------|
 | `PLAID_CLIENT_ID` | string | ❌ | - | Plaid client ID |
 | `PLAID_SECRET` | string | ❌ | - | Plaid secret key |
 | `PLAID_ENV` | string | ❌ | `sandbox` | Plaid environment: `sandbox`, `development`, `production` |
+| `STRIPE_SECRET` | string | ❌ | - | Stripe secret key |
+| `STRIPE_WEBHOOK` | string | ❌ | - | Stripe webhook secret |
+
+#### Communications
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
 | `TWILIO_SID` | string | ❌ | - | Twilio account SID |
 | `TWILIO_TOKEN` | string | ❌ | - | Twilio auth token |
 | `TWILIO_FROM` | string | ❌ | - | Twilio phone number |
-| `STRIPE_SECRET` | string | ❌ | - | Stripe secret key |
-| `STRIPE_WEBHOOK` | string | ❌ | - | Stripe webhook secret |
+| `SENDGRID_KEY` | string | ❌ | - | SendGrid API key |
+
+#### Accounting & Financial Data
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `QUICKBOOKS_CLIENT_ID` | string | ❌ | - | QuickBooks OAuth client ID |
+| `QUICKBOOKS_CLIENT_SECRET` | string | ❌ | - | QuickBooks OAuth client secret |
+| `QUICKBOOKS_REDIRECT_URI` | string | ❌ | - | OAuth callback URL (e.g., `https://yourdomain.com/.netlify/functions/quickbooks-callback`) |
+| `QUICKBOOKS_ENV` | string | ❌ | `sandbox` | QuickBooks environment: `sandbox`, `production` |
+
+**QuickBooks Setup Example**:
+```bash
+QUICKBOOKS_CLIENT_ID=ABCxyz123456789
+QUICKBOOKS_CLIENT_SECRET=aBcDeFgHiJkLmNoPqRsTuVwXyZ123456
+QUICKBOOKS_REDIRECT_URI=https://lendgismo.com/.netlify/functions/quickbooks-callback
+QUICKBOOKS_ENV=sandbox
+```
+
+#### Alternative Credit & Risk
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `DATAMERCH_API_KEY` | string | ❌ | - | DataMerch API key |
+| `DATAMERCH_API_URL` | string | ❌ | `https://api.datamerch.com/v1` | DataMerch API base URL |
+| `DATAMERCH_ENV` | string | ❌ | `sandbox` | DataMerch environment: `sandbox`, `production` |
+| `DECISIONLOGIC_API_KEY` | string | ❌ | - | DecisionLogic API key |
+| `DECISIONLOGIC_API_URL` | string | ❌ | `https://api.decisionlogic.com/v1` | DecisionLogic API base URL |
+| `DECISIONLOGIC_ENV` | string | ❌ | `sandbox` | DecisionLogic environment: `sandbox`, `production` |
+
+**DataMerch Setup Example**:
+```bash
+DATAMERCH_API_KEY=dm_live_abc123xyz789
+DATAMERCH_API_URL=https://api.datamerch.com/v1
+DATAMERCH_ENV=production
+```
+
+**DecisionLogic Setup Example**:
+```bash
+DECISIONLOGIC_API_KEY=dl_sk_test_abc123xyz789
+DECISIONLOGIC_API_URL=https://api.decisionlogic.com/v1
+DECISIONLOGIC_ENV=sandbox
+```
+
+#### Identity Verification
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `IDENTITY_PROVIDER` | string | ❌ | - | Identity verification provider: `socure`, `alloy` |
+| `SOCURE_API_KEY` | string | ❌ | - | Socure API key (if provider=socure) |
+| `SOCURE_API_URL` | string | ❌ | `https://api.socure.com/v3` | Socure API base URL |
+| `ALLOY_API_KEY` | string | ❌ | - | Alloy API key (if provider=alloy) |
+| `ALLOY_API_URL` | string | ❌ | `https://api.alloy.com/v1` | Alloy API base URL |
+| `IDENTITY_ENV` | string | ❌ | `sandbox` | Identity verification environment: `sandbox`, `production` |
+
+**Socure Setup Example**:
+```bash
+IDENTITY_PROVIDER=socure
+SOCURE_API_KEY=soc_sk_live_abc123xyz789
+SOCURE_API_URL=https://api.socure.com/v3
+IDENTITY_ENV=production
+```
 
 ---
 

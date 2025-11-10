@@ -1,0 +1,623 @@
+{
+  "generatedAt": "2025-11-10T19:51:03.982Z",
+  "baseUrl": "https://lendgismo.com",
+  "count": 88,
+  "pages": [
+    {
+      "slug": "alt-lending-platform",
+      "title": "Alt-lending platform | Lendgismo",
+      "description": "White-label alt-lending platform for MCA/ABL/working-capital lenders: onboarding, underwriting automation, reporting, and multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-platform/",
+      "type": "core"
+    },
+    {
+      "slug": "mca-lending-software",
+      "title": "MCA lending software | Lendgismo",
+      "description": "Merchant Cash Advance software for funders & ISOs—borrower onboarding, decisioning rules, collections, and reporting out-of-the-box.",
+      "canonical": "https://lendgismo.com/lp/mca-lending-software/",
+      "type": "core"
+    },
+    {
+      "slug": "asset-based-lending-software",
+      "title": "Asset-based lending (ABL) software | Lendgismo",
+      "description": "ABL workflows, collateral tracking, and customizable underwriting checklists with lender-grade exports and audit trails.",
+      "canonical": "https://lendgismo.com/lp/asset-based-lending-software/",
+      "type": "core"
+    },
+    {
+      "slug": "smb-lending-platform",
+      "title": "SMB lending platform | Lendgismo",
+      "description": "Launch an SMB lending OS—intake, underwriting, analytics, and servicing—faster with a white-label base you can own and extend.",
+      "canonical": "https://lendgismo.com/lp/smb-lending-platform/",
+      "type": "core"
+    },
+    {
+      "slug": "white-label-lending-software",
+      "title": "White-label lending software | Lendgismo",
+      "description": "Fully brandable lender OS for alt-lenders: configure credit policies, roles, and tenant-level themes.",
+      "canonical": "https://lendgismo.com/lp/white-label-lending-software/",
+      "type": "core"
+    },
+    {
+      "slug": "loan-origination-system-los",
+      "title": "Loan origination system (LOS) for alt-lenders | Lendgismo",
+      "description": "Modern LOS for MCA/ABL: digital intake, rules-based decisioning, and ops automation.",
+      "canonical": "https://lendgismo.com/lp/loan-origination-system-los/",
+      "type": "core"
+    },
+    {
+      "slug": "loan-management-servicing",
+      "title": "Loan management & servicing | Lendgismo",
+      "description": "Post-funding workflows, collections, and portfolio analytics with auditable histories.",
+      "canonical": "https://lendgismo.com/lp/loan-management-servicing/",
+      "type": "core"
+    },
+    {
+      "slug": "underwriting-automation",
+      "title": "Underwriting automation | Lendgismo",
+      "description": "Rules, checklists, scorecards, and cash-flow analysis to standardize decisions and speed approvals.",
+      "canonical": "https://lendgismo.com/lp/underwriting-automation/",
+      "type": "core"
+    },
+    {
+      "slug": "borrower-onboarding",
+      "title": "Borrower onboarding & document collection | Lendgismo",
+      "description": "Friction-light intake, e-sign, and document capture tailored to your programs.",
+      "canonical": "https://lendgismo.com/lp/borrower-onboarding/",
+      "type": "core"
+    },
+    {
+      "slug": "kyc-kyb-aml",
+      "title": "KYC/KYB & AML workflows | Lendgismo",
+      "description": "Identity and business verification pipelines with audit trail and role-based controls.",
+      "canonical": "https://lendgismo.com/lp/kyc-kyb-aml/",
+      "type": "core"
+    },
+    {
+      "slug": "plaid-bank-data",
+      "title": "Plaid bank data integration | Lendgismo",
+      "description": "Connect bank accounts with Plaid for cash-flow underwriting and ongoing monitoring.",
+      "canonical": "https://lendgismo.com/lp/plaid-bank-data/",
+      "type": "core"
+    },
+    {
+      "slug": "quickbooks-integration",
+      "title": "QuickBooks integration for lenders | Lendgismo",
+      "description": "Sync accounting to accelerate underwriting and portfolio reviews.",
+      "canonical": "https://lendgismo.com/lp/quickbooks-integration/",
+      "type": "core"
+    },
+    {
+      "slug": "stripe-repayments",
+      "title": "Stripe repayments for lenders | Lendgismo",
+      "description": "Card/ACH repayments and automated schedules with reporting.",
+      "canonical": "https://lendgismo.com/lp/stripe-repayments/",
+      "type": "core"
+    },
+    {
+      "slug": "twilio-sms-otp",
+      "title": "Twilio SMS (OTP & notifications) | Lendgismo",
+      "description": "2FA logins and borrower messaging via Twilio SMS.",
+      "canonical": "https://lendgismo.com/lp/twilio-sms-otp/",
+      "type": "core"
+    },
+    {
+      "slug": "sendgrid-email-otp",
+      "title": "SendGrid email (OTP & notifications) | Lendgismo",
+      "description": "Email-based OTP and transactional messaging out of the box.",
+      "canonical": "https://lendgismo.com/lp/sendgrid-email-otp/",
+      "type": "core"
+    },
+    {
+      "slug": "multi-tenant-lender-os",
+      "title": "Multi-tenant lender OS | Lendgismo",
+      "description": "Serve multiple lenders/brands from one codebase with strict tenant isolation.",
+      "canonical": "https://lendgismo.com/lp/multi-tenant-lender-os/",
+      "type": "core"
+    },
+    {
+      "slug": "iso-broker-portal",
+      "title": "ISO / broker portal | Lendgismo",
+      "description": "Partner submission, tracking, and referral management with role-based access.",
+      "canonical": "https://lendgismo.com/lp/iso-broker-portal/",
+      "type": "core"
+    },
+    {
+      "slug": "decisioning-rules-engine",
+      "title": "Decisioning rules engine | Lendgismo",
+      "description": "Configurable decision rules, scorecards, and policy checks.",
+      "canonical": "https://lendgismo.com/lp/decisioning-rules-engine/",
+      "type": "core"
+    },
+    {
+      "slug": "pricing-engine",
+      "title": "Pricing engine for alt-lenders | Lendgismo",
+      "description": "Consistent pricing/fee logic across programs with auditability.",
+      "canonical": "https://lendgismo.com/lp/pricing-engine/",
+      "type": "core"
+    },
+    {
+      "slug": "term-sheets-e-sign",
+      "title": "Digital term sheets & e-sign | Lendgismo",
+      "description": "Generate compliant term sheets and capture signatures quickly.",
+      "canonical": "https://lendgismo.com/lp/term-sheets-e-sign/",
+      "type": "core"
+    },
+    {
+      "slug": "document-management",
+      "title": "Document management for lenders | Lendgismo",
+      "description": "Organize borrower docs with permissions, versions, and logs.",
+      "canonical": "https://lendgismo.com/lp/document-management/",
+      "type": "core"
+    },
+    {
+      "slug": "collections-workflows",
+      "title": "Collections workflows | Lendgismo",
+      "description": "Queue-based follow-ups, notes, reminders, and payment links.",
+      "canonical": "https://lendgismo.com/lp/collections-workflows/",
+      "type": "core"
+    },
+    {
+      "slug": "portfolio-analytics-reporting",
+      "title": "Portfolio analytics & reporting | Lendgismo",
+      "description": "Cohorts, cash-flow metrics, charge-off trends, and investor-ready exports (CSV/PPTX).",
+      "canonical": "https://lendgismo.com/lp/portfolio-analytics-reporting/",
+      "type": "core"
+    },
+    {
+      "slug": "compliance-audit-trail",
+      "title": "Compliance & audit trail | Lendgismo",
+      "description": "Every action logged with timestamp, user, and context for audits.",
+      "canonical": "https://lendgismo.com/lp/compliance-audit-trail/",
+      "type": "core"
+    },
+    {
+      "slug": "api-webhooks",
+      "title": "APIs & webhooks for lenders | Lendgismo",
+      "description": "Connect external systems and trigger custom workflows safely.",
+      "canonical": "https://lendgismo.com/lp/api-webhooks/",
+      "type": "core"
+    },
+    {
+      "slug": "equipment-finance-software",
+      "title": "Equipment finance lender software | Lendgismo",
+      "description": "Equipment finance flow: intake, underwriting, docs, servicing.",
+      "canonical": "https://lendgismo.com/lp/equipment-finance-software/",
+      "type": "core"
+    },
+    {
+      "slug": "invoice-factoring-software",
+      "title": "Invoice factoring software | Lendgismo",
+      "description": "Factoring workflow support with document and payment tracking.",
+      "canonical": "https://lendgismo.com/lp/invoice-factoring-software/",
+      "type": "core"
+    },
+    {
+      "slug": "working-capital-lending-software",
+      "title": "Working capital lending software | Lendgismo",
+      "description": "Rapid SMB working-capital programs with standardized ops.",
+      "canonical": "https://lendgismo.com/lp/working-capital-lending-software/",
+      "type": "core"
+    },
+    {
+      "slug": "ecommerce-lender-software",
+      "title": "E-commerce lender software | Lendgismo",
+      "description": "Serve online merchants with data-driven underwriting and payouts.",
+      "canonical": "https://lendgismo.com/lp/ecommerce-lender-software/",
+      "type": "core"
+    },
+    {
+      "slug": "for-mca-funders",
+      "title": "For MCA funders | Lendgismo",
+      "description": "Everything MCAs need to intake, decision, collect, and report.",
+      "canonical": "https://lendgismo.com/lp/for-mca-funders/",
+      "type": "core"
+    },
+    {
+      "slug": "for-iso-brokers",
+      "title": "For ISO / brokers | Lendgismo",
+      "description": "Partner portal, deal routing, status, and referral analytics.",
+      "canonical": "https://lendgismo.com/lp/for-iso-brokers/",
+      "type": "core"
+    },
+    {
+      "slug": "for-nonbank-lenders",
+      "title": "For non-bank lenders | Lendgismo",
+      "description": "Launch alternative lending programs with lender-grade rails.",
+      "canonical": "https://lendgismo.com/lp/for-nonbank-lenders/",
+      "type": "core"
+    },
+    {
+      "slug": "for-credit-unions-smb",
+      "title": "For credit unions (SMB) | Lendgismo",
+      "description": "Modernize SMB programs with underwriting automation & UX.",
+      "canonical": "https://lendgismo.com/lp/for-credit-unions-smb/",
+      "type": "core"
+    },
+    {
+      "slug": "for-community-banks-smb",
+      "title": "For community banks (SMB) | Lendgismo",
+      "description": "Community lenders: accelerate SMB onboarding & decisions.",
+      "canonical": "https://lendgismo.com/lp/for-community-banks-smb/",
+      "type": "core"
+    },
+    {
+      "slug": "fraud-detection-kyc-aml",
+      "title": "Fraud detection, KYC/AML | Lendgismo",
+      "description": "Mitigate risk with identity/business checks and alerts.",
+      "canonical": "https://lendgismo.com/lp/fraud-detection-kyc-aml/",
+      "type": "core"
+    },
+    {
+      "slug": "cashflow-analysis",
+      "title": "Cash-flow analysis for underwriting | Lendgismo",
+      "description": "Bank & accounting data to evaluate capacity and trends.",
+      "canonical": "https://lendgismo.com/lp/cashflow-analysis/",
+      "type": "core"
+    },
+    {
+      "slug": "risk-scoring",
+      "title": "Lender risk scoring | Lendgismo",
+      "description": "Configurable scorecards and thresholds with transparent logic.",
+      "canonical": "https://lendgismo.com/lp/risk-scoring/",
+      "type": "core"
+    },
+    {
+      "slug": "investor-reporting",
+      "title": "Investor reporting | Lendgismo",
+      "description": "Clean exports and dashboards for LP updates and diligence.",
+      "canonical": "https://lendgismo.com/lp/investor-reporting/",
+      "type": "core"
+    },
+    {
+      "slug": "alt-lending-software-alabama",
+      "title": "Alt-lending software in Alabama | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Alabama with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-alabama/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-alaska",
+      "title": "Alt-lending software in Alaska | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Alaska with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-alaska/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-arizona",
+      "title": "Alt-lending software in Arizona | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Arizona with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-arizona/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-arkansas",
+      "title": "Alt-lending software in Arkansas | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Arkansas with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-arkansas/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-california",
+      "title": "Alt-lending software in California | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in California with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-california/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-colorado",
+      "title": "Alt-lending software in Colorado | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Colorado with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-colorado/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-connecticut",
+      "title": "Alt-lending software in Connecticut | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Connecticut with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-connecticut/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-delaware",
+      "title": "Alt-lending software in Delaware | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Delaware with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-delaware/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-florida",
+      "title": "Alt-lending software in Florida | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Florida with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-florida/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-georgia",
+      "title": "Alt-lending software in Georgia | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Georgia with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-georgia/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-hawaii",
+      "title": "Alt-lending software in Hawaii | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Hawaii with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-hawaii/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-idaho",
+      "title": "Alt-lending software in Idaho | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Idaho with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-idaho/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-illinois",
+      "title": "Alt-lending software in Illinois | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Illinois with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-illinois/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-indiana",
+      "title": "Alt-lending software in Indiana | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Indiana with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-indiana/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-iowa",
+      "title": "Alt-lending software in Iowa | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Iowa with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-iowa/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-kansas",
+      "title": "Alt-lending software in Kansas | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Kansas with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-kansas/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-kentucky",
+      "title": "Alt-lending software in Kentucky | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Kentucky with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-kentucky/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-louisiana",
+      "title": "Alt-lending software in Louisiana | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Louisiana with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-louisiana/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-maine",
+      "title": "Alt-lending software in Maine | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Maine with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-maine/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-maryland",
+      "title": "Alt-lending software in Maryland | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Maryland with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-maryland/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-massachusetts",
+      "title": "Alt-lending software in Massachusetts | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Massachusetts with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-massachusetts/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-michigan",
+      "title": "Alt-lending software in Michigan | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Michigan with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-michigan/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-minnesota",
+      "title": "Alt-lending software in Minnesota | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Minnesota with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-minnesota/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-mississippi",
+      "title": "Alt-lending software in Mississippi | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Mississippi with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-mississippi/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-missouri",
+      "title": "Alt-lending software in Missouri | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Missouri with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-missouri/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-montana",
+      "title": "Alt-lending software in Montana | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Montana with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-montana/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-nebraska",
+      "title": "Alt-lending software in Nebraska | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Nebraska with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-nebraska/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-nevada",
+      "title": "Alt-lending software in Nevada | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Nevada with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-nevada/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-new-hampshire",
+      "title": "Alt-lending software in New Hampshire | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in New Hampshire with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-new-hampshire/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-new-jersey",
+      "title": "Alt-lending software in New Jersey | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in New Jersey with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-new-jersey/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-new-mexico",
+      "title": "Alt-lending software in New Mexico | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in New Mexico with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-new-mexico/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-new-york",
+      "title": "Alt-lending software in New York | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in New York with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-new-york/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-north-carolina",
+      "title": "Alt-lending software in North Carolina | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in North Carolina with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-north-carolina/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-north-dakota",
+      "title": "Alt-lending software in North Dakota | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in North Dakota with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-north-dakota/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-ohio",
+      "title": "Alt-lending software in Ohio | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Ohio with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-ohio/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-oklahoma",
+      "title": "Alt-lending software in Oklahoma | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Oklahoma with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-oklahoma/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-oregon",
+      "title": "Alt-lending software in Oregon | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Oregon with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-oregon/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-pennsylvania",
+      "title": "Alt-lending software in Pennsylvania | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Pennsylvania with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-pennsylvania/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-rhode-island",
+      "title": "Alt-lending software in Rhode Island | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Rhode Island with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-rhode-island/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-south-carolina",
+      "title": "Alt-lending software in South Carolina | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in South Carolina with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-south-carolina/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-south-dakota",
+      "title": "Alt-lending software in South Dakota | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in South Dakota with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-south-dakota/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-tennessee",
+      "title": "Alt-lending software in Tennessee | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Tennessee with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-tennessee/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-texas",
+      "title": "Alt-lending software in Texas | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Texas with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-texas/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-utah",
+      "title": "Alt-lending software in Utah | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Utah with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-utah/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-vermont",
+      "title": "Alt-lending software in Vermont | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Vermont with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-vermont/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-virginia",
+      "title": "Alt-lending software in Virginia | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Virginia with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-virginia/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-washington",
+      "title": "Alt-lending software in Washington | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Washington with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-washington/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-west-virginia",
+      "title": "Alt-lending software in West Virginia | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in West Virginia with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-west-virginia/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-wisconsin",
+      "title": "Alt-lending software in Wisconsin | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Wisconsin with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-wisconsin/",
+      "type": "state"
+    },
+    {
+      "slug": "alt-lending-software-wyoming",
+      "title": "Alt-lending software in Wyoming | Lendgismo",
+      "description": "Launch an alt-lending / MCA / ABL platform in Wyoming with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.",
+      "canonical": "https://lendgismo.com/lp/alt-lending-software-wyoming/",
+      "type": "state"
+    }
+  ]
+}

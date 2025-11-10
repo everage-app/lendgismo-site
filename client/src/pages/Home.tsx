@@ -7,6 +7,7 @@ import Seo from "@/components/Seo";
 import { Link } from "wouter";
 import { ArrowRight, Zap, CheckCircle, Users, Clock, HelpCircle, Package, Loader2 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -48,13 +49,40 @@ export default function Home() {
     setSubmitting(true);
     setSubmitError(null);
     try {
-      // Submit to Netlify Forms - it will email you automatically via form notifications
       const form = e.currentTarget;
-      await fetch('/', {
+
+      // 1) Primary path: send email via our function (SendGrid)
+      const payload = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        company: formData.company,
+        role: formData.role,
+        interest: formData.interest,
+        message: formData.message,
+      };
+      const emailRes = await fetch('/api/contact/email', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form) as any).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
+
+      if (!emailRes.ok) {
+        const t = await emailRes.text().catch(() => '');
+        throw new Error(`Email send failed (${emailRes.status}): ${t}`);
+      }
+
+      // 2) Fire-and-forget: register submission with Netlify Forms for dashboard/history
+      //    (kept non-blocking so email delivery is not impacted)
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          // ensure form-name is present for Netlify
+          body: new URLSearchParams(new FormData(form) as any).toString(),
+          keepalive: true as any,
+        });
+      } catch { /* ignore */ }
 
       setLastEmail(formData.email);
       setSubmitted(true);
@@ -138,9 +166,9 @@ export default function Home() {
                   <span>See What You Get Instantly</span>
                   <ArrowRight size={20} />
                 </a>
-                <Link href="/overview" className="btn-ghost" data-testid="button-hero-overview">
+                <a href="/overview" className="btn-ghost" data-testid="button-hero-overview">
                   View Tech Details
-                </Link>
+                </a>
                 <Link href="/docs" className="btn-ghost" data-testid="button-hero-docs">
                   Read the Docs
                 </Link>
@@ -166,7 +194,7 @@ export default function Home() {
             {/* Right Column - Visual */}
             <div className="relative">
               <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur overflow-hidden group">
-                <Link href="/overview" className="block">
+                <a href="/overview" className="block">
                   <div className="aspect-[16/10] w-full rounded-xl border border-white/10 bg-gradient-to-br from-brand-950 via-brand-900 to-background relative overflow-hidden cursor-pointer">
                     {/* Animated gradient orbs */}
                     <div className="absolute top-0 left-0 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
@@ -209,17 +237,17 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
                 <div className="mt-4 flex items-center justify-between">
                   <p className="text-sm text-zinc-400" data-testid="text-hero-caption">
                     Production-ready UI components and workflows
                   </p>
-                  <Link href="/overview" className="text-sm text-brand-400 hover:text-brand-300 transition flex items-center gap-1" data-testid="button-watch-demo" aria-label="Watch video demo">
+                  <a href="/overview" className="text-sm text-brand-400 hover:text-brand-300 transition flex items-center gap-1" data-testid="button-watch-demo" aria-label="Watch video demo">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M5 4L11 8L5 12V4Z" fill="currentColor"/>
                     </svg>
                     Watch demo
-                  </Link>
+                  </a>
                 </div>
               </div>
               
@@ -359,7 +387,7 @@ export default function Home() {
             
             <div className="mt-8 pt-8 border-t border-white/10 text-center">
               <p className="text-lg text-white mb-4">
-                <strong>Delivery:</strong> GitHub repository access within 24 hours of purchase + live handoff session
+                <strong>Delivery:</strong> Secure ZIP handoff within 24 hours (Google Drive, WeTransfer, or Amazon S3), or GitHub repository access — plus a live handoff session
               </p>
               <p className="text-sm text-zinc-400">
                 Your dev team can start customizing and deploying immediately
@@ -378,8 +406,8 @@ export default function Home() {
               <p className="text-sm text-zinc-400">See the ROI breakdown or dive into the docs. You can launch in weeks, not months.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="btn-primary" data-testid="button-band-handoff">
-                Request Code Handoff
+              <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="btn-primary" data-testid="button-band-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
+                Request ZIP Handoff
               </a>
               <a href="#roi" onClick={(e) => scrollToSection(e, '#roi')} className="btn-ghost" data-testid="button-band-roi">
                 See ROI Breakdown
@@ -514,7 +542,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 px-8 py-6 backdrop-blur">
               <div>
                 <div className="text-sm uppercase text-zinc-400 mb-1">You Save</div>
-                <div className="text-4xl md:text-5xl font-bold text-gradient">$300k–$600k</div>
+                <div className="text-4xl md:text-5xl font-bold text-gradient">$600k+</div>
               </div>
               <div className="h-16 w-px bg-white/10"></div>
               <div>
@@ -525,6 +553,28 @@ export default function Home() {
               <div>
                 <div className="text-sm uppercase text-zinc-400 mb-1">Time Saved</div>
                 <div className="text-4xl md:text-5xl font-bold text-white">6 months</div>
+              </div>
+              <div className="h-16 w-px bg-white/10"></div>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="cursor-help">
+                    <div className="text-sm uppercase text-zinc-400 mb-1">Dev Hours Saved</div>
+                    <div className="text-4xl md:text-5xl font-bold text-white">1,800+</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs text-sm">
+                  <p>
+                    Estimate: 2 senior engineers × 6 months × ~150 hrs/month ≈ 1,800 hours.
+                  </p>
+                  <p className="text-zinc-400 mt-1">
+                    Excludes PM, design, QA/DevOps, and third‑party integrations.
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+              <div className="h-16 w-px bg-white/10"></div>
+              <div>
+                <div className="text-sm uppercase text-zinc-400 mb-1">Sprints Saved</div>
+                <div className="text-4xl md:text-5xl font-bold text-white">12+</div>
               </div>
             </div>
           </div>
@@ -625,8 +675,8 @@ export default function Home() {
               
               <div className="space-y-6">
                 {[
-                  { title: 'Flexible payment terms', description: 'Standard payment, or split across 2-3 milestones. Enterprise invoicing and PO supported.' },
-                  { title: 'Optional add-ons', description: 'Custom integrations (Plaid, Stripe, QuickBooks), white-label deployment assistance, extended training sessions.' },
+                  { title: 'Simple one-time payment', description: 'Single payment for a perpetual license. Enterprise invoicing and PO supported.' },
+                  { title: 'Everything included', description: 'Core integrations (Plaid, Stripe, QuickBooks), white‑label deployment assistance, and a live training handoff are included.' },
                   { title: '30-day email support', description: 'Technical questions answered within 24 hours. Extended support packages available.' },
                   { title: 'NDA & IP assignment', description: 'We provide standard NDA and full intellectual property assignment documents upon request.' },
                 ].map((item, index) => (
@@ -656,13 +706,13 @@ export default function Home() {
                     className="flex items-center justify-center gap-2 w-full btn-primary"
                     data-testid="button-pricing-handoff"
                   >
-                    Request Code Handoff
+                    Request ZIP Handoff
                     <ArrowRight size={20} />
                   </a>
                   
-                  <Link href="/overview" className="flex items-center justify-center gap-2 w-full btn-ghost" data-testid="button-pricing-overview">
+                  <a href="/overview" className="flex items-center justify-center gap-2 w-full btn-ghost" data-testid="button-pricing-overview">
                     Read Full Overview
-                  </Link>
+                  </a>
                 </div>
                 
                 <p className="text-sm text-zinc-400 mt-6 text-center" data-testid="text-pricing-note">
@@ -709,10 +759,10 @@ export default function Home() {
             <p className="text-lg text-zinc-300 mb-8 max-w-2xl mx-auto" data-testid="text-overview-cta-description">
               Explore the complete overview with screenshots, technical specifications, and detailed feature breakdowns.
             </p>
-            <Link href="/overview" className="btn-primary" data-testid="button-view-overview">
+            <a href="/overview" className="btn-primary" data-testid="button-view-overview">
               View Full Overview
               <ArrowRight size={20} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -772,7 +822,7 @@ export default function Home() {
                   Do you provide ongoing support or updates?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  The $150,000 license includes a comprehensive handoff session and 30 days of email support for technical questions. Extended support packages, custom integrations (Plaid, QuickBooks, etc.), and additional training sessions are available as optional add-ons. Since you own the code, you maintain and update it on your own schedule.
+                  The $150,000 license includes a comprehensive handoff session and 30 days of email support for technical questions. Core integrations (Plaid, Stripe, QuickBooks) and the training handoff are included. If you need more help, extended support packages and customizations are available on request. Since you own the code, you maintain and update it on your own schedule.
                 </AccordionContent>
               </AccordionItem>
               
@@ -1042,3 +1092,4 @@ export default function Home() {
     </div>
   );
 }
+

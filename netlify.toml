@@ -73,3 +73,26 @@
   from = "/doc"
   to = "/docs/"
   status = 301
+
+# Cached immutable hero/demo video assets
+[[headers]]
+  for = "/assets/showcase/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "video/mp4"
+    Accept-Ranges = "bytes"
+
+[[headers]]
+  for = "/assets/showcase/*.webm"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "video/webm"
+    Accept-Ranges = "bytes"
+
+# Wildcard MP4 headers (broader, as requested; keeps existing)
+[[headers]]
+  for = "/**/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Accept-Ranges = "bytes"
+    Content-Type = "video/mp4"

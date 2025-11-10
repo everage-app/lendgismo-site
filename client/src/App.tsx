@@ -18,6 +18,7 @@ import DocsHome from "@/pages/DocsHome";
 import DocViewer from "@/pages/DocViewer";
 import IntegrationsDemo from "@/pages/IntegrationsDemo";
 import DocsIntegrationsDemo from "@/pages/DocsIntegrationsDemo";
+import Marketing from "@/pages/Marketing";
 
 function Redirect({ to }: { to: string }) {
   const [, navigate] = useLocation();
@@ -30,6 +31,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/overview" component={Overview} />
+  <Route path="/marketing" component={Marketing} />
     <Route path="/docs" component={DocsHome} />
     <Route path="/docs/" component={DocsHome} />
     <Route path="/docs/demo/integrations" component={DocsIntegrationsDemo} />

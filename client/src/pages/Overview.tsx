@@ -8,9 +8,11 @@ import TrustBelt from "@/components/TrustBelt";
 import CompareTable from "@/components/CompareTable";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
+import IntegrationsShowcase from "@/components/IntegrationsShowcase";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, Package, BookOpen, Database, Handshake } from "lucide-react";
 import Seo from "@/components/Seo";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Overview() {
 
@@ -100,8 +102,8 @@ export default function Overview() {
         </div>
       </section>
 
-      {/* STUNNING HERO VIDEO SECTION */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+  {/* STUNNING HERO VIDEO SECTION */}
+  <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-brand-950/50 via-brand-900/30 to-brand-950/50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-500/10 via-transparent to-transparent"></div>
@@ -296,7 +298,7 @@ export default function Overview() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 border-t border-white/10">
                   <div className="flex items-center gap-8">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-gradient">$300k+</div>
+                      <div className="text-3xl font-bold text-gradient">$600k+</div>
                       <div className="text-xs text-zinc-400 mt-1">You Save</div>
                     </div>
                     <div className="h-12 w-px bg-white/10"></div>
@@ -308,6 +310,28 @@ export default function Overview() {
                     <div className="text-center">
                       <div className="text-3xl font-bold text-white">6 mo.</div>
                       <div className="text-xs text-zinc-400 mt-1">Faster</div>
+                    </div>
+                    <div className="h-12 w-px bg-white/10"></div>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div className="text-center cursor-help">
+                          <div className="text-3xl font-bold text-white">1,800+</div>
+                          <div className="text-xs text-zinc-400 mt-1">Dev hours saved</div>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="max-w-xs text-sm">
+                        <p>
+                          Estimate: 2 senior engineers × 6 months × ~150 hrs/month ≈ 1,800 hours.
+                        </p>
+                        <p className="text-zinc-400 mt-1">
+                          Excludes PM, design, QA/DevOps, and third‑party integrations.
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="h-12 w-px bg-white/10"></div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-white">12+</div>
+                      <div className="text-xs text-zinc-400 mt-1">Sprints saved</div>
                     </div>
                   </div>
                   <a 
@@ -366,6 +390,9 @@ export default function Overview() {
 
       {/* Trust belt / integrations */}
       <TrustBelt />
+
+  {/* Integrations ROI showcase */}
+  <IntegrationsShowcase />
 
       {/* Screenshot Gallery removed as requested */}
 
@@ -480,8 +507,8 @@ export default function Overview() {
             Get started with Lendgismo today and launch your lending platform in weeks instead of months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="btn-primary" data-testid="button-cta-handoff">
-              Request Code Handoff
+            <Link href="/#contact" className="btn-primary" data-testid="button-cta-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
+              Request ZIP Handoff
               <ArrowRight size={20} />
             </Link>
             <Link href="/#pricing" className="btn-ghost" data-testid="button-cta-pricing">

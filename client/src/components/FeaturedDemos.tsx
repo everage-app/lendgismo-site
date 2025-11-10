@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type React from 'react'
+import HeroVideo from '@/components/media/HeroVideo'
 
 interface ShowcaseItem { src: string; title?: string; caption?: string; type?: 'image'|'video'; timestamp?: string }
 
@@ -11,8 +12,6 @@ type FeaturedDemosProps = {
 
 export default function FeaturedDemos({ maxVideos = 2, className = '', variant = 'hero' }: FeaturedDemosProps) {
   const [items, setItems] = useState<ShowcaseItem[]>([])
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const lastTickRef = useRef<{ t: number; ts: number }>({ t: 0, ts: 0 })
 
   useEffect(() => {
     fetch('/assets/showcase/manifest.json')
@@ -86,90 +85,36 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   }
 
   // HERO VARIANT - single large video (default)
-  // If no video yet, show loading state but don't break the page
-  if (!primarySrc) {
-    return (
-      <section className={`${className}`}>
-        <div className="w-full aspect-[16/9] bg-gradient-to-br from-brand-950 to-black rounded-lg flex items-center justify-center border border-white/10">
-          <div className="text-center">
-            <div className="w-12 h-12 border-4 border-brand-500/30 border-t-brand-500 rounded-full animate-spin mx-auto mb-3"></div>
-            <p className="text-sm text-zinc-400">Loading demo video...</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  // Safe version of sources - only apply if we have a primary source
-  const webmSrc = primarySrc ? primarySrc.replace(/\.mp4$/i, '.webm') : null
-  const mp4Src = primarySrc || null
-  
-  // Preload the WebM for faster initial load
-  useEffect(() => {
-    if (!webmSrc) return
-    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.as = 'video'
-    link.href = webmSrc
-    link.type = 'video/webm'
-    document.head.appendChild(link)
-    return () => {
-      try { document.head.removeChild(link) } catch {}
-    }
-  }, [webmSrc])
+  // Absolute-safe defaults to guarantee something playable even if the manifest is slow/missing
+  const DEFAULT_MP4 = '/assets/showcase/20251030-0830/demo_full_tour.mp4'
+  const DEFAULT_POSTER = '/assets/showcase/20251023-0938/02_dashboard--desktop.png'
+  // Surgical stability: hardcode the hero to MP4 path to avoid source/order flips
+  const REAL_MP4_PATH = DEFAULT_MP4
 
   return (
     <section className={`${className}`}>
       <div className="w-full">
-        {/* Premium video player - OPTIMIZED for large files with proper streaming */}
+        {/* Premium video player - Bulletproof autoplay with overlay fallback */}
         <div className="aspect-[16/9] bg-black relative rounded-lg overflow-hidden">
-          
-          <video
-            key={primarySrc}
-            ref={videoRef}
+          <HeroVideo
+            src={REAL_MP4_PATH}
+            poster={null}
             className="w-full h-full object-contain"
-            playsInline
-            controls
-            preload="auto"
-            poster={primarySrc ? posterFromVideo(primarySrc) : undefined}
-            onLoadedMetadata={(e) => {
-              console.log('Video metadata loaded:', e.currentTarget.duration, 'seconds')
-              applyCaptionPlacement(e.currentTarget)
-              lastTickRef.current = { t: 0, ts: Date.now() }
-            }}
-            onCanPlay={(e) => {
-              console.log('Video can play - ready state:', e.currentTarget.readyState)
-            }}
-            onTimeUpdate={(e) => {
-              const v = e.currentTarget
-              const now = Date.now()
-              const { t, ts } = lastTickRef.current
-              if (v.currentTime <= 5) {
-                // If we haven't advanced for > 2000ms within the first 5 seconds, nudge forward slightly
-                if (Math.abs(v.currentTime - t) < 0.02 && now - ts > 2000 && !v.paused) {
-                  try { v.currentTime = Math.min(5, v.currentTime + 0.15) } catch {}
-                  v.play().catch(() => {})
-                }
-              }
-              lastTickRef.current = { t: v.currentTime, ts: now }
-            }}
-            onError={(e) => {
-              const video = e.currentTarget
-              console.error('Video error:', video.error?.code, video.error?.message)
-            }}
-          >
-            {/* WebM first for smaller file size (15MB vs 81MB) */}
-            {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
-            {mp4Src ? <source src={mp4Src} type="video/mp4" /> : null}
-            {primarySrc ? (
-              <track kind="subtitles" src={subtitleFromVideo(primarySrc)} label="English" srcLang="en" default={false} />
-            ) : null}
-            Your browser does not support the video tag.
-          </video>
+          />
         </div>
         
         {/* Optional: Try live app link */}
         <div className="text-center mt-6 text-sm md:text-base text-zinc-400">
+          Trouble playing the video?{' '}
+          <a
+            href={REAL_MP4_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brand-300 hover:text-brand-200 underline underline-offset-4 transition-colors mr-2"
+          >
+            Open in new tab →
+          </a>
+          <span className="mx-1">·</span>
           Want to explore the live app?{' '}
           <a
             href="https://platform.lendgismo.com"

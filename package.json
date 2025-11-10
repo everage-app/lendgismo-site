@@ -8,6 +8,8 @@
     "dev:5100": "vite --port 5100 --strictPort",
     "dev:win:5001": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"[Environment]::SetEnvironmentVariable('NODE_ENV','development','Process'); [Environment]::SetEnvironmentVariable('PORT','5001','Process'); npx tsx server/index.ts\"",
     "dev:win:5000": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"[Environment]::SetEnvironmentVariable('NODE_ENV','development','Process'); [Environment]::SetEnvironmentVariable('PORT','5000','Process'); npx tsx server/index.ts\"",
+    "prebuild": "node scripts/generate-lp.mjs",
+    "lp:gen": "node scripts/generate-lp.mjs",
     "build": "vite build",
     "preview": "vite preview --port 5173",
     "start": "NODE_ENV=production node dist/index.js",

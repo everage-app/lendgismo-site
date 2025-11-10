@@ -51,6 +51,61 @@ This document catalogs all secrets, API keys, and credentials used in Lendgismo,
 | `TWILIO_SID` | Account SID | ❌ Optional | On compromise | Secrets Manager |
 | `TWILIO_TOKEN` | Auth Token | ❌ Optional | 90 days | Secrets Manager |
 
+### Accounting Integration (QuickBooks)
+
+| Secret | Type | Required | Rotation Schedule | Storage Location |
+|--------|------|----------|-------------------|------------------|
+| `QUICKBOOKS_CLIENT_ID` | OAuth Client ID | ✅ (if using QuickBooks) | On compromise | Secrets Manager |
+| `QUICKBOOKS_CLIENT_SECRET` | OAuth Secret | ✅ (if using QuickBooks) | 180 days | Secrets Manager |
+| `QUICKBOOKS_REDIRECT_URI` | OAuth Callback URL | ✅ (if using QuickBooks) | On domain change | Config/Secrets Manager |
+
+**Security Notes**:
+- OAuth tokens stored encrypted per-tenant
+- Access tokens expire after 3600 seconds (1 hour)
+- Refresh tokens valid for 100 days
+- Implement automatic token refresh 5 minutes before expiration
+
+### Alternative Data (DataMerch)
+
+| Secret | Type | Required | Rotation Schedule | Storage Location |
+|--------|------|----------|-------------------|------------------|
+| `DATAMERCH_API_KEY` | API Key | ✅ (if using DataMerch) | 90 days | Secrets Manager |
+| `DATAMERCH_API_URL` | API Endpoint | ✅ (if using DataMerch) | On migration | Config/Secrets Manager |
+
+**Security Notes**:
+- API key grants access to alternative credit data
+- Rotate immediately if compromised
+- Rate limits: 1000 requests/day (standard tier)
+- Monitor for unusual usage patterns
+
+### Credit & Fraud (DecisionLogic)
+
+| Secret | Type | Required | Rotation Schedule | Storage Location |
+|--------|------|----------|-------------------|------------------|
+| `DECISIONLOGIC_API_KEY` | API Key | ✅ (if using DecisionLogic) | 90 days | Secrets Manager |
+| `DECISIONLOGIC_API_URL` | API Endpoint | ✅ (if using DecisionLogic) | On migration | Config/Secrets Manager |
+
+**Security Notes**:
+- API key provides access to PII and credit data
+- Must comply with FCRA and GLBA requirements
+- Rotate immediately if compromised
+- Audit all API calls with user context
+- Never log PII or SSN data
+
+### Identity Verification (Socure/Alloy)
+
+| Secret | Type | Required | Rotation Schedule | Storage Location |
+|--------|------|----------|-------------------|------------------|
+| `IDENTITY_PROVIDER` | Provider Selection | ✅ (if using KYC) | On provider change | Config |
+| `SOCURE_API_KEY` | API Key | ✅ (if provider=socure) | 90 days | Secrets Manager |
+| `ALLOY_API_KEY` | API Key | ✅ (if provider=alloy) | 90 days | Secrets Manager |
+
+**Security Notes**:
+- Handles sensitive PII for identity verification
+- Must comply with KYC/AML regulations
+- Rotate on suspected compromise
+- Log all verification attempts for compliance audit
+
 ### Database Credentials
 
 | Secret | Type | Required | Rotation Schedule | Storage Location |

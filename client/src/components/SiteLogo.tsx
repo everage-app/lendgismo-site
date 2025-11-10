@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 // Use the attached brand logo for headers/footers (keep favicon as-is elsewhere)
 // Import as URL to ensure optimal bundling and caching (transparent background version)
 import logoUrl from "@assets/lendgismo-logo-white-transparent.svg?url";
@@ -26,7 +25,7 @@ export default function SiteLogo({
   const logoSrc = logoUrl;
 
   return (
-    <Link href="/" aria-label={ariaLabel} data-testid={linkTestId}>
+    <a href="/" aria-label={ariaLabel} data-testid={linkTestId}>
       <div className={`${baseClasses} ${glowClasses} ${className}`}>
         <img
           src={logoSrc}
@@ -37,6 +36,6 @@ export default function SiteLogo({
           data-testid={imgTestId}
         />
       </div>
-    </Link>
+    </a>
   );
 }
