@@ -86,7 +86,7 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
 
   // HERO VARIANT - single large video (default)
   // Absolute-safe defaults to guarantee something playable even if the manifest is slow/missing
-  const DEFAULT_MP4 = '/assets/showcase/20251030-0830/demo_full_tour.mp4'
+  const DEFAULT_MP4 = '/assets/showcase/20251030-0830/demo_full_tour_optimized.mp4'
   const DEFAULT_POSTER = '/assets/showcase/20251023-0938/02_dashboard--desktop.png'
   // Surgical stability: hardcode the hero to MP4 path to avoid source/order flips
   const REAL_MP4_PATH = DEFAULT_MP4
