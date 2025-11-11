@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type React from 'react'
-import HeroVideo from '@/components/media/HeroVideo'
+import StableLoopVideo from '@/components/media/StableLoopVideo'
 
 interface ShowcaseItem { src: string; title?: string; caption?: string; type?: 'image'|'video'; timestamp?: string }
 
@@ -9,6 +9,8 @@ type FeaturedDemosProps = {
   className?: string
   variant?: 'hero'|'grid'
 }
+
+const HERO_VIDEO_SRC = new URL('../../../attached_assets/Lendgismo_Demo_720.mp4', import.meta.url).href
 
 export default function FeaturedDemos({ maxVideos = 2, className = '', variant = 'hero' }: FeaturedDemosProps) {
   const [items, setItems] = useState<ShowcaseItem[]>([])
@@ -86,20 +88,19 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
 
   // HERO VARIANT - single large video (default)
   // Absolute-safe defaults to guarantee something playable even if the manifest is slow/missing
-  const DEFAULT_MP4 = '/assets/showcase/20251030-0830/demo_full_tour_optimized.mp4'
-  const DEFAULT_POSTER = '/assets/showcase/20251023-0938/02_dashboard--desktop.png'
-  // Surgical stability: hardcode the hero to MP4 path to avoid source/order flips
-  const REAL_MP4_PATH = DEFAULT_MP4
+  // Prefer the local attached assets demo video, fall back to manifest default if needed
+  const DEFAULT_MP4 = HERO_VIDEO_SRC
+  // NO POSTER - let video show first frame naturally
+  const REAL_MP4_PATH = primarySrc || DEFAULT_MP4
 
   return (
     <section className={`${className}`}>
       <div className="w-full">
         {/* Premium video player - Bulletproof autoplay with overlay fallback */}
         <div className="aspect-[16/9] bg-black relative rounded-lg overflow-hidden">
-          <HeroVideo
+          <StableLoopVideo
             src={REAL_MP4_PATH}
-            poster={null}
-            className="w-full h-full object-contain"
+            className="w-full h-full"
           />
         </div>
         

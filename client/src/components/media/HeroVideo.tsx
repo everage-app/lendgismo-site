@@ -55,6 +55,10 @@ export default function HeroVideo({ src, poster = null, className }: Props) {
     const onCanPlayThrough = () => {
       console.log('[HeroVideo] canplaythrough');
       setStatus('ready');
+      // Force currentTime to 0.1 to bypass any initial buffering issues
+      if (v.currentTime === 0) {
+        v.currentTime = 0.1;
+      }
       tryPlay();
     };
 
@@ -64,9 +68,18 @@ export default function HeroVideo({ src, poster = null, className }: Props) {
     };
 
     const onPlaying = () => {
-      console.log('[HeroVideo] playing event');
+      console.log('[HeroVideo] playing event, currentTime:', v.currentTime, 'readyState:', v.readyState);
       setShowOverlay(false);
       setStatus('playing');
+      // If stuck at 0, nudge forward
+      if (v.currentTime === 0) {
+        setTimeout(() => {
+          if (v.currentTime === 0 && !v.paused) {
+            console.log('[HeroVideo] stuck at 0, forcing seek to 0.1');
+            v.currentTime = 0.1;
+          }
+        }, 100);
+      }
     };
 
     const onWaiting = () => {
