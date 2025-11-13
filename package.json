@@ -16,9 +16,9 @@
     "check": "tsc",
     "db:push": "drizzle-kit push",
     "docs:sync": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$src='C:\\Lendgismo\\AssetLender\\docs'; $dst='C:\\Lendgismo\\Lendgismo-site\\public\\docs'; if(!(Test-Path $src)){ Write-Host 'SOURCE missing, skipping'; exit 0 }; if(!(Test-Path $dst)){ New-Item -ItemType Directory -Path $dst | Out-Null }; robocopy $src $dst /MIR /XD .git node_modules .next .turbo assets api tools /XF *.tmp *.log index.html 404.html assets\\docs.css assets\\docs.js api\\index.html; if($LASTEXITCODE -lt 8){ exit 0 } else { exit $LASTEXITCODE }\"",
-  "docs:mirror": "node scripts/docs-mirror-maybe.cjs",
+    "docs:mirror": "node scripts/docs-mirror-maybe.cjs",
     "showcase:gen": "node scripts/generate-showcase.cjs",
-  "docs:dev": "npm run docs:mirror && npm run showcase:gen && vite --port 5100 --strictPort",
+    "docs:dev": "npm run docs:mirror && npm run showcase:gen && vite --port 5100 --strictPort",
     "docs:scan": "node scripts/scan-docs-security.cjs",
     "capture:init": "npx playwright install",
     "capture:screens": "tsx scripts/capture-demo.ts --mode=screens",
@@ -92,6 +92,7 @@
     "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.2",
     "@replit/vite-plugin-cartographer": "^0.3.1",
     "@replit/vite-plugin-dev-banner": "^0.1.1",
     "@replit/vite-plugin-runtime-error-modal": "^0.0.3",
@@ -110,13 +111,13 @@
     "autoprefixer": "^10.4.20",
     "drizzle-kit": "^0.31.4",
     "esbuild": "^0.25.0",
+    "jsdom": "^27.2.0",
     "netlify-cli": "^23.9.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.5",
     "typescript": "5.6.3",
-    "vite": "^5.4.20",
-    "@playwright/test": "^1.48.2"
+    "vite": "^5.4.20"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"

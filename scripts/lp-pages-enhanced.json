@@ -1,0 +1,2326 @@
+{
+  "baseUrl": "https://lendgismo.com",
+  "brand": {
+    "name": "Lendgismo LLC",
+    "email": "lendgismo@gmail.com",
+    "phone": "801-930-0261",
+    "address": "4638 Watery Way, South Jordan, UT 84009"
+  },
+  "core": [
+    {
+      "slug": "alt-lending-platform",
+      "title": "Alternative Lending Platform Software for MCA & ABL",
+      "description": "Launch your alternative lending platform faster. White-label software with underwriting automation, borrower onboarding, RBAC, Plaid, Stripe, and multi-tenant architecture for MCA and ABL funders.",
+      "h1": "Alternative Lending Platform for MCA, ABL & Working Capital Lenders",
+      "intro": "Build and launch your alternative lending operation in weeks, not months. Lendgismo delivers production-ready lending platform software with automated underwriting, borrower portals, and enterprise-grade integrations—fully white-labeled for your brand.",
+      "sections": [
+        {
+          "h2": "Complete Alternative Lending Software Stack",
+          "body": "Power your MCA, asset-based lending, or working capital programs with a modern lending platform designed for non-bank lenders. Our alternative lending software includes digital intake, decisioning rules engine, collections workflows, and investor reporting—all built for speed and compliance. Deploy faster with pre-integrated Plaid bank data, QuickBooks sync, Stripe payments, and fraud detection APIs."
+        },
+        {
+          "h2": "White-Label Multi-Tenant Architecture",
+          "body": "Serve multiple brands, ISOs, or partner lenders from a single codebase. Configure credit policies, branding, and workflows per tenant with strict data isolation. Perfect for MCA funders managing multiple programs or ISOs white-labeling for clients."
+        },
+        {
+          "h2": "Underwriting Automation & Cash Flow Analysis",
+          "body": "Standardize credit decisions with configurable scorecards, rules, and automated cash-flow analysis from bank and accounting data. Reduce manual review time by 70% while maintaining credit quality. Every decision is logged for audit trails and compliance reporting."
+        },
+        {
+          "h2": "Integrations That Scale Your Operations",
+          "body": "Built-in integrations with Plaid (bank verification), QuickBooks (financial data), Stripe (ACH/card payments), Twilio (SMS OTP), SendGrid (email notifications), DataMerch (trade lines), and DecisionLogic (fraud/verify). Connect your existing tools via REST APIs and webhooks."
+        },
+        {
+          "h2": "Why Alternative Lenders Choose Lendgismo",
+          "body": "Own your stack. No revenue share or per-transaction fees. Launch in 2-4 weeks with a battle-tested codebase built for MCA, ABL, and SMB lenders. Full source code, documentation, and white-glove support. Deploy on your infrastructure or ours."
+        }
+      ],
+      "ctas": [
+        "Book a Demo",
+        "Get White-Label Pricing",
+        "Talk to a Lending Specialist"
+      ],
+      "keywords": ["alternative lending platform", "MCA software", "ABL software", "white-label lending", "underwriting automation", "non-bank lender software"]
+    },
+    {
+      "slug": "mca-lending-software",
+      "title": "MCA Lending Software for Funders & ISOs | Lendgismo",
+      "description": "Merchant cash advance software with automated underwriting, collections, ISO portals, and compliance. Built for MCA funders and brokers. Launch faster with white-label tech.",
+      "h1": "MCA Lending Software for Merchant Cash Advance Funders",
+      "intro": "Scale your MCA operation with purpose-built lending software. Automate deal intake, underwriting, funding, collections, and ISO management—all in one white-label platform designed for merchant cash advance lenders.",
+      "sections": [
+        {
+          "h2": "Complete MCA Workflow Automation",
+          "body": "From application to funding to collections, Lendgismo handles the full merchant cash advance lifecycle. Digital merchant onboarding with bank statements, automated revenue analysis, configurable advance rates and holdback percentages, batch funding, and automated ACH/card collections with reminders."
+        },
+        {
+          "h2": "ISO & Broker Portal with Commission Tracking",
+          "body": "Empower your ISO network with a branded partner portal. ISOs submit deals, track status, view approvals, and monitor commission payouts—all with role-based access controls. Automate referral fee calculations and generate 1099-ready reports."
+        },
+        {
+          "h2": "Real-Time Cash Flow & Bank Data",
+          "body": "Integrate Plaid for instant bank account verification and daily revenue monitoring. Analyze merchant cash flow, transaction velocity, and NSF patterns to make better underwriting decisions. Set automated alerts for collection triggers and early warnings."
+        },
+        {
+          "h2": "MCA-Specific Underwriting Rules",
+          "body": "Pre-built decisioning logic for MCA use cases: factor rates, holdback calculations, revenue multiples, and stacking analysis. Configure approval thresholds, auto-decline rules, and manual review queues. Every decision is auditable with timestamp and reasoning."
+        },
+        {
+          "h2": "Built for MCA Funders Who Need Speed",
+          "body": "Deploy in weeks, not months. No rev-share or transaction fees—you own the code. Includes compliance audit trails, investor reporting, and full white-label branding. Trusted by merchant cash advance lenders funding $500K–$50M+ annually."
+        }
+      ],
+      "ctas": [
+        "See MCA Demo",
+        "Get Pricing",
+        "Book a Call"
+      ],
+      "keywords": ["MCA software", "merchant cash advance software", "MCA lender platform", "ISO portal", "merchant lending software", "cash advance automation"]
+    },
+    {
+      "slug": "asset-based-lending-software",
+      "title": "Asset-Based Lending (ABL) Software | Lendgismo",
+      "description": "ABL lending software with collateral tracking, borrowing base calculations, field audits, and compliance reporting. White-label platform for asset-based lenders.",
+      "h1": "Asset-Based Lending Software for ABL Lenders",
+      "intro": "Manage ABL portfolios with specialized lending software built for collateral-heavy lending. Track inventory, AR aging, field exams, and borrowing base certificates—all in one auditable platform.",
+      "sections": [
+        {
+          "h2": "Collateral Management & Borrowing Base",
+          "body": "Track eligible collateral categories (A/R, inventory, equipment) with automated advance rate calculations. Generate borrowing base certificates, monitor loan-to-value ratios, and set alerts for covenant breaches. Support for AR aging, inventory turns, and appraisal tracking."
+        },
+        {
+          "h2": "Field Exam & Audit Workflows",
+          "body": "Document field exams with photo uploads, collateral verification checklists, and inspector notes. Link findings to borrower profiles and flag discrepancies for follow-up. Export audit trails for compliance and investor reporting."
+        },
+        {
+          "h2": "Underwriting for ABL Use Cases",
+          "body": "Configure credit policies specific to asset-based lending: advance rates by collateral type, concentration limits, cross-aging schedules, and dilution analysis. Automate eligibility checks and generate exception reports for manual review."
+        },
+        {
+          "h2": "Integrations for ABL Lenders",
+          "body": "Connect QuickBooks and accounting systems for real-time AR/AP data. Integrate with Plaid for operating account monitoring and cash sweeps. Use Stripe for automated ACH payments and fee collections."
+        },
+        {
+          "h2": "Why ABL Lenders Trust Lendgismo",
+          "body": "Built by lenders who understand collateral complexity. White-label your platform, own the code, and deploy in weeks. Includes compliance logging, investor reporting templates, and API access for custom workflows."
+        }
+      ],
+      "ctas": [
+        "Request ABL Demo",
+        "Get White-Label Pricing",
+        "Schedule Consultation"
+      ],
+      "keywords": ["ABL software", "asset-based lending software", "collateral management", "borrowing base", "field exam software", "ABL lender platform"]
+    },
+    {
+      "slug": "smb-lending-platform",
+      "title": "SMB Lending Platform for Small Business Lenders",
+      "description": "Launch SMB lending programs faster with white-label software. Digital onboarding, underwriting automation, loan servicing, and RBAC for small business lenders.",
+      "h1": "SMB Lending Platform for Small Business Finance",
+      "intro": "Launch and scale small business lending programs with modern fintech infrastructure. Deliver fast funding decisions, seamless borrower experiences, and efficient portfolio management—all white-labeled for your brand.",
+      "sections": [
+        {
+          "h2": "End-to-End SMB Lending Workflow",
+          "body": "Power your small business lending operation from application to servicing. Digital intake with business verification, automated underwriting with bank and accounting data, instant funding decisions, e-signed term sheets, and post-funding collections with payment schedules."
+        },
+        {
+          "h2": "Automated SMB Underwriting",
+          "body": "Make faster credit decisions with rules-based automation. Analyze cash flow from Plaid bank connections, financial statements from QuickBooks, and credit bureau data. Configure scorecards for different SMB loan products: term loans, lines of credit, equipment financing, and working capital advances."
+        },
+        {
+          "h2": "Borrower Portal & Self-Service",
+          "body": "Give SMB borrowers a modern digital experience. Application submission, document upload, real-time status tracking, payment scheduling, and account management—all accessible 24/7. Reduce support burden and increase borrower satisfaction."
+        },
+        {
+          "h2": "Multi-Product SMB Lending",
+          "body": "Support multiple SMB loan products from one platform: term loans, revolving credit, merchant cash advances, equipment leases, and invoice factoring. Configure unique underwriting criteria, pricing models, and servicing workflows per product."
+        },
+        {
+          "h2": "Built for Community Banks, Credit Unions & Fintechs",
+          "body": "Deploy faster than legacy LOS systems. White-label branding, role-based access, compliance audit trails, and investor-ready reporting. Own your tech stack with full source code—no vendor lock-in or per-loan fees."
+        }
+      ],
+      "ctas": [
+        "See SMB Demo",
+        "Request Pricing",
+        "Talk to SMB Lending Expert"
+      ],
+      "keywords": ["SMB lending platform", "small business lending software", "business loan software", "SMB underwriting automation", "small business lender OS"]
+    },
+    {
+      "slug": "white-label-lending-software",
+      "title": "White-Label Lending Software | Lendgismo",
+      "description": "Fully brandable lending platform with custom domains, themes, logos, and workflows. White-label software for lenders, ISOs, and fintech companies.",
+      "h1": "White-Label Lending Software for Your Brand",
+      "intro": "Launch your lending platform under your brand in weeks. Fully customizable lending software with white-label UI, custom domains, tenant branding, and configurable workflows—no \"powered by\" footers.",
+      "sections": [
+        {
+          "h2": "Complete White-Label Control",
+          "body": "Your brand, your platform. Customize logos, color schemes, email templates, and borrower-facing portals. Deploy on your domain with SSL certificates. Remove all Lendgismo branding—borrowers and partners see only your identity."
+        },
+        {
+          "h2": "Multi-Tenant Architecture",
+          "body": "Serve multiple brands or partner lenders from one codebase. Each tenant gets isolated data, custom branding, and independent configurations. Perfect for ISOs white-labeling for clients or lenders managing sub-brands."
+        },
+        {
+          "h2": "Configurable Credit Policies & Workflows",
+          "body": "Tailor underwriting rules, approval thresholds, and decisioning logic per tenant or product. Configure custom fields, document checklists, and notification templates without code changes. Empower your ops team to iterate fast."
+        },
+        {
+          "h2": "Own Your Tech Stack",
+          "body": "Full source code delivery with documentation. Deploy on your AWS, Azure, or GCP infrastructure—or use our managed hosting. No vendor lock-in, no rev-share, no per-transaction fees. You control roadmap and integrations."
+        },
+        {
+          "h2": "White-Label for Every Lending Use Case",
+          "body": "MCA funders, ABL providers, equipment finance companies, invoice factors, and SMB lenders trust Lendgismo for white-label flexibility. Launch faster than building in-house and cheaper than enterprise LOS vendors."
+        }
+      ],
+      "ctas": [
+        "Get White-Label Demo",
+        "View Pricing Options",
+        "Schedule Setup Call"
+      ],
+      "keywords": ["white-label lending software", "branded lending platform", "multi-tenant lender OS", "white-label fintech", "custom lending software"]
+    },
+    {
+      "slug": "loan-origination-system-los",
+      "title": "Loan Origination System (LOS) for Alt Lenders",
+      "description": "Modern loan origination software for MCA, ABL, and working capital lenders. Automate intake, underwriting, decisioning, and funding with a flexible white-label LOS.",
+      "h1": "Loan Origination System Built for Alternative Lenders",
+      "intro": "Replace spreadsheets and legacy LOS systems with modern loan origination software. Purpose-built for MCA, ABL, and alternative lenders who need speed, flexibility, and control.",
+      "sections": [
+        {
+          "h2": "Digital Loan Intake & Application Processing",
+          "body": "Streamline loan origination with digital applications, automated document collection, and real-time status tracking. Borrowers submit applications via branded portals, upload bank statements and financials, and track progress—reducing call volume and manual data entry by 80%."
+        },
+        {
+          "h2": "Automated Underwriting & Decisioning",
+          "body": "Configure credit policies, scorecards, and approval workflows without code. Connect Plaid for bank verification, QuickBooks for financial analysis, and credit bureaus for tradelines. Set auto-approval thresholds, manual review queues, and escalation rules. Every decision logged for compliance."
+        },
+        {
+          "h2": "Workflow Management & Queue Automation",
+          "body": "Route applications through configurable stages: intake, KYC, underwriting, credit committee, docs, funding. Assign tasks to team members, set SLA alerts, and track cycle time metrics. Integrate with your existing tools via REST APIs and webhooks."
+        },
+        {
+          "h2": "E-Sign, Term Sheets & Funding",
+          "body": "Generate compliant term sheets, capture e-signatures, and trigger funding workflows—all within the LOS. Support multiple loan products with product-specific document templates, pricing calculators, and disbursement instructions."
+        },
+        {
+          "h2": "Why Alternative Lenders Choose Our LOS",
+          "body": "Deploy in weeks vs months with legacy vendors. No per-loan fees or rev-share. White-label branding, multi-tenant architecture, and full source code. Built for MCA funders, ABL providers, and SMB lenders who fund $1M–$100M+ annually."
+        }
+      ],
+      "ctas": ["See LOS Demo", "Get Pricing", "Talk to Sales"],
+      "keywords": ["loan origination system", "LOS software", "lending software", "loan origination platform", "alternative lending LOS", "MCA LOS"]
+    },
+    {
+      "slug": "loan-management-servicing",
+      "title": "Loan Management & Servicing Software | Lendgismo",
+      "description": "Manage loan servicing, collections, payments, and portfolio analytics. White-label loan management system for alternative lenders with ACH, reporting, and compliance.",
+      "h1": "Loan Management & Servicing Platform",
+      "intro": "Service your loan portfolio with automated collections, payment processing, and real-time portfolio analytics. Built for alternative lenders managing MCA, ABL, and SMB loan books.",
+      "sections": [
+        {
+          "h2": "Automated Payment Collections",
+          "body": "Schedule ACH debits, card payments, and wire transfers with automated retry logic for failed payments. Send payment reminders via SMS and email. Track payment history, partial payments, and prepayments with full audit trails."
+        },
+        {
+          "h2": "Collections Workflow Management",
+          "body": "Queue past-due accounts with priority scoring. Assign collectors, log call notes, track promises to pay, and send demand letters. Automate escalation triggers and generate legal referral packets. Monitor collection metrics and team performance."
+        },
+        {
+          "h2": "Portfolio Analytics & Reporting",
+          "body": "Real-time dashboards for outstanding balances, payment schedules, delinquency rates, and charge-offs. Cohort analysis, vintage curves, and yield calculations. Export investor reports, regulatory filings, and audit trails in seconds."
+        },
+        {
+          "h2": "Stripe & ACH Integration",
+          "body": "Process payments with Stripe for card and ACH transactions. Automate payment schedules, handle refunds, and reconcile deposits. Support split funding, fee deductions, and custom payment plans."
+        },
+        {
+          "h2": "Built for Growing Loan Portfolios",
+          "body": "Scale from hundreds to thousands of loans without changing systems. White-label branding, role-based access for servicing teams, and API access for custom integrations. No per-transaction fees—you own the platform."
+        }
+      ],
+      "ctas": ["See Servicing Demo", "Request Pricing", "Schedule Call"],
+      "keywords": ["loan servicing software", "loan management system", "collections software", "payment processing", "portfolio management", "servicing platform"]
+    },
+    {
+      "slug": "underwriting-automation",
+      "title": "Underwriting Automation Software for Lenders",
+      "description": "Automate lending decisions with rules engines, scorecards, and cash-flow analysis. Underwriting software with Plaid, QuickBooks, and credit bureau integrations.",
+      "h1": "Underwriting Automation for Faster Credit Decisions",
+      "intro": "Reduce manual underwriting time by 70% with automated rules, scorecards, and data-driven decisioning. Purpose-built for alternative lenders who need speed without sacrificing credit quality.",
+      "sections": [
+        {
+          "h2": "Rules-Based Decisioning Engine",
+          "body": "Configure credit policies with if-then rules, scoring matrices, and approval thresholds. Set auto-approval limits, auto-decline criteria, and manual review triggers. Support multiple loan products with product-specific underwriting logic."
+        },
+        {
+          "h2": "Automated Cash Flow Analysis",
+          "body": "Analyze bank transactions via Plaid, accounting data from QuickBooks, and merchant processing statements. Calculate revenue trends, expense ratios, debt service coverage, and available cash flow. Flag anomalies for manual review."
+        },
+        {
+          "h2": "Credit Bureau & Fraud Check Integration",
+          "body": "Pull credit reports, verify business identities, and screen for fraud with pre-integrated APIs. Connect DataMerch, DecisionLogic, Experian, and other data providers. Automate credit pulls based on application triggers."
+        },
+        {
+          "h2": "Underwriting Checklists & Workflows",
+          "body": "Create custom underwriting checklists with required documents, verification steps, and approval stages. Track completion status, assign tasks to underwriters, and enforce quality controls. Every action logged for audit trails."
+        },
+        {
+          "h2": "Why Lenders Trust Our Underwriting Tools",
+          "body": "Faster decisions without manual bottlenecks. Consistent credit quality with transparent logic. Full audit trails for compliance and investor reporting. White-label deployment in weeks with ongoing support."
+        }
+      ],
+      "ctas": ["See Automation Demo", "Get Pricing", "Book Consultation"],
+      "keywords": ["underwriting automation", "credit decisioning software", "automated underwriting", "lending decisioning engine", "cash flow analysis", "underwriting platform"]
+    },
+    {
+      "slug": "borrower-onboarding",
+      "title": "Borrower Onboarding & Document Collection Software",
+      "description": "Digital onboarding for lenders with KYC, document upload, e-sign, and verification. Reduce friction and increase conversion with automated borrower intake.",
+      "h1": "Borrower Onboarding & Digital Document Collection",
+      "intro": "Convert more loan applications with frictionless digital onboarding. Branded borrower portals with KYC verification, document upload, e-sign, and real-time status tracking.",
+      "sections": [
+        {
+          "h2": "Digital Application & Intake",
+          "body": "Replace paper applications with mobile-optimized digital forms. Borrowers complete applications in minutes, upload documents via phone camera, and track progress in real-time. Auto-save progress and send completion reminders."
+        },
+        {
+          "h2": "KYC & Identity Verification",
+          "body": "Verify borrower identities with automated KYC checks, business verification, and document validation. Integrate with KYB providers for corporate filings, beneficial ownership, and fraud screening. Flag suspicious applications for manual review."
+        },
+        {
+          "h2": "Document Collection & Management",
+          "body": "Automated document requests with customizable checklists per loan product. Borrowers upload bank statements, tax returns, financial statements, and contracts. OCR extraction, version control, and secure storage with audit trails."
+        },
+        {
+          "h2": "E-Signature & Term Sheet Execution",
+          "body": "Send term sheets, loan agreements, and disclosures for electronic signature. Track signature status, send reminders, and store executed documents with timestamps. Compliant with ESIGN Act and state regulations."
+        },
+        {
+          "h2": "Increase Conversion & Reduce Drop-Off",
+          "body": "Mobile-first UX optimized for completion rates. Reduce drop-off with progress indicators, auto-save, and SMS/email reminders. White-label branding builds trust and reduces friction."
+        }
+      ],
+      "ctas": ["See Onboarding Demo", "Request Pricing", "Talk to Product Team"],
+      "keywords": ["borrower onboarding", "digital loan application", "document collection software", "KYC verification", "e-signature for lenders", "loan intake automation"]
+    },
+    {
+      "slug": "kyc-kyb-aml",
+      "title": "KYC, KYB & AML Compliance for Lenders | Lendgismo",
+      "description": "Automate KYC, KYB, and AML compliance with identity verification, business checks, and fraud screening. Compliance software for alternative lenders.",
+      "h1": "KYC, KYB & AML Workflows for Lending Compliance",
+      "intro": "Meet BSA/AML requirements with automated identity verification, business checks, and transaction monitoring. Purpose-built for alternative lenders navigating fintech regulations.",
+      "sections": [
+        {
+          "h2": "Know Your Customer (KYC) Verification",
+          "body": "Verify borrower identities with government ID checks, address validation, and PEP/sanctions screening. Integrate with identity verification providers for real-time results. Store KYC records with audit trails for regulatory exams."
+        },
+        {
+          "h2": "Know Your Business (KYB) Checks",
+          "body": "Validate business entities with Secretary of State filings, EIN verification, and beneficial ownership disclosure. Screen for sanctioned entities, shell companies, and fraud indicators. Automate UCC lien searches and corporate registry checks."
+        },
+        {
+          "h2": "AML Transaction Monitoring",
+          "body": "Monitor payment patterns for suspicious activity with configurable alert thresholds. Flag large deposits, rapid withdrawals, and structuring behavior. Generate SARs (Suspicious Activity Reports) with supporting documentation."
+        },
+        {
+          "h2": "Compliance Audit Trails",
+          "body": "Every KYC/KYB check logged with timestamp, result, and operator. Maintain records for FFIEC exam readiness. Export compliance reports for auditors, regulators, and investor due diligence."
+        },
+        {
+          "h2": "Built for Alternative Lending Compliance",
+          "body": "Navigate state licensing, BSA/AML, and OFAC requirements with confidence. Pre-integrated with leading verification providers. White-label deployment with ongoing regulatory updates."
+        }
+      ],
+      "ctas": ["See Compliance Demo", "Get Pricing", "Schedule Compliance Review"],
+      "keywords": ["KYC software", "KYB verification", "AML compliance", "identity verification", "lending compliance", "BSA AML software"]
+    },
+    {
+      "slug": "plaid-bank-data",
+      "title": "Plaid Bank Data Integration for Lenders | Lendgismo",
+      "description": "Integrate Plaid for instant bank verification, cash-flow analysis, and account monitoring. Pre-built Plaid integration for alternative lenders.",
+      "h1": "Plaid Bank Data Integration for Lending Underwriting",
+      "intro": "Accelerate underwriting with real-time bank data. Pre-integrated Plaid connectivity for instant account verification, transaction history, and cash-flow analysis—no dev work required.",
+      "sections": [
+        {
+          "h2": "Instant Bank Account Verification",
+          "body": "Verify borrower bank accounts in seconds with Plaid Auth. No micro-deposits or 2-3 day wait times. Confirm account ownership, routing numbers, and account status for ACH setup and fraud prevention."
+        },
+        {
+          "h2": "Cash Flow Analysis from Bank Transactions",
+          "body": "Analyze 3-24 months of transaction history for income verification, expense patterns, and NSF behavior. Categorize transactions, calculate average daily balances, and identify recurring revenue streams. Export data for credit memos."
+        },
+        {
+          "h2": "Ongoing Account Monitoring",
+          "body": "Monitor funded accounts for early warning signals: declining balances, NSF fees, large withdrawals, and account closures. Set automated alerts to trigger collections or covenant reviews."
+        },
+        {
+          "h2": "Compliant & Secure Bank Data Access",
+          "body": "Plaid handles bank login credentials and OAuth flows—you never store banking passwords. Data encrypted in transit and at rest. Compliance with GLBA, SOC 2, and regional privacy laws."
+        },
+        {
+          "h2": "Pre-Built for Alternative Lenders",
+          "body": "No integration headaches. Plaid connectivity included out-of-the-box with token management, error handling, and retry logic. Support for 12,000+ banks and credit unions."
+        }
+      ],
+      "ctas": ["See Plaid Demo", "Get Integration Guide", "Talk to Tech Team"],
+      "keywords": ["Plaid integration", "bank data integration", "bank verification", "cash flow analysis", "Plaid for lenders", "account verification"]
+    },
+    {
+      "slug": "quickbooks-integration",
+      "title": "QuickBooks Integration for Lenders | Lendgismo",
+      "description": "Sync QuickBooks data for underwriting and portfolio monitoring. Automated financial analysis from P&L, balance sheets, and cash flow statements.",
+      "h1": "QuickBooks Integration for Lending Underwriting",
+      "intro": "Pull financial data directly from borrower QuickBooks accounts. Automate underwriting with P&L analysis, balance sheet review, and cash flow trends—no manual data entry.",
+      "sections": [
+        {
+          "h2": "Automated Financial Statement Analysis",
+          "body": "Connect borrower QuickBooks accounts via OAuth for read-only access. Pull profit & loss statements, balance sheets, and cash flow statements. Analyze revenue trends, expense ratios, and working capital changes over 12-36 months."
+        },
+        {
+          "h2": "Underwriting Efficiency Gains",
+          "body": "Eliminate manual financial spreading. Calculate DSCR, debt-to-equity, and liquidity ratios automatically. Flag red flags like negative equity, declining revenues, and unusual expenses for manual review."
+        },
+        {
+          "h2": "Real-Time Portfolio Monitoring",
+          "body": "Monitor funded borrowers with quarterly or monthly QuickBooks syncs. Track covenant compliance, financial deterioration, and early warning indicators. Automate portfolio risk scoring."
+        },
+        {
+          "h2": "Secure OAuth & Data Privacy",
+          "body": "QuickBooks OAuth integration means no password storage. Data encrypted and stored with audit logs. Revocable access tokens and borrower consent workflows."
+        },
+        {
+          "h2": "Pre-Integrated for Alternative Lenders",
+          "body": "No dev work required. QuickBooks Online and Desktop support included. Handle multi-entity businesses, franchise locations, and parent/subsidiary structures."
+        }
+      ],
+      "ctas": ["See QuickBooks Demo", "Get Technical Docs", "Schedule Integration Call"],
+      "keywords": ["QuickBooks integration", "accounting data for lenders", "financial statement automation", "QuickBooks for underwriting", "P&L analysis software"]
+    },
+    {
+      "slug": "stripe-repayments",
+      "title": "Stripe Payments Integration for Lenders | Lendgismo",
+      "description": "Process ACH and card payments with Stripe. Automated loan repayments, fee collections, and reconciliation for alternative lenders.",
+      "h1": "Stripe Payment Processing for Loan Repayments",
+      "intro": "Automate loan repayments with Stripe ACH and card processing. Handle recurring payments, failed payment retries, and instant reconciliation—all built into your lending platform.",
+      "sections": [
+        {
+          "h2": "ACH & Card Payment Processing",
+          "body": "Charge borrowers via ACH debit, debit cards, or credit cards using Stripe. Support one-time payments, recurring schedules, and custom payment plans. Handle partial payments, prepayments, and manual adjustments."
+        },
+        {
+          "h2": "Automated Payment Retries",
+          "body": "Configure retry logic for failed ACH transactions and declined cards. Automatically attempt payments 1-3 times with smart spacing. Send payment failure notifications via SMS and email."
+        },
+        {
+          "h2": "Payment Reconciliation & Reporting",
+          "body": "Stripe webhooks auto-update payment status in real-time. Reconcile deposits to loan accounts, fees, and interest. Export payment histories for accounting systems and investor reports."
+        },
+        {
+          "h2": "Refunds, Disputes & Chargebacks",
+          "body": "Handle refunds and dispute management through integrated Stripe dashboard. Track chargeback activity and link to borrower accounts. Automated alerts for dispute escalations."
+        },
+        {
+          "h2": "Built-In for Alternative Lenders",
+          "body": "No payment gateway integration needed. Stripe connectivity included with PCI compliance handled. Support for split payments, fee deductions, and multi-party disbursements."
+        }
+      ],
+      "ctas": ["See Stripe Demo", "Get Payment Setup Guide", "Talk to Payments Team"],
+      "keywords": ["Stripe integration", "ACH payments", "loan repayment software", "payment processing for lenders", "Stripe for lending", "automated collections"]
+    },
+    {
+      "slug": "twilio-sms-otp",
+      "title": "Twilio SMS Integration for Lenders | Lendgismo",
+      "description": "Send SMS notifications and OTP codes with Twilio. Two-factor authentication, payment reminders, and borrower messaging for lenders.",
+      "h1": "Twilio SMS Integration for Lender Communications",
+      "intro": "Communicate with borrowers via SMS for OTP codes, payment reminders, and status updates. Pre-integrated Twilio connectivity with templated messaging and delivery tracking.",
+      "sections": [
+        {
+          "h2": "Two-Factor Authentication (2FA)",
+          "body": "Secure borrower logins with SMS-based OTP codes delivered via Twilio. Configure code expiration, retry limits, and fallback methods. Prevent unauthorized access and account takeover fraud."
+        },
+        {
+          "h2": "Payment Reminders & Collections",
+          "body": "Send automated payment reminders 1-3 days before due dates. Follow up on past-due accounts with escalating message templates. Track delivery status and response rates."
+        },
+        {
+          "h2": "Application Status Notifications",
+          "body": "Keep borrowers informed with SMS updates: application received, documents needed, approval decisions, and funding confirmations. Reduce support inquiries with proactive messaging."
+        },
+        {
+          "h2": "Compliant SMS Messaging",
+          "body": "Respect TCPA regulations with opt-in consent tracking, opt-out handling, and quiet hours. Template library with pre-approved messaging for different loan stages."
+        },
+        {
+          "h2": "Pre-Built Twilio Integration",
+          "body": "No integration work required. Twilio SMS included out-of-the-box with message queuing, retry logic, and delivery webhooks. Support for short codes and toll-free numbers."
+        }
+      ],
+      "ctas": ["See SMS Demo", "Get Messaging Guide", "Schedule Setup"],
+      "keywords": ["Twilio integration", "SMS for lenders", "two-factor authentication", "payment reminders SMS", "borrower notifications", "Twilio SMS API"]
+    },
+    {
+      "slug": "sendgrid-email-otp",
+      "title": "SendGrid Email Integration for Lenders | Lendgismo",
+      "description": "Send transactional emails with SendGrid. OTP codes, payment receipts, and borrower notifications with deliverability tracking.",
+      "h1": "SendGrid Email Integration for Lending Communications",
+      "intro": "Deliver reliable transactional emails with SendGrid. Pre-integrated for OTP codes, payment confirmations, document requests, and borrower updates—track opens and clicks.",
+      "sections": [
+        {
+          "h2": "Email-Based Two-Factor Authentication",
+          "body": "Send one-time password codes via email for account security. Configurable expiration times, branded email templates, and fallback to SMS if needed."
+        },
+        {
+          "h2": "Automated Email Workflows",
+          "body": "Trigger emails based on loan lifecycle events: application submitted, documents requested, underwriting updates, approval letters, funding confirmations, and payment receipts. Template editor with merge tags for personalization."
+        },
+        {
+          "h3": "Deliverability & Reputation Management",
+          "body": "SendGrid handles email deliverability, SPF/DKIM authentication, and IP warming. Track bounce rates, spam reports, and unsubscribe requests. White-label sender domains for brand consistency."
+        },
+        {
+          "h2": "Email Analytics & Tracking",
+          "body": "Monitor email opens, clicks, and engagement rates. Link click tracking for document uploads, payment portals, and application submissions. Export metrics for marketing and ops analysis."
+        },
+        {
+          "h2": "Pre-Integrated for Lenders",
+          "body": "SendGrid connectivity included with API key setup and webhook handling. Support for transactional emails, marketing campaigns, and compliance notifications."
+        }
+      ],
+      "ctas": ["See Email Demo", "Get Template Library", "Talk to Support"],
+      "keywords": ["SendGrid integration", "transactional email", "email OTP", "lender email automation", "SendGrid for lending", "email notifications"]
+    },
+    {
+      "slug": "multi-tenant-lender-os",
+      "title": "Multi-Tenant Lending Platform | Lendgismo",
+      "description": "Serve multiple lenders or brands from one platform. Multi-tenant architecture with data isolation, custom branding, and independent configurations per tenant.",
+      "h1": "Multi-Tenant Lending OS for Multiple Brands",
+      "intro": "Power multiple lending brands, ISOs, or partner lenders from a single codebase. Enterprise-grade multi-tenant architecture with strict data isolation and per-tenant customization.",
+      "sections": [
+        {
+          "h2": "True Multi-Tenancy with Data Isolation",
+          "body": "Each tenant gets isolated database schemas, encrypted data storage, and independent user access controls. No data leakage between tenants. Support hundreds of tenants on shared infrastructure with guaranteed performance."
+        },
+        {
+          "h2": "Per-Tenant Branding & Configuration",
+          "body": "Customize logos, color schemes, domains, and email templates per tenant. Configure unique credit policies, underwriting rules, and workflow stages. White-label each tenant completely—borrowers never see other brands."
+        },
+        {
+          "h2": "Tenant Management Dashboard",
+          "body": "Super-admin controls for creating tenants, managing subscriptions, and monitoring system health. Tenant admins manage their own users, workflows, and integrations without affecting others."
+        },
+        {
+          "h2": "Use Cases for Multi-Tenant Lending",
+          "body": "ISO networks white-labeling for lender clients. Lending-as-a-Service platforms serving multiple financial institutions. Parent companies managing subsidiary brands. Franchise lending platforms with location-based tenants."
+        },
+        {
+          "h2": "Built for Scale & Security",
+          "body": "Battle-tested multi-tenant architecture handling 50+ tenants in production. SOC 2 compliant infrastructure with tenant-level audit logs. Deploy on AWS, Azure, or GCP with auto-scaling and redundancy."
+        }
+      ],
+      "ctas": ["See Multi-Tenant Demo", "Get Enterprise Pricing", "Schedule Architecture Review"],
+      "keywords": ["multi-tenant lending platform", "white-label lending", "lending-as-a-service", "multi-tenant SaaS", "tenant isolation", "enterprise lending software"]
+    },
+    {
+      "slug": "iso-broker-portal",
+      "title": "ISO & Broker Portal for Lenders | Lendgismo",
+      "description": "Empower ISO partners with branded portals for deal submission, tracking, and commission management. White-label broker portal with role-based access.",
+      "h1": "ISO & Broker Portal for Partner Management",
+      "intro": "Scale your ISO network with self-service partner portals. ISOs submit deals, track approvals, and manage commissions—all with your branding and compliance controls.",
+      "sections": [
+        {
+          "h2": "ISO Deal Submission & Tracking",
+          "body": "ISOs submit applications via branded portals with guided workflows. Upload borrower documents, enter merchant details, and track deal status in real-time. Reduce back-and-forth emails and phone calls by 80%."
+        },
+        {
+          "h2": "Commission Management & Payouts",
+          "body": "Automate referral fee calculations based on funded amounts, loan products, and tier structures. ISOs view commission statements, payment history, and 1099-ready reports. Support for splits, override structures, and bonus tiers."
+        },
+        {
+          "h2": "Role-Based Access & Permissions",
+          "body": "Control what ISOs can see and do: submit deals only, view own pipeline, or access full partner analytics. Hierarchical ISO structures with master agents, sub-agents, and regional managers."
+        },
+        {
+          "h2": "Compliance & Audit Trails",
+          "body": "Track every ISO action with timestamp, IP address, and user identity. Monitor for suspicious patterns, enforce document requirements, and maintain NMLS compliance records. Export ISO activity for audits."
+        },
+        {
+          "h2": "Built for ISO-Driven Lenders",
+          "body": "Proven with MCA funders managing 100+ ISO relationships. White-label branding, custom workflows per ISO tier, and API access for CRM integration. Deploy in weeks with ongoing support."
+        }
+      ],
+      "ctas": ["See ISO Portal Demo", "Get Partner Guide", "Talk to Channel Team"],
+      "keywords": ["ISO portal", "broker portal", "partner management software", "ISO commission tracking", "referral management", "broker deal submission"]
+    },
+    {
+      "slug": "decisioning-rules-engine",
+      "title": "Lending Decisioning Rules Engine | Lendgismo",
+      "description": "Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails.",
+      "h1": "Decisioning Rules Engine for Automated Approvals",
+      "intro": "Standardize credit decisions with configurable rules, scorecards, and thresholds. Automate 60-80% of approvals while maintaining credit quality and compliance.",
+      "sections": [
+        {
+          "h2": "Configurable Decision Rules",
+          "body": "Build credit policies with if-then-else logic: minimum credit score, debt-to-income ratios, cash flow thresholds, and industry restrictions. Layer rules for different loan products, amounts, and borrower types."
+        },
+        {
+          "h2": "Scorecard-Based Underwriting",
+          "body": "Create custom scorecards with weighted factors: credit score, revenue trends, time in business, bank balance, and industry risk. Set approval cut-offs, manual review bands, and auto-decline thresholds."
+        },
+        {
+          "h2": "Manual Review Queues",
+          "body": "Route borderline applications to underwriters with pre-populated decision recommendations. Underwriters override rules with documented reasoning. Track override rates and credit quality metrics."
+        },
+        {
+          "h2": "Transparent Decision Logic",
+          "body": "Every decision shows which rules triggered, data points evaluated, and final score. Borrowers receive clear decline reasons. Audit trails for regulatory exams and investor due diligence."
+        },
+        {
+          "h2": "Proven for Alternative Lenders",
+          "body": "Deployed by MCA funders, ABL providers, and SMB lenders making 100-10,000 decisions monthly. No-code rule editor for ops teams. Version control and A/B testing for policy iterations."
+        }
+      ],
+      "ctas": ["See Rules Engine Demo", "Get Configuration Guide", "Schedule Policy Review"],
+      "keywords": ["decisioning engine", "credit rules engine", "automated underwriting", "loan decisioning software", "scorecard platform", "lending automation"]
+    },
+    {
+      "slug": "pricing-engine",
+      "title": "Loan Pricing Engine for Alternative Lenders",
+      "description": "Standardize loan pricing with configurable fee structures, rate sheets, and margin calculations. Pricing software for MCA, ABL, and SMB lenders.",
+      "h1": "Pricing Engine for Consistent Loan Pricing",
+      "intro": "Eliminate pricing inconsistency with a centralized pricing engine. Configure rate sheets, fee structures, and margin calculations for consistent quoting and profitability.",
+      "sections": [
+        {
+          "h2": "Configurable Rate Sheets & Fee Structures",
+          "body": "Build pricing tiers based on credit profile, loan amount, term length, and risk factors. Support for factor rates, interest rates, origination fees, and servicing charges. Real-time pricing calculations with borrower-facing quotes."
+        },
+        {
+          "h2": "Dynamic Pricing Rules",
+          "body": "Adjust pricing based on market conditions, funding costs, and portfolio risk. Set floors, ceilings, and approval requirements for off-sheet pricing. Track pricing exceptions and margin erosion."
+        },
+        {
+          "h2": "Margin & Profitability Analysis",
+          "body": "Calculate all-in yields, cost of capital, and expected returns per loan. Factor in origination costs, servicing expenses, and default probabilities. Export pricing analytics for portfolio management."
+        },
+        {
+          "h2": "Audit Trails & Compliance",
+          "body": "Log every pricing decision with operator, timestamp, and inputs. Demonstrate fair lending practices and consistent pricing policies. Export reports for regulatory exams."
+        },
+        {
+          "h2": "Built for Pricing Discipline",
+          "body": "Used by lenders managing multi-product portfolios with complex fee structures. Version control for rate sheet changes. API access for external quoting tools and CRMs."
+        }
+      ],
+      "ctas": ["See Pricing Demo", "Get Rate Sheet Template", "Talk to Product Team"],
+      "keywords": ["loan pricing engine", "rate sheet software", "pricing calculator", "fee structure automation", "loan margin analysis", "pricing software for lenders"]
+    },
+    {
+      "slug": "term-sheets-e-sign",
+      "title": "Term Sheets & E-Signature for Lenders | Lendgismo",
+      "description": "Generate branded term sheets and loan agreements with e-signature workflows. DocuSign integration for fast loan closing and document management.",
+      "h1": "Term Sheets & E-Signature for Fast Loan Closing",
+      "intro": "Accelerate loan closing with automated term sheet generation and e-signature workflows. Create custom templates, track signing status, and store executed documents.",
+      "sections": [
+        {
+          "h2": "Automated Term Sheet Generation",
+          "body": "Generate loan term sheets from approved application data—no manual data entry. Customize templates per loan product with your branding, legal language, and fee disclosures. Preview, edit, and send for signature in seconds."
+        },
+        {
+          "h2": "E-Signature Integration",
+          "body": "Integrate with DocuSign, Adobe Sign, or built-in e-signature. Send multi-party documents (borrower, guarantor, ISO) with signing order and reminders. Track who viewed, signed, and when—down to the page."
+        },
+        {
+          "h2": "Document Templates & Variables",
+          "body": "Build reusable templates with merge fields for borrower name, loan amount, term, rate, and custom fields. Support for conditional clauses, multiple signers, and attachment pages. Version control for template updates."
+        },
+        {
+          "h2": "Compliance & Audit Readiness",
+          "body": "Maintain executed documents with timestamp, IP address, and certificate of completion. Export signed agreements for loan files and audits. Track template usage and signature completion rates."
+        },
+        {
+          "h2": "Proven for High-Volume Lenders",
+          "body": "Process 1,000+ signatures monthly for MCA funders and SMB lenders. Mobile-friendly signing experience for borrowers. Automated reminders and expiration workflows reduce signing delays."
+        }
+      ],
+      "ctas": ["See E-Sign Demo", "Get Template Library", "Talk to Implementation"],
+      "keywords": ["term sheet automation", "e-signature for lenders", "DocuSign integration", "loan document automation", "electronic signature software", "loan closing software"]
+    },
+    {
+      "slug": "document-management",
+      "title": "Document Management for Lending | Lendgismo",
+      "description": "Centralized document storage, versioning, and access controls for loan files. Secure document management with audit trails and regulatory compliance.",
+      "h1": "Document Management for Loan Files & Compliance",
+      "intro": "Organize loan files with secure, searchable document storage. Upload, categorize, and track documents across the loan lifecycle with role-based access and audit trails.",
+      "sections": [
+        {
+          "h2": "Centralized Document Repository",
+          "body": "Store all loan-related documents: applications, bank statements, tax returns, term sheets, executed agreements, and correspondence. Auto-organize by borrower, loan, and document type. Search by filename, content, or metadata."
+        },
+        {
+          "h2": "Version Control & Document History",
+          "body": "Track document versions with upload timestamp, user, and change notes. Retrieve prior versions for audits or disputes. Prevent document overwrites with automatic versioning."
+        },
+        {
+          "h2": "Role-Based Access & Permissions",
+          "body": "Control who can view, download, upload, or delete documents. Restrict access to sensitive documents (tax returns, bank statements) to underwriters and admins. Audit every document access with user and timestamp."
+        },
+        {
+          "h2": "OCR & Data Extraction",
+          "body": "Extract data from bank statements, tax forms, and invoices with OCR. Pre-populate application fields from uploaded documents. Reduce manual data entry and transcription errors."
+        },
+        {
+          "h2": "Security & Compliance",
+          "body": "Encrypt documents at rest and in transit (AES-256, TLS 1.3). Maintain document retention policies per regulatory requirements. Export loan files for audits, portfolio sales, or legal proceedings."
+        }
+      ],
+      "ctas": ["See Document Manager Demo", "Get Security Overview", "Schedule Compliance Review"],
+      "keywords": ["document management for lenders", "loan file storage", "document repository", "secure document storage", "OCR for lending", "version control documents"]
+    },
+    {
+      "slug": "collections-workflows",
+      "title": "Collections & Payment Workflows | Lendgismo",
+      "description": "Automate collections with payment reminders, dunning sequences, and delinquency management. Collections software for alternative lenders.",
+      "h1": "Collections & Payment Workflows for Lenders",
+      "intro": "Reduce delinquency with automated payment reminders and collections workflows. Manage late payments, payment plans, and charge-offs with compliance-ready audit trails.",
+      "sections": [
+        {
+          "h2": "Automated Payment Reminders",
+          "body": "Send email and SMS reminders before payment due dates, on due dates, and after missed payments. Customize messaging per loan product, delinquency stage, and borrower segment. Track open rates and payment conversions."
+        },
+        {
+          "h2": "Delinquency & Dunning Workflows",
+          "body": "Escalate late loans through configurable stages: early delinquency, late stage, pre-default, and charge-off. Auto-assign to collections reps, trigger phone calls, and log contact attempts. Pause auto-debit for payment plans."
+        },
+        {
+          "h3": "Payment Plans & Restructuring",
+          "body": "Offer payment plans with reduced payments, extended terms, or interest-only periods. Document forbearance agreements and track compliance. Resume normal servicing when borrower returns to current status."
+        },
+        {
+          "h2": "Compliance & FDCPA Adherence",
+          "body": "Log all collections activity with timestamp, rep name, and outcome. Prevent contact outside allowed hours or after cease-and-desist requests. Export collections logs for regulatory exams."
+        },
+        {
+          "h2": "Built for Portfolio Performance",
+          "body": "Used by lenders managing 500-10,000 active loans with 5-15% delinquency rates. Analytics on collections effectiveness, payment plan success, and charge-off trends. API access for third-party collections agencies."
+        }
+      ],
+      "ctas": ["See Collections Demo", "Get Workflow Templates", "Talk to Servicing Team"],
+      "keywords": ["collections software", "payment reminders", "delinquency management", "dunning workflows", "payment plan software", "collections automation"]
+    },
+    {
+      "slug": "portfolio-analytics-reporting",
+      "title": "Portfolio Analytics & Reporting | Lendgismo",
+      "description": "Real-time portfolio analytics for loan performance, risk metrics, and investor reporting. Business intelligence dashboards for alternative lenders.",
+      "h1": "Portfolio Analytics & Reporting for Lenders",
+      "intro": "Make data-driven decisions with real-time portfolio analytics. Track origination volume, loan performance, credit quality, and profitability with customizable dashboards.",
+      "sections": [
+        {
+          "h2": "Real-Time Portfolio Dashboards",
+          "body": "Monitor key metrics: loans funded, outstanding principal, delinquency rates, charge-offs, and yield. Filter by loan product, origination date, ISO partner, or industry. Drill down into loan-level details."
+        },
+        {
+          "h2": "Origination & Pipeline Analytics",
+          "body": "Track application volume, approval rates, funding conversion, and time-to-close. Identify bottlenecks in underwriting or document collection. Compare performance across channels, products, and time periods."
+        },
+        {
+          "h2": "Credit Quality & Risk Metrics",
+          "body": "Analyze vintage performance, default curves, and loss rates by cohort. Monitor early warning signals: payment delays, covenant breaches, or declining cash flow. Stress test portfolio under economic scenarios."
+        },
+        {
+          "h2": "Investor & Compliance Reporting",
+          "body": "Generate monthly investor reports with portfolio composition, payment activity, and covenant compliance. Export data for warehouse lenders, institutional investors, or regulators. Automate report delivery schedules."
+        },
+        {
+          "h2": "Built for Portfolio Managers",
+          "body": "Proven with lenders managing $10M-$500M portfolios across multiple loan products. Customizable KPIs, scheduled reports, and API access for BI tools (Tableau, Power BI). Support for multi-entity consolidation."
+        }
+      ],
+      "ctas": ["See Analytics Demo", "Get Report Examples", "Schedule Data Review"],
+      "keywords": ["portfolio analytics", "loan performance reporting", "lender dashboards", "portfolio management software", "investor reporting", "lending business intelligence"]
+    },
+    {
+      "slug": "compliance-audit-trail",
+      "title": "Compliance & Audit Trail for Lenders | Lendgismo",
+      "description": "Maintain regulatory compliance with comprehensive audit trails, user activity logs, and data retention policies. SOC 2 compliant lending software.",
+      "h1": "Compliance & Audit Trail for Regulatory Confidence",
+      "intro": "Document every action with tamper-proof audit logs. Meet regulatory requirements with data retention, user activity tracking, and exportable audit reports.",
+      "sections": [
+        {
+          "h2": "Comprehensive Activity Logging",
+          "body": "Log every user action: logins, data access, application edits, decisions, document views, and system changes. Capture timestamp, user identity, IP address, and action details. Immutable logs prevent tampering or deletion."
+        },
+        {
+          "h2": "Data Retention & Archival",
+          "body": "Configure retention policies per data type: applications (7 years), loan files (loan term + 3 years), audit logs (10 years). Auto-archive old records to cold storage. Retrieve archived data for audits or legal holds."
+        },
+        {
+          "h2": "Regulatory Reporting",
+          "body": "Export audit trails for regulatory exams, investor due diligence, or legal discovery. Pre-built reports for TILA, ECOA, FCRA, and state licensing requirements. Document fair lending practices and consistent underwriting."
+        },
+        {
+          "h2": "Security & Access Controls",
+          "body": "Enforce role-based access with principle of least privilege. Monitor for suspicious activity: unusual login times, bulk data exports, or privilege escalation. Alert admins to potential security incidents."
+        },
+        {
+          "h2": "SOC 2 Compliant Infrastructure",
+          "body": "Built on security-first architecture with annual SOC 2 Type II audits. Encrypted data storage and transit. Disaster recovery, backup policies, and incident response procedures documented and tested."
+        }
+      ],
+      "ctas": ["See Compliance Demo", "Get SOC 2 Report", "Schedule Audit Review"],
+      "keywords": ["compliance software", "audit trail", "regulatory compliance", "SOC 2 lending software", "data retention", "lending audit logs"]
+    },
+    {
+      "slug": "api-webhooks",
+      "title": "Lending API & Webhooks | Lendgismo",
+      "description": "RESTful API and webhook events for lending platform integration. Developer-friendly API for applications, decisioning, and loan servicing automation.",
+      "h1": "API & Webhooks for Lending Platform Integration",
+      "intro": "Integrate Lendgismo with your CRM, accounting software, or custom applications. RESTful API with comprehensive documentation and webhook events for real-time updates.",
+      "sections": [
+        {
+          "h2": "RESTful API for Lending Operations",
+          "body": "Create applications, submit documents, trigger underwriting, and update loan status via API. Retrieve borrower data, payment schedules, and portfolio analytics. JSON responses with pagination, filtering, and sorting."
+        },
+        {
+          "h2": "Webhook Events for Real-Time Updates",
+          "body": "Subscribe to events: application submitted, decision rendered, loan funded, payment received, or delinquency triggered. Receive HTTP POST notifications to your endpoints with event payload. Retry logic and webhook signature verification included."
+        },
+        {
+          "h2": "Developer-Friendly Documentation",
+          "body": "Interactive API docs with code samples in Python, JavaScript, and cURL. Sandbox environment for testing without affecting production data. Postman collections and OpenAPI/Swagger specs available."
+        },
+        {
+          "h2": "Authentication & Rate Limits",
+          "body": "OAuth 2.0 and API key authentication. Configurable rate limits per tenant or API key. Monitor API usage, error rates, and response times from admin dashboard."
+        },
+        {
+          "h2": "Built for Integration Partners",
+          "body": "Used by lenders integrating with Salesforce, HubSpot, QuickBooks, and custom CRMs. Versioned API with deprecation notices. Dedicated support channel for integration partners."
+        }
+      ],
+      "ctas": ["View API Docs", "Get Sandbox Access", "Talk to Integration Team"],
+      "keywords": ["lending API", "loan origination API", "webhook events", "lending platform integration", "developer API", "RESTful lending API"]
+    },
+    {
+      "slug": "equipment-finance-software",
+      "title": "Equipment Financing Software | Lendgismo",
+      "description": "Equipment finance origination and servicing software. Manage lease applications, asset tracking, and payment schedules for equipment lenders.",
+      "h1": "Equipment Finance Software for Lenders",
+      "intro": "Streamline equipment financing with specialized software for lease origination, asset collateral tracking, and payment servicing. Built for equipment lenders and leasing companies.",
+      "sections": [
+        {
+          "h2": "Equipment Lease Origination",
+          "body": "Capture equipment details: type, vendor, purchase price, and delivery timeline. Calculate lease payments with configurable terms, residual values, and buyout options. Generate lease agreements with equipment schedules."
+        },
+        {
+          "h2": "Asset & Collateral Tracking",
+          "body": "Maintain asset registry with serial numbers, purchase dates, and depreciation schedules. Track UCC filings and lien positions. Monitor asset disposition: returned, sold, or retained by lessee."
+        },
+        {
+          "h2": "Payment Servicing & Amortization",
+          "body": "Auto-calculate monthly lease payments with interest, principal, and tax components. Support for step leases, seasonal payments, and deferred structures. Reconcile payments to equipment schedules."
+        },
+        {
+          "h2": "Vendor & Dealer Networks",
+          "body": "Manage equipment vendor relationships with approved vendor lists and pricing agreements. White-label portals for dealers to submit financing requests. Auto-fund approved leases to vendor accounts."
+        },
+        {
+          "h2": "Built for Equipment Lenders",
+          "body": "Deployed by equipment finance companies funding $5M-$100M annually. Support for Section 179 tax benefits and MACRS depreciation. Integration with equipment valuation services (NADA, Black Book)."
+        }
+      ],
+      "ctas": ["See Equipment Finance Demo", "Get Asset Tracking Guide", "Talk to Leasing Team"],
+      "keywords": ["equipment financing software", "lease origination", "equipment lease management", "asset finance software", "collateral tracking", "leasing platform"]
+    },
+    {
+      "slug": "invoice-factoring-software",
+      "title": "Invoice Factoring Software | Lendgismo",
+      "description": "Invoice factoring and accounts receivable financing software. Manage invoice purchases, advance rates, and client/debtor relationships.",
+      "h1": "Invoice Factoring Software for A/R Financing",
+      "intro": "Operate invoice factoring and A/R financing with software built for factor companies. Purchase invoices, manage reserves, and track debtor payments.",
+      "sections": [
+        {
+          "h2": "Invoice Purchase & Verification",
+          "body": "Intake invoice batches with debtor names, amounts, and due dates. Verify invoices against debtor credit limits and concentration risks. Calculate advance rates (80-90%) and reserve holdbacks."
+        },
+        {
+          "h2": "Client & Debtor Management",
+          "body": "Maintain client profiles with factoring agreements, fee structures, and concentration limits. Track debtor creditworthiness, payment history, and aging. Monitor client-debtor relationship risks."
+        },
+        {
+          "h2": "Reserve Accounts & Reconciliation",
+          "body": "Hold reserves in client sub-accounts with automatic release after debtor payment. Reconcile collected payments to purchased invoices. Handle partial payments, credits, and disputes."
+        },
+        {
+          "h2": "Collections & Notifications",
+          "body": "Auto-notify debtors of invoice assignment (notification factoring). Track collection attempts and payment promises. Escalate past-due invoices to collections or back to client (recourse factoring)."
+        },
+        {
+          "h2": "Built for Factoring Companies",
+          "body": "Used by factors managing $10M-$500M in A/R portfolios. Support for recourse and non-recourse structures. Integration with credit bureaus and debtor payment verification services."
+        }
+      ],
+      "ctas": ["See Factoring Demo", "Get Fee Calculator", "Talk to Factoring Team"],
+      "keywords": ["invoice factoring software", "accounts receivable financing", "factoring platform", "A/R software", "factor management", "debtor tracking"]
+    },
+    {
+      "slug": "working-capital-lending-software",
+      "title": "Working Capital Lending Software | Lendgismo",
+      "description": "Working capital loan origination and servicing software. Revenue-based financing, cash flow loans, and line of credit management for SMBs.",
+      "h1": "Working Capital Lending Software",
+      "intro": "Fund working capital needs with flexible loan products: term loans, lines of credit, and revenue-based financing. Software built for SMB working capital lenders.",
+      "sections": [
+        {
+          "h2": "Flexible Loan Products",
+          "body": "Offer term loans (6-36 months), revolving lines of credit, or revenue-based financing. Configure repayment structures: daily ACH, weekly, or monthly. Support for seasonal businesses with variable payment schedules."
+        },
+        {
+          "h2": "Cash Flow Underwriting",
+          "body": "Analyze bank account cash flow with Plaid integration. Identify revenue patterns, recurring expenses, and available free cash flow. Stress test repayment capacity under revenue declines."
+        },
+        {
+          "h2": "Line of Credit Management",
+          "body": "Set credit limits with auto-renewal and draw-down tracking. Monitor utilization rates and payment performance. Adjust limits based on portfolio risk and borrower performance."
+        },
+        {
+          "h2": "Revenue-Based Financing",
+          "body": "Structure repayments as % of daily revenue with Stripe or payment processor integration. Auto-adjust payment amounts based on sales velocity. Cap total repayment at 1.2-1.5x funded amount."
+        },
+        {
+          "h2": "Built for SMB Lenders",
+          "body": "Proven with working capital lenders funding $500K-$50M annually. Fast approval-to-funding (24-48 hours). Support for repeat borrowers with automated renewals."
+        }
+      ],
+      "ctas": ["See Working Capital Demo", "Get Product Guide", "Talk to Product Team"],
+      "keywords": ["working capital lending", "cash flow loans", "revenue-based financing", "line of credit software", "SMB lending software", "working capital platform"]
+    },
+    {
+      "slug": "ecommerce-lender-software",
+      "title": "Ecommerce Lending Software | Lendgismo",
+      "description": "Lending software for ecommerce businesses. Integrate with Shopify, Amazon, and payment processors for revenue-based financing and inventory loans.",
+      "h1": "Ecommerce Lending Software",
+      "intro": "Finance ecommerce businesses with revenue-based loans, inventory financing, and cash advances. Integrate with Shopify, Amazon, and payment processors for real-time data.",
+      "sections": [
+        {
+          "h2": "Ecommerce Data Integration",
+          "body": "Connect to Shopify, WooCommerce, Amazon Seller Central, and payment processors (Stripe, PayPal). Pull sales data, inventory levels, and customer metrics. Auto-refresh data for ongoing underwriting."
+        },
+        {
+          "h2": "Revenue-Based Repayment",
+          "body": "Structure loans with daily or weekly ACH based on % of sales. Auto-adjust payments during slow seasons or promotional periods. Cap total repayment and provide payoff quotes."
+        },
+        {
+          "h2": "Inventory & Purchase Order Financing",
+          "body": "Finance inventory purchases with vendor payment integration. Track inventory as collateral with auto-valuation from platform data. Release funds upon inventory receipt or sale."
+        },
+        {
+          "h2": "Underwriting Ecommerce Metrics",
+          "body": "Analyze GMV, repeat purchase rates, customer acquisition cost, and inventory turnover. Identify seasonal patterns and growth trends. Flag platform policy violations or chargebacks."
+        },
+        {
+          "h2": "Built for Ecommerce Lenders",
+          "body": "Used by lenders funding DTC brands, Amazon sellers, and Shopify stores. Typical loan sizes: $10K-$500K. Fast funding (24-48 hours) with automated decisioning."
+        }
+      ],
+      "ctas": ["See Ecommerce Demo", "Get Integration Guide", "Talk to Ecommerce Team"],
+      "keywords": ["ecommerce lending software", "Shopify lending", "Amazon seller financing", "revenue-based financing", "inventory financing", "DTC lending platform"]
+    },
+    {
+      "slug": "for-mca-funders",
+      "title": "MCA Software for Merchant Cash Advance Funders",
+      "description": "Complete MCA origination and servicing platform for merchant cash advance funders. Manage ISO networks, daily ACH collections, and factor rate pricing.",
+      "h1": "MCA Software Built for Merchant Cash Advance Funders",
+      "intro": "Purpose-built software for MCA funders managing high-volume origination, ISO networks, and daily ACH collections. Proven with funders doing 100-1,000+ deals monthly.",
+      "sections": [
+        {
+          "h2": "High-Volume MCA Origination",
+          "body": "Process 100-1,000 applications monthly with automated bank statement analysis, credit pulls, and ISO deal submission portals. Fast underwriting (2-24 hours) with configurable decisioning rules for factor rates, holdback %, and split payments."
+        },
+        {
+          "h2": "ISO Network Management",
+          "body": "Manage 10-500 ISO partners with white-label portals, commission tracking, and hierarchical structures. Auto-calculate referral fees, support split commissions, and generate 1099-ready reports. Track ISO performance and fraud patterns."
+        },
+        {
+          "h2": "Daily ACH Collections & Reconciliation",
+          "body": "Auto-initiate daily ACH debits based on holdback % or fixed amounts. Reconcile collected payments to funded deals. Handle NSFs, payment plan restructuring, and balance adjustments. Monitor collection rates and aging."
+        },
+        {
+          "h2": "Factor Rate Pricing & Renewals",
+          "body": "Configure factor rate pricing tiers (1.1-1.5x) based on credit profile, time in business, and revenue. Auto-generate renewal offers for paid-off merchants. Track portfolio yield and margin compression."
+        },
+        {
+          "h2": "Proven at Scale",
+          "body": "Deployed by MCA funders managing $5M-$100M portfolios. Support for syndication, participations, and portfolio sales. Integrate with warehouse lenders for funding line draws and covenant reporting."
+        }
+      ],
+      "ctas": ["See MCA Platform Demo", "Get Funder Guide", "Talk to MCA Team"],
+      "keywords": ["MCA software", "merchant cash advance platform", "MCA funder software", "ISO management", "daily ACH collections", "factor rate lending"]
+    },
+    {
+      "slug": "for-iso-brokers",
+      "title": "Software for ISO Brokers & Merchant Cash Advance Brokers",
+      "description": "ISO broker portal for submitting MCA deals, tracking commissions, and managing merchant relationships. White-label broker software.",
+      "h1": "Software for ISO Brokers & MCA Brokers",
+      "intro": "Streamline your ISO brokerage with deal submission portals, real-time status tracking, and commission management. White-label software for independent sales organizations.",
+      "sections": [
+        {
+          "h2": "Deal Submission & Document Upload",
+          "body": "Submit merchant applications with guided workflows: business info, bank statements, credit authorization, and ISO disclosures. Upload documents via drag-and-drop or mobile capture. Pre-populate repeat merchants."
+        },
+        {
+          "h2": "Real-Time Deal Tracking",
+          "body": "Track submitted deals through underwriting, approval, funding, and commission payout. Receive email/SMS notifications at each stage. View decline reasons and resubmit with corrected information."
+        },
+        {
+          "h2": "Commission Statements & Payouts",
+          "body": "View commission statements with funded amount, commission rate, and payout date. Track overrides, bonuses, and chargebacks. Export 1099-ready reports for tax filing."
+        },
+        {
+          "h2": "Multi-Lender Network Access",
+          "body": "Submit deals to multiple funders from one portal. Compare approval likelihood and pricing across lenders. Route declined deals to alternative funders automatically."
+        },
+        {
+          "h2": "Built for ISOs at Scale",
+          "body": "Used by ISO shops submitting 10-500 deals monthly. Mobile app for field agents. CRM integration for merchant pipeline management. Training resources and product guides included."
+        }
+      ],
+      "ctas": ["See ISO Portal Demo", "Get Broker Guide", "Sign Up as ISO"],
+      "keywords": ["ISO broker software", "MCA broker portal", "deal submission software", "ISO commission tracking", "merchant cash advance broker", "independent sales organization"]
+    },
+    {
+      "slug": "for-nonbank-lenders",
+      "title": "Software for Nonbank Lenders & Alternative Lenders",
+      "description": "Complete lending platform for nonbank lenders, fintech companies, and alternative finance providers. Origination, underwriting, servicing, and compliance.",
+      "h1": "Software for Nonbank & Alternative Lenders",
+      "intro": "Purpose-built for nonbank lenders offering MCA, ABL, working capital, and specialty finance. Flexible platform supporting diverse loan products and business models.",
+      "sections": [
+        {
+          "h2": "Multi-Product Lending Platform",
+          "body": "Support MCA, term loans, lines of credit, ABL, equipment finance, and invoice factoring from one platform. Configure unique workflows, pricing, and underwriting rules per product. Cross-sell opportunities across products."
+        },
+        {
+          "h2": "Alternative Underwriting Data",
+          "body": "Integrate with Plaid (bank data), QuickBooks (accounting), payment processors (revenue), and alternative credit bureaus. Build custom scorecards with cash flow, revenue trends, and industry risk. Faster decisions than traditional lenders."
+        },
+        {
+          "h2": "Flexible Servicing & Collections",
+          "body": "Support daily, weekly, or monthly payment schedules. Auto-adjust payments for revenue-based structures. Manage payment plans, forbearance, and restructuring. Integrate with third-party servicers or collections agencies."
+        },
+        {
+          "h2": "Compliance for Nonbank Lenders",
+          "body": "Maintain state licensing compliance with configurable disclosure requirements. Track TILA, ECOA, and state-specific lending laws. Audit trails for regulatory exams and investor due diligence."
+        },
+        {
+          "h2": "Proven with Fintech Lenders",
+          "body": "Deployed by 50+ nonbank lenders from $1M-$500M in origination volume. Support for warehouse lines, institutional capital, and portfolio sales. API access for fintech innovation."
+        }
+      ],
+      "ctas": ["See Platform Demo", "Get Compliance Guide", "Talk to Fintech Team"],
+      "keywords": ["nonbank lender software", "alternative lending platform", "fintech lending software", "commercial lending platform", "non-bank finance software", "alternative finance platform"]
+    },
+    {
+      "slug": "for-credit-unions-smb",
+      "title": "SMB Lending Software for Credit Unions",
+      "description": "Small business lending platform for credit unions. Member business lending with SBA loan processing, underwriting automation, and portfolio management.",
+      "h1": "SMB Lending Software for Credit Unions",
+      "intro": "Expand member business lending with modern origination and servicing software. Support commercial loans, SBA 7(a) loans, and lines of credit for small business members.",
+      "sections": [
+        {
+          "h2": "Member Business Loan Origination",
+          "body": "Digital application experience for business members with branded portals. Collect financial statements, tax returns, and personal guarantor information. Route applications through credit union workflows and committees."
+        },
+        {
+          "h2": "SBA Loan Processing",
+          "body": "SBA 7(a) and 504 loan application templates with required forms (1919, 1920, 413). Eligibility checking, affiliation analysis, and credit elsewhere test. Export SBA packages for upload to E-Tran."
+        },
+        {
+          "h2": "Credit Union Compliance",
+          "body": "Maintain member business lending cap tracking (12.25% of assets). Monitor concentration limits by industry, member, and loan type. Generate NCUA call report data and exam-ready documentation."
+        },
+        {
+          "h3": "Portfolio & Risk Management",
+          "body": "Track commercial loan portfolio with credit risk ratings, watch list monitoring, and covenant tracking. Stress test portfolio under economic scenarios. Report to ALCO and board committees."
+        },
+        {
+          "h2": "Built for Credit Unions",
+          "body": "Deployed by credit unions with $50M-$5B in assets. Integrate with core banking systems (Symitar, Corelation, Fiserv). Support for participations and loan consortiums."
+        }
+      ],
+      "ctas": ["See Credit Union Demo", "Get SBA Guide", "Talk to Credit Union Team"],
+      "keywords": ["credit union business lending", "member business loans", "credit union SMB software", "SBA loan software", "NCUA compliance", "credit union commercial lending"]
+    },
+    {
+      "slug": "for-community-banks-smb",
+      "title": "SMB Lending Software for Community Banks",
+      "description": "Small business lending platform for community banks. Commercial lending origination, underwriting, and portfolio management for local banks.",
+      "h1": "SMB Lending Software for Community Banks",
+      "intro": "Modernize small business lending with digital origination and automated underwriting. Compete with fintech lenders while maintaining relationship banking.",
+      "sections": [
+        {
+          "h2": "Digital Commercial Lending",
+          "body": "Branded online application portals for business customers. Upload financial statements, tax returns, and collateral documentation. Mobile-friendly experience for small business owners."
+        },
+        {
+          "h2": "Relationship Lending Workflows",
+          "body": "Integrate with CRM to view customer deposit relationships, treasury services, and cross-sell opportunities. Route applications to relationship managers and credit committees. Document credit memos and approval rationale."
+        },
+        {
+          "h2": "Core Banking Integration",
+          "body": "Integrate with core systems (Jack Henry, FIS, Fiserv) for customer data, deposit balances, and loan booking. Two-way sync for loan servicing, payment posting, and general ledger updates."
+        },
+        {
+          "h2": "Community Bank Compliance",
+          "body": "Maintain CRA lending data and reporting. Track Reg B (ECOA) compliance for adverse action notices. Generate call report data for FFIEC submissions. Fair lending monitoring and testing."
+        },
+        {
+          "h2": "Built for Community Banks",
+          "body": "Used by community banks with $100M-$10B in assets. Support for commercial real estate, C&I loans, and equipment financing. Loan participations and shared national credits."
+        }
+      ],
+      "ctas": ["See Community Bank Demo", "Get Integration Guide", "Talk to Banking Team"],
+      "keywords": ["community bank lending software", "small business lending", "commercial lending platform", "bank SMB software", "core banking integration", "CRA lending"]
+    },
+    {
+      "slug": "fraud-detection-kyc-aml",
+      "title": "Fraud Detection, KYC & AML for Lenders | Lendgismo",
+      "description": "Prevent fraud with identity verification, KYC/KYB checks, AML screening, and device fingerprinting. Fraud detection software for alternative lenders.",
+      "h1": "Fraud Detection, KYC & AML for Lenders",
+      "intro": "Protect your lending portfolio with multi-layer fraud prevention: identity verification, KYC/KYB checks, AML screening, and behavioral analysis.",
+      "sections": [
+        {
+          "h2": "Identity Verification & Document Checks",
+          "body": "Verify government-issued IDs (driver's license, passport) with OCR and liveness detection. Cross-reference extracted data against application info. Detect fake IDs, photo manipulation, and stolen identities."
+        },
+        {
+          "h2": "KYC & KYB Screening",
+          "body": "Screen individuals against watchlists (OFAC, PEP, sanctions lists). Verify business entities with Secretary of State records, EIN validation, and UCC searches. Document screening results for audit trails."
+        },
+        {
+          "h2": "AML Transaction Monitoring",
+          "body": "Monitor loan applications and payments for suspicious patterns: rapid application velocity, inconsistent data, or high-risk industries. Generate Suspicious Activity Reports (SARs) for regulators. Maintain AML program documentation."
+        },
+        {
+          "h2": "Device Fingerprinting & Behavioral Analytics",
+          "body": "Track device IDs, IP addresses, and browser fingerprints to detect application fraud rings. Analyze behavioral signals: typing speed, mouse movements, and form completion time. Flag bot activity and automated submissions."
+        },
+        {
+          "h2": "Built for Fraud Prevention",
+          "body": "Proven with lenders preventing $500K-$5M+ in annual fraud losses. Integration with fraud detection services (Sift, Socure, Alloy). Real-time decisioning with fraud scores and manual review queues."
+        }
+      ],
+      "ctas": ["See Fraud Detection Demo", "Get Security Guide", "Talk to Risk Team"],
+      "keywords": ["fraud detection", "KYC verification", "AML screening", "identity verification", "fraud prevention lending", "KYB checks"]
+    },
+    {
+      "slug": "cashflow-analysis",
+      "title": "Cash Flow Analysis for Lenders | Lendgismo",
+      "description": "Analyze borrower cash flow with bank account data from Plaid. Automate revenue verification, expense categorization, and repayment capacity calculations.",
+      "h1": "Cash Flow Analysis for Alternative Lenders",
+      "intro": "Underwrite based on cash flow, not just credit scores. Analyze bank account transactions to verify revenue, identify patterns, and calculate repayment capacity.",
+      "sections": [
+        {
+          "h2": "Bank Account Transaction Analysis",
+          "body": "Pull 6-24 months of bank transactions via Plaid. Categorize deposits as revenue, refunds, or transfers. Identify recurring expenses, loan payments, and overdrafts. Calculate average daily balance and cash reserves."
+        },
+        {
+          "h2": "Revenue Verification & Trends",
+          "body": "Verify stated revenue against actual bank deposits. Identify seasonality, growth trends, or declining sales. Flag inconsistencies between application and bank data. Support for multiple revenue streams."
+        },
+        {
+          "h2": "Expense Analysis & Free Cash Flow",
+          "body": "Categorize expenses: rent, payroll, inventory, loan payments, and discretionary spending. Calculate free cash flow available for debt service. Stress test under revenue decline scenarios (10-30% drop)."
+        },
+        {
+          "h2": "Repayment Capacity Calculation",
+          "body": "Calculate maximum sustainable payment amount based on cash flow patterns. Account for seasonality, expense volatility, and cash reserve needs. Set payment schedules (daily, weekly, monthly) aligned with cash flow."
+        },
+        {
+          "h2": "Built for Cash Flow Lenders",
+          "body": "Used by MCA funders, working capital lenders, and revenue-based lenders. Typical approval lift of 20-30% vs. credit-score-only decisioning. Reduce defaults by matching payment structure to cash flow."
+        }
+      ],
+      "ctas": ["See Cash Flow Demo", "Get Analysis Guide", "Talk to Underwriting Team"],
+      "keywords": ["cash flow analysis", "bank statement analysis", "Plaid underwriting", "revenue verification", "cash flow lending", "repayment capacity"]
+    },
+    {
+      "slug": "risk-scoring",
+      "title": "Risk Scoring & Credit Models for Lenders | Lendgismo",
+      "description": "Build custom risk scorecards and credit models for alternative lending. Predictive analytics, machine learning, and portfolio segmentation.",
+      "h1": "Risk Scoring & Credit Models for Lenders",
+      "intro": "Optimize credit decisions with custom scorecards, predictive models, and portfolio analytics. Data-driven underwriting for alternative lenders.",
+      "sections": [
+        {
+          "h2": "Custom Scorecard Development",
+          "body": "Build scorecards with weighted factors: credit score, revenue trends, time in business, industry, and cash flow metrics. Set approval thresholds, manual review bands, and auto-decline cutoffs. A/B test scorecard versions."
+        },
+        {
+          "h2": "Machine Learning Models",
+          "body": "Train predictive models on historical loan performance data. Identify leading indicators of default: payment delays, declining revenue, or covenant breaches. Continuously refine models with new data."
+        },
+        {
+          "h2": "Portfolio Segmentation & Monitoring",
+          "body": "Segment portfolio by risk grade (A-E) based on origination scores and ongoing performance. Monitor migration between risk grades. Early warning system for deteriorating credits."
+        },
+        {
+          "h2": "Backtesting & Model Validation",
+          "body": "Backtest models against historical data to measure predictive accuracy. Calculate Gini coefficient, KS statistic, and ROC curves. Document model development for regulatory exams."
+        },
+        {
+          "h2": "Built for Data-Driven Lenders",
+          "body": "Deployed by lenders managing $10M-$500M portfolios. Support for alternative data sources (bank transactions, payment processor data, social signals). Model monitoring and retraining workflows included."
+        }
+      ],
+      "ctas": ["See Risk Scoring Demo", "Get Model Guide", "Talk to Analytics Team"],
+      "keywords": ["risk scoring", "credit scorecard", "predictive analytics", "machine learning lending", "credit risk model", "portfolio segmentation"]
+    },
+    {
+      "slug": "investor-reporting",
+      "title": "Investor Reporting for Lenders | Lendgismo",
+      "description": "Automated investor reporting for warehouse lenders, institutional investors, and portfolio buyers. Loan tape generation and covenant compliance tracking.",
+      "h1": "Investor Reporting for Lending Portfolios",
+      "intro": "Automate monthly investor reporting with loan tape generation, payment waterfall tracking, and covenant compliance monitoring. Built for lenders with institutional capital.",
+      "sections": [
+        {
+          "h2": "Loan Tape Generation",
+          "body": "Auto-generate monthly loan tapes with origination data, payment history, and current status. Standardized formats for warehouse lenders, credit funds, and rating agencies. Loan-level and portfolio-level summaries."
+        },
+        {
+          "h2": "Payment Waterfall & Collections",
+          "body": "Track collections and apply to payment waterfalls: senior debt, junior debt, excess spread, and equity. Calculate coverage ratios and distribution triggers. Investor-specific reporting views."
+        },
+        {
+          "h2": "Covenant Compliance Monitoring",
+          "body": "Monitor financial covenants: portfolio yield, delinquency rates, charge-offs, and concentration limits. Alert when approaching covenant thresholds. Generate compliance certificates for investors."
+        },
+        {
+          "h2": "Portfolio Performance Analytics",
+          "body": "Report on vintage performance, cumulative defaults, and loss curves. Cohort analysis by origination period, product type, or channel. Compare actual vs. projected performance."
+        },
+        {
+          "h2": "Built for Institutional Capital",
+          "body": "Used by lenders with warehouse lines, term debt, or securitizations. Automated delivery schedules (monthly, quarterly). Support for multiple investor classes and reporting requirements."
+        }
+      ],
+      "ctas": ["See Investor Reporting Demo", "Get Sample Reports", "Talk to Capital Markets"],
+      "keywords": ["investor reporting", "loan tape", "warehouse reporting", "covenant tracking", "portfolio reporting", "institutional investor reports"]
+    }
+  ],
+  "states": [
+    {
+      "slug": "alternative-lending-texas",
+      "title": "Alternative Lending Software for Texas Lenders",
+      "description": "Lending platform for Texas-based MCA funders, commercial lenders, and alternative finance providers. Compliant with Texas state lending regulations.",
+      "h1": "Alternative Lending Software for Texas",
+      "intro": "Purpose-built for Texas lenders serving the state's diverse business landscape—from Houston energy companies to Austin tech startups and Dallas SMBs. State-compliant software with local market expertise.",
+      "sections": [
+        {
+          "h2": "Serving Texas Business Diversity",
+          "body": "Support lending to Texas industries: oil & gas services, technology, healthcare, hospitality, manufacturing, and retail. Understand regional market dynamics across Houston, Dallas-Fort Worth, Austin, and San Antonio metros. Flexible loan products for seasonal and cyclical businesses."
+        },
+        {
+          "h2": "Texas Regulatory Compliance",
+          "body": "Maintain compliance with Texas Finance Code and state lending regulations. Configure required disclosures and licensing documentation. Track usury limits and fee restrictions per Texas law. Audit trails for state examinations."
+        },
+        {
+          "h2": "Local Market Expertise",
+          "body": "Analyze Texas-specific economic indicators: oil prices, tech employment, and real estate trends. Underwriting models calibrated for Texas market conditions. Support for Spanish-language borrower communications in border regions."
+        },
+        {
+          "h2": "Texas Lender Network",
+          "body": "Join 50+ Texas lenders using Lendgismo for MCA, ABL, and working capital lending. Connect with Texas-based ISOs and broker networks. Share best practices with regional lending community."
+        },
+        {
+          "h2": "Fast Texas Deployment",
+          "body": "Deploy in 2-4 weeks with Texas-specific configurations. Local support team familiar with Texas lending landscape. Integration with Texas business databases and verification services."
+        }
+      ],
+      "ctas": ["See Texas Demo", "Talk to Texas Team", "Get Texas Compliance Guide"],
+      "keywords": ["Texas lending software", "alternative lending Texas", "MCA Texas", "Texas commercial lending", "Houston lender software", "Dallas lending platform"]
+    },
+    {
+      "slug": "alternative-lending-california",
+      "title": "Alternative Lending Software for California Lenders",
+      "description": "Lending platform for California MCA funders, commercial lenders, and fintech companies. California Finance Lenders Law (CFL) compliant software.",
+      "h1": "Alternative Lending Software for California",
+      "intro": "Built for California lenders navigating the state's complex regulatory environment. CFL-compliant software serving diverse markets from LA to Silicon Valley to San Diego.",
+      "sections": [
+        {
+          "h2": "California Market Diversity",
+          "body": "Serve California businesses across technology, entertainment, healthcare, agriculture, manufacturing, and hospitality. Regional expertise for Los Angeles, San Francisco Bay Area, San Diego, and Central Valley markets. Support for multilingual borrowers."
+        },
+        {
+          "h2": "CFL Compliance & Licensing",
+          "body": "Maintain California Finance Lenders Law (CFL) compliance with required disclosures, rate caps, and reporting. Track CFL license requirements and renewal dates. Generate DBO examination documentation. Support for DFPI regulatory changes."
+        },
+        {
+          "h2": "High-Cost Lending Regulations",
+          "body": "Configure rate and fee restrictions per California law. Track APR disclosures and usury limits. Maintain records for consumer and commercial lending distinctions. Support for AB 539 and commercial financing disclosures."
+        },
+        {
+          "h2": "California Lender Community",
+          "body": "Network with 100+ California lenders using Lendgismo. Share regional market insights and compliance best practices. Connect with California-based ISO networks and business development partners."
+        },
+        {
+          "h2": "Silicon Valley Innovation",
+          "body": "Modern fintech platform built with California innovation mindset. API-first architecture for integration with California business ecosystems. Support for alternative data sources popular in CA lending."
+        }
+      ],
+      "ctas": ["See California Demo", "Talk to CA Compliance Team", "Get CFL Guide"],
+      "keywords": ["California lending software", "CFL compliant", "California MCA", "Los Angeles lender software", "San Francisco lending", "California fintech"]
+    },
+    {
+      "slug": "alternative-lending-florida",
+      "title": "Alternative Lending Software for Florida Lenders",
+      "description": "Lending platform for Florida MCA funders, commercial lenders, and alternative finance providers. Florida state lending compliance software.",
+      "h1": "Alternative Lending Software for Florida",
+      "intro": "Purpose-built for Florida lenders serving Miami, Tampa, Orlando, and Jacksonville markets. Navigate Florida lending regulations with compliant, flexible software.",
+      "sections": [
+        {
+          "h2": "Florida Business Lending Markets",
+          "body": "Serve Florida industries: tourism & hospitality, healthcare, real estate services, logistics, and retail. Understand seasonal business patterns in tourist regions. Support for Cuban-American and Latin American business communities in South Florida."
+        },
+        {
+          "h2": "Florida Regulatory Framework",
+          "body": "Comply with Florida Statutes Chapter 516 (Consumer Finance Loans) and commercial lending regulations. Track licensing requirements and renewal schedules. Generate documentation for Florida Office of Financial Regulation exams."
+        },
+        {
+          "h2": "Hurricane & Disaster Preparedness",
+          "body": "Monitor weather events impacting borrower performance. Configure payment deferment workflows for hurricane season. Disaster recovery planning for Florida lending operations."
+        },
+        {
+          "h2": "Florida Lender Network",
+          "body": "Connect with Florida-based MCA funders, ABL providers, and commercial lenders. Regional ISO networks across Miami-Dade, Broward, Palm Beach, and Central Florida. Spanish-language support for South Florida markets."
+        },
+        {
+          "h2": "Fast Florida Setup",
+          "body": "Deploy with Florida-specific configurations in 2-4 weeks. Local support team with Florida market knowledge. Integration with Florida business verification services and Secretary of State databases."
+        }
+      ],
+      "ctas": ["See Florida Demo", "Talk to Florida Team", "Get FL Compliance Guide"],
+      "keywords": ["Florida lending software", "Miami MCA", "Florida commercial lending", "alternative lending Florida", "Orlando lender software", "Tampa lending platform"]
+    },
+    {
+      "slug": "alternative-lending-new-york",
+      "title": "Alternative Lending Software for New York Lenders",
+      "description": "Lending platform for New York MCA funders, commercial lenders, and fintech companies. NYC and NYS banking law compliant software.",
+      "h1": "Alternative Lending Software for New York",
+      "intro": "Built for New York lenders serving the nation's financial capital. Navigate NYC and NYS regulations with enterprise-grade, compliant lending software.",
+      "sections": [
+        {
+          "h2": "New York Lending Hub",
+          "body": "Serve NYC's diverse business landscape: finance, media, fashion, food service, healthcare, and technology. Support for ethnic business communities across boroughs. Expertise in high-cost urban markets and competitive lending environment."
+        },
+        {
+          "h2": "NYS Banking Law Compliance",
+          "body": "Maintain compliance with New York Banking Law Article 9-A (Licensed Lenders) and commercial financing disclosure requirements. Track DFS licensing and registration. Generate examination documentation for NYDFS. Support for NYC small business disclosure laws."
+        },
+        {
+          "h2": "Commercial Financing Disclosures",
+          "body": "Comply with NY commercial financing disclosure law (Truth in Lending for Small Businesses). Calculate and display APR, total repayment, and payment schedules. Maintain disclosure records and borrower acknowledgments."
+        },
+        {
+          "h2": "New York Lender Community",
+          "body": "Network with 200+ New York metro lenders using Lendgismo. Connect with Manhattan, Brooklyn, and Westchester ISO networks. Share best practices with NYC alternative lending community."
+        },
+        {
+          "h2": "Enterprise-Grade Platform",
+          "body": "SOC 2 compliant infrastructure meeting NYC financial services standards. Support for high-volume lending operations (100-1,000+ deals monthly). Integration with New York business verification and credit services."
+        }
+      ],
+      "ctas": ["See New York Demo", "Talk to NY Team", "Get NYDFS Guide"],
+      "keywords": ["New York lending software", "NYC MCA", "New York commercial lending", "NYDFS compliant", "Manhattan lender software", "NYC fintech lending"]
+    },
+    {
+      "slug": "alternative-lending-illinois",
+      "title": "Alternative Lending Software for Illinois Lenders",
+      "description": "Lending platform for Illinois MCA funders, commercial lenders, and alternative finance providers. Chicago and Illinois state lending compliance.",
+      "h1": "Alternative Lending Software for Illinois",
+      "intro": "Purpose-built for Illinois lenders serving Chicago and statewide markets. Navigate Illinois lending regulations with flexible, compliant software.",
+      "sections": [
+        {
+          "h2": "Illinois Business Lending",
+          "body": "Serve Chicago and Illinois industries: manufacturing, logistics, food services, healthcare, and professional services. Understand Midwest business cycles and seasonal patterns. Support for diverse Chicago metro business communities."
+        },
+        {
+          "h2": "Illinois Regulatory Compliance",
+          "body": "Comply with Illinois Consumer Installment Loan Act and commercial lending regulations. Track IDFPR licensing requirements and reporting. Generate examination documentation for Illinois Department of Financial & Professional Regulation."
+        },
+        {
+          "h2": "Chicago Lending Market",
+          "body": "Expertise in competitive Chicago alternative lending landscape. Connect with Chicago-based ISO networks and business brokers. Regional market intelligence for collar counties and downstate Illinois."
+        },
+        {
+          "h2": "Midwest Lender Network",
+          "body": "Join Midwest lenders using Lendgismo for MCA, working capital, and commercial lending. Share regional best practices. Access to regional economic indicators and portfolio benchmarks."
+        },
+        {
+          "h2": "Fast Illinois Deployment",
+          "body": "Deploy in 2-4 weeks with Illinois-specific configurations. Support team familiar with Illinois lending environment. Integration with Illinois Secretary of State and business verification services."
+        }
+      ],
+      "ctas": ["See Illinois Demo", "Talk to Chicago Team", "Get IL Compliance Guide"],
+      "keywords": ["Illinois lending software", "Chicago MCA", "Illinois commercial lending", "alternative lending Illinois", "Chicago lender software", "IDFPR compliant"]
+    },
+    {
+      "slug": "alternative-lending-indiana",
+      "title": "Alternative Lending Software for Indiana Lenders",
+      "description": "Lending platform for Indiana MCA funders and commercial lenders. Indianapolis and IN state lending compliance software.",
+      "h1": "Alternative Lending Software for Indiana",
+      "intro": "Purpose-built for Indiana lenders serving Indianapolis and statewide markets. IN-compliant lending software for Midwest lenders.",
+      "sections": [
+        {
+          "h2": "Indiana Business Markets",
+          "body": "Serve Indiana industries: manufacturing, healthcare, logistics, agriculture, and motorsports. Regional expertise across Indianapolis metro, Fort Wayne, Evansville, and South Bend. Support for automotive supply chain."
+        },
+        {
+          "h2": "IN Regulatory Compliance",
+          "body": "Comply with Indiana Code Title 24 and state lending regulations. Track licensing with Indiana Department of Financial Institutions. Generate examination documentation per IN requirements."
+        },
+        {
+          "h2": "Manufacturing & Logistics Hub",
+          "body": "Specialized underwriting for Indiana's manufacturing and logistics sectors. Understand automotive supply chain, equipment financing, and warehouse operations. Support for tier 1-3 suppliers."
+        },
+        {
+          "h2": "Midwest Lender Network",
+          "body": "Network with Indiana and Midwest lenders using Lendgismo. Share regional market insights and lending best practices. Access to Midwest economic indicators and portfolio benchmarks."
+        },
+        {
+          "h2": "Fast IN Deployment",
+          "body": "Deploy in 2-4 weeks with Indiana-specific configurations. Support team familiar with IN lending landscape. Integration with Indiana Secretary of State and business verification services."
+        }
+      ],
+      "ctas": ["See Indiana Demo", "Talk to Indianapolis Team", "Get IN Compliance Guide"],
+      "keywords": ["Indiana lending software", "Indianapolis MCA", "Indiana commercial lending", "alternative lending Indiana", "IN lender software", "Indiana manufacturing finance"]
+    },
+    {
+      "slug": "alternative-lending-georgia",
+      "title": "Alternative Lending Software for Georgia Lenders",
+      "description": "Lending platform for Georgia MCA funders, commercial lenders, and alternative finance providers. Atlanta and Georgia state lending compliance.",
+      "h1": "Alternative Lending Software for Georgia",
+      "intro": "Built for Georgia lenders serving Atlanta's business hub and statewide markets. Navigate Georgia lending regulations with flexible, compliant software.",
+      "sections": [
+        {
+          "h2": "Georgia Business Lending Markets",
+          "body": "Serve Georgia industries: logistics & distribution, film & entertainment, manufacturing, healthcare, and hospitality. Regional expertise across Atlanta metro, Savannah port, and Augusta. Support for diverse business communities statewide."
+        },
+        {
+          "h2": "Georgia Regulatory Compliance",
+          "body": "Comply with Georgia Industrial Loan Act and state lending regulations. Track licensing requirements with Georgia Department of Banking and Finance. Generate examination documentation and maintain required disclosures."
+        },
+        {
+          "h2": "Atlanta Fintech Hub",
+          "body": "Connect with Atlanta's growing fintech and alternative lending community. Network with Georgia-based ISO partners and business brokers. Access regional market data and portfolio benchmarks."
+        },
+        {
+          "h2": "Southeast Lender Network",
+          "body": "Join Southeast lenders using Lendgismo for commercial and alternative lending. Share regional best practices. Collaborate on multi-state lending strategies across Southeast markets."
+        },
+        {
+          "h2": "Fast Georgia Deployment",
+          "body": "Deploy in 2-4 weeks with Georgia-specific configurations. Support team familiar with Georgia lending landscape. Integration with Georgia Secretary of State and business verification services."
+        }
+      ],
+      "ctas": ["See Georgia Demo", "Talk to Atlanta Team", "Get GA Compliance Guide"],
+      "keywords": ["Georgia lending software", "Atlanta MCA", "Georgia commercial lending", "alternative lending Georgia", "Atlanta lender software", "Georgia fintech"]
+    },
+    {
+      "slug": "alternative-lending-pennsylvania",
+      "title": "Alternative Lending Software for Pennsylvania Lenders",
+      "description": "Lending platform for Pennsylvania MCA funders, commercial lenders, and alternative finance providers. Philadelphia and PA state lending compliance.",
+      "h1": "Alternative Lending Software for Pennsylvania",
+      "intro": "Purpose-built for Pennsylvania lenders serving Philadelphia, Pittsburgh, and statewide markets. Navigate PA lending regulations with compliant software.",
+      "sections": [
+        {
+          "h2": "Pennsylvania Business Lending",
+          "body": "Serve Pennsylvania industries: manufacturing, healthcare, logistics, food services, and professional services. Regional expertise across Philadelphia metro, Pittsburgh, Lehigh Valley, and Harrisburg. Support for diverse urban and rural markets."
+        },
+        {
+          "h2": "PA Regulatory Framework",
+          "body": "Comply with Pennsylvania Consumer Discount Company Act and commercial lending regulations. Track licensing with PA Department of Banking and Securities. Generate examination documentation and audit trails."
+        },
+        {
+          "h2": "Philadelphia & Pittsburgh Markets",
+          "body": "Expertise in competitive Philadelphia and Pittsburgh lending landscapes. Connect with regional ISO networks and business development partners. Access Mid-Atlantic market intelligence."
+        },
+        {
+          "h2": "Mid-Atlantic Lender Network",
+          "body": "Network with Pennsylvania and Mid-Atlantic lenders using Lendgismo. Share regional best practices and compliance strategies. Collaborate on multi-state lending operations."
+        },
+        {
+          "h2": "Fast PA Deployment",
+          "body": "Deploy in 2-4 weeks with Pennsylvania-specific configurations. Support team familiar with PA lending environment. Integration with PA business databases and verification services."
+        }
+      ],
+      "ctas": ["See Pennsylvania Demo", "Talk to Philly Team", "Get PA Compliance Guide"],
+      "keywords": ["Pennsylvania lending software", "Philadelphia MCA", "Pittsburgh lending", "alternative lending PA", "Pennsylvania commercial lending", "Philly lender software"]
+    },
+    {
+      "slug": "alternative-lending-ohio",
+      "title": "Alternative Lending Software for Ohio Lenders",
+      "description": "Lending platform for Ohio MCA funders, commercial lenders, and alternative finance providers. Cleveland, Columbus, Cincinnati market expertise.",
+      "h1": "Alternative Lending Software for Ohio",
+      "intro": "Built for Ohio lenders serving the state's major metros and manufacturing corridor. Navigate Ohio lending regulations with flexible, compliant software.",
+      "sections": [
+        {
+          "h2": "Ohio Business Lending Markets",
+          "body": "Serve Ohio industries: manufacturing, healthcare, logistics, retail, and professional services. Regional expertise across Columbus, Cleveland, Cincinnati tri-state area, and Toledo. Support for manufacturing and industrial businesses."
+        },
+        {
+          "h2": "Ohio Regulatory Compliance",
+          "body": "Comply with Ohio Revised Code Chapter 1321 (Credit Unions) and commercial lending regulations. Track licensing requirements with Ohio Division of Financial Institutions. Generate examination documentation."
+        },
+        {
+          "h2": "Manufacturing & Industrial Lending",
+          "body": "Specialized underwriting for Ohio's manufacturing sector. Understand equipment financing, working capital cycles, and supply chain dynamics. Support for industrial equipment collateral valuation."
+        },
+        {
+          "h2": "Midwest Lender Network",
+          "body": "Join Ohio and Midwest lenders using Lendgismo. Share regional market insights and lending best practices. Access to regional economic indicators and portfolio performance data."
+        },
+        {
+          "h2": "Fast Ohio Deployment",
+          "body": "Deploy in 2-4 weeks with Ohio-specific configurations. Support team familiar with Ohio lending landscape. Integration with Ohio Secretary of State and business verification services."
+        }
+      ],
+      "ctas": ["See Ohio Demo", "Talk to Columbus Team", "Get OH Compliance Guide"],
+      "keywords": ["Ohio lending software", "Cleveland MCA", "Columbus lending", "Cincinnati lender software", "Ohio commercial lending", "alternative lending Ohio"]
+    },
+    {
+      "slug": "alternative-lending-north-carolina",
+      "title": "Alternative Lending Software for North Carolina Lenders",
+      "description": "Lending platform for North Carolina MCA funders, commercial lenders, and alternative finance providers. Charlotte and NC state lending compliance.",
+      "h1": "Alternative Lending Software for North Carolina",
+      "intro": "Purpose-built for North Carolina lenders serving Charlotte's banking hub, Research Triangle, and statewide markets. NC-compliant lending software.",
+      "sections": [
+        {
+          "h2": "North Carolina Business Markets",
+          "body": "Serve North Carolina industries: banking & finance, technology, healthcare, manufacturing, and agriculture. Regional expertise across Charlotte metro, Research Triangle (Raleigh-Durham), and Triad (Greensboro-Winston-Salem)."
+        },
+        {
+          "h2": "NC Regulatory Compliance",
+          "body": "Comply with North Carolina Consumer Finance Act and state lending regulations. Track licensing with NC Commissioner of Banks. Generate examination documentation and maintain required disclosures per NC law."
+        },
+        {
+          "h2": "Charlotte Banking Center",
+          "body": "Leverage Charlotte's banking expertise and financial services infrastructure. Connect with Charlotte-based ISO networks and business development partners. Access to sophisticated lending community and resources."
+        },
+        {
+          "h2": "Southeast Lender Network",
+          "body": "Network with North Carolina and Southeast lenders using Lendgismo. Share regional market intelligence and compliance strategies. Collaborate on multi-state lending operations across Southeast."
+        },
+        {
+          "h2": "Fast NC Deployment",
+          "body": "Deploy in 2-4 weeks with North Carolina-specific configurations. Support team familiar with NC lending landscape. Integration with NC Secretary of State and business verification services."
+        }
+      ],
+      "ctas": ["See North Carolina Demo", "Talk to Charlotte Team", "Get NC Compliance Guide"],
+      "keywords": ["North Carolina lending software", "Charlotte MCA", "NC commercial lending", "alternative lending North Carolina", "Charlotte lender software", "Research Triangle lending"]
+    },
+    {
+      "slug": "alternative-lending-new-jersey",
+      "title": "Alternative Lending Software for New Jersey Lenders",
+      "description": "Lending platform for New Jersey MCA funders, commercial lenders, and alternative finance providers. NJ state lending compliance software.",
+      "h1": "Alternative Lending Software for New Jersey",
+      "intro": "Built for New Jersey lenders serving densely populated business markets. Navigate NJ lending regulations with compliant, flexible software.",
+      "sections": [
+        {
+          "h2": "New Jersey Business Lending",
+          "body": "Serve New Jersey industries: logistics & distribution, pharmaceuticals, healthcare, retail, and professional services. Regional expertise across North Jersey, Central Jersey, and Shore regions. Support for diverse business communities."
+        },
+        {
+          "h2": "NJ Regulatory Compliance",
+          "body": "Comply with New Jersey Licensed Lenders Act and state lending regulations. Track licensing requirements with NJ Department of Banking and Insurance. Generate examination documentation and audit trails."
+        },
+        {
+          "h2": "NY/NJ Metro Market",
+          "body": "Expertise in competitive NY/NJ metropolitan lending landscape. Connect with regional ISO networks spanning New Jersey and New York. Access to tri-state market intelligence and best practices."
+        },
+        {
+          "h2": "Northeast Lender Network",
+          "body": "Network with New Jersey and Northeast lenders using Lendgismo. Share regional compliance strategies and market insights. Collaborate on multi-state lending operations."
+        },
+        {
+          "h2": "Fast NJ Deployment",
+          "body": "Deploy in 2-4 weeks with New Jersey-specific configurations. Support team familiar with NJ lending environment. Integration with NJ business databases and verification services."
+        }
+      ],
+      "ctas": ["See New Jersey Demo", "Talk to NJ Team", "Get NJ Compliance Guide"],
+      "keywords": ["New Jersey lending software", "NJ MCA", "New Jersey commercial lending", "alternative lending NJ", "North Jersey lender software", "NJ fintech"]
+    },
+    {
+      "slug": "alternative-lending-virginia",
+      "title": "Alternative Lending Software for Virginia Lenders",
+      "description": "Lending platform for Virginia MCA funders and commercial lenders. Richmond and Northern Virginia lending compliance software.",
+      "h1": "Alternative Lending Software for Virginia",
+      "intro": "Purpose-built for Virginia lenders serving Northern Virginia, Richmond, Hampton Roads, and statewide markets. VA-compliant lending software.",
+      "sections": [
+        {
+          "h2": "Virginia Business Markets",
+          "body": "Serve Virginia industries: technology, government contracting, healthcare, logistics, and tourism. Regional expertise across Northern Virginia (DC metro), Richmond, Virginia Beach, and Roanoke."
+        },
+        {
+          "h2": "VA Regulatory Compliance",
+          "body": "Comply with Virginia Consumer Finance Companies Act and state lending regulations. Track licensing with Virginia State Corporation Commission. Generate examination documentation per VA requirements."
+        },
+        {
+          "h2": "Northern Virginia Government Contractors",
+          "body": "Specialized underwriting for government contractors in DC metro area. Understand contract financing, receivables, and cash flow patterns. Support for cleared businesses and defense contractors."
+        },
+        {
+          "h2": "Southeast Lender Network",
+          "body": "Network with Virginia and Southeast lenders. Share regional market insights and compliance best practices. Access to DMV (DC-Maryland-Virginia) lending community."
+        },
+        {
+          "h2": "Fast VA Deployment",
+          "body": "Deploy in 2-4 weeks with Virginia-specific configurations. Support team familiar with VA lending landscape. Integration with Virginia business verification services."
+        }
+      ],
+      "ctas": ["See Virginia Demo", "Talk to VA Team", "Get VA Compliance Guide"],
+      "keywords": ["Virginia lending software", "Northern Virginia MCA", "Virginia commercial lending", "Richmond lender software", "government contractor financing", "VA lending platform"]
+    },
+    {
+      "slug": "alternative-lending-massachusetts",
+      "title": "Alternative Lending Software for Massachusetts Lenders",
+      "description": "Lending platform for Massachusetts MCA funders and commercial lenders. Boston and MA state lending compliance software.",
+      "h1": "Alternative Lending Software for Massachusetts",
+      "intro": "Built for Massachusetts lenders serving Boston's business hub and statewide markets. Navigate MA lending regulations with compliant software.",
+      "sections": [
+        {
+          "h2": "Massachusetts Business Lending",
+          "body": "Serve Massachusetts industries: healthcare, education, technology, biotech, and professional services. Regional expertise across Greater Boston, Worcester, Springfield, and Cape Cod markets."
+        },
+        {
+          "h2": "MA Regulatory Compliance",
+          "body": "Comply with Massachusetts Small Loan Act and state lending regulations. Track licensing with MA Division of Banks. Generate examination documentation and maintain required disclosures."
+        },
+        {
+          "h2": "Boston Fintech & Innovation",
+          "body": "Leverage Boston's strong fintech and financial services ecosystem. Connect with Massachusetts-based ISO networks and lending partners. Access to sophisticated lending community."
+        },
+        {
+          "h2": "Northeast Lender Network",
+          "body": "Network with Massachusetts and Northeast lenders using Lendgismo. Share regional compliance strategies and market intelligence. Collaborate on multi-state lending operations."
+        },
+        {
+          "h2": "Fast MA Deployment",
+          "body": "Deploy in 2-4 weeks with Massachusetts-specific configurations. Support team familiar with MA lending environment. Integration with MA Secretary of State databases."
+        }
+      ],
+      "ctas": ["See Massachusetts Demo", "Talk to Boston Team", "Get MA Compliance Guide"],
+      "keywords": ["Massachusetts lending software", "Boston MCA", "MA commercial lending", "alternative lending Massachusetts", "Boston lender software", "MA fintech"]
+    },
+    {
+      "slug": "alternative-lending-washington",
+      "title": "Alternative Lending Software for Washington Lenders",
+      "description": "Lending platform for Washington state MCA funders and commercial lenders. Seattle and WA state lending compliance software.",
+      "h1": "Alternative Lending Software for Washington",
+      "intro": "Purpose-built for Washington lenders serving Seattle's tech scene and statewide markets. WA-compliant lending software for Pacific Northwest lenders.",
+      "sections": [
+        {
+          "h2": "Washington Business Markets",
+          "body": "Serve Washington industries: technology, aerospace, retail, healthcare, and agriculture. Regional expertise across Seattle-Tacoma metro, Spokane, Vancouver, and Tri-Cities. Support for tech startups and SMBs."
+        },
+        {
+          "h2": "WA Regulatory Compliance",
+          "body": "Comply with Washington Consumer Loan Act and state lending regulations. Track licensing with Washington Department of Financial Institutions. Generate examination documentation per WA requirements."
+        },
+        {
+          "h2": "Seattle Tech & Innovation",
+          "body": "Understand Seattle's tech ecosystem and SaaS business models. Support for high-growth companies and revenue-based financing structures. Connect with Pacific Northwest fintech community."
+        },
+        {
+          "h2": "West Coast Lender Network",
+          "body": "Network with Washington and West Coast lenders using Lendgismo. Share regional market insights and lending strategies. Access to Pacific Northwest economic indicators."
+        },
+        {
+          "h2": "Fast WA Deployment",
+          "body": "Deploy in 2-4 weeks with Washington-specific configurations. Support team familiar with WA lending landscape. Integration with Washington Secretary of State services."
+        }
+      ],
+      "ctas": ["See Washington Demo", "Talk to Seattle Team", "Get WA Compliance Guide"],
+      "keywords": ["Washington lending software", "Seattle MCA", "Washington commercial lending", "alternative lending Washington", "Seattle lender software", "WA fintech"]
+    },
+    {
+      "slug": "alternative-lending-arizona",
+      "title": "Alternative Lending Software for Arizona Lenders",
+      "description": "Lending platform for Arizona MCA funders and commercial lenders. Phoenix and AZ state lending compliance software.",
+      "h1": "Alternative Lending Software for Arizona",
+      "intro": "Built for Arizona lenders serving Phoenix metro and statewide markets. Navigate AZ lending regulations with flexible, compliant software.",
+      "sections": [
+        {
+          "h2": "Arizona Business Lending",
+          "body": "Serve Arizona industries: real estate, tourism & hospitality, healthcare, technology, and logistics. Regional expertise across Phoenix metro, Tucson, Scottsdale, and Mesa. Support for seasonal businesses."
+        },
+        {
+          "h2": "AZ Regulatory Compliance",
+          "body": "Comply with Arizona Revised Statutes Title 6 (Financial Institutions) and commercial lending regulations. Track licensing with Arizona Department of Insurance and Financial Institutions. Generate required documentation."
+        },
+        {
+          "h2": "Phoenix Growth Market",
+          "body": "Leverage Phoenix's rapid business growth and real estate expansion. Connect with Arizona-based ISO networks and business brokers. Access to Southwest market intelligence."
+        },
+        {
+          "h2": "Southwest Lender Network",
+          "body": "Network with Arizona and Southwest lenders using Lendgismo. Share regional best practices and compliance strategies. Collaborate on multi-state operations."
+        },
+        {
+          "h2": "Fast AZ Deployment",
+          "body": "Deploy in 2-4 weeks with Arizona-specific configurations. Support team familiar with AZ lending landscape. Integration with Arizona business verification services."
+        }
+      ],
+      "ctas": ["See Arizona Demo", "Talk to Phoenix Team", "Get AZ Compliance Guide"],
+      "keywords": ["Arizona lending software", "Phoenix MCA", "Arizona commercial lending", "alternative lending Arizona", "Phoenix lender software", "AZ fintech"]
+    },
+    {
+      "slug": "alternative-lending-michigan",
+      "title": "Alternative Lending Software for Michigan Lenders",
+      "description": "Lending platform for Michigan MCA funders and commercial lenders. Detroit and MI state lending compliance software.",
+      "h1": "Alternative Lending Software for Michigan",
+      "intro": "Purpose-built for Michigan lenders serving Detroit metro and statewide markets. MI-compliant lending software for Midwest lenders.",
+      "sections": [
+        {
+          "h2": "Michigan Business Markets",
+          "body": "Serve Michigan industries: automotive, manufacturing, healthcare, technology, and logistics. Regional expertise across Detroit metro, Grand Rapids, Ann Arbor, and Lansing. Support for manufacturing supply chain."
+        },
+        {
+          "h2": "MI Regulatory Compliance",
+          "body": "Comply with Michigan Regulatory Loan Act and state lending regulations. Track licensing with Michigan Department of Insurance and Financial Services. Generate examination documentation."
+        },
+        {
+          "h2": "Automotive & Manufacturing Expertise",
+          "body": "Specialized underwriting for Michigan's automotive and manufacturing sectors. Understand equipment financing, inventory cycles, and supplier relationships. Support for tier 1-3 suppliers."
+        },
+        {
+          "h2": "Midwest Lender Network",
+          "body": "Network with Michigan and Midwest lenders using Lendgismo. Share regional market insights and lending best practices. Access to Great Lakes economic indicators."
+        },
+        {
+          "h2": "Fast MI Deployment",
+          "body": "Deploy in 2-4 weeks with Michigan-specific configurations. Support team familiar with MI lending landscape. Integration with Michigan business databases."
+        }
+      ],
+      "ctas": ["See Michigan Demo", "Talk to Detroit Team", "Get MI Compliance Guide"],
+      "keywords": ["Michigan lending software", "Detroit MCA", "Michigan commercial lending", "alternative lending Michigan", "Detroit lender software", "MI manufacturing finance"]
+    },
+    {
+      "slug": "alternative-lending-tennessee",
+      "title": "Alternative Lending Software for Tennessee Lenders",
+      "description": "Lending platform for Tennessee MCA funders and commercial lenders. Nashville, Memphis, and TN state lending compliance.",
+      "h1": "Alternative Lending Software for Tennessee",
+      "intro": "Built for Tennessee lenders serving Nashville, Memphis, and statewide markets. TN-compliant lending software for Southeast lenders.",
+      "sections": [
+        {
+          "h2": "Tennessee Business Markets",
+          "body": "Serve Tennessee industries: healthcare, music & entertainment, logistics, manufacturing, and hospitality. Regional expertise across Nashville metro, Memphis, Knoxville, and Chattanooga."
+        },
+        {
+          "h2": "TN Regulatory Compliance",
+          "body": "Comply with Tennessee Consumer Lending Act and state lending regulations. Track licensing with Tennessee Department of Financial Institutions. Generate required examination documentation."
+        },
+        {
+          "h2": "Nashville Business Hub",
+          "body": "Connect with Nashville's growing business and healthcare sectors. Network with Tennessee-based ISO partners and lending community. Access to Southeast market intelligence."
+        },
+        {
+          "h2": "Southeast Lender Network",
+          "body": "Network with Tennessee and Southeast lenders using Lendgismo. Share regional best practices and compliance strategies. Collaborate on multi-state lending operations."
+        },
+        {
+          "h2": "Fast TN Deployment",
+          "body": "Deploy in 2-4 weeks with Tennessee-specific configurations. Support team familiar with TN lending landscape. Integration with Tennessee business verification services."
+        }
+      ],
+      "ctas": ["See Tennessee Demo", "Talk to Nashville Team", "Get TN Compliance Guide"],
+      "keywords": ["Tennessee lending software", "Nashville MCA", "Tennessee commercial lending", "Memphis lender software", "alternative lending Tennessee", "TN fintech"]
+    },
+    {
+      "slug": "alternative-lending-colorado",
+      "title": "Alternative Lending Software for Colorado Lenders",
+      "description": "Lending platform for Colorado MCA funders and commercial lenders. Denver and CO state lending compliance software.",
+      "h1": "Alternative Lending Software for Colorado",
+      "intro": "Purpose-built for Colorado lenders serving Denver metro and statewide markets. CO-compliant lending software for Rocky Mountain region.",
+      "sections": [
+        {
+          "h2": "Colorado Business Markets",
+          "body": "Serve Colorado industries: technology, tourism, aerospace, healthcare, and cannabis. Regional expertise across Denver metro, Boulder, Colorado Springs, and Fort Collins. Support for high-growth companies."
+        },
+        {
+          "h2": "CO Regulatory Compliance",
+          "body": "Comply with Colorado Uniform Consumer Credit Code and state lending regulations. Track licensing with Colorado Division of Banking. Generate examination documentation per CO requirements."
+        },
+        {
+          "h2": "Denver Tech & Innovation",
+          "body": "Leverage Denver's growing tech and fintech ecosystem. Connect with Colorado-based ISO networks and business partners. Access to Mountain West market intelligence."
+        },
+        {
+          "h2": "Western Lender Network",
+          "body": "Network with Colorado and Western region lenders using Lendgismo. Share regional market insights and lending strategies. Collaborate on multi-state operations."
+        },
+        {
+          "h2": "Fast CO Deployment",
+          "body": "Deploy in 2-4 weeks with Colorado-specific configurations. Support team familiar with CO lending landscape. Integration with Colorado Secretary of State services."
+        }
+      ],
+      "ctas": ["See Colorado Demo", "Talk to Denver Team", "Get CO Compliance Guide"],
+      "keywords": ["Colorado lending software", "Denver MCA", "Colorado commercial lending", "alternative lending Colorado", "Denver lender software", "CO fintech"]
+    },
+    {
+      "slug": "alternative-lending-maryland",
+      "title": "Alternative Lending Software for Maryland Lenders",
+      "description": "Lending platform for Maryland MCA funders and commercial lenders. Baltimore and MD state lending compliance software.",
+      "h1": "Alternative Lending Software for Maryland",
+      "intro": "Built for Maryland lenders serving Baltimore, DMV metro, and statewide markets. MD-compliant lending software.",
+      "sections": [
+        {
+          "h2": "Maryland Business Markets",
+          "body": "Serve Maryland industries: government contracting, cybersecurity, healthcare, biotechnology, and logistics. Regional expertise across Baltimore metro, DMV (DC-Maryland-Virginia), and Eastern Shore."
+        },
+        {
+          "h2": "MD Regulatory Compliance",
+          "body": "Comply with Maryland Commercial Law Article 12 (Credit Grantor Closed End Credit Provisions) and state lending regulations. Track licensing with Maryland Commissioner of Financial Regulation."
+        },
+        {
+          "h2": "DMV Government Contractors",
+          "body": "Specialized underwriting for government contractors in DC metro area. Understand federal contract financing and receivables. Support for cleared businesses and defense contractors."
+        },
+        {
+          "h2": "Mid-Atlantic Lender Network",
+          "body": "Network with Maryland and Mid-Atlantic lenders using Lendgismo. Share regional compliance strategies and market intelligence. Access to DMV lending community."
+        },
+        {
+          "h2": "Fast MD Deployment",
+          "body": "Deploy in 2-4 weeks with Maryland-specific configurations. Support team familiar with MD lending landscape. Integration with Maryland business verification services."
+        }
+      ],
+      "ctas": ["See Maryland Demo", "Talk to Baltimore Team", "Get MD Compliance Guide"],
+      "keywords": ["Maryland lending software", "Baltimore MCA", "Maryland commercial lending", "alternative lending Maryland", "DMV lender software", "MD fintech"]
+    },
+    {
+      "slug": "alternative-lending-wisconsin",
+      "title": "Alternative Lending Software for Wisconsin Lenders",
+      "description": "Lending platform for Wisconsin MCA funders and commercial lenders. Milwaukee and WI state lending compliance software.",
+      "h1": "Alternative Lending Software for Wisconsin",
+      "intro": "Purpose-built for Wisconsin lenders serving Milwaukee and statewide markets. WI-compliant lending software for Midwest lenders.",
+      "sections": [
+        {
+          "h2": "Wisconsin Business Markets",
+          "body": "Serve Wisconsin industries: manufacturing, agriculture, healthcare, paper products, and food processing. Regional expertise across Milwaukee metro, Madison, Green Bay, and Racine."
+        },
+        {
+          "h2": "WI Regulatory Compliance",
+          "body": "Comply with Wisconsin Consumer Act and state lending regulations. Track licensing with Wisconsin Department of Financial Institutions. Generate required examination documentation."
+        },
+        {
+          "h2": "Manufacturing & Agriculture Lending",
+          "body": "Specialized underwriting for Wisconsin's manufacturing and agriculture sectors. Understand equipment financing, seasonal cash flows, and commodity cycles. Support for dairy and food processors."
+        },
+        {
+          "h2": "Midwest Lender Network",
+          "body": "Network with Wisconsin and Midwest lenders using Lendgismo. Share regional market insights and lending best practices. Access to Upper Midwest economic indicators."
+        },
+        {
+          "h2": "Fast WI Deployment",
+          "body": "Deploy in 2-4 weeks with Wisconsin-specific configurations. Support team familiar with WI lending landscape. Integration with Wisconsin business databases."
+        }
+      ],
+      "ctas": ["See Wisconsin Demo", "Talk to Milwaukee Team", "Get WI Compliance Guide"],
+      "keywords": ["Wisconsin lending software", "Milwaukee MCA", "Wisconsin commercial lending", "alternative lending Wisconsin", "Milwaukee lender software", "WI manufacturing finance"]
+    },
+    {
+      "slug": "alternative-lending-minnesota",
+      "title": "Alternative Lending Software for Minnesota Lenders",
+      "description": "Lending platform for Minnesota MCA funders and commercial lenders. Minneapolis and MN state lending compliance software.",
+      "h1": "Alternative Lending Software for Minnesota",
+      "intro": "Built for Minnesota lenders serving Twin Cities and statewide markets. MN-compliant lending software for Upper Midwest lenders.",
+      "sections": [
+        {
+          "h2": "Minnesota Business Markets",
+          "body": "Serve Minnesota industries: healthcare, retail, food processing, manufacturing, and technology. Regional expertise across Minneapolis-St. Paul metro, Rochester, Duluth, and St. Cloud."
+        },
+        {
+          "h2": "MN Regulatory Compliance",
+          "body": "Comply with Minnesota Statutes Chapter 56 (Regulated Lenders) and state lending regulations. Track licensing with Minnesota Department of Commerce. Generate required documentation."
+        },
+        {
+          "h2": "Twin Cities Business Hub",
+          "body": "Connect with Minneapolis-St. Paul's strong business and retail sectors. Network with Minnesota-based ISO partners and lending community. Access to Upper Midwest market intelligence."
+        },
+        {
+          "h2": "Midwest Lender Network",
+          "body": "Network with Minnesota and Midwest lenders using Lendgismo. Share regional best practices and compliance strategies. Collaborate on multi-state lending operations."
+        },
+        {
+          "h2": "Fast MN Deployment",
+          "body": "Deploy in 2-4 weeks with Minnesota-specific configurations. Support team familiar with MN lending landscape. Integration with Minnesota business verification services."
+        }
+      ],
+      "ctas": ["See Minnesota Demo", "Talk to Twin Cities Team", "Get MN Compliance Guide"],
+      "keywords": ["Minnesota lending software", "Minneapolis MCA", "Minnesota commercial lending", "alternative lending Minnesota", "Twin Cities lender software", "MN fintech"]
+    },
+    {
+      "slug": "alternative-lending-missouri",
+      "title": "Alternative Lending Software for Missouri Lenders",
+      "description": "Lending platform for Missouri MCA funders and commercial lenders. Kansas City, St. Louis, and MO state lending compliance.",
+      "h1": "Alternative Lending Software for Missouri",
+      "intro": "Purpose-built for Missouri lenders serving Kansas City, St. Louis, and statewide markets. MO-compliant lending software.",
+      "sections": [
+        {"h2": "Missouri Business Markets", "body": "Serve Missouri industries: agriculture, manufacturing, logistics, healthcare, and financial services. Regional expertise across Kansas City metro, St. Louis, Springfield, and Columbia."},
+        {"h2": "MO Regulatory Compliance", "body": "Comply with Missouri Revised Statutes Chapter 367 and state lending regulations. Track licensing with Missouri Division of Finance. Generate required examination documentation."},
+        {"h2": "Kansas City & St. Louis Hubs", "body": "Connect with Kansas City and St. Louis business communities. Network with Missouri-based ISO partners and lending networks. Access to Midwest market intelligence."},
+        {"h2": "Midwest Lender Network", "body": "Network with Missouri and Midwest lenders using Lendgismo. Share regional best practices and compliance strategies. Collaborate on multi-state operations."},
+        {"h2": "Fast MO Deployment", "body": "Deploy in 2-4 weeks with Missouri-specific configurations. Support team familiar with MO lending landscape. Integration with Missouri business verification services."}
+      ],
+      "ctas": ["See Missouri Demo", "Talk to KC Team", "Get MO Compliance Guide"],
+      "keywords": ["Missouri lending software", "Kansas City MCA", "St. Louis lending", "alternative lending Missouri", "MO commercial lending", "Missouri fintech"]
+    },
+    {
+      "slug": "alternative-lending-alabama",
+      "title": "Alternative Lending Software for Alabama Lenders",
+      "description": "Lending platform for Alabama MCA funders and commercial lenders. Birmingham and AL state lending compliance software.",
+      "h1": "Alternative Lending Software for Alabama",
+      "intro": "Built for Alabama lenders serving Birmingham, Mobile, and statewide markets. AL-compliant lending software for Southeast lenders.",
+      "sections": [
+        {"h2": "Alabama Business Markets", "body": "Serve Alabama industries: manufacturing, aerospace, healthcare, logistics, and agriculture. Regional expertise across Birmingham metro, Mobile, Huntsville, and Montgomery."},
+        {"h2": "AL Regulatory Compliance", "body": "Comply with Alabama Small Loan Act and state lending regulations. Track licensing with Alabama State Banking Department. Generate required documentation."},
+        {"h2": "Southeast Manufacturing", "body": "Specialized underwriting for Alabama's automotive and aerospace manufacturing. Understand supplier relationships and equipment financing needs."},
+        {"h2": "Southeast Lender Network", "body": "Network with Alabama and Southeast lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast AL Deployment", "body": "Deploy in 2-4 weeks with Alabama-specific configurations. Support team familiar with AL lending landscape."}
+      ],
+      "ctas": ["See Alabama Demo", "Talk to Birmingham Team", "Get AL Compliance Guide"],
+      "keywords": ["Alabama lending software", "Birmingham MCA", "Alabama commercial lending", "alternative lending Alabama", "AL lender software", "Alabama fintech"]
+    },
+    {
+      "slug": "alternative-lending-south-carolina",
+      "title": "Alternative Lending Software for South Carolina Lenders",
+      "description": "Lending platform for South Carolina MCA funders and commercial lenders. Charleston, Columbia, and SC state lending compliance.",
+      "h1": "Alternative Lending Software for South Carolina",
+      "intro": "Purpose-built for South Carolina lenders serving Charleston, Columbia, and statewide markets. SC-compliant lending software.",
+      "sections": [
+        {"h2": "South Carolina Business Markets", "body": "Serve South Carolina industries: tourism, manufacturing, healthcare, logistics, and agriculture. Regional expertise across Charleston, Columbia, Greenville, and Myrtle Beach."},
+        {"h2": "SC Regulatory Compliance", "body": "Comply with South Carolina Consumer Protection Code and state lending regulations. Track licensing with SC Department of Consumer Affairs."},
+        {"h2": "Southeast Business Hub", "body": "Connect with South Carolina's growing business and manufacturing sectors. Network with SC-based ISO partners and lending community."},
+        {"h2": "Southeast Lender Network", "body": "Network with South Carolina and Southeast lenders using Lendgismo. Share regional best practices and compliance strategies."},
+        {"h2": "Fast SC Deployment", "body": "Deploy in 2-4 weeks with South Carolina-specific configurations. Support team familiar with SC lending landscape."}
+      ],
+      "ctas": ["See South Carolina Demo", "Talk to Charleston Team", "Get SC Compliance Guide"],
+      "keywords": ["South Carolina lending software", "Charleston MCA", "SC commercial lending", "alternative lending South Carolina", "Columbia lender software", "SC fintech"]
+    },
+    {
+      "slug": "alternative-lending-louisiana",
+      "title": "Alternative Lending Software for Louisiana Lenders",
+      "description": "Lending platform for Louisiana MCA funders and commercial lenders. New Orleans and LA state lending compliance software.",
+      "h1": "Alternative Lending Software for Louisiana",
+      "intro": "Built for Louisiana lenders serving New Orleans, Baton Rouge, and statewide markets. LA-compliant lending software.",
+      "sections": [
+        {"h2": "Louisiana Business Markets", "body": "Serve Louisiana industries: oil & gas, tourism, healthcare, logistics, and food services. Regional expertise across New Orleans, Baton Rouge, Shreveport, and Lafayette."},
+        {"h2": "LA Regulatory Compliance", "body": "Comply with Louisiana Consumer Credit Law and state lending regulations. Track licensing with Louisiana Office of Financial Institutions."},
+        {"h2": "Energy & Tourism Sectors", "body": "Specialized underwriting for Louisiana's energy and tourism industries. Understand seasonal patterns and commodity price impacts on business performance."},
+        {"h2": "Southeast Lender Network", "body": "Network with Louisiana and Southeast lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast LA Deployment", "body": "Deploy in 2-4 weeks with Louisiana-specific configurations. Support team familiar with LA lending landscape."}
+      ],
+      "ctas": ["See Louisiana Demo", "Talk to New Orleans Team", "Get LA Compliance Guide"],
+      "keywords": ["Louisiana lending software", "New Orleans MCA", "Louisiana commercial lending", "alternative lending Louisiana", "LA lender software", "Louisiana fintech"]
+    },
+    {
+      "slug": "alternative-lending-kentucky",
+      "title": "Alternative Lending Software for Kentucky Lenders",
+      "description": "Lending platform for Kentucky MCA funders and commercial lenders. Louisville and KY state lending compliance software.",
+      "h1": "Alternative Lending Software for Kentucky",
+      "intro": "Purpose-built for Kentucky lenders serving Louisville, Lexington, and statewide markets. KY-compliant lending software.",
+      "sections": [
+        {"h2": "Kentucky Business Markets", "body": "Serve Kentucky industries: manufacturing, healthcare, logistics, bourbon & distilleries, and agriculture. Regional expertise across Louisville metro, Lexington, and Northern Kentucky."},
+        {"h2": "KY Regulatory Compliance", "body": "Comply with Kentucky Revised Statutes Chapter 288 and state lending regulations. Track licensing with Kentucky Department of Financial Institutions."},
+        {"h2": "Manufacturing & Logistics", "body": "Specialized underwriting for Kentucky's automotive and logistics sectors. Understand supply chain financing and equipment needs."},
+        {"h2": "Southeast Lender Network", "body": "Network with Kentucky and Southeast lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast KY Deployment", "body": "Deploy in 2-4 weeks with Kentucky-specific configurations. Support team familiar with KY lending landscape."}
+      ],
+      "ctas": ["See Kentucky Demo", "Talk to Louisville Team", "Get KY Compliance Guide"],
+      "keywords": ["Kentucky lending software", "Louisville MCA", "Kentucky commercial lending", "alternative lending Kentucky", "KY lender software", "Kentucky fintech"]
+    },
+    {
+      "slug": "alternative-lending-oregon",
+      "title": "Alternative Lending Software for Oregon Lenders",
+      "description": "Lending platform for Oregon MCA funders and commercial lenders. Portland and OR state lending compliance software.",
+      "h1": "Alternative Lending Software for Oregon",
+      "intro": "Built for Oregon lenders serving Portland metro and statewide markets. OR-compliant lending software for Pacific Northwest.",
+      "sections": [
+        {"h2": "Oregon Business Markets", "body": "Serve Oregon industries: technology, manufacturing, agriculture, forestry, and tourism. Regional expertise across Portland metro, Eugene, Salem, and Bend."},
+        {"h2": "OR Regulatory Compliance", "body": "Comply with Oregon Revised Statutes Chapter 725 and state lending regulations. Track licensing with Oregon Division of Financial Regulation."},
+        {"h2": "Portland Tech & Innovation", "body": "Connect with Portland's growing tech and startup ecosystem. Network with Oregon-based ISO partners and lending community."},
+        {"h2": "West Coast Lender Network", "body": "Network with Oregon and West Coast lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast OR Deployment", "body": "Deploy in 2-4 weeks with Oregon-specific configurations. Support team familiar with OR lending landscape."}
+      ],
+      "ctas": ["See Oregon Demo", "Talk to Portland Team", "Get OR Compliance Guide"],
+      "keywords": ["Oregon lending software", "Portland MCA", "Oregon commercial lending", "alternative lending Oregon", "Portland lender software", "OR fintech"]
+    },
+    {
+      "slug": "alternative-lending-oklahoma",
+      "title": "Alternative Lending Software for Oklahoma Lenders",
+      "description": "Lending platform for Oklahoma MCA funders and commercial lenders. Oklahoma City, Tulsa, and OK state lending compliance.",
+      "h1": "Alternative Lending Software for Oklahoma",
+      "intro": "Purpose-built for Oklahoma lenders serving Oklahoma City, Tulsa, and statewide markets. OK-compliant lending software.",
+      "sections": [
+        {"h2": "Oklahoma Business Markets", "body": "Serve Oklahoma industries: oil & gas, aerospace, agriculture, healthcare, and logistics. Regional expertise across Oklahoma City metro, Tulsa, and Norman."},
+        {"h2": "OK Regulatory Compliance", "body": "Comply with Oklahoma Deferred Deposit Lending Act and state lending regulations. Track licensing with Oklahoma Department of Consumer Credit."},
+        {"h2": "Energy Sector Expertise", "body": "Specialized underwriting for Oklahoma's oil & gas industry. Understand commodity price cycles and energy sector cash flows."},
+        {"h2": "Southwest Lender Network", "body": "Network with Oklahoma and Southwest lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast OK Deployment", "body": "Deploy in 2-4 weeks with Oklahoma-specific configurations. Support team familiar with OK lending landscape."}
+      ],
+      "ctas": ["See Oklahoma Demo", "Talk to OKC Team", "Get OK Compliance Guide"],
+      "keywords": ["Oklahoma lending software", "Oklahoma City MCA", "Tulsa lending", "alternative lending Oklahoma", "OK commercial lending", "Oklahoma fintech"]
+    },
+    {
+      "slug": "alternative-lending-connecticut",
+      "title": "Alternative Lending Software for Connecticut Lenders",
+      "description": "Lending platform for Connecticut MCA funders and commercial lenders. Hartford and CT state lending compliance software.",
+      "h1": "Alternative Lending Software for Connecticut",
+      "intro": "Built for Connecticut lenders serving Hartford, New Haven, and statewide markets. CT-compliant lending software.",
+      "sections": [
+        {"h2": "Connecticut Business Markets", "body": "Serve Connecticut industries: financial services, insurance, healthcare, manufacturing, and professional services. Regional expertise across Hartford, New Haven, Stamford, and Bridgeport."},
+        {"h2": "CT Regulatory Compliance", "body": "Comply with Connecticut General Statutes Title 36a and state lending regulations. Track licensing with Connecticut Department of Banking."},
+        {"h2": "Financial Services Hub", "body": "Leverage Connecticut's strong financial services and insurance sectors. Connect with CT-based ISO networks and lending community."},
+        {"h2": "Northeast Lender Network", "body": "Network with Connecticut and Northeast lenders using Lendgismo. Share regional compliance strategies and market intelligence."},
+        {"h2": "Fast CT Deployment", "body": "Deploy in 2-4 weeks with Connecticut-specific configurations. Support team familiar with CT lending landscape."}
+      ],
+      "ctas": ["See Connecticut Demo", "Talk to Hartford Team", "Get CT Compliance Guide"],
+      "keywords": ["Connecticut lending software", "Hartford MCA", "Connecticut commercial lending", "alternative lending Connecticut", "CT lender software", "Connecticut fintech"]
+    },
+    {
+      "slug": "alternative-lending-iowa",
+      "title": "Alternative Lending Software for Iowa Lenders",
+      "description": "Lending platform for Iowa MCA funders and commercial lenders. Des Moines and IA state lending compliance software.",
+      "h1": "Alternative Lending Software for Iowa",
+      "intro": "Purpose-built for Iowa lenders serving Des Moines and statewide markets. IA-compliant lending software for Midwest lenders.",
+      "sections": [
+        {"h2": "Iowa Business Markets", "body": "Serve Iowa industries: agriculture, food processing, manufacturing, insurance, and healthcare. Regional expertise across Des Moines, Cedar Rapids, Davenport, and Sioux City."},
+        {"h2": "IA Regulatory Compliance", "body": "Comply with Iowa Code Chapter 536 and state lending regulations. Track licensing with Iowa Division of Banking."},
+        {"h2": "Agriculture & Food Processing", "body": "Specialized underwriting for Iowa's agriculture and food processing sectors. Understand commodity cycles, seasonal cash flows, and equipment financing."},
+        {"h2": "Midwest Lender Network", "body": "Network with Iowa and Midwest lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast IA Deployment", "body": "Deploy in 2-4 weeks with Iowa-specific configurations. Support team familiar with IA lending landscape."}
+      ],
+      "ctas": ["See Iowa Demo", "Talk to Des Moines Team", "Get IA Compliance Guide"],
+      "keywords": ["Iowa lending software", "Des Moines MCA", "Iowa commercial lending", "alternative lending Iowa", "IA lender software", "Iowa agriculture finance"]
+    },
+    {
+      "slug": "alternative-lending-arkansas",
+      "title": "Alternative Lending Software for Arkansas Lenders",
+      "description": "Lending platform for Arkansas MCA funders and commercial lenders. Little Rock and AR state lending compliance software.",
+      "h1": "Alternative Lending Software for Arkansas",
+      "intro": "Built for Arkansas lenders serving Little Rock and statewide markets. AR-compliant lending software for Southeast lenders.",
+      "sections": [
+        {"h2": "Arkansas Business Markets", "body": "Serve Arkansas industries: agriculture, poultry processing, logistics, retail, and manufacturing. Regional expertise across Little Rock metro, Fayetteville, Fort Smith, and Jonesboro."},
+        {"h2": "AR Regulatory Compliance", "body": "Comply with Arkansas Code Title 23 (Banking & Financial Institutions) and state lending regulations. Track licensing with Arkansas State Bank Department."},
+        {"h2": "Agriculture & Manufacturing", "body": "Specialized underwriting for Arkansas's agriculture and poultry processing industries. Understand seasonal patterns and commodity cycles."},
+        {"h2": "Southeast Lender Network", "body": "Network with Arkansas and Southeast lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast AR Deployment", "body": "Deploy in 2-4 weeks with Arkansas-specific configurations. Support team familiar with AR lending landscape."}
+      ],
+      "ctas": ["See Arkansas Demo", "Talk to Little Rock Team", "Get AR Compliance Guide"],
+      "keywords": ["Arkansas lending software", "Little Rock MCA", "Arkansas commercial lending", "alternative lending Arkansas", "AR lender software", "Arkansas fintech"]
+    },
+    {
+      "slug": "alternative-lending-mississippi",
+      "title": "Alternative Lending Software for Mississippi Lenders",
+      "description": "Lending platform for Mississippi MCA funders and commercial lenders. Jackson and MS state lending compliance software.",
+      "h1": "Alternative Lending Software for Mississippi",
+      "intro": "Purpose-built for Mississippi lenders serving Jackson and statewide markets. MS-compliant lending software.",
+      "sections": [
+        {"h2": "Mississippi Business Markets", "body": "Serve Mississippi industries: agriculture, manufacturing, healthcare, gaming & casinos, and logistics. Regional expertise across Jackson metro, Gulfport, Biloxi, and Hattiesburg."},
+        {"h2": "MS Regulatory Compliance", "body": "Comply with Mississippi Credit Availability Act and state lending regulations. Track licensing with Mississippi Department of Banking and Consumer Finance."},
+        {"h2": "Southeast Business Lending", "body": "Connect with Mississippi's agriculture and manufacturing sectors. Network with MS-based ISO partners and lending community."},
+        {"h2": "Southeast Lender Network", "body": "Network with Mississippi and Southeast lenders using Lendgismo. Share regional best practices and compliance strategies."},
+        {"h2": "Fast MS Deployment", "body": "Deploy in 2-4 weeks with Mississippi-specific configurations. Support team familiar with MS lending landscape."}
+      ],
+      "ctas": ["See Mississippi Demo", "Talk to Jackson Team", "Get MS Compliance Guide"],
+      "keywords": ["Mississippi lending software", "Jackson MCA", "Mississippi commercial lending", "alternative lending Mississippi", "MS lender software", "Mississippi fintech"]
+    },
+    {
+      "slug": "alternative-lending-kansas",
+      "title": "Alternative Lending Software for Kansas Lenders",
+      "description": "Lending platform for Kansas MCA funders and commercial lenders. Wichita, Kansas City, and KS state lending compliance.",
+      "h1": "Alternative Lending Software for Kansas",
+      "intro": "Built for Kansas lenders serving Wichita, Kansas City, and statewide markets. KS-compliant lending software.",
+      "sections": [
+        {"h2": "Kansas Business Markets", "body": "Serve Kansas industries: agriculture, aerospace, manufacturing, healthcare, and logistics. Regional expertise across Wichita metro, Kansas City metro, Topeka, and Overland Park."},
+        {"h2": "KS Regulatory Compliance", "body": "Comply with Kansas Uniform Consumer Credit Code and state lending regulations. Track licensing with Kansas Office of the State Bank Commissioner."},
+        {"h2": "Aerospace & Agriculture", "body": "Specialized underwriting for Kansas's aerospace manufacturing and agriculture sectors. Understand equipment financing and commodity cycles."},
+        {"h2": "Midwest Lender Network", "body": "Network with Kansas and Midwest lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast KS Deployment", "body": "Deploy in 2-4 weeks with Kansas-specific configurations. Support team familiar with KS lending landscape."}
+      ],
+      "ctas": ["See Kansas Demo", "Talk to Wichita Team", "Get KS Compliance Guide"],
+      "keywords": ["Kansas lending software", "Wichita MCA", "Kansas commercial lending", "alternative lending Kansas", "KS lender software", "Kansas fintech"]
+    },
+    {
+      "slug": "alternative-lending-utah",
+      "title": "Alternative Lending Software for Utah Lenders",
+      "description": "Lending platform for Utah MCA funders and commercial lenders. Salt Lake City and UT state lending compliance software.",
+      "h1": "Alternative Lending Software for Utah",
+      "intro": "Purpose-built for Utah lenders serving Salt Lake City and statewide markets. UT-compliant lending software for Mountain West.",
+      "sections": [
+        {"h2": "Utah Business Markets", "body": "Serve Utah industries: technology, outdoor recreation, healthcare, real estate, and financial services. Regional expertise across Salt Lake City metro, Provo, Ogden, and St. George."},
+        {"h2": "UT Regulatory Compliance", "body": "Comply with Utah Code Title 7 (Financial Institutions) and state lending regulations. Track licensing with Utah Department of Financial Institutions."},
+        {"h2": "Tech & Innovation Hub", "body": "Leverage Utah's growing Silicon Slopes tech ecosystem. Connect with Utah-based fintech companies and lending partners."},
+        {"h2": "Western Lender Network", "body": "Network with Utah and Western region lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast UT Deployment", "body": "Deploy in 2-4 weeks with Utah-specific configurations. Support team familiar with UT lending landscape."}
+      ],
+      "ctas": ["See Utah Demo", "Talk to Salt Lake City Team", "Get UT Compliance Guide"],
+      "keywords": ["Utah lending software", "Salt Lake City MCA", "Utah commercial lending", "alternative lending Utah", "Silicon Slopes fintech", "UT lender software"]
+    },
+    {
+      "slug": "alternative-lending-nevada",
+      "title": "Alternative Lending Software for Nevada Lenders",
+      "description": "Lending platform for Nevada MCA funders and commercial lenders. Las Vegas, Reno, and NV state lending compliance.",
+      "h1": "Alternative Lending Software for Nevada",
+      "intro": "Built for Nevada lenders serving Las Vegas, Reno, and statewide markets. NV-compliant lending software.",
+      "sections": [
+        {"h2": "Nevada Business Markets", "body": "Serve Nevada industries: gaming & casinos, tourism & hospitality, healthcare, logistics, and real estate. Regional expertise across Las Vegas metro, Reno-Tahoe, and Henderson."},
+        {"h2": "NV Regulatory Compliance", "body": "Comply with Nevada Revised Statutes Chapter 604A and state lending regulations. Track licensing with Nevada Financial Institutions Division."},
+        {"h2": "Gaming & Hospitality Expertise", "body": "Specialized underwriting for Nevada's gaming and hospitality sectors. Understand seasonal tourism patterns and entertainment business cycles."},
+        {"h2": "Western Lender Network", "body": "Network with Nevada and Western region lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast NV Deployment", "body": "Deploy in 2-4 weeks with Nevada-specific configurations. Support team familiar with NV lending landscape."}
+      ],
+      "ctas": ["See Nevada Demo", "Talk to Las Vegas Team", "Get NV Compliance Guide"],
+      "keywords": ["Nevada lending software", "Las Vegas MCA", "Nevada commercial lending", "alternative lending Nevada", "Reno lender software", "NV fintech"]
+    },
+    {
+      "slug": "alternative-lending-new-mexico",
+      "title": "Alternative Lending Software for New Mexico Lenders",
+      "description": "Lending platform for New Mexico MCA funders and commercial lenders. Albuquerque and NM state lending compliance software.",
+      "h1": "Alternative Lending Software for New Mexico",
+      "intro": "Purpose-built for New Mexico lenders serving Albuquerque and statewide markets. NM-compliant lending software.",
+      "sections": [
+        {"h2": "New Mexico Business Markets", "body": "Serve New Mexico industries: energy, tourism, healthcare, agriculture, and government contracting. Regional expertise across Albuquerque metro, Santa Fe, Las Cruces, and Rio Rancho."},
+        {"h2": "NM Regulatory Compliance", "body": "Comply with New Mexico Small Loan Act and state lending regulations. Track licensing with New Mexico Financial Institutions Division."},
+        {"h2": "Southwest Business Lending", "body": "Connect with New Mexico's energy and tourism sectors. Network with NM-based ISO partners and lending community."},
+        {"h2": "Southwest Lender Network", "body": "Network with New Mexico and Southwest lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast NM Deployment", "body": "Deploy in 2-4 weeks with New Mexico-specific configurations. Support team familiar with NM lending landscape."}
+      ],
+      "ctas": ["See New Mexico Demo", "Talk to Albuquerque Team", "Get NM Compliance Guide"],
+      "keywords": ["New Mexico lending software", "Albuquerque MCA", "New Mexico commercial lending", "alternative lending New Mexico", "NM lender software", "New Mexico fintech"]
+    },
+    {
+      "slug": "alternative-lending-nebraska",
+      "title": "Alternative Lending Software for Nebraska Lenders",
+      "description": "Lending platform for Nebraska MCA funders and commercial lenders. Omaha and NE state lending compliance software.",
+      "h1": "Alternative Lending Software for Nebraska",
+      "intro": "Built for Nebraska lenders serving Omaha, Lincoln, and statewide markets. NE-compliant lending software for Midwest lenders.",
+      "sections": [
+        {"h2": "Nebraska Business Markets", "body": "Serve Nebraska industries: agriculture, food processing, financial services, logistics, and healthcare. Regional expertise across Omaha metro, Lincoln, and Grand Island."},
+        {"h2": "NE Regulatory Compliance", "body": "Comply with Nebraska Installment Loan Act and state lending regulations. Track licensing with Nebraska Department of Banking and Finance."},
+        {"h2": "Agriculture & Food Processing", "body": "Specialized underwriting for Nebraska's agriculture and food processing sectors. Understand commodity cycles and seasonal cash flows."},
+        {"h2": "Midwest Lender Network", "body": "Network with Nebraska and Midwest lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast NE Deployment", "body": "Deploy in 2-4 weeks with Nebraska-specific configurations. Support team familiar with NE lending landscape."}
+      ],
+      "ctas": ["See Nebraska Demo", "Talk to Omaha Team", "Get NE Compliance Guide"],
+      "keywords": ["Nebraska lending software", "Omaha MCA", "Nebraska commercial lending", "alternative lending Nebraska", "NE lender software", "Nebraska fintech"]
+    },
+    {
+      "slug": "alternative-lending-west-virginia",
+      "title": "Alternative Lending Software for West Virginia Lenders",
+      "description": "Lending platform for West Virginia MCA funders and commercial lenders. Charleston and WV state lending compliance.",
+      "h1": "Alternative Lending Software for West Virginia",
+      "intro": "Purpose-built for West Virginia lenders serving Charleston and statewide markets. WV-compliant lending software.",
+      "sections": [
+        {"h2": "West Virginia Business Markets", "body": "Serve West Virginia industries: energy, healthcare, manufacturing, tourism, and logistics. Regional expertise across Charleston metro, Huntington, Morgantown, and Parkersburg."},
+        {"h2": "WV Regulatory Compliance", "body": "Comply with West Virginia Consumer Credit and Protection Act and state lending regulations. Track licensing with WV Division of Financial Institutions."},
+        {"h2": "Energy & Manufacturing", "body": "Specialized underwriting for West Virginia's energy and manufacturing sectors. Understand commodity cycles and regional economic patterns."},
+        {"h2": "Mid-Atlantic Lender Network", "body": "Network with West Virginia and Mid-Atlantic lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast WV Deployment", "body": "Deploy in 2-4 weeks with West Virginia-specific configurations. Support team familiar with WV lending landscape."}
+      ],
+      "ctas": ["See West Virginia Demo", "Talk to Charleston Team", "Get WV Compliance Guide"],
+      "keywords": ["West Virginia lending software", "Charleston MCA", "WV commercial lending", "alternative lending West Virginia", "WV lender software", "West Virginia fintech"]
+    },
+    {
+      "slug": "alternative-lending-idaho",
+      "title": "Alternative Lending Software for Idaho Lenders",
+      "description": "Lending platform for Idaho MCA funders and commercial lenders. Boise and ID state lending compliance software.",
+      "h1": "Alternative Lending Software for Idaho",
+      "intro": "Built for Idaho lenders serving Boise and statewide markets. ID-compliant lending software for Mountain West lenders.",
+      "sections": [
+        {"h2": "Idaho Business Markets", "body": "Serve Idaho industries: agriculture, technology, tourism, food processing, and manufacturing. Regional expertise across Boise metro, Meridian, Idaho Falls, and Nampa."},
+        {"h2": "ID Regulatory Compliance", "body": "Comply with Idaho Credit Code and state lending regulations. Track licensing with Idaho Department of Finance."},
+        {"h2": "Agriculture & Tech Growth", "body": "Support Idaho's agriculture sector and growing Boise tech ecosystem. Understand seasonal patterns and startup financing needs."},
+        {"h2": "Western Lender Network", "body": "Network with Idaho and Western region lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast ID Deployment", "body": "Deploy in 2-4 weeks with Idaho-specific configurations. Support team familiar with ID lending landscape."}
+      ],
+      "ctas": ["See Idaho Demo", "Talk to Boise Team", "Get ID Compliance Guide"],
+      "keywords": ["Idaho lending software", "Boise MCA", "Idaho commercial lending", "alternative lending Idaho", "ID lender software", "Idaho fintech"]
+    },
+    {
+      "slug": "alternative-lending-hawaii",
+      "title": "Alternative Lending Software for Hawaii Lenders",
+      "description": "Lending platform for Hawaii MCA funders and commercial lenders. Honolulu and HI state lending compliance software.",
+      "h1": "Alternative Lending Software for Hawaii",
+      "intro": "Purpose-built for Hawaii lenders serving Honolulu and statewide markets. HI-compliant lending software for Pacific region.",
+      "sections": [
+        {"h2": "Hawaii Business Markets", "body": "Serve Hawaii industries: tourism & hospitality, healthcare, real estate, agriculture, and retail. Regional expertise across Oahu, Maui, Big Island, and Kauai."},
+        {"h2": "HI Regulatory Compliance", "body": "Comply with Hawaii Revised Statutes Chapter 412 and state lending regulations. Track licensing with Hawaii Division of Financial Institutions."},
+        {"h2": "Tourism & Island Business", "body": "Specialized underwriting for Hawaii's tourism-dependent economy. Understand seasonal patterns and island-specific business challenges."},
+        {"h2": "Pacific Region Lending", "body": "Connect with Hawaii's unique island business community. Network with HI-based ISO partners and lending networks."},
+        {"h2": "Fast HI Deployment", "body": "Deploy in 2-4 weeks with Hawaii-specific configurations. Support team familiar with HI lending landscape and time zone."}
+      ],
+      "ctas": ["See Hawaii Demo", "Talk to Honolulu Team", "Get HI Compliance Guide"],
+      "keywords": ["Hawaii lending software", "Honolulu MCA", "Hawaii commercial lending", "alternative lending Hawaii", "HI lender software", "Hawaii tourism finance"]
+    },
+    {
+      "slug": "alternative-lending-new-hampshire",
+      "title": "Alternative Lending Software for New Hampshire Lenders",
+      "description": "Lending platform for New Hampshire MCA funders and commercial lenders. Manchester and NH state lending compliance.",
+      "h1": "Alternative Lending Software for New Hampshire",
+      "intro": "Built for New Hampshire lenders serving Manchester, Nashua, and statewide markets. NH-compliant lending software.",
+      "sections": [
+        {"h2": "New Hampshire Business Markets", "body": "Serve New Hampshire industries: manufacturing, healthcare, technology, tourism, and financial services. Regional expertise across Manchester metro, Nashua, Concord, and Portsmouth."},
+        {"h2": "NH Regulatory Compliance", "body": "Comply with New Hampshire RSA Chapter 399-A and state lending regulations. Track licensing with NH Banking Department."},
+        {"h2": "New England Business Hub", "body": "Connect with New Hampshire's manufacturing and business service sectors. Network with NH-based ISO partners and lending community."},
+        {"h2": "Northeast Lender Network", "body": "Network with New Hampshire and Northeast lenders using Lendgismo. Share regional best practices and compliance strategies."},
+        {"h2": "Fast NH Deployment", "body": "Deploy in 2-4 weeks with New Hampshire-specific configurations. Support team familiar with NH lending landscape."}
+      ],
+      "ctas": ["See New Hampshire Demo", "Talk to Manchester Team", "Get NH Compliance Guide"],
+      "keywords": ["New Hampshire lending software", "Manchester MCA", "NH commercial lending", "alternative lending New Hampshire", "NH lender software", "New Hampshire fintech"]
+    },
+    {
+      "slug": "alternative-lending-maine",
+      "title": "Alternative Lending Software for Maine Lenders",
+      "description": "Lending platform for Maine MCA funders and commercial lenders. Portland and ME state lending compliance software.",
+      "h1": "Alternative Lending Software for Maine",
+      "intro": "Purpose-built for Maine lenders serving Portland and statewide markets. ME-compliant lending software for New England.",
+      "sections": [
+        {"h2": "Maine Business Markets", "body": "Serve Maine industries: tourism, seafood & fishing, manufacturing, healthcare, and forestry. Regional expertise across Portland metro, Bangor, Lewiston, and Augusta."},
+        {"h2": "ME Regulatory Compliance", "body": "Comply with Maine Revised Statutes Title 9-A and state lending regulations. Track licensing with Maine Bureau of Consumer Credit Protection."},
+        {"h2": "Tourism & Seafood Industries", "body": "Specialized underwriting for Maine's seasonal tourism and fishing industries. Understand cash flow patterns and seasonal business cycles."},
+        {"h2": "New England Lender Network", "body": "Network with Maine and New England lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast ME Deployment", "body": "Deploy in 2-4 weeks with Maine-specific configurations. Support team familiar with ME lending landscape."}
+      ],
+      "ctas": ["See Maine Demo", "Talk to Portland Team", "Get ME Compliance Guide"],
+      "keywords": ["Maine lending software", "Portland MCA", "Maine commercial lending", "alternative lending Maine", "ME lender software", "Maine tourism finance"]
+    },
+    {
+      "slug": "alternative-lending-rhode-island",
+      "title": "Alternative Lending Software for Rhode Island Lenders",
+      "description": "Lending platform for Rhode Island MCA funders and commercial lenders. Providence and RI state lending compliance.",
+      "h1": "Alternative Lending Software for Rhode Island",
+      "intro": "Built for Rhode Island lenders serving Providence and statewide markets. RI-compliant lending software for New England.",
+      "sections": [
+        {"h2": "Rhode Island Business Markets", "body": "Serve Rhode Island industries: healthcare, education, manufacturing, tourism, and professional services. Regional expertise across Providence metro, Warwick, Cranston, and Newport."},
+        {"h2": "RI Regulatory Compliance", "body": "Comply with Rhode Island General Laws Title 19 and state lending regulations. Track licensing with RI Department of Business Regulation."},
+        {"h2": "New England Business Hub", "body": "Connect with Rhode Island's healthcare and education sectors. Network with RI-based ISO partners and lending community."},
+        {"h2": "Northeast Lender Network", "body": "Network with Rhode Island and Northeast lenders using Lendgismo. Share regional compliance strategies and market intelligence."},
+        {"h2": "Fast RI Deployment", "body": "Deploy in 2-4 weeks with Rhode Island-specific configurations. Support team familiar with RI lending landscape."}
+      ],
+      "ctas": ["See Rhode Island Demo", "Talk to Providence Team", "Get RI Compliance Guide"],
+      "keywords": ["Rhode Island lending software", "Providence MCA", "RI commercial lending", "alternative lending Rhode Island", "RI lender software", "Rhode Island fintech"]
+    },
+    {
+      "slug": "alternative-lending-montana",
+      "title": "Alternative Lending Software for Montana Lenders",
+      "description": "Lending platform for Montana MCA funders and commercial lenders. Billings and MT state lending compliance software.",
+      "h1": "Alternative Lending Software for Montana",
+      "intro": "Purpose-built for Montana lenders serving Billings, Missoula, and statewide markets. MT-compliant lending software.",
+      "sections": [
+        {"h2": "Montana Business Markets", "body": "Serve Montana industries: agriculture, energy, tourism, healthcare, and manufacturing. Regional expertise across Billings metro, Missoula, Great Falls, and Bozeman."},
+        {"h2": "MT Regulatory Compliance", "body": "Comply with Montana Code Annotated Title 31 and state lending regulations. Track licensing with Montana Division of Banking and Financial Institutions."},
+        {"h2": "Agriculture & Energy Sectors", "body": "Specialized underwriting for Montana's agriculture and energy industries. Understand commodity cycles and seasonal patterns."},
+        {"h2": "Western Lender Network", "body": "Network with Montana and Western region lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast MT Deployment", "body": "Deploy in 2-4 weeks with Montana-specific configurations. Support team familiar with MT lending landscape."}
+      ],
+      "ctas": ["See Montana Demo", "Talk to Billings Team", "Get MT Compliance Guide"],
+      "keywords": ["Montana lending software", "Billings MCA", "Montana commercial lending", "alternative lending Montana", "MT lender software", "Montana agriculture finance"]
+    },
+    {
+      "slug": "alternative-lending-delaware",
+      "title": "Alternative Lending Software for Delaware Lenders",
+      "description": "Lending platform for Delaware MCA funders and commercial lenders. Wilmington and DE state lending compliance software.",
+      "h1": "Alternative Lending Software for Delaware",
+      "intro": "Built for Delaware lenders serving Wilmington and statewide markets. DE-compliant lending software for Mid-Atlantic.",
+      "sections": [
+        {"h2": "Delaware Business Markets", "body": "Serve Delaware industries: financial services, healthcare, manufacturing, logistics, and agriculture. Regional expertise across Wilmington metro, Dover, and Newark."},
+        {"h2": "DE Regulatory Compliance", "body": "Comply with Delaware Code Title 5 and state lending regulations. Track licensing with Delaware Office of the State Bank Commissioner."},
+        {"h2": "Financial Services Hub", "body": "Leverage Delaware's strong financial services and corporate presence. Connect with DE-based lending community and ISO networks."},
+        {"h2": "Mid-Atlantic Lender Network", "body": "Network with Delaware and Mid-Atlantic lenders using Lendgismo. Share regional compliance strategies and market intelligence."},
+        {"h2": "Fast DE Deployment", "body": "Deploy in 2-4 weeks with Delaware-specific configurations. Support team familiar with DE lending landscape."}
+      ],
+      "ctas": ["See Delaware Demo", "Talk to Wilmington Team", "Get DE Compliance Guide"],
+      "keywords": ["Delaware lending software", "Wilmington MCA", "Delaware commercial lending", "alternative lending Delaware", "DE lender software", "Delaware fintech"]
+    },
+    {
+      "slug": "alternative-lending-south-dakota",
+      "title": "Alternative Lending Software for South Dakota Lenders",
+      "description": "Lending platform for South Dakota MCA funders and commercial lenders. Sioux Falls and SD state lending compliance.",
+      "h1": "Alternative Lending Software for South Dakota",
+      "intro": "Purpose-built for South Dakota lenders serving Sioux Falls and statewide markets. SD-compliant lending software.",
+      "sections": [
+        {"h2": "South Dakota Business Markets", "body": "Serve South Dakota industries: agriculture, financial services, healthcare, tourism, and manufacturing. Regional expertise across Sioux Falls metro, Rapid City, and Aberdeen."},
+        {"h2": "SD Regulatory Compliance", "body": "Comply with South Dakota Codified Laws Title 54 and state lending regulations. Track licensing with SD Division of Banking."},
+        {"h2": "Financial Services & Agriculture", "body": "Understand South Dakota's unique position in financial services and agriculture sectors. Support for credit card processing and ag lending."},
+        {"h2": "Midwest Lender Network", "body": "Network with South Dakota and Midwest lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast SD Deployment", "body": "Deploy in 2-4 weeks with South Dakota-specific configurations. Support team familiar with SD lending landscape."}
+      ],
+      "ctas": ["See South Dakota Demo", "Talk to Sioux Falls Team", "Get SD Compliance Guide"],
+      "keywords": ["South Dakota lending software", "Sioux Falls MCA", "SD commercial lending", "alternative lending South Dakota", "SD lender software", "South Dakota fintech"]
+    },
+    {
+      "slug": "alternative-lending-north-dakota",
+      "title": "Alternative Lending Software for North Dakota Lenders",
+      "description": "Lending platform for North Dakota MCA funders and commercial lenders. Fargo and ND state lending compliance software.",
+      "h1": "Alternative Lending Software for North Dakota",
+      "intro": "Built for North Dakota lenders serving Fargo and statewide markets. ND-compliant lending software for Upper Midwest.",
+      "sections": [
+        {"h2": "North Dakota Business Markets", "body": "Serve North Dakota industries: energy, agriculture, healthcare, manufacturing, and financial services. Regional expertise across Fargo metro, Bismarck, Grand Forks, and Minot."},
+        {"h2": "ND Regulatory Compliance", "body": "Comply with North Dakota Century Code Title 13 and state lending regulations. Track licensing with ND Department of Financial Institutions."},
+        {"h2": "Energy & Agriculture Sectors", "body": "Specialized underwriting for North Dakota's energy and agriculture industries. Understand oil patch cycles and commodity patterns."},
+        {"h2": "Upper Midwest Lender Network", "body": "Network with North Dakota and Upper Midwest lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast ND Deployment", "body": "Deploy in 2-4 weeks with North Dakota-specific configurations. Support team familiar with ND lending landscape."}
+      ],
+      "ctas": ["See North Dakota Demo", "Talk to Fargo Team", "Get ND Compliance Guide"],
+      "keywords": ["North Dakota lending software", "Fargo MCA", "ND commercial lending", "alternative lending North Dakota", "ND lender software", "North Dakota energy finance"]
+    },
+    {
+      "slug": "alternative-lending-alaska",
+      "title": "Alternative Lending Software for Alaska Lenders",
+      "description": "Lending platform for Alaska MCA funders and commercial lenders. Anchorage and AK state lending compliance software.",
+      "h1": "Alternative Lending Software for Alaska",
+      "intro": "Purpose-built for Alaska lenders serving Anchorage and statewide markets. AK-compliant lending software for Pacific region.",
+      "sections": [
+        {"h2": "Alaska Business Markets", "body": "Serve Alaska industries: oil & gas, tourism, seafood, healthcare, and logistics. Regional expertise across Anchorage metro, Fairbanks, Juneau, and remote communities."},
+        {"h2": "AK Regulatory Compliance", "body": "Comply with Alaska Statutes Title 06 and state lending regulations. Track licensing with Alaska Division of Banking and Securities."},
+        {"h2": "Energy & Resource Industries", "body": "Specialized underwriting for Alaska's energy and natural resource sectors. Understand remote operations and seasonal business challenges."},
+        {"h2": "Pacific & Western Lending", "body": "Connect with Alaska's unique business environment and challenges. Support for remote lending and time zone considerations."},
+        {"h2": "Fast AK Deployment", "body": "Deploy in 2-4 weeks with Alaska-specific configurations. Support team familiar with AK lending landscape and remote operations."}
+      ],
+      "ctas": ["See Alaska Demo", "Talk to Anchorage Team", "Get AK Compliance Guide"],
+      "keywords": ["Alaska lending software", "Anchorage MCA", "Alaska commercial lending", "alternative lending Alaska", "AK lender software", "Alaska energy finance"]
+    },
+    {
+      "slug": "alternative-lending-vermont",
+      "title": "Alternative Lending Software for Vermont Lenders",
+      "description": "Lending platform for Vermont MCA funders and commercial lenders. Burlington and VT state lending compliance software.",
+      "h1": "Alternative Lending Software for Vermont",
+      "intro": "Built for Vermont lenders serving Burlington and statewide markets. VT-compliant lending software for New England.",
+      "sections": [
+        {"h2": "Vermont Business Markets", "body": "Serve Vermont industries: tourism, agriculture, manufacturing, healthcare, and food & beverage. Regional expertise across Burlington metro, Rutland, South Burlington, and Montpelier."},
+        {"h2": "VT Regulatory Compliance", "body": "Comply with Vermont Statutes Title 8 and state lending regulations. Track licensing with Vermont Department of Financial Regulation."},
+        {"h2": "Small Business & Agriculture", "body": "Specialized underwriting for Vermont's small business and agriculture sectors. Understand seasonal tourism and farm cash flow patterns."},
+        {"h2": "New England Lender Network", "body": "Network with Vermont and New England lenders using Lendgismo. Share regional market insights and lending best practices."},
+        {"h2": "Fast VT Deployment", "body": "Deploy in 2-4 weeks with Vermont-specific configurations. Support team familiar with VT lending landscape."}
+      ],
+      "ctas": ["See Vermont Demo", "Talk to Burlington Team", "Get VT Compliance Guide"],
+      "keywords": ["Vermont lending software", "Burlington MCA", "Vermont commercial lending", "alternative lending Vermont", "VT lender software", "Vermont agriculture finance"]
+    },
+    {
+      "slug": "alternative-lending-wyoming",
+      "title": "Alternative Lending Software for Wyoming Lenders",
+      "description": "Lending platform for Wyoming MCA funders and commercial lenders. Cheyenne and WY state lending compliance software.",
+      "h1": "Alternative Lending Software for Wyoming",
+      "intro": "Purpose-built for Wyoming lenders serving Cheyenne, Casper, and statewide markets. WY-compliant lending software.",
+      "sections": [
+        {"h2": "Wyoming Business Markets", "body": "Serve Wyoming industries: energy, tourism, agriculture, mining, and healthcare. Regional expertise across Cheyenne metro, Casper, Laramie, and Gillette."},
+        {"h2": "WY Regulatory Compliance", "body": "Comply with Wyoming Statutes Title 40 and state lending regulations. Track licensing with Wyoming Division of Banking."},
+        {"h2": "Energy & Mining Sectors", "body": "Specialized underwriting for Wyoming's energy and mining industries. Understand commodity cycles and remote operations."},
+        {"h2": "Western Lender Network", "body": "Network with Wyoming and Western region lenders using Lendgismo. Share regional market insights and lending strategies."},
+        {"h2": "Fast WY Deployment", "body": "Deploy in 2-4 weeks with Wyoming-specific configurations. Support team familiar with WY lending landscape."}
+      ],
+      "ctas": ["See Wyoming Demo", "Talk to Cheyenne Team", "Get WY Compliance Guide"],
+      "keywords": ["Wyoming lending software", "Cheyenne MCA", "Wyoming commercial lending", "alternative lending Wyoming", "WY lender software", "Wyoming energy finance"]
+    }
+  ]
+}

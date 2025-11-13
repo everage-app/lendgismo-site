@@ -6,6 +6,8 @@ type StableLoopVideoProps = {
   posterSrc?: string
   subtitleSrc?: string
   className?: string
+  autoplay?: boolean // if false, show Play overlay and wait for user
+  preload?: 'none' | 'metadata' | 'auto'
 }
 
 /**
@@ -14,12 +16,13 @@ type StableLoopVideoProps = {
  * No time nudging, no rAF stall logic, no remount triggers. Falls back to a simple
  * click-to-play overlay only when autoplay is blocked by the browser.
  */
-export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className = '' }: StableLoopVideoProps) {
+export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className = '', autoplay = true, preload = 'auto' }: StableLoopVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [autoplayBlocked, setAutoplayBlocked] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const [isWaiting, setIsWaiting] = useState(false)
+  const [showPlayOverlay, setShowPlayOverlay] = useState(!autoplay)
   const isDebug = useVideoDebugParam()
 
   // Only log in debug mode (?videodebug=1)
@@ -36,6 +39,45 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
 
     let destroyed = false
 
+    // If autoplay is disabled, only wire minimal events and wait for user
+    if (!autoplay) {
+      const onPlaying = () => {
+        if (destroyed) return
+        log('playing (user-initiated)')
+        setIsPlaying(true)
+        setIsWaiting(false)
+        setShowPlayOverlay(false)
+      }
+      const onWaiting = () => {
+        if (destroyed) return
+        log('waiting (user-initiated)')
+        setIsWaiting(true)
+        // If waiting persists, keep the play overlay visible for re-try
+        window.setTimeout(() => {
+          if (!destroyed && !video.paused && video.readyState < 3) {
+            setShowPlayOverlay(true)
+            setIsPlaying(false)
+          }
+        }, 2000)
+      }
+      const onError = () => {
+        if (destroyed) return
+        logError('error (user-initiated) code:', video.error?.code, 'message:', video.error?.message)
+        setIsWaiting(false)
+        setIsPlaying(false)
+        setShowPlayOverlay(true)
+      }
+      video.addEventListener('playing', onPlaying)
+      video.addEventListener('waiting', onWaiting)
+      video.addEventListener('error', onError)
+      return () => {
+        destroyed = true
+        video.removeEventListener('playing', onPlaying)
+        video.removeEventListener('waiting', onWaiting)
+        video.removeEventListener('error', onError)
+      }
+    }
+
     const attemptPlay = async (label: string) => {
       if (!video || destroyed) return
       log(label, '→ play attempt (readyState', video.readyState, 'paused', video.paused, ')')
@@ -47,6 +89,7 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
         setIsPlaying(true)
         setAutoplayBlocked(false)
         setIsWaiting(false)
+        setShowPlayOverlay(false)
       } catch (err: any) {
         if (destroyed) return
         logError('Play failed:', err?.name, err?.message)
@@ -54,6 +97,7 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
           setAutoplayBlocked(true)
           setIsPlaying(false)
           setIsWaiting(false)
+          setShowPlayOverlay(true)
         } else {
           // Reload source to recover from network decode issues
           const currentTime = video.currentTime
@@ -116,10 +160,12 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
     video.addEventListener('playing', onPlaying)
     video.addEventListener('error', onError)
 
-    if (video.readyState >= 2) {
-      attemptPlay('readyState>=2')
-    } else {
-      attemptPlay('initial')
+    if (autoplay) {
+      if (video.readyState >= 2) {
+        attemptPlay('readyState>=2')
+      } else {
+        attemptPlay('initial')
+      }
     }
 
     return () => {
@@ -174,10 +220,16 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
     const v = videoRef.current
     if (!v) return
     v.muted = isMuted
+    // Ensure a fresh load if preload is none/metadata
+    if (preload !== 'auto') {
+      try { v.load() } catch {}
+    }
+    setIsWaiting(true)
     v.play().then(() => {
       setIsPlaying(true)
       setAutoplayBlocked(false)
       setIsWaiting(false)
+      setShowPlayOverlay(false)
     }).catch((err) => logError('User play failed:', err))
   }
 
@@ -216,11 +268,11 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
       <video
         ref={videoRef}
         className="w-full h-full object-contain"
-        autoPlay
+        autoPlay={autoplay}
         loop
         muted={isMuted}
         playsInline
-        preload="auto"
+        preload={preload}
         poster={posterSrc}
         onPlaying={onPlaying}
         onPause={onPause}
@@ -234,8 +286,8 @@ export default function StableLoopVideo({ src, posterSrc, subtitleSrc, className
         Your browser does not support the video tag.
       </video>
 
-      {/* Minimal overlay shown only if autoplay is blocked */}
-      {autoplayBlocked && !isPlaying && (
+      {/* Play overlay: shown when autoplay is blocked OR when user-initiated mode is active */}
+      {(showPlayOverlay || (autoplayBlocked && !isPlaying)) && (
         <button
           type="button"
           onClick={handleUserPlay}
