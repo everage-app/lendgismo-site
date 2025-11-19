@@ -27,6 +27,7 @@ export async function handler(event) {
       email = '',
       company = '',
       role = '',
+      phone = '',
       interest = '',
       message = ''
     } = payload;
@@ -38,6 +39,7 @@ export async function handler(event) {
       `Email: ${email}`,
       `Company: ${company}`,
       `Role: ${role}`,
+      `Phone: ${phone || '(not provided)'}`,
       `Timeline: ${interest || '(not provided)'}`,
       '',
       'Message:',
@@ -52,6 +54,7 @@ export async function handler(event) {
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Company:</strong> ${escapeHtml(company)}</p>
       <p><strong>Role:</strong> ${escapeHtml(role)}</p>
+      <p><strong>Phone:</strong> ${escapeHtml(phone || '(not provided)')}</p>
       <p><strong>Timeline:</strong> ${escapeHtml(interest || '(not provided)')}</p>
       ${message ? `<p><strong>Message:</strong><br>${escapeHtml(message).replace(/\n/g, '<br>')}</p>` : ''}
       <hr>

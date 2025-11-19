@@ -16,6 +16,7 @@ export default function Home() {
     email: "",
     company: "",
     role: "",
+    phone: "",
     interest: "",
     message: "",
   });
@@ -32,6 +33,7 @@ export default function Home() {
       `Email: ${formData.email}`,
       `Company: ${formData.company}`,
       `Role: ${formData.role}`,
+      `Phone: ${formData.phone || "(not provided)"}`,
       `Timeline: ${formData.interest || "(not provided)"}`,
       "",
       "Message:",
@@ -58,6 +60,7 @@ export default function Home() {
         email: formData.email,
         company: formData.company,
         role: formData.role,
+        phone: formData.phone,
         interest: formData.interest,
         message: formData.message,
       };
@@ -86,7 +89,7 @@ export default function Home() {
 
       setLastEmail(formData.email);
       setSubmitted(true);
-      setFormData({ firstName: "", lastName: "", email: "", company: "", role: "", interest: "", message: "" });
+      setFormData({ firstName: "", lastName: "", email: "", company: "", role: "", phone: "", interest: "", message: "" });
     } catch (err) {
       console.error("Form submit failed", err);
       setSubmitError("We couldn't send your request. Please try again or email sales@lendgismo.com.");
@@ -961,22 +964,41 @@ export default function Home() {
                 </div>
               </div>
               
-              <div>
-                <label htmlFor="role" className="block text-sm font-semibold text-white mb-2">
-                  Role/Title *
-                </label>
-                <input 
-                  type="text" 
-                  id="role" 
-                  name="role" 
-                  required 
-                  value={formData.role}
-                  onChange={handleChange}
-                  disabled={submitting}
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition outline-none"
-                  placeholder="CTO, Engineering Manager, etc."
-                  data-testid="input-role"
-                />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="role" className="block text-sm font-semibold text-white mb-2">
+                    Role/Title *
+                  </label>
+                  <input 
+                    type="text" 
+                    id="role" 
+                    name="role" 
+                    required 
+                    value={formData.role}
+                    onChange={handleChange}
+                    disabled={submitting}
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition outline-none"
+                    placeholder="CTO, Engineering Manager, etc."
+                    data-testid="input-role"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
+                    Phone Number
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    value={formData.phone}
+                    onChange={handleChange}
+                    disabled={submitting}
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition outline-none"
+                    placeholder="(555) 123-4567"
+                    data-testid="input-phone"
+                  />
+                </div>
               </div>
               
               <div>

@@ -17,6 +17,7 @@ function extractSubmissionFields(payload) {
     email: d.email || "",
     company: d.company || "",
     role: d.role || "",
+    phone: d.phone || "",
     interest: d.interest || d.timeline || "",
     message: d.message || "",
   };
@@ -29,6 +30,7 @@ function buildPlainText(fields) {
     `Email: ${fields.email}`,
     `Company: ${fields.company}`,
     `Role: ${fields.role}`,
+    `Phone: ${fields.phone || '(not provided)'}`,
     `Timeline: ${fields.interest}`,
     fields.message ? "" : undefined,
     fields.message ? "Message:" : undefined,
@@ -74,6 +76,7 @@ async function sendEmailViaSendGrid(fields) {
     <p><strong>Email:</strong> ${fields.email}</p>
     <p><strong>Company:</strong> ${fields.company}</p>
     <p><strong>Role:</strong> ${fields.role}</p>
+    <p><strong>Phone:</strong> ${fields.phone || '(not provided)'}</p>
     <p><strong>Timeline:</strong> ${fields.interest}</p>
     ${fields.message ? `<p><strong>Message:</strong><br>${fields.message.replace(/\n/g, '<br>')}</p>` : ''}
     <hr>
