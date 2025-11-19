@@ -41,21 +41,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- Netlify Forms registration for SPA: ensures the 'contact' form exists at build time -->
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="hidden" name="form-name" value="contact" />
-      <p style="display:none">
-        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-      </p>
-      <input type="text" name="firstName" />
-      <input type="text" name="lastName" />
-      <input type="email" name="email" />
-      <input type="text" name="company" />
-      <input type="text" name="role" />
-      <input type="tel" name="phone" />
-      <input type="text" name="interest" />
-      <textarea name="message"></textarea>
-    </form>
     <!-- Structured Data -->
     <script type="application/ld+json">
       {

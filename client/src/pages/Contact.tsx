@@ -69,15 +69,6 @@ export default function Contact() {
         throw new Error(`Email send failed (${emailRes.status}): ${t}`);
       }
 
-      try {
-        await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form) as any).toString(),
-          keepalive: true as any,
-        });
-      } catch { /* ignore */ }
-
       setLastEmail(formData.email);
       setSubmitted(true);
       setFormData({ firstName: "", lastName: "", email: "", company: "", role: "", phone: "", interest: "", message: "" });
@@ -125,11 +116,7 @@ export default function Contact() {
               <a href={buildMailtoUrl()} className="btn-ghost">Email us directly</a>
             </div>
             {!submitted ? (
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-              </p>
+            <form onSubmit={handleSubmit} className="space-y-6">
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
