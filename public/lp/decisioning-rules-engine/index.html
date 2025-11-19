@@ -3,79 +3,111 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Decisioning rules engine | Lendgismo</title>
-<meta name="description" content="Configurable decision rules, scorecards, and policy checks." />
+<title>Lending Decisioning Rules Engine | Lendgismo</title>
+<meta name="description" content="Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails." />
 <link rel="canonical" href="https://lendgismo.com/lp/decisioning-rules-engine/" />
 <meta name="robots" content="index,follow" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Decisioning rules engine | Lendgismo" />
-<meta property="og:description" content="Configurable decision rules, scorecards, and policy checks." />
+<meta property="og:title" content="Lending Decisioning Rules Engine | Lendgismo" />
+<meta property="og:description" content="Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails." />
 <meta property="og:url" content="https://lendgismo.com/lp/decisioning-rules-engine/" />
 <meta property="og:image" content="https://lendgismo.com/og-default.jpg" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Decisioning rules engine | Lendgismo" />
-<meta name="twitter:description" content="Configurable decision rules, scorecards, and policy checks." />
+<meta name="twitter:title" content="Lending Decisioning Rules Engine | Lendgismo" />
+<meta name="twitter:description" content="Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails." />
 <meta name="twitter:image" content="https://lendgismo.com/og-default.jpg" />
 
 <style>
-  :root { --bg:#0b1220; --card:#fff; --ink:#0b1220; --muted:#5b6477; --brand:#2563eb; }
-  *{box-sizing:border-box} body{margin:0;background:#f7f8fb;color:var(--ink);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:960px;margin:0 auto;padding:32px}
-  .hero{background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,.06);padding:32px}
-  h1{font-size:36px;line-height:1.2;margin:0 0 12px}
-  p.lead{font-size:18px;color:#223;opacity:.9;margin:0 0 16px}
-  .meta{color:var(--muted);font-size:13px;margin-bottom:16px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media(max-width:800px){.grid{grid-template-columns:1fr}}
-  .card{background:#fff;border-radius:14px;padding:20px;border:1px solid #eef0f6}
-  h2{font-size:22px;margin:8px 0 8px}
+  :root { --bg:#0b1220; --card:#0f172a; --ink:#0b1220; --ink-soft:#1f2937; --muted:#5b6477; --muted2:#6b7280; --brand:#2563eb; --brand-2:#1d4ed8; --ring:#93c5fd; }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#f8fafc, #eef2ff 50%, #f8fafc);color:var(--ink);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:28px}
+  .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .brand{font-weight:700;font-size:18px;color:#0f172a}
+  .nav{display:flex;gap:14px}
+  .btn{display:inline-block;border-radius:10px;padding:10px 14px;border:1px solid #e5e7eb;background:#fff;color:#111827}
+  .btn:hover{border-color:#d1d5db}
+  .btn-primary{background:linear-gradient(180deg, var(--brand), var(--brand-2));color:#fff;border:none}
+  .btn-primary:hover{filter:brightness(1.05)}
+  .btn-ghost{background:transparent;border:1px solid #e5e7eb}
+  .hero{position:relative;background:radial-gradient(1200px 600px at 80% -20%, #dbeafe 0%, transparent 60%), #fff;border-radius:16px;box-shadow:0 12px 50px rgba(2,6,23,.08);padding:28px;border:1px solid #eef2ff}
+  h1{font-size:38px;line-height:1.15;margin:0 0 10px;letter-spacing:-0.01em}
+  p.lead{font-size:18px;color:#223;opacity:.92;margin:0 0 14px}
+  .meta{color:var(--muted2);font-size:13px;margin-bottom:14px}
+  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .trust{margin-top:14px;color:var(--muted);font-size:13px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border-radius:14px;padding:18px;border:1px solid #eef0f6}
+  h2{font-size:22px;margin:6px 0 8px}
   ul{padding-left:18px;margin:8px 0}
   li{margin:4px 0}
-  .cta{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;margin-top:12px}
-  .foot{margin-top:24px;color:var(--muted);font-size:13px}
+  .foot{margin-top:26px;color:var(--muted);font-size:13px}
   .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef2ff;color:#334155;font-size:12px;margin-right:6px}
   .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; background:#f1f5f9; padding:2px 6px; border-radius:6px; border:1px solid #e2e8f0;}
+  .sticky-cta{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:#0b1220;color:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(2,6,23,.25);display:flex;gap:8px;align-items:center}
+  .sticky-cta a{color:#fff}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lendgismo LLC","url":"https://lendgismo.com","email":"lendgismo@gmail.com","telephone":"801-930-0261","address":{"@type":"PostalAddress","streetAddress":"4638 Watery Way","addressLocality":"South Jordan","addressRegion":"UT","postalCode":"84009","addressCountry":"US"},"sameAs":["https://lendgismo.com"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Decisioning rules engine","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Contact for pricing/licensing"},"description":"Configurable decision rules, scorecards, and policy checks.","provider":{"@type":"Organization","name":"Lendgismo LLC","url":"https://lendgismo.com"},"url":"https://lendgismo.com/lp/decisioning-rules-engine/"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Decisioning rules engine?","acceptedAnswer":{"@type":"Answer","text":"Decisioning rules engine with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"Who uses Decisioning rules engine?","acceptedAnswer":{"@type":"Answer","text":"Decisioning rules engine with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"How fast can I launch with Lendgismo?","acceptedAnswer":{"@type":"Answer","text":"Decisioning rules engine with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"What integrations are supported (Plaid, QuickBooks, Stripe, DataMerch, DecisionLogic)?","acceptedAnswer":{"@type":"Answer","text":"Decisioning rules engine with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"Can I white-label and customize the workflows?","acceptedAnswer":{"@type":"Answer","text":"Decisioning rules engine with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lendgismo LLC","url":"https://lendgismo.com","email":"sales@lendgismo.com","telephone":"801-930-0261","address":{"@type":"PostalAddress","streetAddress":"4638 Watery Way","addressLocality":"South Jordan","addressRegion":"UT","postalCode":"84009","addressCountry":"US"},"sameAs":["https://lendgismo.com"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lending Decisioning Rules Engine","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Contact for pricing/licensing"},"description":"Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails.","provider":{"@type":"Organization","name":"Lendgismo LLC","url":"https://lendgismo.com"},"url":"https://lendgismo.com/lp/decisioning-rules-engine/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Decisioning Rules Engine for Automated Approvals?","acceptedAnswer":{"@type":"Answer","text":"Decisioning Rules Engine for Automated Approvals with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"Who uses Decisioning Rules Engine for Automated Approvals?","acceptedAnswer":{"@type":"Answer","text":"Decisioning Rules Engine for Automated Approvals with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"How fast can I launch with Lendgismo?","acceptedAnswer":{"@type":"Answer","text":"Decisioning Rules Engine for Automated Approvals with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"What integrations are supported (Plaid, QuickBooks, Stripe, DataMerch, DecisionLogic)?","acceptedAnswer":{"@type":"Answer","text":"Decisioning Rules Engine for Automated Approvals with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}},{"@type":"Question","name":"Can I white-label and customize the workflows?","acceptedAnswer":{"@type":"Answer","text":"Decisioning Rules Engine for Automated Approvals with Lendgismo provides lender-grade onboarding, underwriting automation, reporting, and multi-tenant branding. It's white-label, integrates with Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic, and more — deployed quickly to match your credit policies and ops."}}]}</script>
 </head>
 <body>
   <div class="wrap">
+    <div class="header">
+      <a class="brand" href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Lendgismo</a>
+      <div class="nav">
+        <a class="btn btn-ghost" href="https://lendgismo.com/overview/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Overview</a>
+        <a class="btn" href="https://lendgismo.com/docs/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Docs</a>
+        <a class="btn" href="tel:8019300261">Call 801-930-0261</a>
+        <a class="btn btn-primary" href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine#contact">Book a demo</a>
+      </div>
+    </div>
     <div class="hero">
       <span class="badge">Lendgismo</span>
-      <h1>Decisioning rules engine</h1>
-      <p class="lead">Configurable decision rules, scorecards, and policy checks.</p>
-      <p class="meta">Lendgismo LLC • lendgismo@gmail.com • 801-930-0261</p>
-      <a class="cta" href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Book a walkthrough</a>
+      <h1>Decisioning Rules Engine for Automated Approvals</h1>
+      <p class="lead">Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails.</p>
+      <p class="meta">Lendgismo LLC • sales@lendgismo.com • 801-930-0261</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine#contact">Book a demo</a>
+        <a class="btn" href="mailto:sales%40lendgismo.com?subject=Lendgismo%20%E2%80%94%20Decisioning%20Rules%20Engine%20for%20Automated%20Approvals&body=Hi%20Lendgismo%20team%2C%0A%0AI'm%20interested%20in%20Decisioning%20Rules%20Engine%20for%20Automated%20Approvals.%20Let's%20connect.%0A%0AThanks!%0A">Email sales</a>
+        <a class="btn" href="tel:8019300261">Call now</a>
+      </div>
+      <p class="trust">Trusted by alt‑lenders, ISOs & fintech teams</p>
     </div>
 
     <div class="grid" style="margin-top:16px">
-      <div class="card">
-        <h2>Key features</h2>
-        <ul><li>Borrower onboarding &amp; document collection</li><li>Underwriting workflows (rules, checklists, term sheets)</li><li>Reporting &amp; clean exports (CSV/PPTX)</li><li>Multi-tenant white-labeling for each lender</li><li>Integrations: Plaid, QuickBooks, Stripe, Twilio, SendGrid, DataMerch, DecisionLogic</li><li>APIs &amp; webhooks for custom pipelines</li><li>Audit trail, roles &amp; permissions</li></ul>
-      </div>
-      <div class="card">
-        <h2>Who it’s for</h2>
-        <ul><li>Merchant Cash Advance (MCA) funders &amp; ISOs</li><li>Asset-based lenders &amp; working capital providers</li><li>Non-bank &amp; fintech lenders</li><li>Servicing and collections teams</li><li>Credit/risk teams standardizing decisioning</li></ul>
-      </div>
-      <div class="card">
-        <h2>Integrations</h2>
-        <ul><li>Plaid (bank data &amp; cash flow)</li><li>QuickBooks (accounting sync)</li><li>Stripe (repayments/ACH/cards)</li><li>Twilio (SMS 2FA &amp; notifications)</li><li>SendGrid (email OTP &amp; messaging)</li><li>DataMerch (alternative data &amp; analytics)</li><li>DecisionLogic (credit decisions &amp; fraud detection)</li><li>Socure/Alloy (identity verification &amp; KYC)</li></ul>
-      </div>
-      <div class="card">
-        <h2>Why Lendgismo</h2>
-        <ul>
-          <li>Launch fast with a lender-grade base you can own</li>
-          <li>White-label UI, branding per tenant</li>
-          <li>Secure, auditable workflows end-to-end</li>
-          <li>Exportable reports for investors & ops</li>
-        </ul>
-      </div>
+      
+        <div class="card">
+          <h2>Configurable Decision Rules</h2>
+          <p>Build credit policies with if-then-else logic: minimum credit score, debt-to-income ratios, cash flow thresholds, and industry restrictions. Layer rules for different loan products, amounts, and borrower types.</p>
+        </div>
+      
+        <div class="card">
+          <h2>Scorecard-Based Underwriting</h2>
+          <p>Create custom scorecards with weighted factors: credit score, revenue trends, time in business, bank balance, and industry risk. Set approval cut-offs, manual review bands, and auto-decline thresholds.</p>
+        </div>
+      
+        <div class="card">
+          <h2>Manual Review Queues</h2>
+          <p>Route borderline applications to underwriters with pre-populated decision recommendations. Underwriters override rules with documented reasoning. Track override rates and credit quality metrics.</p>
+        </div>
+      
+        <div class="card">
+          <h2>Transparent Decision Logic</h2>
+          <p>Every decision shows which rules triggered, data points evaluated, and final score. Borrowers receive clear decline reasons. Audit trails for regulatory exams and investor due diligence.</p>
+        </div>
+      
+        <div class="card">
+          <h2>Proven for Alternative Lenders</h2>
+          <p>Deployed by MCA funders, ABL providers, and SMB lenders making 100-10,000 decisions monthly. No-code rule editor for ops teams. Version control and A/B testing for policy iterations.</p>
+        </div>
+      
     </div>
 
     <div class="foot">
@@ -83,11 +115,17 @@
         <a href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Home</a> · 
         <a href="https://lendgismo.com/overview/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Overview</a> · 
         <a href="https://lendgismo.com/docs/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Docs</a> · 
-        <a href="https://lendgismo.com/#contact?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine">Contact</a>
+        <a href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine#contact">Contact</a>
       </p>
-      <p>Canonical: <span class="kbd">https://lendgismo.com/lp/decisioning-rules-engine/</span> • Updated: 2025-11-13</p>
+      <p>Canonical: <span class="kbd">https://lendgismo.com/lp/decisioning-rules-engine/</span> • Updated: 2025-11-19</p>
       <p>© 2025 Lendgismo LLC. All rights reserved.</p>
     </div>
+  </div>
+
+  <div class="sticky-cta">
+    <a class="btn btn-primary" href="https://lendgismo.com/?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=decisioning-rules-engine#contact">Book a demo</a>
+    <span>or</span>
+    <a class="btn" href="mailto:sales%40lendgismo.com?subject=Lendgismo%20%E2%80%94%20Decisioning%20Rules%20Engine%20for%20Automated%20Approvals&body=Hi%20Lendgismo%20team%2C%0A%0AI'm%20interested%20in%20Decisioning%20Rules%20Engine%20for%20Automated%20Approvals.%20Let's%20connect.%0A%0AThanks!%0A">Email sales</a>
   </div>
 </body>
 </html>

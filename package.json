@@ -23,7 +23,8 @@
     "capture:init": "npx playwright install",
     "capture:screens": "tsx scripts/capture-demo.ts --mode=screens",
     "capture:videos": "tsx scripts/capture-demo.ts --mode=videos",
-    "test:e2e": "npx playwright test --config=playwright.config.ts"
+    "test:e2e": "npx playwright test --config=playwright.config.ts",
+    "seo:lp": "node ./scripts/seoOptimize.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

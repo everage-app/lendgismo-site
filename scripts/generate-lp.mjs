@@ -8,7 +8,8 @@ const ROOT = process.cwd();
 const PUB = path.join(ROOT, "public");
 const LP_DIR = path.join(PUB, "lp");
 const SITEMAPS_DIR = path.join(PUB, "sitemaps");
-const SPEC_PATH = path.join(ROOT, "scripts", "lp-pages.json");
+const SPEC_DEFAULT = path.join(ROOT, "scripts", "lp-pages.json");
+const SPEC_ENHANCED = path.join(ROOT, "scripts", "lp-pages-enhanced.json");
 
 function slugify(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -21,23 +22,36 @@ function nowIso() {
 }
 
 const inlineCss = `
-  :root { --bg:#0b1220; --card:#fff; --ink:#0b1220; --muted:#5b6477; --brand:#2563eb; }
-  *{box-sizing:border-box} body{margin:0;background:#f7f8fb;color:var(--ink);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:960px;margin:0 auto;padding:32px}
-  .hero{background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,.06);padding:32px}
-  h1{font-size:36px;line-height:1.2;margin:0 0 12px}
-  p.lead{font-size:18px;color:#223;opacity:.9;margin:0 0 16px}
-  .meta{color:var(--muted);font-size:13px;margin-bottom:16px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media(max-width:800px){.grid{grid-template-columns:1fr}}
-  .card{background:#fff;border-radius:14px;padding:20px;border:1px solid #eef0f6}
-  h2{font-size:22px;margin:8px 0 8px}
+  :root { --bg:#0b1220; --card:#0f172a; --ink:#0b1220; --ink-soft:#1f2937; --muted:#5b6477; --muted2:#6b7280; --brand:#2563eb; --brand-2:#1d4ed8; --ring:#93c5fd; }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#f8fafc, #eef2ff 50%, #f8fafc);color:var(--ink);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:28px}
+  .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .brand{font-weight:700;font-size:18px;color:#0f172a}
+  .nav{display:flex;gap:14px}
+  .btn{display:inline-block;border-radius:10px;padding:10px 14px;border:1px solid #e5e7eb;background:#fff;color:#111827}
+  .btn:hover{border-color:#d1d5db}
+  .btn-primary{background:linear-gradient(180deg, var(--brand), var(--brand-2));color:#fff;border:none}
+  .btn-primary:hover{filter:brightness(1.05)}
+  .btn-ghost{background:transparent;border:1px solid #e5e7eb}
+  .hero{position:relative;background:radial-gradient(1200px 600px at 80% -20%, #dbeafe 0%, transparent 60%), #fff;border-radius:16px;box-shadow:0 12px 50px rgba(2,6,23,.08);padding:28px;border:1px solid #eef2ff}
+  h1{font-size:38px;line-height:1.15;margin:0 0 10px;letter-spacing:-0.01em}
+  p.lead{font-size:18px;color:#223;opacity:.92;margin:0 0 14px}
+  .meta{color:var(--muted2);font-size:13px;margin-bottom:14px}
+  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .trust{margin-top:14px;color:var(--muted);font-size:13px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border-radius:14px;padding:18px;border:1px solid #eef0f6}
+  h2{font-size:22px;margin:6px 0 8px}
   ul{padding-left:18px;margin:8px 0}
   li{margin:4px 0}
-  .cta{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;margin-top:12px}
-  .foot{margin-top:24px;color:var(--muted);font-size:13px}
+  .foot{margin-top:26px;color:var(--muted);font-size:13px}
   .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef2ff;color:#334155;font-size:12px;margin-right:6px}
   .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; background:#f1f5f9; padding:2px 6px; border-radius:6px; border:1px solid #e2e8f0;}
+  .sticky-cta{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);background:#0b1220;color:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(2,6,23,.25);display:flex;gap:8px;align-items:center}
+  .sticky-cta a{color:#fff}
 `;
 
 function orgJsonLd(brand) {
@@ -138,6 +152,20 @@ function pageHtml(page, brand) {
 
   // UTM tagging for attribution
   const utm = `?utm_source=seo-lp&utm_medium=organic&utm_campaign=lp&utm_content=${encodeURIComponent(page.slug)}`;
+  const contactUrl = `${brand.baseUrl}/${utm}#contact`;
+  const homeUrl = `${brand.baseUrl}/${utm}`;
+  const mailto = `mailto:${encodeURIComponent(brand.email)}?subject=${encodeURIComponent("Lendgismo — "+page.h1)}&body=${encodeURIComponent("Hi Lendgismo team,\n\nI'm interested in "+page.h1+". Let's connect.\n\nThanks!\n")}`;
+  const tel = `tel:${brand.phone.replace(/[^0-9+]/g, "")}`;
+
+  // Use provided sections if any; otherwise show defaults
+  const sections = Array.isArray(page.sections) && page.sections.length > 0
+    ? page.sections
+    : [
+        { h2: "Key features", body: `<ul>${features.map(f=>`<li>${htmlEscape(f)}</li>`).join("")}</ul>` },
+        { h2: "Who it’s for", body: `<ul>${useCases.map(f=>`<li>${htmlEscape(f)}</li>`).join("")}</ul>` },
+        { h2: "Integrations", body: `<ul>${integrations.map(f=>`<li>${htmlEscape(f)}</li>`).join("")}</ul>` },
+        { h2: "Why Lendgismo", body: `<ul><li>Launch fast with a lender-grade base you can own</li><li>White-label UI, branding per tenant</li><li>Secure, auditable workflows end-to-end</li><li>Exportable reports for investors & ops</li></ul>` },
+      ];
 
   return `<!doctype html>
 <html lang="en">
@@ -169,48 +197,53 @@ function pageHtml(page, brand) {
 </head>
 <body>
   <div class="wrap">
+    <div class="header">
+      <a class="brand" href="${homeUrl}">Lendgismo</a>
+      <div class="nav">
+        <a class="btn btn-ghost" href="${brand.baseUrl}/overview/${utm}">Overview</a>
+        <a class="btn" href="${brand.baseUrl}/docs/${utm}">Docs</a>
+        <a class="btn" href="${tel}">Call ${htmlEscape(brand.phone)}</a>
+        <a class="btn btn-primary" href="${contactUrl}">Book a demo</a>
+      </div>
+    </div>
     <div class="hero">
       <span class="badge">Lendgismo</span>
       <h1>${htmlEscape(page.h1)}</h1>
       <p class="lead">${desc}</p>
       <p class="meta">${brand.name} • ${htmlEscape(brand.email)} • ${htmlEscape(brand.phone)}</p>
-      <a class="cta" href="https://lendgismo.com/${utm}">Book a walkthrough</a>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="${contactUrl}">Book a demo</a>
+        <a class="btn" href="${mailto}">Email sales</a>
+        <a class="btn" href="${tel}">Call now</a>
+      </div>
+      <p class="trust">Trusted by alt‑lenders, ISOs & fintech teams</p>
     </div>
 
     <div class="grid" style="margin-top:16px">
-      <div class="card">
-        <h2>Key features</h2>
-        <ul>${features.map(f=>`<li>${htmlEscape(f)}</li>`).join("")}</ul>
-      </div>
-      <div class="card">
-        <h2>Who it’s for</h2>
-        <ul>${useCases.map(f=>`<li>${htmlEscape(f)}</li>`).join("")}</ul>
-      </div>
-      <div class="card">
-        <h2>Integrations</h2>
-        <ul>${integrations.map(f=>`<li>${htmlEscape(f)}</li>`).join("")}</ul>
-      </div>
-      <div class="card">
-        <h2>Why Lendgismo</h2>
-        <ul>
-          <li>Launch fast with a lender-grade base you can own</li>
-          <li>White-label UI, branding per tenant</li>
-          <li>Secure, auditable workflows end-to-end</li>
-          <li>Exportable reports for investors & ops</li>
-        </ul>
-      </div>
+      ${sections.map(sec => `
+        <div class="card">
+          <h2>${htmlEscape(sec.h2 || "Section")}</h2>
+          ${sec.body && /<\/?\w+/.test(sec.body) ? sec.body : `<p>${htmlEscape(sec.body || "")}</p>`}
+        </div>
+      `).join("")}
     </div>
 
     <div class="foot">
       <p>
-        <a href="https://lendgismo.com/${utm}">Home</a> · 
-        <a href="https://lendgismo.com/overview/${utm}">Overview</a> · 
-        <a href="https://lendgismo.com/docs/${utm}">Docs</a> · 
-        <a href="https://lendgismo.com/#contact${utm}">Contact</a>
+        <a href="${homeUrl}">Home</a> · 
+        <a href="${brand.baseUrl}/overview/${utm}">Overview</a> · 
+        <a href="${brand.baseUrl}/docs/${utm}">Docs</a> · 
+        <a href="${contactUrl}">Contact</a>
       </p>
       <p>Canonical: <span class="kbd">${canon}</span> • Updated: ${nowIso().slice(0,10)}</p>
       <p>© ${new Date().getFullYear()} ${brand.name}. All rights reserved.</p>
     </div>
+  </div>
+
+  <div class="sticky-cta">
+    <a class="btn btn-primary" href="${contactUrl}">Book a demo</a>
+    <span>or</span>
+    <a class="btn" href="${mailto}">Email sales</a>
   </div>
 </body>
 </html>`;
@@ -225,9 +258,20 @@ async function writeFileSafe(filePath, content) {
   await fs.writeFile(filePath, content, "utf8");
 }
 
+async function loadSpec() {
+  // Prefer enhanced spec if present; fall back to default
+  try {
+    const raw = await fs.readFile(SPEC_ENHANCED, "utf8");
+    const spec = JSON.parse(raw);
+    return { spec, source: "enhanced" };
+  } catch {}
+  const raw = await fs.readFile(SPEC_DEFAULT, "utf8");
+  const spec = JSON.parse(raw);
+  return { spec, source: "default" };
+}
+
 async function main() {
-  const specRaw = await fs.readFile(SPEC_PATH, "utf8");
-  const spec = JSON.parse(specRaw);
+  const { spec } = await loadSpec();
 
   const brand = {
     name: spec.brand?.name || "Lendgismo LLC",
@@ -248,28 +292,47 @@ async function main() {
       h1: p.h1 || p.title.replace(/\s*\|\s*Lendgismo/i, ""),
       canonical: `${brand.baseUrl}/lp/${p.slug}/`,
       ogImage: p.ogImage || null,
-      faq: p.faq || []
+      faq: p.faq || [],
+      sections: p.sections || null,
+      ctas: p.ctas || null,
+      keywords: p.keywords || null,
     });
   }
   // State/geographic pages
-  const stateNames = spec.states || [];
-  for (const state of stateNames) {
-    const sslug = slugify(state);
-    const slug = `alt-lending-software-${sslug}`;
-    const title = `Alt-lending software in ${state} | Lendgismo`;
-    const description = `Launch an alt-lending / MCA / ABL platform in ${state} with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.`;
-    pages.push({
-      slug,
-      title,
-      description,
-      h1: `Alt-lending software — ${state}`,
-      canonical: `${brand.baseUrl}/lp/${slug}/`,
-      ogImage: null,
-      faq: [
-        `Can Lendgismo handle ${state}-specific lending policies?`,
-        `Does Lendgismo support MCA flows in ${state}?`
-      ]
-    });
+  const stateItems = spec.states || [];
+  for (const state of stateItems) {
+    if (typeof state === "string") {
+      const sslug = slugify(state);
+      const slug = `alt-lending-software-${sslug}`;
+      const title = `Alt-lending software in ${state} | Lendgismo`;
+      const description = `Launch an alt-lending / MCA / ABL platform in ${state} with Lendgismo — fast borrower onboarding, underwriting automation, reporting, and white-label multi-tenant branding.`;
+      pages.push({
+        slug,
+        title,
+        description,
+        h1: `Alt-lending software — ${state}`,
+        canonical: `${brand.baseUrl}/lp/${slug}/`,
+        ogImage: null,
+        faq: [
+          `Can Lendgismo handle ${state}-specific lending policies?`,
+          `Does Lendgismo support MCA flows in ${state}?`
+        ]
+      });
+    } else if (state && typeof state === "object") {
+      const slug = state.slug || slugify(state.h1 || state.title || "state");
+      pages.push({
+        slug,
+        title: state.title || `Alternative Lending Software — ${state.name || "State"}`,
+        description: state.description || `Alternative lending platform for ${state.name || "your state"}.`,
+        h1: state.h1 || state.title || `Alternative Lending — ${state.name || "State"}`,
+        canonical: `${brand.baseUrl}/lp/${slug}/`,
+        ogImage: state.ogImage || null,
+        faq: state.faq || [],
+        sections: state.sections || null,
+        ctas: state.ctas || null,
+        keywords: state.keywords || null,
+      });
+    }
   }
 
   // Write each page

@@ -165,6 +165,22 @@
 			"type": "shell",
 			"command": "npm run build",
 			"group": "build"
+		},
+		{
+			"label": "SEO LP Audit",
+			"type": "shell",
+			"command": "npm run seo:lp",
+			"args": [],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build frontend (vite) via npm",
+			"type": "shell",
+			"command": "npm run build",
+			"args": [],
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

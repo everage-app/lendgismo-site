@@ -1,33 +1,37 @@
 # Lendgismo Landing Pages SEO & Conversion Audit
-Generated: 2025-11-13T13:16:48.565Z
+Generated: 2025-11-14T16:36:30.457Z
 ---
 
 ## 1. alt-lending-platform
 **URL:** https://lendgismo.com/lp/alt-lending-platform/
 
 ### SEO Metadata
-- **Title:** Alt-lending platform | Lendgismo
-- **Meta Description:** White-label alt-lending platform for MCA/ABL/working-capital lenders: onboarding, underwriting automation, reporting, and multi-tenant branding.
+- **Title:** Alternative Lending Platform Software for MCA & ABL
+- **Meta Description:** Launch your alternative lending platform faster. White-label software with underwriting automation, borrower onboarding, RBAC, Plaid, Stripe, and multi-tenant architecture for MCA and ABL funders.
 - **Canonical:** https://lendgismo.com/lp/alt-lending-platform/
-- **OG Title:** Alt-lending platform | Lendgismo
-- **OG Description:** White-label alt-lending platform for MCA/ABL/working-capital lenders: onboarding, underwriting automation, reporting, and multi-tenant branding.
+- **OG Title:** Alternative Lending Platform Software for MCA & ABL
+- **OG Description:** Launch your alternative lending platform faster. White-label software with underwriting automation, borrower onboarding, RBAC, Plaid, Stripe, and multi-tenant architecture for MCA and ABL funders.
 
 ### Content Structure
-- **H1:** Alt-lending platform
-- **H2 Count:** 4
+- **H1:** Alternative Lending Platform for MCA, ABL & Working Capital Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~163
+  - Complete Alternative Lending Software Stack
+  - White-Label Multi-Tenant Architecture
+  - Underwriting Automation & Cash Flow Analysis
+  - Integrations That Scale Your Operations
+  - Why Alternative Lenders Choose Lendgismo
+- **Word Count:** ~308
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Low word count (163) - add more content for SEO
+- Meta description length (196 chars) - should be 120-160
 
 ---
 
@@ -1531,1118 +1535,2916 @@ Generated: 2025-11-13T13:16:48.565Z
 
 ---
 
-## 52. api-webhooks
+## 52. alternative-lending-alabama
+**URL:** https://lendgismo.com/lp/alternative-lending-alabama/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Alabama Lenders
+- **Meta Description:** Lending platform for Alabama MCA funders and commercial lenders. Birmingham and AL state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-alabama/
+- **OG Title:** Alternative Lending Software for Alabama Lenders
+- **OG Description:** Lending platform for Alabama MCA funders and commercial lenders. Birmingham and AL state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Alabama
+- **H2 Count:** 5
+- **H2s:**
+  - Alabama Business Markets
+  - AL Regulatory Compliance
+  - Southeast Manufacturing
+  - Southeast Lender Network
+  - Fast AL Deployment
+- **Word Count:** ~174
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (117 chars) - should be 120-160
+- Low word count (174) - add more content for SEO
+
+---
+
+## 53. alternative-lending-alaska
+**URL:** https://lendgismo.com/lp/alternative-lending-alaska/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Alaska Lenders
+- **Meta Description:** Lending platform for Alaska MCA funders and commercial lenders. Anchorage and AK state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-alaska/
+- **OG Title:** Alternative Lending Software for Alaska Lenders
+- **OG Description:** Lending platform for Alaska MCA funders and commercial lenders. Anchorage and AK state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Alaska
+- **H2 Count:** 5
+- **H2s:**
+  - Alaska Business Markets
+  - AK Regulatory Compliance
+  - Energy & Resource Industries
+  - Pacific & Western Lending
+  - Fast AK Deployment
+- **Word Count:** ~183
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (115 chars) - should be 120-160
+- Low word count (183) - add more content for SEO
+
+---
+
+## 54. alternative-lending-arizona
+**URL:** https://lendgismo.com/lp/alternative-lending-arizona/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Arizona Lenders
+- **Meta Description:** Lending platform for Arizona MCA funders and commercial lenders. Phoenix and AZ state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-arizona/
+- **OG Title:** Alternative Lending Software for Arizona Lenders
+- **OG Description:** Lending platform for Arizona MCA funders and commercial lenders. Phoenix and AZ state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Arizona
+- **H2 Count:** 5
+- **H2s:**
+  - Arizona Business Lending
+  - AZ Regulatory Compliance
+  - Phoenix Growth Market
+  - Southwest Lender Network
+  - Fast AZ Deployment
+- **Word Count:** ~204
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (204) - add more content for SEO
+
+---
+
+## 55. alternative-lending-arkansas
+**URL:** https://lendgismo.com/lp/alternative-lending-arkansas/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Arkansas Lenders
+- **Meta Description:** Lending platform for Arkansas MCA funders and commercial lenders. Little Rock and AR state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-arkansas/
+- **OG Title:** Alternative Lending Software for Arkansas Lenders
+- **OG Description:** Lending platform for Arkansas MCA funders and commercial lenders. Little Rock and AR state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Arkansas
+- **H2 Count:** 5
+- **H2s:**
+  - Arkansas Business Markets
+  - AR Regulatory Compliance
+  - Agriculture & Manufacturing
+  - Southeast Lender Network
+  - Fast AR Deployment
+- **Word Count:** ~180
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (119 chars) - should be 120-160
+- Low word count (180) - add more content for SEO
+
+---
+
+## 56. alternative-lending-california
+**URL:** https://lendgismo.com/lp/alternative-lending-california/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for California Lenders
+- **Meta Description:** Lending platform for California MCA funders, commercial lenders, and fintech companies. California Finance Lenders Law (CFL) compliant software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-california/
+- **OG Title:** Alternative Lending Software for California Lenders
+- **OG Description:** Lending platform for California MCA funders, commercial lenders, and fintech companies. California Finance Lenders Law (CFL) compliant software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for California
+- **H2 Count:** 5
+- **H2s:**
+  - California Market Diversity
+  - CFL Compliance & Licensing
+  - High-Cost Lending Regulations
+  - California Lender Community
+  - Silicon Valley Innovation
+- **Word Count:** ~234
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (234) - add more content for SEO
+
+---
+
+## 57. alternative-lending-colorado
+**URL:** https://lendgismo.com/lp/alternative-lending-colorado/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Colorado Lenders
+- **Meta Description:** Lending platform for Colorado MCA funders and commercial lenders. Denver and CO state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-colorado/
+- **OG Title:** Alternative Lending Software for Colorado Lenders
+- **OG Description:** Lending platform for Colorado MCA funders and commercial lenders. Denver and CO state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Colorado
+- **H2 Count:** 5
+- **H2s:**
+  - Colorado Business Markets
+  - CO Regulatory Compliance
+  - Denver Tech & Innovation
+  - Western Lender Network
+  - Fast CO Deployment
+- **Word Count:** ~203
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (203) - add more content for SEO
+
+---
+
+## 58. alternative-lending-connecticut
+**URL:** https://lendgismo.com/lp/alternative-lending-connecticut/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Connecticut Lenders
+- **Meta Description:** Lending platform for Connecticut MCA funders and commercial lenders. Hartford and CT state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-connecticut/
+- **OG Title:** Alternative Lending Software for Connecticut Lenders
+- **OG Description:** Lending platform for Connecticut MCA funders and commercial lenders. Hartford and CT state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Connecticut
+- **H2 Count:** 5
+- **H2s:**
+  - Connecticut Business Markets
+  - CT Regulatory Compliance
+  - Financial Services Hub
+  - Northeast Lender Network
+  - Fast CT Deployment
+- **Word Count:** ~175
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (119 chars) - should be 120-160
+- Low word count (175) - add more content for SEO
+
+---
+
+## 59. alternative-lending-delaware
+**URL:** https://lendgismo.com/lp/alternative-lending-delaware/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Delaware Lenders
+- **Meta Description:** Lending platform for Delaware MCA funders and commercial lenders. Wilmington and DE state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-delaware/
+- **OG Title:** Alternative Lending Software for Delaware Lenders
+- **OG Description:** Lending platform for Delaware MCA funders and commercial lenders. Wilmington and DE state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Delaware
+- **H2 Count:** 5
+- **H2s:**
+  - Delaware Business Markets
+  - DE Regulatory Compliance
+  - Financial Services Hub
+  - Mid-Atlantic Lender Network
+  - Fast DE Deployment
+- **Word Count:** ~175
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (118 chars) - should be 120-160
+- Low word count (175) - add more content for SEO
+
+---
+
+## 60. alternative-lending-florida
+**URL:** https://lendgismo.com/lp/alternative-lending-florida/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Florida Lenders
+- **Meta Description:** Lending platform for Florida MCA funders, commercial lenders, and alternative finance providers. Florida state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-florida/
+- **OG Title:** Alternative Lending Software for Florida Lenders
+- **OG Description:** Lending platform for Florida MCA funders, commercial lenders, and alternative finance providers. Florida state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Florida
+- **H2 Count:** 5
+- **H2s:**
+  - Florida Business Lending Markets
+  - Florida Regulatory Framework
+  - Hurricane & Disaster Preparedness
+  - Florida Lender Network
+  - Fast Florida Setup
+- **Word Count:** ~226
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (226) - add more content for SEO
+
+---
+
+## 61. alternative-lending-georgia
+**URL:** https://lendgismo.com/lp/alternative-lending-georgia/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Georgia Lenders
+- **Meta Description:** Lending platform for Georgia MCA funders, commercial lenders, and alternative finance providers. Atlanta and Georgia state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-georgia/
+- **OG Title:** Alternative Lending Software for Georgia Lenders
+- **OG Description:** Lending platform for Georgia MCA funders, commercial lenders, and alternative finance providers. Atlanta and Georgia state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Georgia
+- **H2 Count:** 5
+- **H2s:**
+  - Georgia Business Lending Markets
+  - Georgia Regulatory Compliance
+  - Atlanta Fintech Hub
+  - Southeast Lender Network
+  - Fast Georgia Deployment
+- **Word Count:** ~220
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (220) - add more content for SEO
+
+---
+
+## 62. alternative-lending-hawaii
+**URL:** https://lendgismo.com/lp/alternative-lending-hawaii/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Hawaii Lenders
+- **Meta Description:** Lending platform for Hawaii MCA funders and commercial lenders. Honolulu and HI state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-hawaii/
+- **OG Title:** Alternative Lending Software for Hawaii Lenders
+- **OG Description:** Lending platform for Hawaii MCA funders and commercial lenders. Honolulu and HI state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Hawaii
+- **H2 Count:** 5
+- **H2s:**
+  - Hawaii Business Markets
+  - HI Regulatory Compliance
+  - Tourism & Island Business
+  - Pacific Region Lending
+  - Fast HI Deployment
+- **Word Count:** ~178
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (178) - add more content for SEO
+
+---
+
+## 63. alternative-lending-idaho
+**URL:** https://lendgismo.com/lp/alternative-lending-idaho/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Idaho Lenders
+- **Meta Description:** Lending platform for Idaho MCA funders and commercial lenders. Boise and ID state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-idaho/
+- **OG Title:** Alternative Lending Software for Idaho Lenders
+- **OG Description:** Lending platform for Idaho MCA funders and commercial lenders. Boise and ID state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Idaho
+- **H2 Count:** 5
+- **H2s:**
+  - Idaho Business Markets
+  - ID Regulatory Compliance
+  - Agriculture & Tech Growth
+  - Western Lender Network
+  - Fast ID Deployment
+- **Word Count:** ~175
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (110 chars) - should be 120-160
+- Low word count (175) - add more content for SEO
+
+---
+
+## 64. alternative-lending-illinois
+**URL:** https://lendgismo.com/lp/alternative-lending-illinois/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Illinois Lenders
+- **Meta Description:** Lending platform for Illinois MCA funders, commercial lenders, and alternative finance providers. Chicago and Illinois state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-illinois/
+- **OG Title:** Alternative Lending Software for Illinois Lenders
+- **OG Description:** Lending platform for Illinois MCA funders, commercial lenders, and alternative finance providers. Chicago and Illinois state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Illinois
+- **H2 Count:** 5
+- **H2s:**
+  - Illinois Business Lending
+  - Illinois Regulatory Compliance
+  - Chicago Lending Market
+  - Midwest Lender Network
+  - Fast Illinois Deployment
+- **Word Count:** ~221
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (221) - add more content for SEO
+
+---
+
+## 65. alternative-lending-indiana
+**URL:** https://lendgismo.com/lp/alternative-lending-indiana/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Indiana Lenders
+- **Meta Description:** Lending platform for Indiana MCA funders and commercial lenders. Indianapolis and IN state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-indiana/
+- **OG Title:** Alternative Lending Software for Indiana Lenders
+- **OG Description:** Lending platform for Indiana MCA funders and commercial lenders. Indianapolis and IN state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Indiana
+- **H2 Count:** 5
+- **H2s:**
+  - Indiana Business Markets
+  - IN Regulatory Compliance
+  - Manufacturing & Logistics Hub
+  - Midwest Lender Network
+  - Fast IN Deployment
+- **Word Count:** ~212
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (119 chars) - should be 120-160
+- Low word count (212) - add more content for SEO
+
+---
+
+## 66. alternative-lending-iowa
+**URL:** https://lendgismo.com/lp/alternative-lending-iowa/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Iowa Lenders
+- **Meta Description:** Lending platform for Iowa MCA funders and commercial lenders. Des Moines and IA state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-iowa/
+- **OG Title:** Alternative Lending Software for Iowa Lenders
+- **OG Description:** Lending platform for Iowa MCA funders and commercial lenders. Des Moines and IA state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Iowa
+- **H2 Count:** 5
+- **H2s:**
+  - Iowa Business Markets
+  - IA Regulatory Compliance
+  - Agriculture & Food Processing
+  - Midwest Lender Network
+  - Fast IA Deployment
+- **Word Count:** ~180
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (180) - add more content for SEO
+
+---
+
+## 67. alternative-lending-kansas
+**URL:** https://lendgismo.com/lp/alternative-lending-kansas/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Kansas Lenders
+- **Meta Description:** Lending platform for Kansas MCA funders and commercial lenders. Wichita, Kansas City, and KS state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-kansas/
+- **OG Title:** Alternative Lending Software for Kansas Lenders
+- **OG Description:** Lending platform for Kansas MCA funders and commercial lenders. Wichita, Kansas City, and KS state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Kansas
+- **H2 Count:** 5
+- **H2s:**
+  - Kansas Business Markets
+  - KS Regulatory Compliance
+  - Aerospace & Agriculture
+  - Midwest Lender Network
+  - Fast KS Deployment
+- **Word Count:** ~180
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (118 chars) - should be 120-160
+- Low word count (180) - add more content for SEO
+
+---
+
+## 68. alternative-lending-kentucky
+**URL:** https://lendgismo.com/lp/alternative-lending-kentucky/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Kentucky Lenders
+- **Meta Description:** Lending platform for Kentucky MCA funders and commercial lenders. Louisville and KY state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-kentucky/
+- **OG Title:** Alternative Lending Software for Kentucky Lenders
+- **OG Description:** Lending platform for Kentucky MCA funders and commercial lenders. Louisville and KY state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Kentucky
+- **H2 Count:** 5
+- **H2s:**
+  - Kentucky Business Markets
+  - KY Regulatory Compliance
+  - Manufacturing & Logistics
+  - Southeast Lender Network
+  - Fast KY Deployment
+- **Word Count:** ~176
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (118 chars) - should be 120-160
+- Low word count (176) - add more content for SEO
+
+---
+
+## 69. alternative-lending-louisiana
+**URL:** https://lendgismo.com/lp/alternative-lending-louisiana/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Louisiana Lenders
+- **Meta Description:** Lending platform for Louisiana MCA funders and commercial lenders. New Orleans and LA state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-louisiana/
+- **OG Title:** Alternative Lending Software for Louisiana Lenders
+- **OG Description:** Lending platform for Louisiana MCA funders and commercial lenders. New Orleans and LA state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Louisiana
+- **H2 Count:** 5
+- **H2s:**
+  - Louisiana Business Markets
+  - LA Regulatory Compliance
+  - Energy & Tourism Sectors
+  - Southeast Lender Network
+  - Fast LA Deployment
+- **Word Count:** ~182
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (182) - add more content for SEO
+
+---
+
+## 70. alternative-lending-maine
+**URL:** https://lendgismo.com/lp/alternative-lending-maine/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Maine Lenders
+- **Meta Description:** Lending platform for Maine MCA funders and commercial lenders. Portland and ME state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-maine/
+- **OG Title:** Alternative Lending Software for Maine Lenders
+- **OG Description:** Lending platform for Maine MCA funders and commercial lenders. Portland and ME state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Maine
+- **H2 Count:** 5
+- **H2s:**
+  - Maine Business Markets
+  - ME Regulatory Compliance
+  - Tourism & Seafood Industries
+  - New England Lender Network
+  - Fast ME Deployment
+- **Word Count:** ~182
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (113 chars) - should be 120-160
+- Low word count (182) - add more content for SEO
+
+---
+
+## 71. alternative-lending-maryland
+**URL:** https://lendgismo.com/lp/alternative-lending-maryland/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Maryland Lenders
+- **Meta Description:** Lending platform for Maryland MCA funders and commercial lenders. Baltimore and MD state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-maryland/
+- **OG Title:** Alternative Lending Software for Maryland Lenders
+- **OG Description:** Lending platform for Maryland MCA funders and commercial lenders. Baltimore and MD state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Maryland
+- **H2 Count:** 5
+- **H2s:**
+  - Maryland Business Markets
+  - MD Regulatory Compliance
+  - DMV Government Contractors
+  - Mid-Atlantic Lender Network
+  - Fast MD Deployment
+- **Word Count:** ~199
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (117 chars) - should be 120-160
+- Low word count (199) - add more content for SEO
+
+---
+
+## 72. alternative-lending-massachusetts
+**URL:** https://lendgismo.com/lp/alternative-lending-massachusetts/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Massachusetts Lenders
+- **Meta Description:** Lending platform for Massachusetts MCA funders and commercial lenders. Boston and MA state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-massachusetts/
+- **OG Title:** Alternative Lending Software for Massachusetts Lenders
+- **OG Description:** Lending platform for Massachusetts MCA funders and commercial lenders. Boston and MA state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Massachusetts
+- **H2 Count:** 5
+- **H2s:**
+  - Massachusetts Business Lending
+  - MA Regulatory Compliance
+  - Boston Fintech & Innovation
+  - Northeast Lender Network
+  - Fast MA Deployment
+- **Word Count:** ~200
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (119 chars) - should be 120-160
+- Low word count (200) - add more content for SEO
+
+---
+
+## 73. alternative-lending-michigan
+**URL:** https://lendgismo.com/lp/alternative-lending-michigan/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Michigan Lenders
+- **Meta Description:** Lending platform for Michigan MCA funders and commercial lenders. Detroit and MI state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-michigan/
+- **OG Title:** Alternative Lending Software for Michigan Lenders
+- **OG Description:** Lending platform for Michigan MCA funders and commercial lenders. Detroit and MI state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Michigan
+- **H2 Count:** 5
+- **H2s:**
+  - Michigan Business Markets
+  - MI Regulatory Compliance
+  - Automotive & Manufacturing Expertise
+  - Midwest Lender Network
+  - Fast MI Deployment
+- **Word Count:** ~203
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (115 chars) - should be 120-160
+- Low word count (203) - add more content for SEO
+
+---
+
+## 74. alternative-lending-minnesota
+**URL:** https://lendgismo.com/lp/alternative-lending-minnesota/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Minnesota Lenders
+- **Meta Description:** Lending platform for Minnesota MCA funders and commercial lenders. Minneapolis and MN state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-minnesota/
+- **OG Title:** Alternative Lending Software for Minnesota Lenders
+- **OG Description:** Lending platform for Minnesota MCA funders and commercial lenders. Minneapolis and MN state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Minnesota
+- **H2 Count:** 5
+- **H2s:**
+  - Minnesota Business Markets
+  - MN Regulatory Compliance
+  - Twin Cities Business Hub
+  - Midwest Lender Network
+  - Fast MN Deployment
+- **Word Count:** ~199
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (199) - add more content for SEO
+
+---
+
+## 75. alternative-lending-mississippi
+**URL:** https://lendgismo.com/lp/alternative-lending-mississippi/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Mississippi Lenders
+- **Meta Description:** Lending platform for Mississippi MCA funders and commercial lenders. Jackson and MS state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-mississippi/
+- **OG Title:** Alternative Lending Software for Mississippi Lenders
+- **OG Description:** Lending platform for Mississippi MCA funders and commercial lenders. Jackson and MS state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Mississippi
+- **H2 Count:** 5
+- **H2s:**
+  - Mississippi Business Markets
+  - MS Regulatory Compliance
+  - Southeast Business Lending
+  - Southeast Lender Network
+  - Fast MS Deployment
+- **Word Count:** ~176
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (118 chars) - should be 120-160
+- Low word count (176) - add more content for SEO
+
+---
+
+## 76. alternative-lending-missouri
+**URL:** https://lendgismo.com/lp/alternative-lending-missouri/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Missouri Lenders
+- **Meta Description:** Lending platform for Missouri MCA funders and commercial lenders. Kansas City, St. Louis, and MO state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-missouri/
+- **OG Title:** Alternative Lending Software for Missouri Lenders
+- **OG Description:** Lending platform for Missouri MCA funders and commercial lenders. Kansas City, St. Louis, and MO state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Missouri
+- **H2 Count:** 5
+- **H2s:**
+  - Missouri Business Markets
+  - MO Regulatory Compliance
+  - Kansas City & St. Louis Hubs
+  - Midwest Lender Network
+  - Fast MO Deployment
+- **Word Count:** ~201
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (201) - add more content for SEO
+
+---
+
+## 77. alternative-lending-montana
+**URL:** https://lendgismo.com/lp/alternative-lending-montana/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Montana Lenders
+- **Meta Description:** Lending platform for Montana MCA funders and commercial lenders. Billings and MT state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-montana/
+- **OG Title:** Alternative Lending Software for Montana Lenders
+- **OG Description:** Lending platform for Montana MCA funders and commercial lenders. Billings and MT state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Montana
+- **H2 Count:** 5
+- **H2s:**
+  - Montana Business Markets
+  - MT Regulatory Compliance
+  - Agriculture & Energy Sectors
+  - Western Lender Network
+  - Fast MT Deployment
+- **Word Count:** ~177
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (115 chars) - should be 120-160
+- Low word count (177) - add more content for SEO
+
+---
+
+## 78. alternative-lending-nebraska
+**URL:** https://lendgismo.com/lp/alternative-lending-nebraska/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Nebraska Lenders
+- **Meta Description:** Lending platform for Nebraska MCA funders and commercial lenders. Omaha and NE state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-nebraska/
+- **OG Title:** Alternative Lending Software for Nebraska Lenders
+- **OG Description:** Lending platform for Nebraska MCA funders and commercial lenders. Omaha and NE state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Nebraska
+- **H2 Count:** 5
+- **H2s:**
+  - Nebraska Business Markets
+  - NE Regulatory Compliance
+  - Agriculture & Food Processing
+  - Midwest Lender Network
+  - Fast NE Deployment
+- **Word Count:** ~178
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (113 chars) - should be 120-160
+- Low word count (178) - add more content for SEO
+
+---
+
+## 79. alternative-lending-nevada
+**URL:** https://lendgismo.com/lp/alternative-lending-nevada/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Nevada Lenders
+- **Meta Description:** Lending platform for Nevada MCA funders and commercial lenders. Las Vegas, Reno, and NV state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-nevada/
+- **OG Title:** Alternative Lending Software for Nevada Lenders
+- **OG Description:** Lending platform for Nevada MCA funders and commercial lenders. Las Vegas, Reno, and NV state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Nevada
+- **H2 Count:** 5
+- **H2s:**
+  - Nevada Business Markets
+  - NV Regulatory Compliance
+  - Gaming & Hospitality Expertise
+  - Western Lender Network
+  - Fast NV Deployment
+- **Word Count:** ~181
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (113 chars) - should be 120-160
+- Low word count (181) - add more content for SEO
+
+---
+
+## 80. alternative-lending-new-hampshire
+**URL:** https://lendgismo.com/lp/alternative-lending-new-hampshire/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for New Hampshire Lenders
+- **Meta Description:** Lending platform for New Hampshire MCA funders and commercial lenders. Manchester and NH state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-new-hampshire/
+- **OG Title:** Alternative Lending Software for New Hampshire Lenders
+- **OG Description:** Lending platform for New Hampshire MCA funders and commercial lenders. Manchester and NH state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for New Hampshire
+- **H2 Count:** 5
+- **H2s:**
+  - New Hampshire Business Markets
+  - NH Regulatory Compliance
+  - New England Business Hub
+  - Northeast Lender Network
+  - Fast NH Deployment
+- **Word Count:** ~180
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (180) - add more content for SEO
+
+---
+
+## 81. alternative-lending-new-jersey
+**URL:** https://lendgismo.com/lp/alternative-lending-new-jersey/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for New Jersey Lenders
+- **Meta Description:** Lending platform for New Jersey MCA funders, commercial lenders, and alternative finance providers. NJ state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-new-jersey/
+- **OG Title:** Alternative Lending Software for New Jersey Lenders
+- **OG Description:** Lending platform for New Jersey MCA funders, commercial lenders, and alternative finance providers. NJ state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for New Jersey
+- **H2 Count:** 5
+- **H2s:**
+  - New Jersey Business Lending
+  - NJ Regulatory Compliance
+  - NY/NJ Metro Market
+  - Northeast Lender Network
+  - Fast NJ Deployment
+- **Word Count:** ~221
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (221) - add more content for SEO
+
+---
+
+## 82. alternative-lending-new-mexico
+**URL:** https://lendgismo.com/lp/alternative-lending-new-mexico/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for New Mexico Lenders
+- **Meta Description:** Lending platform for New Mexico MCA funders and commercial lenders. Albuquerque and NM state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-new-mexico/
+- **OG Title:** Alternative Lending Software for New Mexico Lenders
+- **OG Description:** Lending platform for New Mexico MCA funders and commercial lenders. Albuquerque and NM state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for New Mexico
+- **H2 Count:** 5
+- **H2s:**
+  - New Mexico Business Markets
+  - NM Regulatory Compliance
+  - Southwest Business Lending
+  - Southwest Lender Network
+  - Fast NM Deployment
+- **Word Count:** ~185
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (185) - add more content for SEO
+
+---
+
+## 83. alternative-lending-new-york
+**URL:** https://lendgismo.com/lp/alternative-lending-new-york/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for New York Lenders
+- **Meta Description:** Lending platform for New York MCA funders, commercial lenders, and fintech companies. NYC and NYS banking law compliant software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-new-york/
+- **OG Title:** Alternative Lending Software for New York Lenders
+- **OG Description:** Lending platform for New York MCA funders, commercial lenders, and fintech companies. NYC and NYS banking law compliant software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for New York
+- **H2 Count:** 5
+- **H2s:**
+  - New York Lending Hub
+  - NYS Banking Law Compliance
+  - Commercial Financing Disclosures
+  - New York Lender Community
+  - Enterprise-Grade Platform
+- **Word Count:** ~239
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (239) - add more content for SEO
+
+---
+
+## 84. alternative-lending-north-carolina
+**URL:** https://lendgismo.com/lp/alternative-lending-north-carolina/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for North Carolina Lenders
+- **Meta Description:** Lending platform for North Carolina MCA funders, commercial lenders, and alternative finance providers. Charlotte and NC state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-north-carolina/
+- **OG Title:** Alternative Lending Software for North Carolina Lenders
+- **OG Description:** Lending platform for North Carolina MCA funders, commercial lenders, and alternative finance providers. Charlotte and NC state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for North Carolina
+- **H2 Count:** 5
+- **H2s:**
+  - North Carolina Business Markets
+  - NC Regulatory Compliance
+  - Charlotte Banking Center
+  - Southeast Lender Network
+  - Fast NC Deployment
+- **Word Count:** ~220
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (220) - add more content for SEO
+
+---
+
+## 85. alternative-lending-north-dakota
+**URL:** https://lendgismo.com/lp/alternative-lending-north-dakota/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for North Dakota Lenders
+- **Meta Description:** Lending platform for North Dakota MCA funders and commercial lenders. Fargo and ND state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-north-dakota/
+- **OG Title:** Alternative Lending Software for North Dakota Lenders
+- **OG Description:** Lending platform for North Dakota MCA funders and commercial lenders. Fargo and ND state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for North Dakota
+- **H2 Count:** 5
+- **H2s:**
+  - North Dakota Business Markets
+  - ND Regulatory Compliance
+  - Energy & Agriculture Sectors
+  - Upper Midwest Lender Network
+  - Fast ND Deployment
+- **Word Count:** ~186
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (117 chars) - should be 120-160
+- Low word count (186) - add more content for SEO
+
+---
+
+## 86. alternative-lending-ohio
+**URL:** https://lendgismo.com/lp/alternative-lending-ohio/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Ohio Lenders
+- **Meta Description:** Lending platform for Ohio MCA funders, commercial lenders, and alternative finance providers. Cleveland, Columbus, Cincinnati market expertise.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-ohio/
+- **OG Title:** Alternative Lending Software for Ohio Lenders
+- **OG Description:** Lending platform for Ohio MCA funders, commercial lenders, and alternative finance providers. Cleveland, Columbus, Cincinnati market expertise.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Ohio
+- **H2 Count:** 5
+- **H2s:**
+  - Ohio Business Lending Markets
+  - Ohio Regulatory Compliance
+  - Manufacturing & Industrial Lending
+  - Midwest Lender Network
+  - Fast Ohio Deployment
+- **Word Count:** ~216
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (216) - add more content for SEO
+
+---
+
+## 87. alternative-lending-oklahoma
+**URL:** https://lendgismo.com/lp/alternative-lending-oklahoma/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Oklahoma Lenders
+- **Meta Description:** Lending platform for Oklahoma MCA funders and commercial lenders. Oklahoma City, Tulsa, and OK state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-oklahoma/
+- **OG Title:** Alternative Lending Software for Oklahoma Lenders
+- **OG Description:** Lending platform for Oklahoma MCA funders and commercial lenders. Oklahoma City, Tulsa, and OK state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Oklahoma
+- **H2 Count:** 5
+- **H2s:**
+  - Oklahoma Business Markets
+  - OK Regulatory Compliance
+  - Energy Sector Expertise
+  - Southwest Lender Network
+  - Fast OK Deployment
+- **Word Count:** ~179
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (179) - add more content for SEO
+
+---
+
+## 88. alternative-lending-oregon
+**URL:** https://lendgismo.com/lp/alternative-lending-oregon/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Oregon Lenders
+- **Meta Description:** Lending platform for Oregon MCA funders and commercial lenders. Portland and OR state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-oregon/
+- **OG Title:** Alternative Lending Software for Oregon Lenders
+- **OG Description:** Lending platform for Oregon MCA funders and commercial lenders. Portland and OR state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Oregon
+- **H2 Count:** 5
+- **H2s:**
+  - Oregon Business Markets
+  - OR Regulatory Compliance
+  - Portland Tech & Innovation
+  - West Coast Lender Network
+  - Fast OR Deployment
+- **Word Count:** ~177
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (177) - add more content for SEO
+
+---
+
+## 89. alternative-lending-pennsylvania
+**URL:** https://lendgismo.com/lp/alternative-lending-pennsylvania/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Pennsylvania Lenders
+- **Meta Description:** Lending platform for Pennsylvania MCA funders, commercial lenders, and alternative finance providers. Philadelphia and PA state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-pennsylvania/
+- **OG Title:** Alternative Lending Software for Pennsylvania Lenders
+- **OG Description:** Lending platform for Pennsylvania MCA funders, commercial lenders, and alternative finance providers. Philadelphia and PA state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Pennsylvania
+- **H2 Count:** 5
+- **H2s:**
+  - Pennsylvania Business Lending
+  - PA Regulatory Framework
+  - Philadelphia & Pittsburgh Markets
+  - Mid-Atlantic Lender Network
+  - Fast PA Deployment
+- **Word Count:** ~212
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (212) - add more content for SEO
+
+---
+
+## 90. alternative-lending-rhode-island
+**URL:** https://lendgismo.com/lp/alternative-lending-rhode-island/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Rhode Island Lenders
+- **Meta Description:** Lending platform for Rhode Island MCA funders and commercial lenders. Providence and RI state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-rhode-island/
+- **OG Title:** Alternative Lending Software for Rhode Island Lenders
+- **OG Description:** Lending platform for Rhode Island MCA funders and commercial lenders. Providence and RI state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Rhode Island
+- **H2 Count:** 5
+- **H2s:**
+  - Rhode Island Business Markets
+  - RI Regulatory Compliance
+  - New England Business Hub
+  - Northeast Lender Network
+  - Fast RI Deployment
+- **Word Count:** ~182
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (113 chars) - should be 120-160
+- Low word count (182) - add more content for SEO
+
+---
+
+## 91. alternative-lending-south-carolina
+**URL:** https://lendgismo.com/lp/alternative-lending-south-carolina/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for South Carolina Lenders
+- **Meta Description:** Lending platform for South Carolina MCA funders and commercial lenders. Charleston, Columbia, and SC state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-south-carolina/
+- **OG Title:** Alternative Lending Software for South Carolina Lenders
+- **OG Description:** Lending platform for South Carolina MCA funders and commercial lenders. Charleston, Columbia, and SC state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for South Carolina
+- **H2 Count:** 5
+- **H2s:**
+  - South Carolina Business Markets
+  - SC Regulatory Compliance
+  - Southeast Business Hub
+  - Southeast Lender Network
+  - Fast SC Deployment
+- **Word Count:** ~181
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (181) - add more content for SEO
+
+---
+
+## 92. alternative-lending-south-dakota
+**URL:** https://lendgismo.com/lp/alternative-lending-south-dakota/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for South Dakota Lenders
+- **Meta Description:** Lending platform for South Dakota MCA funders and commercial lenders. Sioux Falls and SD state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-south-dakota/
+- **OG Title:** Alternative Lending Software for South Dakota Lenders
+- **OG Description:** Lending platform for South Dakota MCA funders and commercial lenders. Sioux Falls and SD state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for South Dakota
+- **H2 Count:** 5
+- **H2s:**
+  - South Dakota Business Markets
+  - SD Regulatory Compliance
+  - Financial Services & Agriculture
+  - Midwest Lender Network
+  - Fast SD Deployment
+- **Word Count:** ~187
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (187) - add more content for SEO
+
+---
+
+## 93. alternative-lending-tennessee
+**URL:** https://lendgismo.com/lp/alternative-lending-tennessee/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Tennessee Lenders
+- **Meta Description:** Lending platform for Tennessee MCA funders and commercial lenders. Nashville, Memphis, and TN state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-tennessee/
+- **OG Title:** Alternative Lending Software for Tennessee Lenders
+- **OG Description:** Lending platform for Tennessee MCA funders and commercial lenders. Nashville, Memphis, and TN state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Tennessee
+- **H2 Count:** 5
+- **H2s:**
+  - Tennessee Business Markets
+  - TN Regulatory Compliance
+  - Nashville Business Hub
+  - Southeast Lender Network
+  - Fast TN Deployment
+- **Word Count:** ~195
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (119 chars) - should be 120-160
+- Low word count (195) - add more content for SEO
+
+---
+
+## 94. alternative-lending-texas
+**URL:** https://lendgismo.com/lp/alternative-lending-texas/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Texas Lenders
+- **Meta Description:** Lending platform for Texas-based MCA funders, commercial lenders, and alternative finance providers. Compliant with Texas state lending regulations.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-texas/
+- **OG Title:** Alternative Lending Software for Texas Lenders
+- **OG Description:** Lending platform for Texas-based MCA funders, commercial lenders, and alternative finance providers. Compliant with Texas state lending regulations.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Texas
+- **H2 Count:** 5
+- **H2s:**
+  - Serving Texas Business Diversity
+  - Texas Regulatory Compliance
+  - Local Market Expertise
+  - Texas Lender Network
+  - Fast Texas Deployment
+- **Word Count:** ~238
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (238) - add more content for SEO
+
+---
+
+## 95. alternative-lending-utah
+**URL:** https://lendgismo.com/lp/alternative-lending-utah/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Utah Lenders
+- **Meta Description:** Lending platform for Utah MCA funders and commercial lenders. Salt Lake City and UT state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-utah/
+- **OG Title:** Alternative Lending Software for Utah Lenders
+- **OG Description:** Lending platform for Utah MCA funders and commercial lenders. Salt Lake City and UT state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Utah
+- **H2 Count:** 5
+- **H2s:**
+  - Utah Business Markets
+  - UT Regulatory Compliance
+  - Tech & Innovation Hub
+  - Western Lender Network
+  - Fast UT Deployment
+- **Word Count:** ~184
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (118 chars) - should be 120-160
+- Low word count (184) - add more content for SEO
+
+---
+
+## 96. alternative-lending-vermont
+**URL:** https://lendgismo.com/lp/alternative-lending-vermont/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Vermont Lenders
+- **Meta Description:** Lending platform for Vermont MCA funders and commercial lenders. Burlington and VT state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-vermont/
+- **OG Title:** Alternative Lending Software for Vermont Lenders
+- **OG Description:** Lending platform for Vermont MCA funders and commercial lenders. Burlington and VT state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Vermont
+- **H2 Count:** 5
+- **H2s:**
+  - Vermont Business Markets
+  - VT Regulatory Compliance
+  - Small Business & Agriculture
+  - New England Lender Network
+  - Fast VT Deployment
+- **Word Count:** ~181
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (117 chars) - should be 120-160
+- Low word count (181) - add more content for SEO
+
+---
+
+## 97. alternative-lending-virginia
+**URL:** https://lendgismo.com/lp/alternative-lending-virginia/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Virginia Lenders
+- **Meta Description:** Lending platform for Virginia MCA funders and commercial lenders. Richmond and Northern Virginia lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-virginia/
+- **OG Title:** Alternative Lending Software for Virginia Lenders
+- **OG Description:** Lending platform for Virginia MCA funders and commercial lenders. Richmond and Northern Virginia lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Virginia
+- **H2 Count:** 5
+- **H2s:**
+  - Virginia Business Markets
+  - VA Regulatory Compliance
+  - Northern Virginia Government Contractors
+  - Southeast Lender Network
+  - Fast VA Deployment
+- **Word Count:** ~203
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (203) - add more content for SEO
+
+---
+
+## 98. alternative-lending-washington
+**URL:** https://lendgismo.com/lp/alternative-lending-washington/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Washington Lenders
+- **Meta Description:** Lending platform for Washington state MCA funders and commercial lenders. Seattle and WA state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-washington/
+- **OG Title:** Alternative Lending Software for Washington Lenders
+- **OG Description:** Lending platform for Washington state MCA funders and commercial lenders. Seattle and WA state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Washington
+- **H2 Count:** 5
+- **H2s:**
+  - Washington Business Markets
+  - WA Regulatory Compliance
+  - Seattle Tech & Innovation
+  - West Coast Lender Network
+  - Fast WA Deployment
+- **Word Count:** ~208
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Low word count (208) - add more content for SEO
+
+---
+
+## 99. alternative-lending-west-virginia
+**URL:** https://lendgismo.com/lp/alternative-lending-west-virginia/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for West Virginia Lenders
+- **Meta Description:** Lending platform for West Virginia MCA funders and commercial lenders. Charleston and WV state lending compliance.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-west-virginia/
+- **OG Title:** Alternative Lending Software for West Virginia Lenders
+- **OG Description:** Lending platform for West Virginia MCA funders and commercial lenders. Charleston and WV state lending compliance.
+
+### Content Structure
+- **H1:** Alternative Lending Software for West Virginia
+- **H2 Count:** 5
+- **H2s:**
+  - West Virginia Business Markets
+  - WV Regulatory Compliance
+  - Energy & Manufacturing
+  - Mid-Atlantic Lender Network
+  - Fast WV Deployment
+- **Word Count:** ~181
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (114 chars) - should be 120-160
+- Low word count (181) - add more content for SEO
+
+---
+
+## 100. alternative-lending-wisconsin
+**URL:** https://lendgismo.com/lp/alternative-lending-wisconsin/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Wisconsin Lenders
+- **Meta Description:** Lending platform for Wisconsin MCA funders and commercial lenders. Milwaukee and WI state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-wisconsin/
+- **OG Title:** Alternative Lending Software for Wisconsin Lenders
+- **OG Description:** Lending platform for Wisconsin MCA funders and commercial lenders. Milwaukee and WI state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Wisconsin
+- **H2 Count:** 5
+- **H2s:**
+  - Wisconsin Business Markets
+  - WI Regulatory Compliance
+  - Manufacturing & Agriculture Lending
+  - Midwest Lender Network
+  - Fast WI Deployment
+- **Word Count:** ~199
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (118 chars) - should be 120-160
+- Low word count (199) - add more content for SEO
+
+---
+
+## 101. alternative-lending-wyoming
+**URL:** https://lendgismo.com/lp/alternative-lending-wyoming/
+
+### SEO Metadata
+- **Title:** Alternative Lending Software for Wyoming Lenders
+- **Meta Description:** Lending platform for Wyoming MCA funders and commercial lenders. Cheyenne and WY state lending compliance software.
+- **Canonical:** https://lendgismo.com/lp/alternative-lending-wyoming/
+- **OG Title:** Alternative Lending Software for Wyoming Lenders
+- **OG Description:** Lending platform for Wyoming MCA funders and commercial lenders. Cheyenne and WY state lending compliance software.
+
+### Content Structure
+- **H1:** Alternative Lending Software for Wyoming
+- **H2 Count:** 5
+- **H2s:**
+  - Wyoming Business Markets
+  - WY Regulatory Compliance
+  - Energy & Mining Sectors
+  - Western Lender Network
+  - Fast WY Deployment
+- **Word Count:** ~172
+
+### Conversion Elements
+- **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
+  - "Contact"
+  - "Book a demo"
+
+### Issues to Address
+- Meta description length (115 chars) - should be 120-160
+- Low word count (172) - add more content for SEO
+
+---
+
+## 102. api-webhooks
 **URL:** https://lendgismo.com/lp/api-webhooks/
 
 ### SEO Metadata
-- **Title:** APIs & webhooks for lenders | Lendgismo
-- **Meta Description:** Connect external systems and trigger custom workflows safely.
+- **Title:** Lending API & Webhooks | Lendgismo
+- **Meta Description:** RESTful API and webhook events for lending platform integration. Developer-friendly API for applications, decisioning, and loan servicing automation.
 - **Canonical:** https://lendgismo.com/lp/api-webhooks/
-- **OG Title:** APIs & webhooks for lenders | Lendgismo
-- **OG Description:** Connect external systems and trigger custom workflows safely.
+- **OG Title:** Lending API & Webhooks | Lendgismo
+- **OG Description:** RESTful API and webhook events for lending platform integration. Developer-friendly API for applications, decisioning, and loan servicing automation.
 
 ### Content Structure
-- **H1:** APIs & webhooks
-- **H2 Count:** 4
+- **H1:** API & Webhooks for Lending Platform Integration
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - RESTful API for Lending Operations
+  - Webhook Events for Real-Time Updates
+  - Developer-Friendly Documentation
+  - Authentication & Rate Limits
+  - Built for Integration Partners
+- **Word Count:** ~231
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (61 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (231) - add more content for SEO
 
 ---
 
-## 53. asset-based-lending-software
+## 103. asset-based-lending-software
 **URL:** https://lendgismo.com/lp/asset-based-lending-software/
 
 ### SEO Metadata
-- **Title:** Asset-based lending (ABL) software | Lendgismo
-- **Meta Description:** ABL workflows, collateral tracking, and customizable underwriting checklists with lender-grade exports and audit trails.
+- **Title:** Asset-Based Lending (ABL) Software | Lendgismo
+- **Meta Description:** ABL lending software with collateral tracking, borrowing base calculations, field audits, and compliance reporting. White-label platform for asset-based lenders.
 - **Canonical:** https://lendgismo.com/lp/asset-based-lending-software/
-- **OG Title:** Asset-based lending (ABL) software | Lendgismo
-- **OG Description:** ABL workflows, collateral tracking, and customizable underwriting checklists with lender-grade exports and audit trails.
+- **OG Title:** Asset-Based Lending (ABL) Software | Lendgismo
+- **OG Description:** ABL lending software with collateral tracking, borrowing base calculations, field audits, and compliance reporting. White-label platform for asset-based lenders.
 
 ### Content Structure
-- **H1:** Asset-based lending software
-- **H2 Count:** 4
+- **H1:** Asset-Based Lending Software for ABL Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~165
+  - Collateral Management & Borrowing Base
+  - Field Exam & Audit Workflows
+  - Underwriting for ABL Use Cases
+  - Integrations for ABL Lenders
+  - Why ABL Lenders Trust Lendgismo
+- **Word Count:** ~255
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Low word count (165) - add more content for SEO
+- Meta description length (161 chars) - should be 120-160
+- Low word count (255) - add more content for SEO
 
 ---
 
-## 54. borrower-onboarding
+## 104. borrower-onboarding
 **URL:** https://lendgismo.com/lp/borrower-onboarding/
 
 ### SEO Metadata
-- **Title:** Borrower onboarding & document collection | Lendgismo
-- **Meta Description:** Friction-light intake, e-sign, and document capture tailored to your programs.
+- **Title:** Borrower Onboarding & Document Collection Software
+- **Meta Description:** Digital onboarding for lenders with KYC, document upload, e-sign, and verification. Reduce friction and increase conversion with automated borrower intake.
 - **Canonical:** https://lendgismo.com/lp/borrower-onboarding/
-- **OG Title:** Borrower onboarding & document collection | Lendgismo
-- **OG Description:** Friction-light intake, e-sign, and document capture tailored to your programs.
+- **OG Title:** Borrower Onboarding & Document Collection Software
+- **OG Description:** Digital onboarding for lenders with KYC, document upload, e-sign, and verification. Reduce friction and increase conversion with automated borrower intake.
 
 ### Content Structure
-- **H1:** Borrower onboarding & doc collection
-- **H2 Count:** 4
+- **H1:** Borrower Onboarding & Digital Document Collection
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~163
+  - Digital Application & Intake
+  - KYC & Identity Verification
+  - Document Collection & Management
+  - E-Signature & Term Sheet Execution
+  - Increase Conversion & Reduce Drop-Off
+- **Word Count:** ~241
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (78 chars) - should be 120-160
-- Low word count (163) - add more content for SEO
+- Low word count (241) - add more content for SEO
 
 ---
 
-## 55. cashflow-analysis
+## 105. cashflow-analysis
 **URL:** https://lendgismo.com/lp/cashflow-analysis/
 
 ### SEO Metadata
-- **Title:** Cash-flow analysis for underwriting | Lendgismo
-- **Meta Description:** Bank & accounting data to evaluate capacity and trends.
+- **Title:** Cash Flow Analysis for Lenders | Lendgismo
+- **Meta Description:** Analyze borrower cash flow with bank account data from Plaid. Automate revenue verification, expense categorization, and repayment capacity calculations.
 - **Canonical:** https://lendgismo.com/lp/cashflow-analysis/
-- **OG Title:** Cash-flow analysis for underwriting | Lendgismo
-- **OG Description:** Bank & accounting data to evaluate capacity and trends.
+- **OG Title:** Cash Flow Analysis for Lenders | Lendgismo
+- **OG Description:** Analyze borrower cash flow with bank account data from Plaid. Automate revenue verification, expense categorization, and repayment capacity calculations.
 
 ### Content Structure
-- **H1:** Cash-flow analysis for underwriting
-- **H2 Count:** 4
+- **H1:** Cash Flow Analysis for Alternative Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Bank Account Transaction Analysis
+  - Revenue Verification & Trends
+  - Expense Analysis & Free Cash Flow
+  - Repayment Capacity Calculation
+  - Built for Cash Flow Lenders
+- **Word Count:** ~240
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (55 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (240) - add more content for SEO
 
 ---
 
-## 56. collections-workflows
+## 106. collections-workflows
 **URL:** https://lendgismo.com/lp/collections-workflows/
 
 ### SEO Metadata
-- **Title:** Collections workflows | Lendgismo
-- **Meta Description:** Queue-based follow-ups, notes, reminders, and payment links.
+- **Title:** Collections & Payment Workflows | Lendgismo
+- **Meta Description:** Automate collections with payment reminders, dunning sequences, and delinquency management. Collections software for alternative lenders.
 - **Canonical:** https://lendgismo.com/lp/collections-workflows/
-- **OG Title:** Collections workflows | Lendgismo
-- **OG Description:** Queue-based follow-ups, notes, reminders, and payment links.
+- **OG Title:** Collections & Payment Workflows | Lendgismo
+- **OG Description:** Automate collections with payment reminders, dunning sequences, and delinquency management. Collections software for alternative lenders.
 
 ### Content Structure
-- **H1:** Collections workflows
-- **H2 Count:** 4
+- **H1:** Collections & Payment Workflows for Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~157
+  - Automated Payment Reminders
+  - Delinquency & Dunning Workflows
+  - Section
+  - Compliance & FDCPA Adherence
+  - Built for Portfolio Performance
+- **Word Count:** ~232
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (60 chars) - should be 120-160
-- Low word count (157) - add more content for SEO
+- Low word count (232) - add more content for SEO
 
 ---
 
-## 57. compliance-audit-trail
+## 107. compliance-audit-trail
 **URL:** https://lendgismo.com/lp/compliance-audit-trail/
 
 ### SEO Metadata
-- **Title:** Compliance & audit trail | Lendgismo
-- **Meta Description:** Every action logged with timestamp, user, and context for audits.
+- **Title:** Compliance & Audit Trail for Lenders | Lendgismo
+- **Meta Description:** Maintain regulatory compliance with comprehensive audit trails, user activity logs, and data retention policies. SOC 2 compliant lending software.
 - **Canonical:** https://lendgismo.com/lp/compliance-audit-trail/
-- **OG Title:** Compliance & audit trail | Lendgismo
-- **OG Description:** Every action logged with timestamp, user, and context for audits.
+- **OG Title:** Compliance & Audit Trail for Lenders | Lendgismo
+- **OG Description:** Maintain regulatory compliance with comprehensive audit trails, user activity logs, and data retention policies. SOC 2 compliant lending software.
 
 ### Content Structure
-- **H1:** Compliance & audit trail
-- **H2 Count:** 4
+- **H1:** Compliance & Audit Trail for Regulatory Confidence
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~162
+  - Comprehensive Activity Logging
+  - Data Retention & Archival
+  - Regulatory Reporting
+  - Security & Access Controls
+  - SOC 2 Compliant Infrastructure
+- **Word Count:** ~246
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (65 chars) - should be 120-160
-- Low word count (162) - add more content for SEO
+- Low word count (246) - add more content for SEO
 
 ---
 
-## 58. decisioning-rules-engine
+## 108. decisioning-rules-engine
 **URL:** https://lendgismo.com/lp/decisioning-rules-engine/
 
 ### SEO Metadata
-- **Title:** Decisioning rules engine | Lendgismo
-- **Meta Description:** Configurable decision rules, scorecards, and policy checks.
+- **Title:** Lending Decisioning Rules Engine | Lendgismo
+- **Meta Description:** Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails.
 - **Canonical:** https://lendgismo.com/lp/decisioning-rules-engine/
-- **OG Title:** Decisioning rules engine | Lendgismo
-- **OG Description:** Configurable decision rules, scorecards, and policy checks.
+- **OG Title:** Lending Decisioning Rules Engine | Lendgismo
+- **OG Description:** Configure credit policies with rules-based decisioning. Automate approval, decline, and manual review decisions with transparent logic and audit trails.
 
 ### Content Structure
-- **H1:** Decisioning rules engine
-- **H2 Count:** 4
+- **H1:** Decisioning Rules Engine for Automated Approvals
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~158
+  - Configurable Decision Rules
+  - Scorecard-Based Underwriting
+  - Manual Review Queues
+  - Transparent Decision Logic
+  - Proven for Alternative Lenders
+- **Word Count:** ~225
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (59 chars) - should be 120-160
-- Low word count (158) - add more content for SEO
+- Low word count (225) - add more content for SEO
 
 ---
 
-## 59. document-management
+## 109. document-management
 **URL:** https://lendgismo.com/lp/document-management/
 
 ### SEO Metadata
-- **Title:** Document management for lenders | Lendgismo
-- **Meta Description:** Organize borrower docs with permissions, versions, and logs.
+- **Title:** Document Management for Lending | Lendgismo
+- **Meta Description:** Centralized document storage, versioning, and access controls for loan files. Secure document management with audit trails and regulatory compliance.
 - **Canonical:** https://lendgismo.com/lp/document-management/
-- **OG Title:** Document management for lenders | Lendgismo
-- **OG Description:** Organize borrower docs with permissions, versions, and logs.
+- **OG Title:** Document Management for Lending | Lendgismo
+- **OG Description:** Centralized document storage, versioning, and access controls for loan files. Secure document management with audit trails and regulatory compliance.
 
 ### Content Structure
-- **H1:** Document management
-- **H2 Count:** 4
+- **H1:** Document Management for Loan Files & Compliance
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~158
+  - Centralized Document Repository
+  - Version Control & Document History
+  - Role-Based Access & Permissions
+  - OCR & Data Extraction
+  - Security & Compliance
+- **Word Count:** ~233
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (60 chars) - should be 120-160
-- Low word count (158) - add more content for SEO
+- Low word count (233) - add more content for SEO
 
 ---
 
-## 60. ecommerce-lender-software
+## 110. ecommerce-lender-software
 **URL:** https://lendgismo.com/lp/ecommerce-lender-software/
 
 ### SEO Metadata
-- **Title:** E-commerce lender software | Lendgismo
-- **Meta Description:** Serve online merchants with data-driven underwriting and payouts.
+- **Title:** Ecommerce Lending Software | Lendgismo
+- **Meta Description:** Lending software for ecommerce businesses. Integrate with Shopify, Amazon, and payment processors for revenue-based financing and inventory loans.
 - **Canonical:** https://lendgismo.com/lp/ecommerce-lender-software/
-- **OG Title:** E-commerce lender software | Lendgismo
-- **OG Description:** Serve online merchants with data-driven underwriting and payouts.
+- **OG Title:** Ecommerce Lending Software | Lendgismo
+- **OG Description:** Lending software for ecommerce businesses. Integrate with Shopify, Amazon, and payment processors for revenue-based financing and inventory loans.
 
 ### Content Structure
-- **H1:** E-commerce lender software
-- **H2 Count:** 4
+- **H1:** Ecommerce Lending Software
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - Ecommerce Data Integration
+  - Revenue-Based Repayment
+  - Inventory & Purchase Order Financing
+  - Underwriting Ecommerce Metrics
+  - Built for Ecommerce Lenders
+- **Word Count:** ~214
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (65 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (214) - add more content for SEO
 
 ---
 
-## 61. equipment-finance-software
+## 111. equipment-finance-software
 **URL:** https://lendgismo.com/lp/equipment-finance-software/
 
 ### SEO Metadata
-- **Title:** Equipment finance lender software | Lendgismo
-- **Meta Description:** Equipment finance flow: intake, underwriting, docs, servicing.
+- **Title:** Equipment Financing Software | Lendgismo
+- **Meta Description:** Equipment finance origination and servicing software. Manage lease applications, asset tracking, and payment schedules for equipment lenders.
 - **Canonical:** https://lendgismo.com/lp/equipment-finance-software/
-- **OG Title:** Equipment finance lender software | Lendgismo
-- **OG Description:** Equipment finance flow: intake, underwriting, docs, servicing.
+- **OG Title:** Equipment Financing Software | Lendgismo
+- **OG Description:** Equipment finance origination and servicing software. Manage lease applications, asset tracking, and payment schedules for equipment lenders.
 
 ### Content Structure
-- **H1:** Equipment finance software
-- **H2 Count:** 4
+- **H1:** Equipment Finance Software for Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~158
+  - Equipment Lease Origination
+  - Asset & Collateral Tracking
+  - Payment Servicing & Amortization
+  - Vendor & Dealer Networks
+  - Built for Equipment Lenders
+- **Word Count:** ~224
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (62 chars) - should be 120-160
-- Low word count (158) - add more content for SEO
+- Low word count (224) - add more content for SEO
 
 ---
 
-## 62. for-community-banks-smb
+## 112. for-community-banks-smb
 **URL:** https://lendgismo.com/lp/for-community-banks-smb/
 
 ### SEO Metadata
-- **Title:** For community banks (SMB) | Lendgismo
-- **Meta Description:** Community lenders: accelerate SMB onboarding & decisions.
+- **Title:** SMB Lending Software for Community Banks
+- **Meta Description:** Small business lending platform for community banks. Commercial lending origination, underwriting, and portfolio management for local banks.
 - **Canonical:** https://lendgismo.com/lp/for-community-banks-smb/
-- **OG Title:** For community banks (SMB) | Lendgismo
-- **OG Description:** Community lenders: accelerate SMB onboarding & decisions.
+- **OG Title:** SMB Lending Software for Community Banks
+- **OG Description:** Small business lending platform for community banks. Commercial lending origination, underwriting, and portfolio management for local banks.
 
 ### Content Structure
-- **H1:** For community banks — SMB lending
-- **H2 Count:** 4
+- **H1:** SMB Lending Software for Community Banks
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Digital Commercial Lending
+  - Relationship Lending Workflows
+  - Core Banking Integration
+  - Community Bank Compliance
+  - Built for Community Banks
+- **Word Count:** ~221
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (57 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (221) - add more content for SEO
 
 ---
 
-## 63. for-credit-unions-smb
+## 113. for-credit-unions-smb
 **URL:** https://lendgismo.com/lp/for-credit-unions-smb/
 
 ### SEO Metadata
-- **Title:** For credit unions (SMB) | Lendgismo
-- **Meta Description:** Modernize SMB programs with underwriting automation & UX.
+- **Title:** SMB Lending Software for Credit Unions
+- **Meta Description:** Small business lending platform for credit unions. Member business lending with SBA loan processing, underwriting automation, and portfolio management.
 - **Canonical:** https://lendgismo.com/lp/for-credit-unions-smb/
-- **OG Title:** For credit unions (SMB) | Lendgismo
-- **OG Description:** Modernize SMB programs with underwriting automation & UX.
+- **OG Title:** SMB Lending Software for Credit Unions
+- **OG Description:** Small business lending platform for credit unions. Member business lending with SBA loan processing, underwriting automation, and portfolio management.
 
 ### Content Structure
-- **H1:** For credit unions — SMB lending
-- **H2 Count:** 4
+- **H1:** SMB Lending Software for Credit Unions
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~162
+  - Member Business Loan Origination
+  - SBA Loan Processing
+  - Credit Union Compliance
+  - Section
+  - Built for Credit Unions
+- **Word Count:** ~224
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (57 chars) - should be 120-160
-- Low word count (162) - add more content for SEO
+- Low word count (224) - add more content for SEO
 
 ---
 
-## 64. for-iso-brokers
+## 114. for-iso-brokers
 **URL:** https://lendgismo.com/lp/for-iso-brokers/
 
 ### SEO Metadata
-- **Title:** For ISO / brokers | Lendgismo
-- **Meta Description:** Partner portal, deal routing, status, and referral analytics.
+- **Title:** Software for ISO Brokers & Merchant Cash Advance Brokers
+- **Meta Description:** ISO broker portal for submitting MCA deals, tracking commissions, and managing merchant relationships. White-label broker software.
 - **Canonical:** https://lendgismo.com/lp/for-iso-brokers/
-- **OG Title:** For ISO / brokers | Lendgismo
-- **OG Description:** Partner portal, deal routing, status, and referral analytics.
+- **OG Title:** Software for ISO Brokers & Merchant Cash Advance Brokers
+- **OG Description:** ISO broker portal for submitting MCA deals, tracking commissions, and managing merchant relationships. White-label broker software.
 
 ### Content Structure
-- **H1:** Platform for ISOs & brokers
-- **H2 Count:** 4
+- **H1:** Software for ISO Brokers & MCA Brokers
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Deal Submission & Document Upload
+  - Real-Time Deal Tracking
+  - Commission Statements & Payouts
+  - Multi-Lender Network Access
+  - Built for ISOs at Scale
+- **Word Count:** ~217
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Title length (29 chars) - should be 30-60
-- Meta description length (61 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (217) - add more content for SEO
 
 ---
 
-## 65. for-mca-funders
+## 115. for-mca-funders
 **URL:** https://lendgismo.com/lp/for-mca-funders/
 
 ### SEO Metadata
-- **Title:** For MCA funders | Lendgismo
-- **Meta Description:** Everything MCAs need to intake, decision, collect, and report.
+- **Title:** MCA Software for Merchant Cash Advance Funders
+- **Meta Description:** Complete MCA origination and servicing platform for merchant cash advance funders. Manage ISO networks, daily ACH collections, and factor rate pricing.
 - **Canonical:** https://lendgismo.com/lp/for-mca-funders/
-- **OG Title:** For MCA funders | Lendgismo
-- **OG Description:** Everything MCAs need to intake, decision, collect, and report.
+- **OG Title:** MCA Software for Merchant Cash Advance Funders
+- **OG Description:** Complete MCA origination and servicing platform for merchant cash advance funders. Manage ISO networks, daily ACH collections, and factor rate pricing.
 
 ### Content Structure
-- **H1:** Lending OS for MCA funders
-- **H2 Count:** 4
+- **H1:** MCA Software Built for Merchant Cash Advance Funders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~162
+  - High-Volume MCA Origination
+  - ISO Network Management
+  - Daily ACH Collections & Reconciliation
+  - Factor Rate Pricing & Renewals
+  - Proven at Scale
+- **Word Count:** ~246
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Title length (27 chars) - should be 30-60
-- Meta description length (62 chars) - should be 120-160
-- Low word count (162) - add more content for SEO
+- Low word count (246) - add more content for SEO
 
 ---
 
-## 66. for-nonbank-lenders
+## 116. for-nonbank-lenders
 **URL:** https://lendgismo.com/lp/for-nonbank-lenders/
 
 ### SEO Metadata
-- **Title:** For non-bank lenders | Lendgismo
-- **Meta Description:** Launch alternative lending programs with lender-grade rails.
+- **Title:** Software for Nonbank Lenders & Alternative Lenders
+- **Meta Description:** Complete lending platform for nonbank lenders, fintech companies, and alternative finance providers. Origination, underwriting, servicing, and compliance.
 - **Canonical:** https://lendgismo.com/lp/for-nonbank-lenders/
-- **OG Title:** For non-bank lenders | Lendgismo
-- **OG Description:** Launch alternative lending programs with lender-grade rails.
+- **OG Title:** Software for Nonbank Lenders & Alternative Lenders
+- **OG Description:** Complete lending platform for nonbank lenders, fintech companies, and alternative finance providers. Origination, underwriting, servicing, and compliance.
 
 ### Content Structure
-- **H1:** For non-bank lenders
-- **H2 Count:** 4
+- **H1:** Software for Nonbank & Alternative Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~158
+  - Multi-Product Lending Platform
+  - Alternative Underwriting Data
+  - Flexible Servicing & Collections
+  - Compliance for Nonbank Lenders
+  - Proven with Fintech Lenders
+- **Word Count:** ~229
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (60 chars) - should be 120-160
-- Low word count (158) - add more content for SEO
+- Low word count (229) - add more content for SEO
 
 ---
 
-## 67. fraud-detection-kyc-aml
+## 117. fraud-detection-kyc-aml
 **URL:** https://lendgismo.com/lp/fraud-detection-kyc-aml/
 
 ### SEO Metadata
-- **Title:** Fraud detection, KYC/AML | Lendgismo
-- **Meta Description:** Mitigate risk with identity/business checks and alerts.
+- **Title:** Fraud Detection, KYC & AML for Lenders | Lendgismo
+- **Meta Description:** Prevent fraud with identity verification, KYC/KYB checks, AML screening, and device fingerprinting. Fraud detection software for alternative lenders.
 - **Canonical:** https://lendgismo.com/lp/fraud-detection-kyc-aml/
-- **OG Title:** Fraud detection, KYC/AML | Lendgismo
-- **OG Description:** Mitigate risk with identity/business checks and alerts.
+- **OG Title:** Fraud Detection, KYC & AML for Lenders | Lendgismo
+- **OG Description:** Prevent fraud with identity verification, KYC/KYB checks, AML screening, and device fingerprinting. Fraud detection software for alternative lenders.
 
 ### Content Structure
-- **H1:** Fraud detection & KYC/AML
-- **H2 Count:** 4
+- **H1:** Fraud Detection, KYC & AML for Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - Identity Verification & Document Checks
+  - KYC & KYB Screening
+  - AML Transaction Monitoring
+  - Device Fingerprinting & Behavioral Analytics
+  - Built for Fraud Prevention
+- **Word Count:** ~237
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (55 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (237) - add more content for SEO
 
 ---
 
-## 68. investor-reporting
+## 118. investor-reporting
 **URL:** https://lendgismo.com/lp/investor-reporting/
 
 ### SEO Metadata
-- **Title:** Investor reporting | Lendgismo
-- **Meta Description:** Clean exports and dashboards for LP updates and diligence.
+- **Title:** Investor Reporting for Lenders | Lendgismo
+- **Meta Description:** Automated investor reporting for warehouse lenders, institutional investors, and portfolio buyers. Loan tape generation and covenant compliance tracking.
 - **Canonical:** https://lendgismo.com/lp/investor-reporting/
-- **OG Title:** Investor reporting | Lendgismo
-- **OG Description:** Clean exports and dashboards for LP updates and diligence.
+- **OG Title:** Investor Reporting for Lenders | Lendgismo
+- **OG Description:** Automated investor reporting for warehouse lenders, institutional investors, and portfolio buyers. Loan tape generation and covenant compliance tracking.
 
 ### Content Structure
-- **H1:** Investor reporting
-- **H2 Count:** 4
+- **H1:** Investor Reporting for Lending Portfolios
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - Loan Tape Generation
+  - Payment Waterfall & Collections
+  - Covenant Compliance Monitoring
+  - Portfolio Performance Analytics
+  - Built for Institutional Capital
+- **Word Count:** ~213
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (58 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (213) - add more content for SEO
 
 ---
 
-## 69. invoice-factoring-software
+## 119. invoice-factoring-software
 **URL:** https://lendgismo.com/lp/invoice-factoring-software/
 
 ### SEO Metadata
-- **Title:** Invoice factoring software | Lendgismo
-- **Meta Description:** Factoring workflow support with document and payment tracking.
+- **Title:** Invoice Factoring Software | Lendgismo
+- **Meta Description:** Invoice factoring and accounts receivable financing software. Manage invoice purchases, advance rates, and client/debtor relationships.
 - **Canonical:** https://lendgismo.com/lp/invoice-factoring-software/
-- **OG Title:** Invoice factoring software | Lendgismo
-- **OG Description:** Factoring workflow support with document and payment tracking.
+- **OG Title:** Invoice Factoring Software | Lendgismo
+- **OG Description:** Invoice factoring and accounts receivable financing software. Manage invoice purchases, advance rates, and client/debtor relationships.
 
 ### Content Structure
-- **H1:** Invoice factoring software
-- **H2 Count:** 4
+- **H1:** Invoice Factoring Software for A/R Financing
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - Invoice Purchase & Verification
+  - Client & Debtor Management
+  - Reserve Accounts & Reconciliation
+  - Collections & Notifications
+  - Built for Factoring Companies
+- **Word Count:** ~214
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (62 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (214) - add more content for SEO
 
 ---
 
-## 70. iso-broker-portal
+## 120. iso-broker-portal
 **URL:** https://lendgismo.com/lp/iso-broker-portal/
 
 ### SEO Metadata
-- **Title:** ISO / broker portal | Lendgismo
-- **Meta Description:** Partner submission, tracking, and referral management with role-based access.
+- **Title:** ISO & Broker Portal for Lenders | Lendgismo
+- **Meta Description:** Empower ISO partners with branded portals for deal submission, tracking, and commission management. White-label broker portal with role-based access.
 - **Canonical:** https://lendgismo.com/lp/iso-broker-portal/
-- **OG Title:** ISO / broker portal | Lendgismo
-- **OG Description:** Partner submission, tracking, and referral management with role-based access.
+- **OG Title:** ISO & Broker Portal for Lenders | Lendgismo
+- **OG Description:** Empower ISO partners with branded portals for deal submission, tracking, and commission management. White-label broker portal with role-based access.
 
 ### Content Structure
-- **H1:** ISO & broker portal
-- **H2 Count:** 4
+- **H1:** ISO & Broker Portal for Partner Management
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - ISO Deal Submission & Tracking
+  - Commission Management & Payouts
+  - Role-Based Access & Permissions
+  - Compliance & Audit Trails
+  - Built for ISO-Driven Lenders
+- **Word Count:** ~245
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (77 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (245) - add more content for SEO
 
 ---
 
-## 71. kyc-kyb-aml
+## 121. kyc-kyb-aml
 **URL:** https://lendgismo.com/lp/kyc-kyb-aml/
 
 ### SEO Metadata
-- **Title:** KYC/KYB & AML workflows | Lendgismo
-- **Meta Description:** Identity and business verification pipelines with audit trail and role-based controls.
+- **Title:** KYC, KYB & AML Compliance for Lenders | Lendgismo
+- **Meta Description:** Automate KYC, KYB, and AML compliance with identity verification, business checks, and fraud screening. Compliance software for alternative lenders.
 - **Canonical:** https://lendgismo.com/lp/kyc-kyb-aml/
-- **OG Title:** KYC/KYB & AML workflows | Lendgismo
-- **OG Description:** Identity and business verification pipelines with audit trail and role-based controls.
+- **OG Title:** KYC, KYB & AML Compliance for Lenders | Lendgismo
+- **OG Description:** Automate KYC, KYB, and AML compliance with identity verification, business checks, and fraud screening. Compliance software for alternative lenders.
 
 ### Content Structure
-- **H1:** KYC/KYB & AML workflows
-- **H2 Count:** 4
+- **H1:** KYC, KYB & AML Workflows for Lending Compliance
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~163
+  - Know Your Customer (KYC) Verification
+  - Know Your Business (KYB) Checks
+  - AML Transaction Monitoring
+  - Compliance Audit Trails
+  - Built for Alternative Lending Compliance
+- **Word Count:** ~235
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (86 chars) - should be 120-160
-- Low word count (163) - add more content for SEO
+- Low word count (235) - add more content for SEO
 
 ---
 
-## 72. loan-management-servicing
+## 122. loan-management-servicing
 **URL:** https://lendgismo.com/lp/loan-management-servicing/
 
 ### SEO Metadata
-- **Title:** Loan management & servicing | Lendgismo
-- **Meta Description:** Post-funding workflows, collections, and portfolio analytics with auditable histories.
+- **Title:** Loan Management & Servicing Software | Lendgismo
+- **Meta Description:** Manage loan servicing, collections, payments, and portfolio analytics. White-label loan management system for alternative lenders with ACH, reporting, and compliance.
 - **Canonical:** https://lendgismo.com/lp/loan-management-servicing/
-- **OG Title:** Loan management & servicing | Lendgismo
-- **OG Description:** Post-funding workflows, collections, and portfolio analytics with auditable histories.
+- **OG Title:** Loan Management & Servicing Software | Lendgismo
+- **OG Description:** Manage loan servicing, collections, payments, and portfolio analytics. White-label loan management system for alternative lenders with ACH, reporting, and compliance.
 
 ### Content Structure
-- **H1:** Loan management & servicing
-- **H2 Count:** 4
+- **H1:** Loan Management & Servicing Platform
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Automated Payment Collections
+  - Collections Workflow Management
+  - Portfolio Analytics & Reporting
+  - Stripe & ACH Integration
+  - Built for Growing Loan Portfolios
+- **Word Count:** ~249
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (86 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Meta description length (166 chars) - should be 120-160
+- Low word count (249) - add more content for SEO
 
 ---
 
-## 73. loan-origination-system-los
+## 123. loan-origination-system-los
 **URL:** https://lendgismo.com/lp/loan-origination-system-los/
 
 ### SEO Metadata
-- **Title:** Loan origination system (LOS) for alt-lenders | Lendgismo
-- **Meta Description:** Modern LOS for MCA/ABL: digital intake, rules-based decisioning, and ops automation.
+- **Title:** Loan Origination System (LOS) for Alt Lenders
+- **Meta Description:** Modern loan origination software for MCA, ABL, and working capital lenders. Automate intake, underwriting, decisioning, and funding with a flexible white-label LOS.
 - **Canonical:** https://lendgismo.com/lp/loan-origination-system-los/
-- **OG Title:** Loan origination system (LOS) for alt-lenders | Lendgismo
-- **OG Description:** Modern LOS for MCA/ABL: digital intake, rules-based decisioning, and ops automation.
+- **OG Title:** Loan Origination System (LOS) for Alt Lenders
+- **OG Description:** Modern loan origination software for MCA, ABL, and working capital lenders. Automate intake, underwriting, decisioning, and funding with a flexible white-label LOS.
 
 ### Content Structure
-- **H1:** Loan origination system (LOS)
-- **H2 Count:** 4
+- **H1:** Loan Origination System Built for Alternative Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~163
+  - Digital Loan Intake & Application Processing
+  - Automated Underwriting & Decisioning
+  - Workflow Management & Queue Automation
+  - E-Sign, Term Sheets & Funding
+  - Why Alternative Lenders Choose Our LOS
+- **Word Count:** ~278
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (84 chars) - should be 120-160
-- Low word count (163) - add more content for SEO
+- Meta description length (164 chars) - should be 120-160
+- Low word count (278) - add more content for SEO
 
 ---
 
-## 74. mca-lending-software
+## 124. mca-lending-software
 **URL:** https://lendgismo.com/lp/mca-lending-software/
 
 ### SEO Metadata
-- **Title:** MCA lending software | Lendgismo
-- **Meta Description:** Merchant Cash Advance software for funders & ISOs—borrower onboarding, decisioning rules, collections, and reporting out-of-the-box.
+- **Title:** MCA Lending Software for Funders & ISOs | Lendgismo
+- **Meta Description:** Merchant cash advance software with automated underwriting, collections, ISO portals, and compliance. Built for MCA funders and brokers. Launch faster with white-label tech.
 - **Canonical:** https://lendgismo.com/lp/mca-lending-software/
-- **OG Title:** MCA lending software | Lendgismo
-- **OG Description:** Merchant Cash Advance software for funders & ISOs—borrower onboarding, decisioning rules, collections, and reporting out-of-the-box.
+- **OG Title:** MCA Lending Software for Funders & ISOs | Lendgismo
+- **OG Description:** Merchant cash advance software with automated underwriting, collections, ISO portals, and compliance. Built for MCA funders and brokers. Launch faster with white-label tech.
 
 ### Content Structure
-- **H1:** MCA lending software
-- **H2 Count:** 4
+- **H1:** MCA Lending Software for Merchant Cash Advance Funders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~166
+  - Complete MCA Workflow Automation
+  - ISO & Broker Portal with Commission Tracking
+  - Real-Time Cash Flow & Bank Data
+  - MCA-Specific Underwriting Rules
+  - Built for MCA Funders Who Need Speed
+- **Word Count:** ~282
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Low word count (166) - add more content for SEO
+- Meta description length (173 chars) - should be 120-160
+- Low word count (282) - add more content for SEO
 
 ---
 
-## 75. multi-tenant-lender-os
+## 125. multi-tenant-lender-os
 **URL:** https://lendgismo.com/lp/multi-tenant-lender-os/
 
 ### SEO Metadata
-- **Title:** Multi-tenant lender OS | Lendgismo
-- **Meta Description:** Serve multiple lenders/brands from one codebase with strict tenant isolation.
+- **Title:** Multi-Tenant Lending Platform | Lendgismo
+- **Meta Description:** Serve multiple lenders or brands from one platform. Multi-tenant architecture with data isolation, custom branding, and independent configurations per tenant.
 - **Canonical:** https://lendgismo.com/lp/multi-tenant-lender-os/
-- **OG Title:** Multi-tenant lender OS | Lendgismo
-- **OG Description:** Serve multiple lenders/brands from one codebase with strict tenant isolation.
+- **OG Title:** Multi-Tenant Lending Platform | Lendgismo
+- **OG Description:** Serve multiple lenders or brands from one platform. Multi-tenant architecture with data isolation, custom branding, and independent configurations per tenant.
 
 ### Content Structure
-- **H1:** Multi-tenant lender OS
-- **H2 Count:** 4
+- **H1:** Multi-Tenant Lending OS for Multiple Brands
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - True Multi-Tenancy with Data Isolation
+  - Per-Tenant Branding & Configuration
+  - Tenant Management Dashboard
+  - Use Cases for Multi-Tenant Lending
+  - Built for Scale & Security
+- **Word Count:** ~232
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (77 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (232) - add more content for SEO
 
 ---
 
-## 76. plaid-bank-data
+## 126. plaid-bank-data
 **URL:** https://lendgismo.com/lp/plaid-bank-data/
 
 ### SEO Metadata
-- **Title:** Plaid bank data integration | Lendgismo
-- **Meta Description:** Connect bank accounts with Plaid for cash-flow underwriting and ongoing monitoring.
+- **Title:** Plaid Bank Data Integration for Lenders | Lendgismo
+- **Meta Description:** Integrate Plaid for instant bank verification, cash-flow analysis, and account monitoring. Pre-built Plaid integration for alternative lenders.
 - **Canonical:** https://lendgismo.com/lp/plaid-bank-data/
-- **OG Title:** Plaid bank data integration | Lendgismo
-- **OG Description:** Connect bank accounts with Plaid for cash-flow underwriting and ongoing monitoring.
+- **OG Title:** Plaid Bank Data Integration for Lenders | Lendgismo
+- **OG Description:** Integrate Plaid for instant bank verification, cash-flow analysis, and account monitoring. Pre-built Plaid integration for alternative lenders.
 
 ### Content Structure
-- **H1:** Plaid bank data integration
-- **H2 Count:** 4
+- **H1:** Plaid Bank Data Integration for Lending Underwriting
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~163
+  - Instant Bank Account Verification
+  - Cash Flow Analysis from Bank Transactions
+  - Ongoing Account Monitoring
+  - Compliant & Secure Bank Data Access
+  - Pre-Built for Alternative Lenders
+- **Word Count:** ~238
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (83 chars) - should be 120-160
-- Low word count (163) - add more content for SEO
+- Low word count (238) - add more content for SEO
 
 ---
 
-## 77. portfolio-analytics-reporting
+## 127. portfolio-analytics-reporting
 **URL:** https://lendgismo.com/lp/portfolio-analytics-reporting/
 
 ### SEO Metadata
-- **Title:** Portfolio analytics & reporting | Lendgismo
-- **Meta Description:** Cohorts, cash-flow metrics, charge-off trends, and investor-ready exports (CSV/PPTX).
+- **Title:** Portfolio Analytics & Reporting | Lendgismo
+- **Meta Description:** Real-time portfolio analytics for loan performance, risk metrics, and investor reporting. Business intelligence dashboards for alternative lenders.
 - **Canonical:** https://lendgismo.com/lp/portfolio-analytics-reporting/
-- **OG Title:** Portfolio analytics & reporting | Lendgismo
-- **OG Description:** Cohorts, cash-flow metrics, charge-off trends, and investor-ready exports (CSV/PPTX).
+- **OG Title:** Portfolio Analytics & Reporting | Lendgismo
+- **OG Description:** Real-time portfolio analytics for loan performance, risk metrics, and investor reporting. Business intelligence dashboards for alternative lenders.
 
 ### Content Structure
-- **H1:** Portfolio analytics & reporting
-- **H2 Count:** 4
+- **H1:** Portfolio Analytics & Reporting for Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Real-Time Portfolio Dashboards
+  - Origination & Pipeline Analytics
+  - Credit Quality & Risk Metrics
+  - Investor & Compliance Reporting
+  - Built for Portfolio Managers
+- **Word Count:** ~230
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (85 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (230) - add more content for SEO
 
 ---
 
-## 78. pricing-engine
+## 128. pricing-engine
 **URL:** https://lendgismo.com/lp/pricing-engine/
 
 ### SEO Metadata
-- **Title:** Pricing engine for alt-lenders | Lendgismo
-- **Meta Description:** Consistent pricing/fee logic across programs with auditability.
+- **Title:** Loan Pricing Engine for Alternative Lenders
+- **Meta Description:** Standardize loan pricing with configurable fee structures, rate sheets, and margin calculations. Pricing software for MCA, ABL, and SMB lenders.
 - **Canonical:** https://lendgismo.com/lp/pricing-engine/
-- **OG Title:** Pricing engine for alt-lenders | Lendgismo
-- **OG Description:** Consistent pricing/fee logic across programs with auditability.
+- **OG Title:** Loan Pricing Engine for Alternative Lenders
+- **OG Description:** Standardize loan pricing with configurable fee structures, rate sheets, and margin calculations. Pricing software for MCA, ABL, and SMB lenders.
 
 ### Content Structure
-- **H1:** Pricing engine
-- **H2 Count:** 4
+- **H1:** Pricing Engine for Consistent Loan Pricing
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~157
+  - Configurable Rate Sheets & Fee Structures
+  - Dynamic Pricing Rules
+  - Margin & Profitability Analysis
+  - Audit Trails & Compliance
+  - Built for Pricing Discipline
+- **Word Count:** ~232
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (63 chars) - should be 120-160
-- Low word count (157) - add more content for SEO
+- Low word count (232) - add more content for SEO
 
 ---
 
-## 79. quickbooks-integration
+## 129. quickbooks-integration
 **URL:** https://lendgismo.com/lp/quickbooks-integration/
 
 ### SEO Metadata
-- **Title:** QuickBooks integration for lenders | Lendgismo
-- **Meta Description:** Sync accounting to accelerate underwriting and portfolio reviews.
+- **Title:** QuickBooks Integration for Lenders | Lendgismo
+- **Meta Description:** Sync QuickBooks data for underwriting and portfolio monitoring. Automated financial analysis from P&L, balance sheets, and cash flow statements.
 - **Canonical:** https://lendgismo.com/lp/quickbooks-integration/
-- **OG Title:** QuickBooks integration for lenders | Lendgismo
-- **OG Description:** Sync accounting to accelerate underwriting and portfolio reviews.
+- **OG Title:** QuickBooks Integration for Lenders | Lendgismo
+- **OG Description:** Sync QuickBooks data for underwriting and portfolio monitoring. Automated financial analysis from P&L, balance sheets, and cash flow statements.
 
 ### Content Structure
-- **H1:** QuickBooks integration
-- **H2 Count:** 4
+- **H1:** QuickBooks Integration for Lending Underwriting
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~158
+  - Automated Financial Statement Analysis
+  - Underwriting Efficiency Gains
+  - Real-Time Portfolio Monitoring
+  - Secure OAuth & Data Privacy
+  - Pre-Integrated for Alternative Lenders
+- **Word Count:** ~217
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (65 chars) - should be 120-160
-- Low word count (158) - add more content for SEO
+- Low word count (217) - add more content for SEO
 
 ---
 
-## 80. risk-scoring
+## 130. risk-scoring
 **URL:** https://lendgismo.com/lp/risk-scoring/
 
 ### SEO Metadata
-- **Title:** Lender risk scoring | Lendgismo
-- **Meta Description:** Configurable scorecards and thresholds with transparent logic.
+- **Title:** Risk Scoring & Credit Models for Lenders | Lendgismo
+- **Meta Description:** Build custom risk scorecards and credit models for alternative lending. Predictive analytics, machine learning, and portfolio segmentation.
 - **Canonical:** https://lendgismo.com/lp/risk-scoring/
-- **OG Title:** Lender risk scoring | Lendgismo
-- **OG Description:** Configurable scorecards and thresholds with transparent logic.
+- **OG Title:** Risk Scoring & Credit Models for Lenders | Lendgismo
+- **OG Description:** Build custom risk scorecards and credit models for alternative lending. Predictive analytics, machine learning, and portfolio segmentation.
 
 ### Content Structure
-- **H1:** Risk scoring for lenders
-- **H2 Count:** 4
+- **H1:** Risk Scoring & Credit Models for Lenders
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - Custom Scorecard Development
+  - Machine Learning Models
+  - Portfolio Segmentation & Monitoring
+  - Backtesting & Model Validation
+  - Built for Data-Driven Lenders
+- **Word Count:** ~225
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (62 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (225) - add more content for SEO
 
 ---
 
-## 81. sendgrid-email-otp
+## 131. sendgrid-email-otp
 **URL:** https://lendgismo.com/lp/sendgrid-email-otp/
 
 ### SEO Metadata
-- **Title:** SendGrid email (OTP & notifications) | Lendgismo
-- **Meta Description:** Email-based OTP and transactional messaging out of the box.
+- **Title:** SendGrid Email Integration for Lenders | Lendgismo
+- **Meta Description:** Send transactional emails with SendGrid. OTP codes, payment receipts, and borrower notifications with deliverability tracking.
 - **Canonical:** https://lendgismo.com/lp/sendgrid-email-otp/
-- **OG Title:** SendGrid email (OTP & notifications) | Lendgismo
-- **OG Description:** Email-based OTP and transactional messaging out of the box.
+- **OG Title:** SendGrid Email Integration for Lenders | Lendgismo
+- **OG Description:** Send transactional emails with SendGrid. OTP codes, payment receipts, and borrower notifications with deliverability tracking.
 
 ### Content Structure
-- **H1:** SendGrid email for lenders
-- **H2 Count:** 4
+- **H1:** SendGrid Email Integration for Lending Communications
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Email-Based Two-Factor Authentication
+  - Automated Email Workflows
+  - Section
+  - Email Analytics & Tracking
+  - Pre-Integrated for Lenders
+- **Word Count:** ~206
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (59 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (206) - add more content for SEO
 
 ---
 
-## 82. smb-lending-platform
+## 132. smb-lending-platform
 **URL:** https://lendgismo.com/lp/smb-lending-platform/
 
 ### SEO Metadata
-- **Title:** SMB lending platform | Lendgismo
-- **Meta Description:** Launch an SMB lending OS—intake, underwriting, analytics, and servicing—faster with a white-label base you can own and extend.
+- **Title:** SMB Lending Platform for Small Business Lenders
+- **Meta Description:** Launch SMB lending programs faster with white-label software. Digital onboarding, underwriting automation, loan servicing, and RBAC for small business lenders.
 - **Canonical:** https://lendgismo.com/lp/smb-lending-platform/
-- **OG Title:** SMB lending platform | Lendgismo
-- **OG Description:** Launch an SMB lending OS—intake, underwriting, analytics, and servicing—faster with a white-label base you can own and extend.
+- **OG Title:** SMB Lending Platform for Small Business Lenders
+- **OG Description:** Launch SMB lending programs faster with white-label software. Digital onboarding, underwriting automation, loan servicing, and RBAC for small business lenders.
 
 ### Content Structure
-- **H1:** SMB lending platform
-- **H2 Count:** 4
+- **H1:** SMB Lending Platform for Small Business Finance
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~169
+  - End-to-End SMB Lending Workflow
+  - Automated SMB Underwriting
+  - Borrower Portal & Self-Service
+  - Multi-Product SMB Lending
+  - Built for Community Banks, Credit Unions & Fintechs
+- **Word Count:** ~267
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Low word count (169) - add more content for SEO
+- Low word count (267) - add more content for SEO
 
 ---
 
-## 83. stripe-repayments
+## 133. stripe-repayments
 **URL:** https://lendgismo.com/lp/stripe-repayments/
 
 ### SEO Metadata
-- **Title:** Stripe repayments for lenders | Lendgismo
-- **Meta Description:** Card/ACH repayments and automated schedules with reporting.
+- **Title:** Stripe Payments Integration for Lenders | Lendgismo
+- **Meta Description:** Process ACH and card payments with Stripe. Automated loan repayments, fee collections, and reconciliation for alternative lenders.
 - **Canonical:** https://lendgismo.com/lp/stripe-repayments/
-- **OG Title:** Stripe repayments for lenders | Lendgismo
-- **OG Description:** Card/ACH repayments and automated schedules with reporting.
+- **OG Title:** Stripe Payments Integration for Lenders | Lendgismo
+- **OG Description:** Process ACH and card payments with Stripe. Automated loan repayments, fee collections, and reconciliation for alternative lenders.
 
 ### Content Structure
-- **H1:** Stripe repayments
-- **H2 Count:** 4
+- **H1:** Stripe Payment Processing for Loan Repayments
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~157
+  - ACH & Card Payment Processing
+  - Automated Payment Retries
+  - Payment Reconciliation & Reporting
+  - Refunds, Disputes & Chargebacks
+  - Built-In for Alternative Lenders
+- **Word Count:** ~220
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (59 chars) - should be 120-160
-- Low word count (157) - add more content for SEO
+- Low word count (220) - add more content for SEO
 
 ---
 
-## 84. term-sheets-e-sign
+## 134. term-sheets-e-sign
 **URL:** https://lendgismo.com/lp/term-sheets-e-sign/
 
 ### SEO Metadata
-- **Title:** Digital term sheets & e-sign | Lendgismo
-- **Meta Description:** Generate compliant term sheets and capture signatures quickly.
+- **Title:** Term Sheets & E-Signature for Lenders | Lendgismo
+- **Meta Description:** Generate branded term sheets and loan agreements with e-signature workflows. DocuSign integration for fast loan closing and document management.
 - **Canonical:** https://lendgismo.com/lp/term-sheets-e-sign/
-- **OG Title:** Digital term sheets & e-sign | Lendgismo
-- **OG Description:** Generate compliant term sheets and capture signatures quickly.
+- **OG Title:** Term Sheets & E-Signature for Lenders | Lendgismo
+- **OG Description:** Generate branded term sheets and loan agreements with e-signature workflows. DocuSign integration for fast loan closing and document management.
 
 ### Content Structure
-- **H1:** Digital term sheets & e-sign
-- **H2 Count:** 4
+- **H1:** Term Sheets & E-Signature for Fast Loan Closing
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~161
+  - Automated Term Sheet Generation
+  - E-Signature Integration
+  - Document Templates & Variables
+  - Compliance & Audit Readiness
+  - Proven for High-Volume Lenders
+- **Word Count:** ~240
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (62 chars) - should be 120-160
-- Low word count (161) - add more content for SEO
+- Low word count (240) - add more content for SEO
 
 ---
 
-## 85. twilio-sms-otp
+## 135. twilio-sms-otp
 **URL:** https://lendgismo.com/lp/twilio-sms-otp/
 
 ### SEO Metadata
-- **Title:** Twilio SMS (OTP & notifications) | Lendgismo
-- **Meta Description:** 2FA logins and borrower messaging via Twilio SMS.
+- **Title:** Twilio SMS Integration for Lenders | Lendgismo
+- **Meta Description:** Send SMS notifications and OTP codes with Twilio. Two-factor authentication, payment reminders, and borrower messaging for lenders.
 - **Canonical:** https://lendgismo.com/lp/twilio-sms-otp/
-- **OG Title:** Twilio SMS (OTP & notifications) | Lendgismo
-- **OG Description:** 2FA logins and borrower messaging via Twilio SMS.
+- **OG Title:** Twilio SMS Integration for Lenders | Lendgismo
+- **OG Description:** Send SMS notifications and OTP codes with Twilio. Two-factor authentication, payment reminders, and borrower messaging for lenders.
 
 ### Content Structure
-- **H1:** Twilio SMS for lenders
-- **H2 Count:** 4
+- **H1:** Twilio SMS Integration for Lender Communications
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~160
+  - Two-Factor Authentication (2FA)
+  - Payment Reminders & Collections
+  - Application Status Notifications
+  - Compliant SMS Messaging
+  - Pre-Built Twilio Integration
+- **Word Count:** ~209
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (49 chars) - should be 120-160
-- Low word count (160) - add more content for SEO
+- Low word count (209) - add more content for SEO
 
 ---
 
-## 86. underwriting-automation
+## 136. underwriting-automation
 **URL:** https://lendgismo.com/lp/underwriting-automation/
 
 ### SEO Metadata
-- **Title:** Underwriting automation | Lendgismo
-- **Meta Description:** Rules, checklists, scorecards, and cash-flow analysis to standardize decisions and speed approvals.
+- **Title:** Underwriting Automation Software for Lenders
+- **Meta Description:** Automate lending decisions with rules engines, scorecards, and cash-flow analysis. Underwriting software with Plaid, QuickBooks, and credit bureau integrations.
 - **Canonical:** https://lendgismo.com/lp/underwriting-automation/
-- **OG Title:** Underwriting automation | Lendgismo
-- **OG Description:** Rules, checklists, scorecards, and cash-flow analysis to standardize decisions and speed approvals.
+- **OG Title:** Underwriting Automation Software for Lenders
+- **OG Description:** Automate lending decisions with rules engines, scorecards, and cash-flow analysis. Underwriting software with Plaid, QuickBooks, and credit bureau integrations.
 
 ### Content Structure
-- **H1:** Underwriting automation
-- **H2 Count:** 4
+- **H1:** Underwriting Automation for Faster Credit Decisions
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~162
+  - Rules-Based Decisioning Engine
+  - Automated Cash Flow Analysis
+  - Credit Bureau & Fraud Check Integration
+  - Underwriting Checklists & Workflows
+  - Why Lenders Trust Our Underwriting Tools
+- **Word Count:** ~245
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (99 chars) - should be 120-160
-- Low word count (162) - add more content for SEO
+- Low word count (245) - add more content for SEO
 
 ---
 
-## 87. white-label-lending-software
+## 137. white-label-lending-software
 **URL:** https://lendgismo.com/lp/white-label-lending-software/
 
 ### SEO Metadata
-- **Title:** White-label lending software | Lendgismo
-- **Meta Description:** Fully brandable lender OS for alt-lenders: configure credit policies, roles, and tenant-level themes.
+- **Title:** White-Label Lending Software | Lendgismo
+- **Meta Description:** Fully brandable lending platform with custom domains, themes, logos, and workflows. White-label software for lenders, ISOs, and fintech companies.
 - **Canonical:** https://lendgismo.com/lp/white-label-lending-software/
-- **OG Title:** White-label lending software | Lendgismo
-- **OG Description:** Fully brandable lender OS for alt-lenders: configure credit policies, roles, and tenant-level themes.
+- **OG Title:** White-Label Lending Software | Lendgismo
+- **OG Description:** Fully brandable lending platform with custom domains, themes, logos, and workflows. White-label software for lenders, ISOs, and fintech companies.
 
 ### Content Structure
-- **H1:** White-label lending software
-- **H2 Count:** 4
+- **H1:** White-Label Lending Software for Your Brand
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~164
+  - Complete White-Label Control
+  - Multi-Tenant Architecture
+  - Configurable Credit Policies & Workflows
+  - Own Your Tech Stack
+  - White-Label for Every Lending Use Case
+- **Word Count:** ~249
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (101 chars) - should be 120-160
-- Low word count (164) - add more content for SEO
+- Low word count (249) - add more content for SEO
 
 ---
 
-## 88. working-capital-lending-software
+## 138. working-capital-lending-software
 **URL:** https://lendgismo.com/lp/working-capital-lending-software/
 
 ### SEO Metadata
-- **Title:** Working capital lending software | Lendgismo
-- **Meta Description:** Rapid SMB working-capital programs with standardized ops.
+- **Title:** Working Capital Lending Software | Lendgismo
+- **Meta Description:** Working capital loan origination and servicing software. Revenue-based financing, cash flow loans, and line of credit management for SMBs.
 - **Canonical:** https://lendgismo.com/lp/working-capital-lending-software/
-- **OG Title:** Working capital lending software | Lendgismo
-- **OG Description:** Rapid SMB working-capital programs with standardized ops.
+- **OG Title:** Working Capital Lending Software | Lendgismo
+- **OG Description:** Working capital loan origination and servicing software. Revenue-based financing, cash flow loans, and line of credit management for SMBs.
 
 ### Content Structure
-- **H1:** Working capital lending software
-- **H2 Count:** 4
+- **H1:** Working Capital Lending Software
+- **H2 Count:** 5
 - **H2s:**
-  - Key features
-  - Who it’s for
-  - Integrations
-  - Why Lendgismo
-- **Word Count:** ~159
+  - Flexible Loan Products
+  - Cash Flow Underwriting
+  - Line of Credit Management
+  - Revenue-Based Financing
+  - Built for SMB Lenders
+- **Word Count:** ~217
 
 ### Conversion Elements
 - **CTA Buttons (sample):**
+  - "Book a demo"
+  - "Book a demo"
   - "Contact"
+  - "Book a demo"
 
 ### Issues to Address
-- Meta description length (57 chars) - should be 120-160
-- Low word count (159) - add more content for SEO
+- Low word count (217) - add more content for SEO
 
 ---
 
 ## Summary
 
-Total landing pages analyzed: 88
+Total landing pages analyzed: 138
 
 ### Next Steps for ChatGPT
 1. Review each landing page section above
