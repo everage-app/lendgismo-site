@@ -34,7 +34,7 @@ export default function StickyCTA() {
             <span className="hidden md:inline text-zinc-300"> Pre-built workflows, docs, and integration scaffolding.</span>
           </div>
           <div className="flex items-center gap-3 w-full md:w-auto justify-center md:ml-auto">
-            <a href="#contact" className="btn-primary inline-flex items-center gap-2">
+            <a href="/contact" className="btn-primary inline-flex items-center gap-2">
               Request Handoff <ArrowRight size={16} />
             </a>
             <a

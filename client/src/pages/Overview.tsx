@@ -335,7 +335,7 @@ export default function Overview() {
                     </div>
                   </div>
                   <a 
-                    href="#contact" 
+                    href="/contact" 
                     className="btn-primary text-lg px-8 py-4 whitespace-nowrap inline-flex items-center justify-center gap-2 shadow-xl hover:shadow-brand-500/40 transition-all"
                   >
                     Get Started Now
@@ -420,6 +420,11 @@ export default function Overview() {
                 title: 'Multi-Tenant RBAC Architecture',
                 description: 'Separate portals for borrowers, brokers, and administrators with granular permission controls. Each role has customized dashboards, workflows, and data access. Supports team hierarchies, delegation, and audit trails for compliance.',
                 tags: ['Role-based access', 'Audit logging', 'Tenant isolation']
+              },
+              {
+                title: 'Lender-Grade Analytics & Reporting',
+                description: 'Portfolio dashboards tuned for lending: cohorts, charge-off trends, vintage curves, and cash-flow analytics. Export clean CSVs and board-ready views in minutes instead of pulling ad hoc queries from multiple systems.',
+                tags: ['Cohorts & vintages', 'Charge-off tracking', 'Investor-ready exports']
               }
             ].map((feature, index) => (
               <div key={index} className="card" data-testid={`card-capability-${index}`}>
@@ -435,20 +440,46 @@ export default function Overview() {
                     <p className="text-zinc-300 mb-4" data-testid={`text-capability-description-${index}`}>{feature.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {feature.tags.map((tag, i) => (
-                        <span 
-                          key={i} 
-                          className="inline-flex items-center gap-1 rounded-full bg-brand-500/10 border border-brand-500/20 px-3 py-1 text-xs text-brand-300"
-                          data-testid={`badge-capability-tag-${index}-${i}`}
-                        >
-                          <CheckCircle size={12} />
-                          {tag}
-                        </span>
+                        <Tooltip key={i}>
+                          <TooltipTrigger asChild>
+                            <span 
+                              className="inline-flex items-center gap-1 rounded-full bg-brand-500/10 border border-brand-500/20 px-3 py-1 text-xs text-brand-300 cursor-help"
+                              data-testid={`badge-capability-tag-${index}-${i}`}
+                            >
+                              <CheckCircle size={12} />
+                              {tag}
+                            </span>
+                          </TooltipTrigger>
+                          <TooltipContent className="max-w-xs text-xs text-zinc-100">
+                            <p>
+                              {index === 0 && i === 0 && 'Keep every chart, table, and KPI on the same timeframe with a single control, so your team stops comparing mismatched date windows.'}
+                              {index === 1 && i === 0 && 'Validate column headers, types, and formats before import so bad CSVs never pollute production data.'}
+                              {index === 2 && i === 0 && 'Lock down who can see which portfolios, borrowers, and reports with lender-grade role design.'}
+                              {index === 3 && i === 0 && 'See how cohorts perform over time without building custom analytics in-house.'}
+                              {!(index === 0 && i === 0) && !(index === 1 && i === 0) && !(index === 2 && i === 0) && !(index === 3 && i === 0) && 'Part of the out-of-the-box lender OS feature set.'}
+                            </p>
+                          </TooltipContent>
+                        </Tooltip>
                       ))}
                     </div>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p className="text-sm text-zinc-400 max-w-2xl">
+              Want to see these capabilities live? Jump into the full platform walkthrough and watch timeframe controls, CSV onboarding, RBAC, and analytics in a single flow.
+            </p>
+            <a
+              href="#"
+              onClick={(e) => scrollToSection(e as any, '#demo')}
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-300 hover:text-brand-200"
+            >
+              Watch the live demo
+              <ArrowRight size={16} />
+            </a>
           </div>
         </div>
       </section>
@@ -507,7 +538,7 @@ export default function Overview() {
             Get started with Lendgismo today and launch your lending platform in weeks instead of months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="btn-primary" data-testid="button-cta-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
+            <Link href="/contact" className="btn-primary" data-testid="button-cta-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
               Request ZIP Handoff
               <ArrowRight size={20} />
             </Link>

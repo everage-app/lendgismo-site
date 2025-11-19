@@ -74,7 +74,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="hover:text-white transition" data-testid="link-footer-contact">
+                <a href="/contact" onClick={(e) => scrollToSection(e, '#contact')} className="hover:text-white transition" data-testid="link-footer-contact">
                   Contact
                 </a>
               </li>

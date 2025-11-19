@@ -409,7 +409,7 @@ export default function Home() {
               <p className="text-sm text-zinc-400">See the ROI breakdown or dive into the docs. You can launch in weeks, not months.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="btn-primary" data-testid="button-band-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
+              <a href="/contact" onClick={(e) => scrollToSection(e, '#contact')} className="btn-primary" data-testid="button-band-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
                 Request ZIP Handoff
               </a>
               <a href="#roi" onClick={(e) => scrollToSection(e, '#roi')} className="btn-ghost" data-testid="button-band-roi">

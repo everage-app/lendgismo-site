@@ -29,7 +29,7 @@ export default function Pricing() {
               <div className="text-sm text-brand-300">Everything included</div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#contact" className="btn-primary text-center">Request handoff</a>
+              <a href="/contact" className="btn-primary text-center">Request handoff</a>
               <a href="/docs" target="_blank" rel="noopener noreferrer" className="btn-ghost inline-flex items-center justify-center gap-2">
                 View docs <ExternalLink size={16} />
               </a>

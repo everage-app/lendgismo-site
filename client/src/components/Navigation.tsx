@@ -77,7 +77,7 @@ export default function Navigation() {
               <ExternalLink size={14} />
             </a>
             <a 
-              href="#contact" 
+              href="/contact" 
               onClick={(e) => scrollToSection(e, '#contact')}
               className="btn-primary"
               data-testid="button-request-handoff"
@@ -144,7 +144,7 @@ export default function Navigation() {
               <ExternalLink size={14} />
             </a>
             <a 
-              href="#contact" 
+              href="/contact" 
               onClick={(e) => scrollToSection(e, '#contact')}
               className="block w-full text-center rounded-xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white"
               data-testid="button-mobile-request-handoff"
