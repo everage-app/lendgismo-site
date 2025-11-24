@@ -33,7 +33,7 @@ export default function Overview() {
     <div className="min-h-screen">
       <Seo 
         title="Overview — Lendgismo Lending Platform Codebase"
-        description="Deep dive into Lendgismo’s production‑ready lending platform: full source, RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid)."
+        description="Deep dive into Lendgismo's production‑ready lending platform: full source, RBAC, CSV onboarding, analytics, and integrations (Zapier, Plaid, Stripe, QuickBooks, Twilio, SendGrid)."
         url="https://lendgismo.com/overview"
         image="/assets/showcase/20251023-0938/02_dashboard--desktop.png"
       />
@@ -60,7 +60,7 @@ export default function Overview() {
             </h1>
             <p className="text-xl text-zinc-300 leading-relaxed" data-testid="text-overview-description">
               Production‑ready lending platform foundation. You get full source code, docs & diagrams, demo data, and a
-              live handoff—plus multi‑tenant RBAC, CSV onboarding, analytics, and first‑class integrations (Plaid,
+              live handoff—plus multi‑tenant RBAC, CSV onboarding, analytics, and first‑class integrations (Zapier, Plaid,
               Stripe, Twilio, SendGrid). Deploy anywhere: AWS, Azure, Google Cloud, or any modern cloud platform.
             </p>
           </div>

@@ -29,7 +29,7 @@ export default function IntegrationsStatusBar() {
   )
 
   const entries = Object.entries(data.providers)
-    .filter(([name]) => ['plaid','stripe','quickbooks','datamerch','decisionlogic'].includes(name))
+    .filter(([name]) => ['zapier','plaid','stripe','quickbooks','datamerch','decisionlogic'].includes(name))
 
   return (
     <div className="mt-3 flex flex-wrap gap-2 items-center">

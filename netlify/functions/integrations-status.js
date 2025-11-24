@@ -7,6 +7,11 @@ export async function handler() {
     body: JSON.stringify({
       live,
       providers: {
+        zapier: {
+          configured: !!(env.INTERNAL_WEBHOOK_URL && env.INTERNAL_WEBHOOK_SECRET),
+          url: env.INTERNAL_WEBHOOK_URL ? '***configured***' : undefined,
+          secured: !!env.INTERNAL_WEBHOOK_SECRET
+        },
         plaid: { configured: !!(env.PLAID_CLIENT_ID && env.PLAID_SECRET), env: env.PLAID_ENV || 'sandbox' },
         stripe: { configured: !!env.STRIPE_SECRET, webhook: !!env.STRIPE_WEBHOOK },
         twilio: { configured: !!(env.TWILIO_SID && env.TWILIO_TOKEN && env.TWILIO_FROM) },

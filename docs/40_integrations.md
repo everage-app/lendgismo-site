@@ -1,12 +1,13 @@
 # Integrations Overview
 
-Last Updated: October 17, 2025  
+Last Updated: November 24, 2025  
 Audience: Product, Engineering, and Buyers evaluating capabilities
 
 ---
 
 ## At a glance
 
+- **Zapier-ready webhooks** — Connect to 6,000+ apps with no-code automation
 - Turnkey integrations covering banking, payments, messaging, email, alternative data, fraud detection, and identity verification
 - Environment-driven toggles and minimal endpoint surface
 - Sandbox-first setup instructions and test flows
@@ -14,6 +15,7 @@ Audience: Product, Engineering, and Buyers evaluating capabilities
 
 Quick links
 
+- [Zapier (Automation & Webhooks)](#zapier-automation--webhooks) ⭐ **New**
 - [Plaid (Banking)](#plaid-banking)
 - [Stripe (Payments)](#stripe-payments)
 - [Twilio (SMS)](#twilio-sms)
@@ -23,6 +25,102 @@ Quick links
 - [DecisionLogic (Credit & Fraud)](#decisionlogic-credit--fraud)
 - [Socure/Alloy (Identity Verification)](#socurealloy-identity-verification)
 - [CSV Upload & Onboarding](#csv-upload--onboarding)
+
+---
+
+## Zapier (Automation & Webhooks)
+
+Status: **Production Ready** ⭐  
+Purpose: No-code automation connecting Lendgismo to 6,000+ apps
+
+**Why Zapier?**
+- Connect to Salesforce, HubSpot, Slack, Google Sheets, QuickBooks, and thousands more
+- Build workflows without writing code
+- Real-time event notifications for applications, approvals, payments, and more
+- Bi-directional sync between Lendgismo and your existing tools
+
+Environment variables
+
+- INTERNAL_WEBHOOK_URL — Your Zapier webhook URL (e.g., https://hooks.zapier.com/hooks/catch/YOUR_ID/)
+- INTERNAL_WEBHOOK_SECRET — Secure key for HMAC signature verification
+
+### Quick Start
+
+1. **Create a Zap** → Use "Webhooks by Zapier" as trigger
+2. **Copy webhook URL** → Paste into `INTERNAL_WEBHOOK_URL` environment variable
+3. **Set secret key** → Add to `INTERNAL_WEBHOOK_SECRET` for security
+4. **Test** → Submit a contact form or trigger an event
+5. **Build** → Add actions (CRM, notifications, data sync, etc.)
+
+### Available Webhook Events
+
+| Event | Trigger | Payload Includes |
+|-------|---------|------------------|
+| `contact.submission` | Contact form submitted | Name, email, company, phone, message |
+| `application.submitted` | New loan application | Borrower details, loan amount, product type |
+| `application.status_changed` | Status update | Previous status, new status, decision data |
+| `loan.funded` | Loan disbursed | Funding amount, disbursement date, account info |
+| `payment.received` | Payment processed | Amount, principal, interest, remaining balance |
+| `document.uploaded` | Document added | File name, type, category, uploader |
+
+### Common Workflows
+
+**Contact → CRM Lead**
+```
+Trigger: contact.submission
+Actions:
+  1. Create lead in Salesforce/HubSpot
+  2. Send Slack notification to sales team
+  3. Add row to Google Sheets for tracking
+```
+
+**Loan Approval → Multi-Channel Notification**
+```
+Trigger: application.status_changed (approved)
+Actions:
+  1. Send congratulations email via Gmail/SendGrid
+  2. Update deal stage in HubSpot
+  3. Create task in Asana for loan officer
+  4. Post to Slack #underwriting channel
+```
+
+**Payment Received → Accounting Sync**
+```
+Trigger: payment.received
+Actions:
+  1. Create invoice in QuickBooks
+  2. Log transaction in Google Sheets
+  3. Send receipt via email
+  4. Update loan status in Airtable
+```
+
+### Security
+
+- **HMAC Signature Verification** — All webhooks include `X-Signature` header with SHA-256 HMAC
+- **IP Whitelisting** — Optional restriction to Zapier's webhook IPs
+- **Encrypted Secrets** — Store webhook secrets in environment variables
+- **Audit Trail** — All webhook deliveries logged for compliance
+
+### Testing
+
+```bash
+# Test webhook delivery
+POST /api/webhooks/test
+Content-Type: application/json
+
+{
+  "event": "contact.submission",
+  "testPayload": {
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com"
+  }
+}
+```
+
+### Full Documentation
+
+📚 **Complete Zapier Integration Guide:** [/docs/41_zapier-integration](/docs/41_zapier-integration)
 
 ---
 

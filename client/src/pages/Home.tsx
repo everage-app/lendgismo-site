@@ -115,7 +115,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Seo 
         title="Lendgismo — Lending Platform Codebase (React/TypeScript, RBAC, Plaid, Stripe)"
-        description="Production‑ready lending platform codebase. Full source code, docs, demo data, RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid). One‑time code handoff. Deploy anywhere: AWS, Azure, Google Cloud, or any modern cloud platform."
+        description="Production‑ready lending platform codebase. Full source code, docs, demo data, RBAC, CSV onboarding, analytics, and integrations (Zapier, Plaid, Stripe, QuickBooks, Twilio, SendGrid). One‑time code handoff. Deploy anywhere: AWS, Azure, Google Cloud, or any modern cloud platform."
         url="https://lendgismo.com/"
         image="/assets/showcase/20251023-0938/02_dashboard--desktop.png"
       />
@@ -667,7 +667,7 @@ export default function Home() {
               <div className="space-y-6">
                 {[
                   { title: 'Simple one-time payment', description: 'Single payment for a perpetual license. Enterprise invoicing and PO supported.' },
-                  { title: 'Everything included', description: 'Core integrations (Plaid, Stripe, QuickBooks), white‑label deployment assistance, and a live training handoff are included.' },
+                  { title: 'Everything included', description: 'Core integrations (Zapier, Plaid, Stripe, QuickBooks), white‑label deployment assistance, and a live training handoff are included.' },
                   { title: '30-day email support', description: 'Technical questions answered within 24 hours. Extended support packages available.' },
                   { title: 'NDA & IP assignment', description: 'We provide standard NDA and full intellectual property assignment documents upon request.' },
                 ].map((item, index) => (
@@ -813,7 +813,7 @@ export default function Home() {
                   Do you provide ongoing support or updates?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  The $150,000 license includes a comprehensive handoff session and 30 days of email support for technical questions. Core integrations (Plaid, Stripe, QuickBooks) and the training handoff are included. If you need more help, extended support packages and customizations are available on request. Since you own the code, you maintain and update it on your own schedule.
+                  The $150,000 license includes a comprehensive handoff session and 30 days of email support for technical questions. Core integrations (Zapier webhooks, Plaid, Stripe, QuickBooks) and the training handoff are included. If you need more help, extended support packages and customizations are available on request. Since you own the code, you maintain and update it on your own schedule.
                 </AccordionContent>
               </AccordionItem>
               

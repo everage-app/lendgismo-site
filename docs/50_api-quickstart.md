@@ -765,6 +765,39 @@ Import this collection into Postman for easy testing:
 
 See the full guide with detailed examples: [Integrations Overview](/docs/40_integrations).
 
+### Automation & Webhooks
+
+**Zapier** (No-Code Automation) ⭐ **New**
+- **Purpose:** Connect to 6,000+ apps without writing code
+- **Setup:** Configure `INTERNAL_WEBHOOK_URL` and `INTERNAL_WEBHOOK_SECRET`
+- **Events:** contact.submission, application.status_changed, loan.funded, payment.received, document.uploaded
+- **Documentation:** [Complete Zapier Integration Guide](/docs/41_zapier-integration)
+
+**Example - Zapier Webhook:**
+```bash
+# Configure webhook (environment variables)
+INTERNAL_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/YOUR_ID/
+INTERNAL_WEBHOOK_SECRET=your_secure_secret_key
+
+# Test webhook
+POST /api/webhooks/test
+Content-Type: application/json
+
+{
+  "event": "contact.submission",
+  "testPayload": {
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com"
+  }
+}
+```
+
+**Common Workflows:**
+- Contact form → Create CRM lead in Salesforce/HubSpot
+- Loan approval → Send notifications via Slack + Email
+- Payment received → Update QuickBooks + Send receipt
+
 ### Banking & Payments
 
 **Plaid** (Banking)

@@ -140,6 +140,7 @@ function pageHtml(page, brand) {
   ];
 
   const integrations = [
+    "Zapier (no-code automation w/ 6000+ apps) ⚡",
     "Plaid (bank data & cash flow)",
     "QuickBooks (accounting sync)",
     "Stripe (repayments/ACH/cards)",
