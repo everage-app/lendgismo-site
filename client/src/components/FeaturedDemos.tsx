@@ -27,11 +27,15 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   const [player, setPlayer] = useState<'mp4'|'youtube'>('mp4')
 
   useEffect(() => {
+    // Only needed for the grid variant. Avoid updating state during hero playback,
+    // which can cause the video element to re-render/reload mid-play.
+    if (variant !== 'grid') return
+
     fetch('/assets/showcase/manifest.json')
       .then((r) => r.ok ? r.json() : { items: [] })
       .then((m) => setItems(m.items || []))
       .catch(() => setItems([]))
-  }, [])
+  }, [variant])
 
   const videos = useMemo(() => {
     const vids: ShowcaseItem[] = (items ?? []).filter((it: ShowcaseItem) => (it.type === 'video') || /(\.webm|\.mp4)$/i.test(it.src))
@@ -110,10 +114,9 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
           {player === 'mp4' ? (
             <video
               className="w-full h-full"
-              src={HERO_VIDEO_SRC}
               controls
               playsInline
-              preload="metadata"
+              preload="auto"
               poster="/assets/lendgismo-logo-white-transparent-Ch-zZoVt.svg"
             >
               <source src={HERO_VIDEO_SRC} type="video/mp4" />
