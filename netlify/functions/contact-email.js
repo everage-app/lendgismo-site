@@ -1,5 +1,5 @@
 // Netlify Function: contact-email
-// Sends contact form submissions to sales@lendgismo.com and brysen@lendgismo.com
+// Sends contact form submissions to brysen@lendgismo.com
 // Uses SendGrid API directly (same pattern as sendgrid-send.js)
 
 export async function handler(event) {
@@ -22,6 +22,9 @@ export async function handler(event) {
   try {
     const payload = JSON.parse(event.body || '{}');
     const {
+      formName = 'contact',
+      to = '',
+      name = '',
       firstName = '',
       lastName = '',
       email = '',
@@ -32,10 +35,41 @@ export async function handler(event) {
       message = ''
     } = payload;
 
-    const subject = `Lendgismo contact — ${company || 'No company'} (${firstName} ${lastName})`;
+    const normalizedFormName = String(formName || 'contact').trim().toLowerCase();
+    const recipient = String(to || '').trim();
+    const recipients = recipient
+      ? [{ email: recipient }]
+      : [
+          { email: 'sales@lendgismo.com' },
+          { email: 'brysen@lendgismo.com' }
+        ];
+    const fullName = `${firstName || ''} ${lastName || ''}`.trim() || String(name || '').trim();
+    const [derivedFirstName, ...derivedRest] = fullName.split(' ').filter(Boolean);
+    const safeFirstName = firstName || derivedFirstName || '';
+    const safeLastName = lastName || derivedRest.join(' ');
 
-    const lines = [
-      `Name: ${firstName} ${lastName}`,
+    if (!email) {
+      return {
+        statusCode: 400,
+        headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ok: false, error: 'Missing required field: email' })
+      };
+    }
+
+    const subject = normalizedFormName === 'roi-calculator'
+      ? `Lendgismo ROI lead — ${fullName || 'Unknown name'} (${email})`
+      : `Lendgismo contact — ${company || 'No company'} (${safeFirstName} ${safeLastName})`;
+
+    const lines = normalizedFormName === 'roi-calculator'
+      ? [
+      'Form: roi-calculator',
+      `Name: ${fullName || '(not provided)'}`,
+      `Email: ${email}`,
+      '',
+      `Submitted at: ${new Date().toISOString()}`
+    ] : [
+      'Form: contact',
+      `Name: ${safeFirstName} ${safeLastName}`,
       `Email: ${email}`,
       `Company: ${company}`,
       `Role: ${role}`,
@@ -47,10 +81,19 @@ export async function handler(event) {
       '',
       `Submitted at: ${new Date().toISOString()}`
     ];
+
     const text = lines.join('\r\n');
-    const html = `
+    const html = normalizedFormName === 'roi-calculator'
+      ? `
+      <h2>Lendgismo — New ROI calculator lead</h2>
+      <p><strong>Name:</strong> ${escapeHtml(fullName || '(not provided)')}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <hr>
+      <p style="color:#888;font-size:12px">Submitted at ${new Date().toISOString()}</p>
+    `
+      : `
       <h2>Lendgismo — New contact form submission</h2>
-      <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
+      <p><strong>Name:</strong> ${escapeHtml(safeFirstName)} ${escapeHtml(safeLastName)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Company:</strong> ${escapeHtml(company)}</p>
       <p><strong>Role:</strong> ${escapeHtml(role)}</p>
@@ -72,12 +115,11 @@ export async function handler(event) {
 
     if (!SENDGRID_KEY) {
       return {
-        statusCode: 200,
+        statusCode: 500,
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          ok: true, 
-          mock: true, 
-          reason: 'No SENDGRID_KEY set (dev/test mode)' 
+        body: JSON.stringify({
+          ok: false,
+          error: 'Server email is not configured (missing SENDGRID_KEY)'
         })
       };
     }
@@ -94,13 +136,10 @@ export async function handler(event) {
           },
           body: JSON.stringify({
             personalizations: [{ 
-              to: [
-                { email: 'sales@lendgismo.com' },
-                { email: 'brysen@lendgismo.com' }
-              ],
-              reply_to: { email }
+              to: recipients
             }],
             from: { email: fromEmail, name: 'Lendgismo Site' },
+            reply_to: email ? { email, name: fullName || email } : undefined,
             subject,
             content: [
               { type: 'text/plain', value: text },
@@ -125,9 +164,9 @@ export async function handler(event) {
       }
     }
 
-    // Do not fail the user flow; return 200 with details for troubleshooting
+    // Fail loudly so the frontend does not show a false success state.
     return {
-      statusCode: 200,
+      statusCode: 502,
       headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
       body: JSON.stringify({ ok: false, error: 'All from-address attempts failed', details: lastErrorText })
     };
@@ -135,8 +174,8 @@ export async function handler(event) {
     console.error('Contact email error:', err);
     return {
       statusCode: 500,
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ error: String(err && err.message || err) })
+      headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ok: false, error: String(err && err.message || err) })
     };
   }
 }

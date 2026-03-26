@@ -1,7 +1,6 @@
 import type React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import FeaturedDemos from "@/components/FeaturedDemos";
 import SiteLogo from "@/components/SiteLogo";
 import StickyCTA from "@/components/StickyCTA";
 import TrustBelt from "@/components/TrustBelt";
@@ -153,7 +152,15 @@ export default function Overview() {
               <div className="rounded-xl overflow-hidden border border-white/10 bg-black shadow-inner">
                 {/* Removed the play button overlay that was blocking clicks */}
                 <div className="aspect-[16/9] bg-gradient-to-br from-brand-950 to-black">
-                  <FeaturedDemos variant="hero" maxVideos={1} className="!py-0" />
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/Rdk-Y4QZfS8?rel=0&modestbranding=1&playsinline=1"
+                    title="Lendgismo Platform Overview Demo"
+                    loading="eager"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
@@ -192,7 +199,7 @@ export default function Overview() {
                     <span>Proven ROI for Lenders</span>
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
-                    Stop Burning <span className="text-gradient">$300k–$500k</span> on Custom Dev
+                    Stop Burning <span className="text-gradient">$450k–$750k</span> on Custom Dev
                   </h3>
                   <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
                     Building a lending platform from scratch drains budgets and delays launch. 
@@ -242,7 +249,7 @@ export default function Overview() {
                     <div className="pt-4 border-t border-red-500/20">
                       <div className="flex justify-between items-baseline">
                         <span className="text-white font-semibold">Total Cost</span>
-                        <span className="text-2xl font-bold text-red-400">$450k+</span>
+                        <span className="text-2xl font-bold text-red-400">$450k–$750k</span>
                       </div>
                       <p className="text-xs text-zinc-400 mt-1">+ 6 months time to market</p>
                     </div>
@@ -251,7 +258,7 @@ export default function Overview() {
                   {/* Get Lendgismo */}
                   <div className="relative rounded-2xl border-2 border-brand-500/50 bg-gradient-to-br from-brand-500/20 to-brand-600/10 p-6 backdrop-blur">
                     <div className="absolute -top-3 -right-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-glow">
-                      SAVE $300k+
+                      SAVE $350k+
                     </div>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-brand-500/30 flex items-center justify-center">
@@ -265,7 +272,7 @@ export default function Overview() {
                     <div className="space-y-3 mb-4">
                       <div className="flex justify-between text-sm">
                         <span className="text-zinc-300">Perpetual code license</span>
-                        <span className="text-white font-semibold">$150k</span>
+                        <span className="text-white font-semibold">$59k</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-zinc-300">Customization (2–4 weeks)</span>
@@ -287,7 +294,7 @@ export default function Overview() {
                     <div className="pt-4 border-t border-brand-500/30">
                       <div className="flex justify-between items-baseline">
                         <span className="text-white font-semibold">Total Investment</span>
-                        <span className="text-2xl font-bold text-gradient">$150–190k</span>
+                        <span className="text-2xl font-bold text-gradient">$79–99k</span>
                       </div>
                       <p className="text-xs text-brand-300 mt-1">Launch in 4–6 weeks</p>
                     </div>
@@ -298,7 +305,7 @@ export default function Overview() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 border-t border-white/10">
                   <div className="flex items-center gap-8">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-gradient">$600k+</div>
+                      <div className="text-3xl font-bold text-gradient">$650k+</div>
                       <div className="text-xs text-zinc-400 mt-1">You Save</div>
                     </div>
                     <div className="h-12 w-px bg-white/10"></div>
@@ -538,8 +545,8 @@ export default function Overview() {
             Get started with Lendgismo today and launch your lending platform in weeks instead of months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary" data-testid="button-cta-handoff" title="ZIP via Google Drive/WeTransfer/S3, or GitHub access—your choice">
-              Request ZIP Handoff
+            <Link href="/contact" className="btn-primary" data-testid="button-cta-handoff" title="Secure handoff via Google Drive, WeTransfer, S3, or GitHub access—your choice">
+              Request Handoff
               <ArrowRight size={20} />
             </Link>
             <Link href="/#pricing" className="btn-ghost" data-testid="button-cta-pricing">

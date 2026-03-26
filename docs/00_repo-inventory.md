@@ -1,6 +1,6 @@
 # Repository Inventory
 
-**Generated**: October 16, 2025  
+**Generated**: December 9, 2025  
 **Repository**: Lendgismo Asset Lender Platform  
 **Purpose**: Comprehensive repository scan and technology inventory
 
@@ -68,19 +68,20 @@ Lendgismo is a full-stack loan application management platform designed for asse
   - **Driver**: pg 8.16.3 (@types/pg 8.15.5)
 - **Connection**: Dual-mode support (file:// for SQLite, postgresql:// for PostgreSQL)
 
-### Third-Party Integrations (Planned/Partial)
+### Third-Party Integrations
 
-Based on code analysis, the following integrations are referenced:
+Based on code analysis, the following integrations are active:
 
 | Service | Status | Purpose | Configuration |
 |---------|--------|---------|---------------|
+| **Zapier** | ✅ Production | Workflow automation (5,000+ apps) | `INTERNAL_WEBHOOK_URL`, `INTERNAL_WEBHOOK_SECRET` |
+| **SendGrid** | ✅ Production | Email delivery (contact form) | `SENDGRID_API_KEY` |
+| **Google Chat** | ✅ Production | Team notifications | `GOOGLE_CHAT_WEBHOOK_URL` |
 | **Plaid** | Scaffolded | Bank account linking | `PLAID_CLIENT_ID`, `PLAID_SECRET`, `PLAID_ENV` |
 | **Stripe** | Scaffolded | Payment processing | `STRIPE_SECRET`, `STRIPE_WEBHOOK` |
 | **Twilio** | Scaffolded | SMS notifications | `TWILIO_SID`, `TWILIO_TOKEN`, `TWILIO_FROM` |
-| **SendGrid** | Scaffolded | Email delivery | `SENDGRID_KEY` |
-| **Email (Console)** | Active | Development email logging | `EMAIL_PROVIDER=console` |
 
-> **Note**: Integration settings are stored in ephemeral in-memory storage (`server/integrations.ts`). Production deployments should use persistent encrypted storage (KMS, HashiCorp Vault, etc.).
+> **Note**: See `docs/41_zapier-integration.md` for complete Zapier setup guide. Integration settings are stored in Netlify environment variables.
 
 ### Development Tools
 - **Testing**: 
@@ -166,9 +167,22 @@ AssetLender/
 │   ├── marketing-types.ts    # Marketing page types
 │   └── range.ts              # Date range utilities
 ├── docs/                      # Documentation (existing + generated)
+│   ├── 00_repo-inventory.md  # This file - Repository overview
+│   ├── 10_architecture.md    # System architecture
+│   ├── 11_architecture-diagrams.md # Visual diagrams
+│   ├── 12_rbac-matrix.md     # Role-based access control
+│   ├── 20_data-model.md      # Database schema
+│   ├── 22_seed-and-migrations.md # DB migrations
+│   ├── 30_configuration.md   # Environment variables
+│   ├── internal/             # Internal-only docs (not published)
+│   ├── 40_features-overview.md # Features (12 core features)
+│   ├── 40_integrations.md    # Integration overview
+│   ├── 41_zapier-integration.md # Zapier/webhook guide ⭐ NEW
+│   ├── 50_api-quickstart.md  # API reference
+│   ├── 60_local-dev.md       # Developer setup
 │   ├── account-settings-architecture.md
 │   ├── notifications-page.md
-│   └── (generated files will be added here)
+│   └── README.md             # Docs index
 ├── openapi/                   # OpenAPI specifications (to be generated)
 ├── scripts/                   # Utility scripts
 │   ├── assetlender-safe-cleanup.ps1
@@ -276,11 +290,11 @@ Based on `.env.example` and code analysis:
 | `LOG_LEVEL` | ❌ | `info` | Logging verbosity (`debug`, `info`, `warn`, `error`) |
 | `EMAIL_PROVIDER` | ❌ | `console` | Email provider (`console`, `sendgrid`, `aws-ses`) |
 | `APP_BASE_URL` | ❌ | Auto-detect | Base URL for invite links |
-| `INVITE_SECRET` | ❌ | `dev-invite-secret` | HMAC secret for invite tokens |
+| `INVITE_SECRET` | ❌ | `CHANGE_ME` | HMAC secret for invite tokens |
 | `ALLOW_DEMO_LOGIN` | ❌ | - | Enable demo login mode |
 | `AUTH_MODE` | ❌ | - | Authentication mode (`demo`, etc.) |
 | `DEMO_EMAIL` | ❌ | `admin@example.com` | Demo user email |
-| `DEMO_PASSWORD` | ❌ | `admin123` | Demo user password |
+| `DEMO_PASSWORD` | ❌ | `CHANGE_ME` | Demo user password |
 | `DEMO_USER` | ❌ | JSON object | Demo user object |
 
 **Integration Variables** (optional, stored in ephemeral memory):

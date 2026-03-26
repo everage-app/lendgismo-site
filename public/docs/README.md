@@ -19,11 +19,10 @@ Welcome to the Lendgismo documentation. This is a concise, consistent entry poin
 - RBAC matrix (roles, endpoints) → 12_rbac-matrix.md
 - Data model and ERD → 20_data-model.md and 21_erd.mmd
 - Seeds and migrations (Drizzle) → 22_seed-and-migrations.md
-- Configuration and secrets → 30_configuration.md and 31_secrets-and-keys.md
+- Configuration → 30_configuration.md
 - Features overview → 40_features-overview.md
 - API quick start → 50_api-quickstart.md
 - Local development → 60_local-dev.md
-- Readiness report → 99_docs-readiness-report.md
 
 ---
 
@@ -49,7 +48,7 @@ Welcome to the Lendgismo documentation. This is a concise, consistent entry poin
   - RBAC → 12_rbac-matrix.md
 - Integrations & Ops:
   - Config → 30_configuration.md
-  - Secrets → 31_secrets-and-keys.md
+  - Secrets → internal runbook (not published)
   - API → 50_api-quickstart.md
 
 ---

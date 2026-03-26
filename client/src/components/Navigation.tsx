@@ -69,7 +69,7 @@ export default function Navigation() {
               href="https://platform.lendgismo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 hover:bg-emerald-400 transition-colors"
               data-testid="link-platform"
               title="Open the live platform in a new tab"
             >
@@ -82,7 +82,7 @@ export default function Navigation() {
               className="btn-primary"
               data-testid="button-request-handoff"
             >
-              Request ZIP Handoff
+              Request Handoff
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -136,7 +136,7 @@ export default function Navigation() {
               href="https://platform.lendgismo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-sm text-zinc-300 hover:text-white transition-colors py-2 inline-flex items-center gap-1"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 hover:bg-emerald-400 transition-colors"
               data-testid="link-mobile-platform"
               title="Open the live platform in a new tab"
             >
@@ -149,7 +149,7 @@ export default function Navigation() {
               className="block w-full text-center rounded-xl bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white"
               data-testid="button-mobile-request-handoff"
             >
-              Request ZIP Handoff
+              Request Handoff
             </a>
           </div>
         )}

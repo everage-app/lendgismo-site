@@ -1,5 +1,6 @@
 const YT_ID = 'ZNm2RdUxRpc'
-const YT_PARAMS = 'rel=0&modestbranding=1&playsinline=1&controls=1'
+// Keep the embed as close to default YouTube playback as possible.
+const YT_PARAMS = ''
 
 import { useEffect, useMemo, useState } from 'react'
 import type React from 'react'
@@ -20,11 +21,8 @@ type FeaturedDemosProps = {
   variant?: 'hero'|'grid'
 }
 
-const HERO_VIDEO_SRC = new URL('../../../attached_assets/Lendgismo_Demo_720_optimized.mp4', import.meta.url).href
-
 export default function FeaturedDemos({ maxVideos = 2, className = '', variant = 'hero' }: FeaturedDemosProps) {
   const [items, setItems] = useState<ShowcaseItem[]>([])
-  const [player, setPlayer] = useState<'mp4'|'youtube'>('mp4')
 
   useEffect(() => {
     // Only needed for the grid variant. Avoid updating state during hero playback,
@@ -109,64 +107,19 @@ export default function FeaturedDemos({ maxVideos = 2, className = '', variant =
   return (
     <section className={`${className}`}>
       <div className="w-full">
-        {/* Player container */}
         <div className="aspect-[16/9] bg-black relative rounded-lg overflow-hidden">
-          {player === 'mp4' ? (
-            <video
-              className="w-full h-full"
-              controls
-              playsInline
-              preload="auto"
-              poster="/assets/lendgismo-logo-white-transparent-Ch-zZoVt.svg"
-            >
-              <source src={HERO_VIDEO_SRC} type="video/mp4" />
-            </video>
-          ) : (
-            <iframe
-              className="w-full h-full"
-              src={`https://www.youtube.com/embed/${YT_ID}?start=4&${YT_PARAMS}`}
-              title="Lendgismo Platform Demo"
-              loading="lazy"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          )}
-        </div>
-
-        {/* Secondary actions */}
-        <div className="mt-3 flex flex-wrap items-center gap-3 text-xs md:text-sm">
-          <a
-            href={HERO_VIDEO_SRC}
-            download
-            className="px-3 py-1.5 rounded bg-white/10 hover:bg-white/20 text-white backdrop-blur border border-white/20 transition-colors"
-          >Download MP4</a>
-          <button
-            type="button"
-            onClick={() => setPlayer(player === 'mp4' ? 'youtube' : 'mp4')}
-            className="px-3 py-1.5 rounded bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-colors"
-          >
-            Switch to {player === 'mp4' ? 'YouTube Player' : 'MP4 Player'}
-          </button>
-          <a
-            href={`https://youtu.be/${YT_ID}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-3 py-1.5 rounded bg-red-600/80 hover:bg-red-600 text-white font-medium transition-colors"
-          >Open on YouTube</a>
-        </div>
-        
-        {/* Optional: Try live app link */}
-        <div className="text-center mt-6 text-sm md:text-base text-zinc-400">
-          Want to explore the live app?{' '}
-          <a
-            href="https://platform.lendgismo.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-brand-300 hover:text-brand-200 underline underline-offset-4 transition-colors"
-          >
-            Try It Now →
-          </a>
+          <iframe
+            className="w-full h-full"
+            src={YT_PARAMS
+              ? `https://www.youtube.com/embed/${YT_ID}?${YT_PARAMS}`
+              : `https://www.youtube.com/embed/${YT_ID}`
+            }
+            title="Lendgismo Platform Demo"
+            loading="eager"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>

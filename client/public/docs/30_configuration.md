@@ -1,6 +1,6 @@
 # Configuration Reference
 
-**Last Updated**: October 16, 2025  
+**Last Updated**: December 9, 2025  
 **Configuration Method**: Environment Variables (.env)
 
 ## At a glance
@@ -105,7 +105,7 @@ APP_BASE_URL=https://app.lendgismo.com
 
 | Variable | Type | Required | Default | Description |
 |----------|------|----------|---------|-------------|
-| `INVITE_SECRET` | string | ❌ | `dev-invite-secret` | HMAC secret for invite tokens |
+| `INVITE_SECRET` | string | ❌ | `CHANGE_ME` | HMAC secret for invite tokens |
 | `APP_BASE_URL` | string | ❌ | auto-detect | Base URL for invite links |
 
 **Examples**:
@@ -121,7 +121,7 @@ APP_BASE_URL=https://app.lendgismo.com
 | `ALLOW_DEMO_LOGIN` | boolean | ❌ | `false` | Enable demo login credentials |
 | `AUTH_MODE` | string | ❌ | - | Set to `demo` for demo mode |
 | `DEMO_EMAIL` | string | ❌ | `admin@example.com` | Demo user email |
-| `DEMO_PASSWORD` | string | ❌ | `admin123` | Demo user password |
+| `DEMO_PASSWORD` | string | ❌ | `CHANGE_ME` | Demo user password |
 | `DEMO_USER` | JSON | ❌ | - | Full demo user object (JSON string) |
 
 **Examples**:
@@ -130,7 +130,7 @@ APP_BASE_URL=https://app.lendgismo.com
 ALLOW_DEMO_LOGIN=1
 AUTH_MODE=demo
 DEMO_EMAIL=admin@example.com
-DEMO_PASSWORD=admin123
+DEMO_PASSWORD=CHANGE_ME
 DEMO_USER='{"id":"demo-admin","role":"lender","email":"admin@example.com","demo":true}'
 ```
 
@@ -138,16 +138,105 @@ DEMO_USER='{"id":"demo-admin","role":"lender","email":"admin@example.com","demo"
 
 Stored in ephemeral memory via `/api/integrations` endpoints. Can also be configured via env vars:
 
+#### Banking & Payments
+
 | Variable | Type | Required | Default | Description |
 |----------|------|----------|---------|-------------|
 | `PLAID_CLIENT_ID` | string | ❌ | - | Plaid client ID |
 | `PLAID_SECRET` | string | ❌ | - | Plaid secret key |
 | `PLAID_ENV` | string | ❌ | `sandbox` | Plaid environment: `sandbox`, `development`, `production` |
+| `STRIPE_SECRET` | string | ❌ | - | Stripe secret key |
+| `STRIPE_WEBHOOK` | string | ❌ | - | Stripe webhook secret |
+
+#### Communications
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
 | `TWILIO_SID` | string | ❌ | - | Twilio account SID |
 | `TWILIO_TOKEN` | string | ❌ | - | Twilio auth token |
 | `TWILIO_FROM` | string | ❌ | - | Twilio phone number |
-| `STRIPE_SECRET` | string | ❌ | - | Stripe secret key |
-| `STRIPE_WEBHOOK` | string | ❌ | - | Stripe webhook secret |
+| `SENDGRID_KEY` | string | ❌ | - | SendGrid API key |
+
+#### Accounting & Financial Data
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `QUICKBOOKS_CLIENT_ID` | string | ❌ | - | QuickBooks OAuth client ID |
+| `QUICKBOOKS_CLIENT_SECRET` | string | ❌ | - | QuickBooks OAuth client secret |
+| `QUICKBOOKS_REDIRECT_URI` | string | ❌ | - | OAuth callback URL (e.g., `https://yourdomain.com/.netlify/functions/quickbooks-callback`) |
+| `QUICKBOOKS_ENV` | string | ❌ | `sandbox` | QuickBooks environment: `sandbox`, `production` |
+
+**QuickBooks Setup Example**:
+```bash
+QUICKBOOKS_CLIENT_ID=CHANGE_ME
+QUICKBOOKS_CLIENT_SECRET=CHANGE_ME
+QUICKBOOKS_REDIRECT_URI=https://lendgismo.com/.netlify/functions/quickbooks-callback
+QUICKBOOKS_ENV=sandbox
+```
+
+#### Alternative Credit & Risk
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `DATAMERCH_API_KEY` | string | ❌ | - | DataMerch API key |
+| `DATAMERCH_API_URL` | string | ❌ | `https://api.datamerch.com/v1` | DataMerch API base URL |
+| `DATAMERCH_ENV` | string | ❌ | `sandbox` | DataMerch environment: `sandbox`, `production` |
+| `DECISIONLOGIC_API_KEY` | string | ❌ | - | DecisionLogic API key |
+| `DECISIONLOGIC_API_URL` | string | ❌ | `https://api.decisionlogic.com/v1` | DecisionLogic API base URL |
+| `DECISIONLOGIC_ENV` | string | ❌ | `sandbox` | DecisionLogic environment: `sandbox`, `production` |
+
+**DataMerch Setup Example**:
+```bash
+DATAMERCH_API_KEY=CHANGE_ME
+DATAMERCH_API_URL=https://api.datamerch.com/v1
+DATAMERCH_ENV=production
+```
+
+**DecisionLogic Setup Example**:
+```bash
+DECISIONLOGIC_API_KEY=CHANGE_ME
+DECISIONLOGIC_API_URL=https://api.decisionlogic.com/v1
+DECISIONLOGIC_ENV=sandbox
+```
+
+#### Automation & Webhooks (Zapier)
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `INTERNAL_WEBHOOK_URL` | string | ❌ | - | Zapier webhook URL for automation (e.g., `https://hooks.zapier.com/hooks/catch/YOUR_ID/`) |
+| `INTERNAL_WEBHOOK_SECRET` | string | ❌ | - | HMAC secret for webhook signature verification |
+| `GOOGLE_CHAT_WEBHOOK_URL` | string | ❌ | - | Google Chat webhook URL for team notifications |
+
+**Zapier Setup Example**:
+```bash
+# Connect to Zapier for no-code automation
+INTERNAL_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/123456/abcdef/
+INTERNAL_WEBHOOK_SECRET=$(openssl rand -hex 32)
+
+# Optional: Google Chat notifications
+GOOGLE_CHAT_WEBHOOK_URL=https://chat.googleapis.com/v1/spaces/XXX/messages?key=YYY
+```
+
+See [Zapier Integration Guide](/docs/41_zapier-integration) for complete webhook documentation.
+
+#### Identity Verification
+
+| Variable | Type | Required | Default | Description |
+|----------|------|----------|---------|-------------|
+| `IDENTITY_PROVIDER` | string | ❌ | - | Identity verification provider: `socure`, `alloy` |
+| `SOCURE_API_KEY` | string | ❌ | - | Socure API key (if provider=socure) |
+| `SOCURE_API_URL` | string | ❌ | `https://api.socure.com/v3` | Socure API base URL |
+| `ALLOY_API_KEY` | string | ❌ | - | Alloy API key (if provider=alloy) |
+| `ALLOY_API_URL` | string | ❌ | `https://api.alloy.com/v1` | Alloy API base URL |
+| `IDENTITY_ENV` | string | ❌ | `sandbox` | Identity verification environment: `sandbox`, `production` |
+
+**Socure Setup Example**:
+```bash
+IDENTITY_PROVIDER=socure
+SOCURE_API_KEY=CHANGE_ME
+SOCURE_API_URL=https://api.socure.com/v3
+IDENTITY_ENV=production
+```
 
 ---
 
@@ -160,7 +249,7 @@ Stored in ephemeral memory via `/api/integrations` endpoints. Can also be config
 NODE_ENV=development
 PORT=5000
 DATABASE_URL=file:./test.db
-SESSION_SECRET=dev-session-secret-change-in-production
+SESSION_SECRET=CHANGE_ME
 LOG_LEVEL=debug
 EMAIL_PROVIDER=console
 ALLOW_DEMO_LOGIN=1
@@ -470,4 +559,4 @@ Before deploying to production:
 ---
 
 **End of Configuration Reference**  
-*Next*: See `31_secrets-and-keys.md` for secrets management, `32_feature-flags.md` for feature toggles
+*Next*: For secrets management, follow your internal runbook (not published). For feature toggles/capabilities, see `40_features-overview.md`.

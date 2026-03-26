@@ -34,7 +34,7 @@ export default function Footer() {
             <p className="text-sm text-zinc-400 max-w-sm">
               Production‑ready lending platform foundation. Full source code, docs & diagrams, demo data, and a live
               handoff. Multi‑tenant RBAC, CSV onboarding, analytics, and first‑class integrations (Plaid, Stripe,
-              Twilio, SendGrid). Deploy anywhere: AWS, Azure, Google Cloud, or any modern cloud platform.
+              Twilio, SendGrid, Experian, Equifax, TransUnion). Deploy anywhere: AWS, Azure, Google Cloud, or any modern cloud platform.
             </p>
           </div>
           

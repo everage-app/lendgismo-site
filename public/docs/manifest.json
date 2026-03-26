@@ -1,12 +1,5 @@
 [
   {
-    "slug": "__PROGRESS_REPORT",
-    "file": "__PROGRESS_REPORT.md",
-    "title": "Documentation Generation - Progress Report",
-    "updatedAt": "2025-11-03T15:34:56.100Z",
-    "hidden": false
-  },
-  {
     "slug": "_DOC_TEMPLATE",
     "file": "_DOC_TEMPLATE.md",
     "title": "<Title>",
@@ -24,7 +17,7 @@
     "slug": "00_repo-inventory",
     "file": "00_repo-inventory.md",
     "title": "Repository Inventory",
-    "updatedAt": "2025-11-03T15:34:56.091Z",
+    "updatedAt": "2026-01-16T18:02:45.924Z",
     "hidden": false
   },
   {
@@ -59,56 +52,49 @@
     "slug": "22_seed-and-migrations",
     "file": "22_seed-and-migrations.md",
     "title": "Database Seeds & Migrations",
-    "updatedAt": "2025-11-03T15:34:56.095Z",
+    "updatedAt": "2026-01-16T18:02:45.934Z",
     "hidden": false
   },
   {
     "slug": "30_configuration",
     "file": "30_configuration.md",
     "title": "Configuration Reference",
-    "updatedAt": "2025-11-03T15:34:56.095Z",
-    "hidden": false
-  },
-  {
-    "slug": "31_secrets-and-keys",
-    "file": "31_secrets-and-keys.md",
-    "title": "Secrets and API Keys",
-    "updatedAt": "2025-11-03T15:34:56.096Z",
+    "updatedAt": "2026-01-16T18:02:45.924Z",
     "hidden": false
   },
   {
     "slug": "40_features-overview",
     "file": "40_features-overview.md",
     "title": "Features Overview",
-    "updatedAt": "2025-11-03T15:34:56.096Z",
+    "updatedAt": "2025-12-09T17:32:34.901Z",
     "hidden": false
   },
   {
     "slug": "40_integrations",
     "file": "40_integrations.md",
     "title": "Integrations Overview",
-    "updatedAt": "2025-11-03T15:34:56.096Z",
+    "updatedAt": "2026-02-09T23:44:54.522Z",
+    "hidden": false
+  },
+  {
+    "slug": "41_zapier-integration",
+    "file": "41_zapier-integration.md",
+    "title": "Zapier Integration Guide",
+    "updatedAt": "2025-11-24T17:56:59.083Z",
     "hidden": false
   },
   {
     "slug": "50_api-quickstart",
     "file": "50_api-quickstart.md",
     "title": "API Quick Start Guide",
-    "updatedAt": "2025-11-04T15:59:33.517Z",
+    "updatedAt": "2026-01-28T17:46:17.465Z",
     "hidden": false
   },
   {
     "slug": "60_local-dev",
     "file": "60_local-dev.md",
     "title": "Local Development Guide",
-    "updatedAt": "2025-11-03T15:34:56.097Z",
-    "hidden": false
-  },
-  {
-    "slug": "99_docs-readiness-report",
-    "file": "99_docs-readiness-report.md",
-    "title": "Documentation Readiness Report",
-    "updatedAt": "2025-11-03T15:34:56.098Z",
+    "updatedAt": "2026-01-16T18:02:45.924Z",
     "hidden": false
   },
   {
@@ -143,7 +129,7 @@
     "slug": "README",
     "file": "README.md",
     "title": "Lendgismo Developer Docs",
-    "updatedAt": "2025-11-03T15:34:56.098Z",
+    "updatedAt": "2026-01-16T18:02:45.922Z",
     "hidden": false
   }
 ]

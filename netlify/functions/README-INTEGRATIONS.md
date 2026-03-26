@@ -1,6 +1,6 @@
 # Integration Functions - Implementation Summary
 
-**Last Updated**: January 2025  
+**Last Updated**: December 9, 2025  
 **Status**: ✅ Production Deployed
 
 ---
@@ -11,7 +11,222 @@ This directory contains serverless functions for all third-party integrations. A
 
 ---
 
+## Quick Reference — All Functions
+
+| Function | Category | Purpose |
+|----------|----------|---------|
+| `contact-email.js` | Communications | Send contact form via SendGrid |
+| `submission-created.js` | Webhooks | Event trigger for form submissions → Zapier/Google Chat |
+| `integrations-status.js` | System | Check all integration configurations |
+| `csv-upload.js` | Data | CSV file upload and processing |
+| `plaid-link-token.js` | Banking | Create Plaid Link token |
+| `plaid-exchange-token.js` | Banking | Exchange Plaid public token |
+| `stripe-payment-intent.js` | Payments | Create Stripe payment intents |
+| `stripe-webhook.js` | Payments | Handle Stripe webhooks |
+| `twilio-send.js` | Communications | Send SMS via Twilio |
+| `sendgrid-send.js` | Communications | Send email via SendGrid |
+| `quickbooks-auth.js` | Accounting | Initiate QuickBooks OAuth |
+| `quickbooks-callback.js` | Accounting | Handle OAuth callback |
+| `quickbooks-company.js` | Accounting | Get company information |
+| `quickbooks-reports.js` | Accounting | Get financial reports |
+| `datamerch-analyze.js` | Risk | Submit business for analysis |
+| `datamerch-report.js` | Risk | Retrieve analysis report |
+| `datamerch-score.js` | Risk | Quick credit score check |
+| `decisionlogic-verify.js` | Risk | Identity & credit verification |
+| `decisionlogic-fraud-check.js` | Risk | Fraud detection analysis |
+| `decisionlogic-report.js` | Risk | Comprehensive risk report |
+
+---
+
 ## Available Integrations
+
+### 📧 Contact Form & Email
+
+**Purpose**: Handle contact form submissions and send emails via SendGrid
+
+**Functions**:
+- `contact-email.js` - Send contact form data to sales@lendgismo.com
+- `submission-created.js` - Event-triggered function for Netlify Forms → Zapier/Google Chat webhooks
+
+**Environment Variables**:
+```bash
+SENDGRID_KEY=SG.xxxxxxxxxxxxxxxxxxxxx
+SENDGRID_FROM=no-reply@lendgismo.com  # Optional, defaults to no-reply@lendgismo.com
+```
+
+**Webhook Environment Variables**:
+```bash
+INTERNAL_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/YOUR_ID/
+INTERNAL_WEBHOOK_SECRET=your_hmac_secret
+GOOGLE_CHAT_WEBHOOK_URL=https://chat.googleapis.com/v1/spaces/XXX/messages?key=YYY
+```
+
+**Example - Contact Email**:
+```javascript
+const response = await fetch('/.netlify/functions/contact-email', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    firstName: 'John',
+    lastName: 'Smith',
+    email: 'john@example.com',
+    company: 'ABC Inc',
+    role: 'CTO',
+    phone: '555-123-4567',
+    interest: '1-3-months',
+    message: 'Looking for lending platform'
+  })
+});
+```
+
+---
+
+### 🔗 Integrations Status
+
+**Purpose**: Check which integrations are configured
+
+**Functions**:
+- `integrations-status.js` - Returns configuration status for all providers
+
+**Response Example**:
+```json
+{
+  "live": false,
+  "providers": {
+    "zapier": { "configured": true, "secured": true },
+    "plaid": { "configured": false, "env": "sandbox" },
+    "stripe": { "configured": false },
+    "quickbooks": { "configured": false, "env": "sandbox" },
+    "datamerch": { "configured": false, "env": "sandbox" },
+    "decisionlogic": { "configured": false, "env": "sandbox" }
+  }
+}
+```
+
+---
+
+### 🏦 Banking (Plaid)
+
+**Purpose**: Bank account linking, balance, and transaction access
+
+**Functions**:
+- `plaid-link-token.js` - Create Plaid Link token for client-side widget
+- `plaid-exchange-token.js` - Exchange public token for access token
+
+**Environment Variables**:
+```bash
+PLAID_CLIENT_ID=your_client_id
+PLAID_SECRET=your_secret
+PLAID_ENV=sandbox  # sandbox | development | production
+```
+
+**Example Usage**:
+```javascript
+// Step 1: Get link token
+const linkResponse = await fetch('/.netlify/functions/plaid-link-token', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ userId: 'user_123' })
+});
+const { linkToken } = await linkResponse.json();
+
+// Step 2: After Plaid Link, exchange token
+const exchangeResponse = await fetch('/.netlify/functions/plaid-exchange-token', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ publicToken: 'public-xxx' })
+});
+const { accessToken } = await exchangeResponse.json();
+```
+
+---
+
+### 💳 Payments (Stripe)
+
+**Purpose**: Payment processing and webhook handling
+
+**Functions**:
+- `stripe-payment-intent.js` - Create payment intents
+- `stripe-webhook.js` - Handle Stripe webhook events
+
+**Environment Variables**:
+```bash
+STRIPE_SECRET=sk_test_xxxxxxxxxxxxx
+STRIPE_WEBHOOK=whsec_xxxxxxxxxxxxx
+```
+
+**Example Usage**:
+```javascript
+// Create payment intent
+const response = await fetch('/.netlify/functions/stripe-payment-intent', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    amount: 5000,  // $50.00 in cents
+    currency: 'usd',
+    metadata: { loanId: 'loan_123' }
+  })
+});
+const { clientSecret } = await response.json();
+```
+
+---
+
+### 📱 SMS (Twilio)
+
+**Purpose**: Send SMS notifications
+
+**Functions**:
+- `twilio-send.js` - Send SMS messages
+
+**Environment Variables**:
+```bash
+TWILIO_SID=ACxxxxxxxxxxxxx
+TWILIO_TOKEN=your_auth_token
+TWILIO_FROM=+15551234567
+```
+
+**Example Usage**:
+```javascript
+const response = await fetch('/.netlify/functions/twilio-send', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    to: '+15559876543',
+    message: 'Your loan application has been approved!'
+  })
+});
+```
+
+---
+
+### 📧 Email (SendGrid)
+
+**Purpose**: Send transactional emails
+
+**Functions**:
+- `sendgrid-send.js` - Send emails via SendGrid API
+
+**Environment Variables**:
+```bash
+SENDGRID_KEY=SG.xxxxxxxxxxxxx
+```
+
+**Example Usage**:
+```javascript
+const response = await fetch('/.netlify/functions/sendgrid-send', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    to: 'user@example.com',
+    subject: 'Application Update',
+    text: 'Your application status has changed.',
+    html: '<p>Your application status has changed.</p>'
+  })
+});
+```
+
+---
 
 ### 🏦 QuickBooks (Accounting)
 

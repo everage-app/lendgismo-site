@@ -28,13 +28,27 @@ export default function IntegrationsStatusBar() {
     <div className="text-[11px] text-zinc-500 animate-pulse">Checking integrations...</div>
   )
 
+  const labelMap: Record<string, string> = {
+    zapier: 'Zapier',
+    plaid: 'Plaid',
+    stripe: 'Stripe',
+    twilio: 'Twilio',
+    sendgrid: 'SendGrid',
+    quickbooks: 'QuickBooks',
+    datamerch: 'DataMerch',
+    decisionlogic: 'DecisionLogic',
+    experian: 'Experian',
+    equifax: 'Equifax',
+    transunion: 'TransUnion'
+  }
+
   const entries = Object.entries(data.providers)
-    .filter(([name]) => ['zapier','plaid','stripe','quickbooks','datamerch','decisionlogic'].includes(name))
+    .filter(([name]) => ['zapier','plaid','stripe','twilio','sendgrid','quickbooks','datamerch','decisionlogic','experian','equifax','transunion'].includes(name))
 
   return (
     <div className="mt-3 flex flex-wrap gap-2 items-center">
       {entries.map(([name, p]) => {
-        const label = name.charAt(0).toUpperCase() + name.slice(1)
+        const label = labelMap[name] ?? (name.charAt(0).toUpperCase() + name.slice(1))
         const state = p.configured ? 'Ready' : 'Mock'
         const color = p.configured ? 'bg-brand-500/20 text-brand-300 border-brand-500/30' : 'bg-zinc-800/50 text-zinc-400 border-zinc-700'
         return (

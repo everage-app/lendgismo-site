@@ -23,6 +23,18 @@ export default function Contact() {
   const [lastEmail, setLastEmail] = useState<string>("");
   const successRef = useRef<HTMLDivElement>(null);
 
+  const mirrorLeadEmail = async (payload: Record<string, string>) => {
+    try {
+      await fetch('/api/contact/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error('Lead mirror email failed', err);
+    }
+  };
+
   const buildMailtoUrl = () => {
     const subject = `Lendgismo handoff request — ${formData.company || "No company"} (${formData.firstName} ${formData.lastName})`;
     const lines = [
@@ -37,7 +49,7 @@ export default function Contact() {
       formData.message || "(none)"
     ];
     const body = lines.join("\r\n");
-    const to = "sales@lendgismo.com,brysen@lendgismo.com";
+    const to = "brysen@lendgismo.com";
     return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
@@ -46,9 +58,9 @@ export default function Contact() {
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const form = e.currentTarget;
-
-      const payload = {
+      const formEncoded = new URLSearchParams({
+        'form-name': 'contact',
+        'bot-field': '',
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
@@ -57,24 +69,26 @@ export default function Contact() {
         phone: formData.phone,
         interest: formData.interest,
         message: formData.message,
-      };
-      const emailRes = await fetch('/api/contact/email', {
+      }).toString();
+
+      const res = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formEncoded,
       });
 
-      if (!emailRes.ok) {
-        const t = await emailRes.text().catch(() => '');
-        throw new Error(`Email send failed (${emailRes.status}): ${t}`);
+      if (!res.ok) {
+        throw new Error(`Form submit failed (${res.status})`);
       }
+
+      void mirrorLeadEmail({ formName: 'contact', ...formData });
 
       setLastEmail(formData.email);
       setSubmitted(true);
       setFormData({ firstName: "", lastName: "", email: "", company: "", role: "", phone: "", interest: "", message: "" });
     } catch (err) {
       console.error("Form submit failed", err);
-      setSubmitError("We couldn't send your request. Please try again or email sales@lendgismo.com.");
+      setSubmitError("We couldn't send your request. Please try again or email brysen@lendgismo.com.");
     } finally {
       setSubmitting(false);
     }
@@ -316,10 +330,6 @@ export default function Contact() {
                 <h3 className="text-2xl font-semibold text-white">Thanks — your request was sent</h3>
                 <p className="text-zinc-300 max-w-xl">
                   We'll reply within 24 hours{lastEmail ? ` at ${lastEmail}` : ''}. If it's urgent, email{' '}
-                  <a href="mailto:sales@lendgismo.com" className="text-brand-400 hover:text-brand-300">
-                    sales@lendgismo.com
-                  </a>{' '}
-                  or{' '}
                   <a href="mailto:brysen@lendgismo.com" className="text-brand-400 hover:text-brand-300">
                     brysen@lendgismo.com
                   </a>.
@@ -335,10 +345,6 @@ export default function Contact() {
           <div className="mt-8 text-center">
             <p className="text-sm text-zinc-400" data-testid="text-email-contact">
               Prefer email? Reach us directly at{' '}
-              <a href="mailto:sales@lendgismo.com" className="text-brand-400 hover:text-brand-300 transition" data-testid="link-email">
-                sales@lendgismo.com
-              </a>{' '}
-              or{' '}
               <a href="mailto:brysen@lendgismo.com" className="text-brand-400 hover:text-brand-300 transition" data-testid="link-email-2">
                 brysen@lendgismo.com
               </a>

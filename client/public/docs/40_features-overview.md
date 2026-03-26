@@ -1,7 +1,7 @@
 # Features Overview
 
-**Last Updated**: October 16, 2025  
-**Platform Version**: v1.0.0
+**Last Updated**: December 9, 2025  
+**Platform Version**: v1.1.0
 
 ## At a glance
 - Audience: Product + Engineering leads
@@ -392,6 +392,96 @@ https://app.lendgismo.com/invite/accept?token=<HMAC_SIGNED_TOKEN>
 
 ---
 
+### 11. Contact Page
+
+**Status**: ✅ **Production Ready**
+
+**Description**: Public-facing contact form for lead capture and customer inquiries.
+
+**Features**:
+- Full contact form with validation
+- Optional phone number field
+- Role/Title capture for lead qualification
+- Interest selection (Demo, Enterprise, Integration, etc.)
+- SendGrid email delivery
+- Zapier webhook integration for CRM sync
+- Responsive two-column layout
+
+**Route**: `/contact`
+
+**Form Fields**:
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| First Name | text | ✅ | Contact's first name |
+| Last Name | text | ✅ | Contact's last name |
+| Work Email | email | ✅ | Business email address |
+| Company | text | ✅ | Organization name |
+| Role/Title | text | ✅ | Job title or role |
+| Phone | tel | ❌ | Optional phone number |
+| Interested In | select | ✅ | Demo, Enterprise, Integration, etc. |
+| Message | textarea | ✅ | Free-form message |
+
+**Endpoints**:
+- `POST /api/contact/email` - Process contact form submission
+
+**Files**:
+- `client/src/pages/Contact.tsx` - Contact page component
+- `netlify/functions/contact-email.js` - Email handler function
+- `client/src/App.tsx` - Route definition
+
+**Integrations**:
+- **SendGrid**: Delivers contact notification emails
+- **Zapier**: Triggers workflows via submission-created webhook
+
+---
+
+### 12. Zapier & Webhook Integration
+
+**Status**: ✅ **Production Ready**
+
+**Description**: Native Zapier integration enabling workflow automation across 5,000+ apps.
+
+**Features**:
+- Automatic webhook triggers on key events
+- Secure HMAC-SHA256 signature verification
+- Google Chat notifications (optional)
+- Full event payload with all form/application data
+- Retry-safe idempotent processing
+- Real-time event delivery (<1 second latency)
+
+**Webhook Events**:
+| Event | Trigger | Payload |
+|-------|---------|---------|
+| `new_submission` | Contact form or application submitted | Full form data, timestamp, source |
+| `application.created` | Loan application created | Application details, borrower info |
+| `application.status_changed` | Status update | Old/new status, timestamp |
+
+**Configuration**:
+```env
+INTERNAL_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/...
+INTERNAL_WEBHOOK_SECRET=your-shared-secret
+GOOGLE_CHAT_WEBHOOK_URL=https://chat.googleapis.com/v1/spaces/...
+```
+
+**Files**:
+- `netlify/functions/submission-created.js` - Webhook dispatcher
+- `docs/41_zapier-integration.md` - Full integration guide
+
+**Security**:
+- HMAC-SHA256 signatures for webhook authenticity
+- Environment variable secrets (never in code)
+- Timestamp validation to prevent replay attacks
+
+**Common Zapier Workflows**:
+- CRM lead creation (Salesforce, HubSpot, Pipedrive)
+- Slack/Teams notifications for new leads
+- Google Sheets logging for analytics
+- Email sequences via Mailchimp/ActiveCampaign
+
+For complete setup instructions, see **[41_zapier-integration.md](./41_zapier-integration.md)**.
+
+---
+
 ## Feature Flags
 
 ### Current Flags
@@ -405,11 +495,14 @@ export const featureFlags = {
   ACTIVITY_LOG: true,
   ACCOUNT_SETTINGS: true,
   BRANDING: true,
+  CONTACT_PAGE: true,
   
   // Third-party integrations
   PLAID_ENABLED: !!process.env.PLAID_CLIENT_ID,
   STRIPE_ENABLED: !!process.env.STRIPE_SECRET,
   TWILIO_ENABLED: !!process.env.TWILIO_SID,
+  SENDGRID_ENABLED: !!process.env.SENDGRID_API_KEY,
+  ZAPIER_ENABLED: !!process.env.INTERNAL_WEBHOOK_URL,
   
   // Beta features
   AI_RISK_SCORING: process.env.ENABLE_AI_SCORING === '1',

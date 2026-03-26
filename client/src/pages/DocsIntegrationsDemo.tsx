@@ -18,6 +18,9 @@ export default function DocsIntegrationsDemo() {
   const [sms, setSms] = useState<any>(null);
   const [email, setEmail] = useState<any>(null);
   const [csv, setCsv] = useState<any>(null);
+  const [experian, setExperian] = useState<any>(null);
+  const [equifax, setEquifax] = useState<any>(null);
+  const [transunion, setTransunion] = useState<any>(null);
   // Mode badge is already shown in the global Docs header; no need to fetch here.
 
   const { toast } = useToast();
@@ -30,6 +33,24 @@ export default function DocsIntegrationsDemo() {
       return { error: String(e) };
     }
   };
+
+  const sampleBureauReport = (provider: string) => ({
+    provider,
+    mock: true,
+    reportId: `mock-${provider}-${Date.now()}`,
+    generatedAt: new Date().toISOString(),
+    summary: {
+      creditScore: 710,
+      riskTier: 'A-',
+      tradelines: 9,
+      publicRecords: 0,
+      fraudSignals: 'none'
+    },
+    notes: [
+      'Sample bureau payload for demo workflows',
+      'Replace with live API responses when configured'
+    ]
+  });
 
   return (
     <DocsLayout>
@@ -110,6 +131,57 @@ export default function DocsIntegrationsDemo() {
               {email && <Json data={email} />}
             </CardContent>
           </Card>
+
+            <Card className="bg-zinc-950/60 border-white/10">
+              <CardHeader>
+                <CardTitle>Experian</CardTitle>
+                <CardDescription>Sample bureau payload (mock, no API call)</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex gap-2">
+                  <Button variant="secondary" onClick={() => {
+                    const data = sampleBureauReport('experian');
+                    setExperian(data);
+                    toast({ title: 'Experian sample loaded', description: 'Use live credentials to fetch real reports' });
+                  }}>Load Sample Report</Button>
+                </div>
+                {experian && <Json data={experian} />}
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zinc-950/60 border-white/10">
+              <CardHeader>
+                <CardTitle>Equifax</CardTitle>
+                <CardDescription>Sample bureau payload (mock, no API call)</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex gap-2">
+                  <Button variant="secondary" onClick={() => {
+                    const data = sampleBureauReport('equifax');
+                    setEquifax(data);
+                    toast({ title: 'Equifax sample loaded', description: 'Use live credentials to fetch real reports' });
+                  }}>Load Sample Report</Button>
+                </div>
+                {equifax && <Json data={equifax} />}
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zinc-950/60 border-white/10">
+              <CardHeader>
+                <CardTitle>TransUnion</CardTitle>
+                <CardDescription>Sample bureau payload (mock, no API call)</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <div className="flex gap-2">
+                  <Button variant="secondary" onClick={() => {
+                    const data = sampleBureauReport('transunion');
+                    setTransunion(data);
+                    toast({ title: 'TransUnion sample loaded', description: 'Use live credentials to fetch real reports' });
+                  }}>Load Sample Report</Button>
+                </div>
+                {transunion && <Json data={transunion} />}
+              </CardContent>
+            </Card>
 
           <Card className="md:col-span-2 bg-zinc-950/60 border-white/10">
             <CardHeader>

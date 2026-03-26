@@ -81,7 +81,7 @@ nano .env.local
 DATABASE_URL=file:./test.db
 
 # Session secret (generate with: openssl rand -base64 32)
-SESSION_SECRET=dev-session-secret-change-in-production
+SESSION_SECRET=CHANGE_ME
 
 # Log level
 LOG_LEVEL=debug
@@ -131,7 +131,7 @@ Navigate to:
 
 **Demo Credentials**:
 - Email: `admin@example.com`
-- Password: `admin123`
+- Password: `CHANGE_ME`
 
 ---
 
@@ -528,7 +528,7 @@ npm run db:push
 # Login
 curl -X POST http://localhost:5000/api/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"admin@example.com","password":"admin123"}' \
+  -d '{"email":"admin@example.com","password":"CHANGE_ME"}' \
   -c cookies.txt
 
 # Get applications
@@ -552,7 +552,7 @@ Content-Type: application/json
 
 {
   "email": "admin@example.com",
-  "password": "admin123"
+  "password": "CHANGE_ME"
 }
 
 ### Get Applications
@@ -664,7 +664,7 @@ Prefix with `VITE_` to expose to frontend:
 ```bash
 # .env.local
 VITE_APP_NAME=Lendgismo  # Accessible in frontend
-API_SECRET=xyz123       # Backend only
+API_SECRET=CHANGE_ME    # Backend only
 ```
 
 ```typescript

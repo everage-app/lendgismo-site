@@ -2,7 +2,7 @@
 
 ## Overview
 
-Lendgismo is a modern, dark-themed marketing website for an asset-based lender platform codebase. The application is built as a two-page website consisting of a landing page and an overview page, designed to sell a $150,000 perpetual license for production-ready lender platform code. The site features a sleek, professional design with a comprehensive UI component library and is optimized for lead capture through integrated forms.
+Lendgismo is a modern, dark-themed marketing website for an asset-based lender platform codebase. The application is built as a two-page website consisting of a landing page and an overview page, designed to sell a $59,000 perpetual license for production-ready lender platform code. The site features a sleek, professional design with a comprehensive UI component library and is optimized for lead capture through integrated forms.
 
 ## Recent Changes (October 16, 2025)
 
@@ -38,10 +38,10 @@ Complete buildless documentation viewer with premium Lendgismo branding:
 Complete overhaul of landing page structure to eliminate content overlaps and create a compelling ROI narrative:
 
 **1. Hero Section - Front-loaded Savings**
-- Headline emphasizes quantified value: "Save $300k–$600k and 6 months of dev time"
-- Two value props: "$150,000 one-time — Own the code forever" and "4x–6x ROI vs. building in-house"
+- Headline emphasizes quantified value: "Save $390k–$690k and 6 months of dev time"
+- Two value props: "$59,000 one-time — Own the code forever" and "8x–13x ROI vs. building in-house"
 - Primary CTA changed to "See What You Get Instantly" linking to instant delivery section
-- Floating savings card: "$300k–$600k + 6 months faster to market"
+- Floating savings card: "$390k–$690k + 6 months faster to market"
 
 **2. New "What You Get Day 1" Section**
 - 4 stat cards showing concrete deliverables: 15k+ LOC, 40+ Components, 3 Portal Types, Full Auth + RBAC
@@ -49,9 +49,9 @@ Complete overhaul of landing page structure to eliminate content overlaps and cr
 - Delivery timeline: "GitHub repository access within 24 hours + live handoff session"
 
 **3. Visual ROI Comparison Section**
-- Side-by-side comparison cards: "Build from Scratch" ($450k–$750k, 6-8 months) vs "Get Lendgismo" ($150k, 4-6 weeks)
+- Side-by-side comparison cards: "Build from Scratch" ($450k–$750k, 6-8 months) vs "Get Lendgismo" ($59k, 4-6 weeks)
 - Build from Scratch breaks down costs: 2 senior engineers, PM, designer with hourly rates
-- Savings highlight bar showing: $300k–$600k saved, 3x–5x ROI, 6 months time saved
+- Savings highlight bar showing: $390k–$690k saved, 8x–13x ROI, 6 months time saved
 
 **4. Streamlined Features Section**
 - Focused on 6 unique capabilities that save development time

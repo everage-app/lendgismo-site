@@ -24,6 +24,7 @@ export default function Seo({ title, description, url, image }: SeoProps) {
       upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });
       upsertMeta('meta[name="twitter:description"]', { name: "twitter:description", content: description });
     }
+    upsertMeta('meta[name="robots"]', { name: "robots", content: "index,follow" });
     if (title) {
       upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
       upsertMeta('meta[name="twitter:title"]', { name: "twitter:title", content: title });

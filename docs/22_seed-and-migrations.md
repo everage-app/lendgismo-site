@@ -255,7 +255,7 @@ async function seed() {
   // Create demo lender
   const lender = await db.insert(users).values({
     email: 'lender@demo.com',
-    password: await bcrypt.hash('demo123', 10),
+    password: await bcrypt.hash('CHANGE_ME', 10),
     firstName: 'Demo',
     lastName: 'Lender',
     role: 'lender',

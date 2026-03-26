@@ -55,7 +55,7 @@ curl -X POST http://localhost:5000/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "admin@example.com",
-    "password": "admin123"
+    "password": "CHANGE_ME"
   }' \
   -c cookies.txt  # Save session cookie
 ```
@@ -583,7 +583,7 @@ curl http://localhost:5000/api/dashboard/stats \
     "myApplications": 3,
     "pendingApplications": 1,
     "approvedApplications": 2,
-    "totalRequested": 150000
+    "totalRequested": 250000
   }
 }
 ```
@@ -734,7 +734,7 @@ Import this collection into Postman for easy testing:
         "url": "{{baseUrl}}/api/login",
         "body": {
           "mode": "raw",
-          "raw": "{\"email\":\"admin@example.com\",\"password\":\"admin123\"}"
+          "raw": "{\"email\":\"admin@example.com\",\"password\":\"CHANGE_ME\"}"
         }
       }
     },

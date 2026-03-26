@@ -55,7 +55,7 @@ curl -X POST http://localhost:5000/api/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "admin@example.com",
-    "password": "admin123"
+    "password": "CHANGE_ME"
   }' \
   -c cookies.txt  # Save session cookie
 ```
@@ -583,7 +583,7 @@ curl http://localhost:5000/api/dashboard/stats \
     "myApplications": 3,
     "pendingApplications": 1,
     "approvedApplications": 2,
-    "totalRequested": 150000
+    "totalRequested": 250000
   }
 }
 ```
@@ -734,7 +734,7 @@ Import this collection into Postman for easy testing:
         "url": "{{baseUrl}}/api/login",
         "body": {
           "mode": "raw",
-          "raw": "{\"email\":\"admin@example.com\",\"password\":\"admin123\"}"
+          "raw": "{\"email\":\"admin@example.com\",\"password\":\"CHANGE_ME\"}"
         }
       }
     },
@@ -761,29 +761,221 @@ Import this collection into Postman for easy testing:
 
 ---
 
-## Third-Party Integrations (Summary)
+## Third-Party Integrations
 
-See the full guide: [Integrations Overview](/docs/40_integrations).
+See the full guide with detailed examples: [Integrations Overview](/docs/40_integrations).
 
-Plaid
+### Automation & Webhooks
 
-- POST /api/plaid/link-token — create Link token
-- POST /api/plaid/exchange-token — exchange public_token
+**Zapier** (No-Code Automation) ⭐ **New**
+- **Purpose:** Connect to 6,000+ apps without writing code
+- **Setup:** Configure `INTERNAL_WEBHOOK_URL` and `INTERNAL_WEBHOOK_SECRET`
+- **Events:** contact.submission, application.status_changed, loan.funded, payment.received, document.uploaded
+- **Documentation:** [Complete Zapier Integration Guide](/docs/41_zapier-integration)
+
+**Example - Zapier Webhook:**
+```bash
+# Configure webhook (environment variables)
+INTERNAL_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/YOUR_ID/
+INTERNAL_WEBHOOK_SECRET=your_secure_secret_key
+
+# Test webhook
+POST /api/webhooks/test
+Content-Type: application/json
+
+{
+  "event": "contact.submission",
+  "testPayload": {
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com"
+  }
+}
+```
+
+**Common Workflows:**
+- Contact form → Create CRM lead in Salesforce/HubSpot
+- Loan approval → Send notifications via Slack + Email
+- Payment received → Update QuickBooks + Send receipt
+
+### Banking & Payments
+
+**Plaid** (Banking)
+- POST /.netlify/functions/plaid-link-token — create Link token
+- POST /.netlify/functions/plaid-exchange-token — exchange public_token
 - GET /api/plaid/accounts/:id — account metadata
 - GET /api/plaid/transactions/:id — transactions
 
-Stripe
+**Stripe** (Payments)
+- POST /.netlify/functions/stripe-payment-intent — create payment intent
+- POST /.netlify/functions/stripe-webhook — webhook handler
 
-- POST /api/stripe/payment-intent — create a payment intent
-- POST /api/stripe/webhook — webhook handler
+### Communications
 
-Twilio
+**Twilio** (SMS)
+- POST /.netlify/functions/twilio-send — send SMS notification
 
-- POST /api/notifications/sms — send SMS
+**SendGrid** (Email)
+- POST /.netlify/functions/sendgrid-send — send transactional email
 
-SendGrid
+### Financial Data & Accounting
 
-- POST /api/notifications/email — send email
+**QuickBooks** (Accounting)
+- GET /.netlify/functions/quickbooks-auth — initiate OAuth flow
+- GET /.netlify/functions/quickbooks-callback — handle OAuth callback
+- POST /.netlify/functions/quickbooks-company — get company information
+- POST /.netlify/functions/quickbooks-reports — retrieve financial reports (P&L, Balance Sheet, Cash Flow)
+
+**Example - QuickBooks Integration**:
+```bash
+# Step 1: Initiate OAuth
+curl https://lendgismo.com/.netlify/functions/quickbooks-auth
+
+# Response includes authUrl - redirect user to this URL
+# After OAuth, QuickBooks redirects to callback automatically
+
+# Step 2: Get company info (after OAuth complete)
+curl -X POST https://lendgismo.com/.netlify/functions/quickbooks-company \
+  -H "Content-Type: application/json" \
+  -d '{
+    "realmId": "1234567890",
+    "accessToken": "your_access_token"
+  }'
+
+# Step 3: Get P&L report
+curl -X POST https://lendgismo.com/.netlify/functions/quickbooks-reports \
+  -H "Content-Type: application/json" \
+  -d '{
+    "realmId": "1234567890",
+    "accessToken": "your_access_token",
+    "reportType": "ProfitAndLoss",
+    "startDate": "2024-01-01",
+    "endDate": "2024-12-31"
+  }'
+```
+
+### Alternative Credit & Risk Assessment
+
+**DataMerch** (Alternative Data)
+- POST /.netlify/functions/datamerch-analyze — submit business for alternative credit analysis
+- POST /.netlify/functions/datamerch-report — retrieve completed analysis report
+- POST /.netlify/functions/datamerch-score — get real-time alternative credit score
+
+**Example - DataMerch Analysis**:
+```bash
+# Step 1: Submit business for analysis
+curl -X POST https://lendgismo.com/.netlify/functions/datamerch-analyze \
+  -H "Content-Type: application/json" \
+  -d '{
+    "businessName": "ABC Manufacturing Inc",
+    "taxId": "12-3456789",
+    "revenue": 2500000,
+    "employees": 45,
+    "industry": "Manufacturing",
+    "yearsInBusiness": 8
+  }'
+
+# Response: {"success": true, "analysisId": "anlyz_abc123", "status": "processing"}
+
+# Step 2: Wait 2-5 minutes, then retrieve report
+curl -X POST https://lendgismo.com/.netlify/functions/datamerch-report \
+  -H "Content-Type: application/json" \
+  -d '{
+    "analysisId": "anlyz_abc123"
+  }'
+
+# Alternative: Quick score check (instant)
+curl -X POST https://lendgismo.com/.netlify/functions/datamerch-score \
+  -H "Content-Type: application/json" \
+  -d '{
+    "businessName": "ABC Manufacturing Inc",
+    "taxId": "12-3456789",
+    "quickCheck": true
+  }'
+```
+
+**DecisionLogic** (Credit & Fraud)
+- POST /.netlify/functions/decisionlogic-verify — verify identity and credit
+- POST /.netlify/functions/decisionlogic-fraud-check — run fraud detection analysis
+- POST /.netlify/functions/decisionlogic-report — retrieve comprehensive risk report
+
+**Example - DecisionLogic Verification**:
+```bash
+# Step 1: Verify applicant identity
+curl -X POST https://lendgismo.com/.netlify/functions/decisionlogic-verify \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstName": "John",
+    "lastName": "Smith",
+    "dateOfBirth": "1985-06-15",
+    "ssn": "123-45-6789",
+    "address": {
+      "street": "123 Main St",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701"
+    },
+    "phone": "512-555-0100",
+    "email": "john.smith@example.com",
+    "verificationLevel": "standard"
+  }'
+
+# Step 2: Run fraud detection
+curl -X POST https://lendgismo.com/.netlify/functions/decisionlogic-fraud-check \
+  -H "Content-Type: application/json" \
+  -d '{
+    "applicationId": "app_123",
+    "applicant": {
+      "firstName": "John",
+      "lastName": "Smith",
+      "dateOfBirth": "1985-06-15",
+      "ssn": "123-45-6789",
+      "address": {"street": "123 Main St", "city": "Austin", "state": "TX", "zip": "78701"},
+      "phone": "512-555-0100",
+      "email": "john.smith@example.com"
+    },
+    "loan": {
+      "amount": 50000,
+      "purpose": "business_expansion",
+      "term": 36
+    },
+    "device": {
+      "ipAddress": "192.168.1.1",
+      "userAgent": "Mozilla/5.0...",
+      "fingerprint": "fp_abc123"
+    },
+    "checkLevel": "comprehensive"
+  }'
+
+# Step 3: Get full report
+curl -X POST https://lendgismo.com/.netlify/functions/decisionlogic-report \
+  -H "Content-Type: application/json" \
+  -d '{
+    "applicationId": "app_123"
+  }'
+```
+
+### Mock Mode
+
+All integration functions support **mock mode** when API credentials are not configured. This allows you to:
+- Test integration workflows without vendor accounts
+- Demo features to stakeholders
+- Develop UI components with realistic data
+
+**Example Mock Response**:
+```json
+{
+  "success": true,
+  "mock": true,
+  "message": "QuickBooks not configured - returning mock data",
+  "company": {
+    "CompanyName": "Mock Company Inc",
+    "LegalName": "Mock Company Incorporated",
+    "CompanyAddr": {...}
+  },
+  "provider": "quickbooks"
+}
+```
 
 
 For complete API documentation with all endpoints, request/response schemas, and examples:

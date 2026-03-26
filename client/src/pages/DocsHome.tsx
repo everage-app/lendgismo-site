@@ -78,7 +78,6 @@ export default function DocsHome() {
             <li><Link href="/docs/_DOC_TEMPLATE" className="hover:text-white">Doc Template</Link></li>
             <li><Link href="/docs/11_architecture-diagrams" className="hover:text-white">Diagrams</Link></li>
             <li><Link href="/docs/20_data-model" className="hover:text-white">Data Model</Link></li>
-            <li><Link href="/docs/31_secrets-and-keys" className="hover:text-white">Secrets & Keys</Link></li>
           </ul>
         </div>
       </section>

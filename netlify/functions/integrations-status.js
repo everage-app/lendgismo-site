@@ -30,6 +30,21 @@ export async function handler() {
           url: env.DECISIONLOGIC_API_URL || 'https://api.decisionlogic.com/v1',
           env: env.DECISIONLOGIC_ENV || 'sandbox'
         },
+        experian: {
+          configured: !!env.EXPERIAN_API_KEY,
+          url: env.EXPERIAN_API_URL || 'https://api.experian.com',
+          env: env.EXPERIAN_ENV || 'sandbox'
+        },
+        equifax: {
+          configured: !!env.EQUIFAX_API_KEY,
+          url: env.EQUIFAX_API_URL || 'https://api.equifax.com',
+          env: env.EQUIFAX_ENV || 'sandbox'
+        },
+        transunion: {
+          configured: !!env.TRANSUNION_API_KEY,
+          url: env.TRANSUNION_API_URL || 'https://api.transunion.com',
+          env: env.TRANSUNION_ENV || 'sandbox'
+        },
       },
     }),
   };

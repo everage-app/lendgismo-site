@@ -1,6 +1,6 @@
 import type React from 'react'
 import { Link } from 'wouter'
-import { ShieldCheck, BarChart3, Calculator, Zap, ArrowRight } from 'lucide-react'
+import { ShieldCheck, BarChart3, Calculator, Zap, ArrowRight, FileSearch, Building2 } from 'lucide-react'
 import IntegrationsStatusBar from '@/components/IntegrationsStatusBar'
 
 export default function IntegrationsShowcase() {
@@ -52,6 +52,43 @@ export default function IntegrationsShowcase() {
         'Comprehensive risk report endpoints'
       ],
       docs: '/docs/40_integrations#decisionlogic-credit--fraud',
+      demo: '/docs/demo/integrations'
+    },
+    {
+      name: 'Experian',
+      icon: FileSearch,
+      blurb: 'Business credit bureau data for risk grading, identity verification, and underwriting workflows.',
+      bullets: [
+        'Business credit profiles and scores',
+        'Identity and entity validation signals',
+        'Configurable pull rules by application stage'
+      ],
+      docs: '/docs/40_integrations#credit-bureaus',
+      demo: '/docs/demo/integrations',
+      badge: 'New'
+    },
+    {
+      name: 'Equifax',
+      icon: Building2,
+      blurb: 'Commercial bureau data and risk attributes to strengthen approval confidence.',
+      bullets: [
+        'Commercial credit attributes',
+        'Public record insights',
+        'Decision-ready summary payloads'
+      ],
+      docs: '/docs/40_integrations#credit-bureaus',
+      demo: '/docs/demo/integrations'
+    },
+    {
+      name: 'TransUnion',
+      icon: ShieldCheck,
+      blurb: 'Credit bureau verification signals with support for policy-driven risk checks.',
+      bullets: [
+        'Fraud and identity indicators',
+        'Configurable risk thresholds',
+        'Fast responses with mock mode support'
+      ],
+      docs: '/docs/40_integrations#credit-bureaus',
       demo: '/docs/demo/integrations'
     }
   ]

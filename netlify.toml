@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  ALLOW_DOCS_MIRROR = "true"
 
 # Local dev: run Vite and proxy Functions
 [dev]
@@ -56,6 +57,11 @@
 [[redirects]]
   from = "/api/contact/email"
   to = "/.netlify/functions/contact-email"
+  status = 200
+
+[[redirects]]
+  from = "/api/lead/health"
+  to = "/.netlify/functions/lead-health"
   status = 200
 
 # SPA fallback must come last

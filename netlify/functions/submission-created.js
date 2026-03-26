@@ -14,6 +14,7 @@ function extractSubmissionFields(payload) {
   return {
     firstName: d.firstName || d.first_name || "",
     lastName: d.lastName || d.last_name || "",
+    name: d.name || "",
     email: d.email || "",
     company: d.company || "",
     role: d.role || "",
@@ -23,10 +24,22 @@ function extractSubmissionFields(payload) {
   };
 }
 
-function buildPlainText(fields) {
+function getLeadName(fields) {
+  return `${fields.firstName} ${fields.lastName}`.trim() || fields.name || "(not provided)";
+}
+
+function buildPlainText(fields, formName) {
+  if (formName === "roi-calculator") {
+    return [
+      "Lendgismo — New ROI calculator lead",
+      `Name: ${getLeadName(fields)}`,
+      `Email: ${fields.email}`,
+    ].filter(Boolean).join("\n");
+  }
+
   const lines = [
     "Lendgismo — New contact form submission",
-    `Name: ${fields.firstName} ${fields.lastName}`.trim(),
+    `Name: ${getLeadName(fields)}`,
     `Email: ${fields.email}`,
     `Company: ${fields.company}`,
     `Role: ${fields.role}`,
@@ -62,7 +75,7 @@ async function postToInternal({ url, payload, secret }) {
   return { ok: res.ok, status: res.status, statusText: res.statusText };
 }
 
-async function sendEmailViaSendGrid(fields) {
+async function sendEmailViaSendGrid(fields, formName) {
   const { SENDGRID_KEY, SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
   
   if (!SENDGRID_KEY) {
@@ -70,9 +83,19 @@ async function sendEmailViaSendGrid(fields) {
     return { ok: false, skipped: true, reason: 'no-sendgrid-key' };
   }
 
-  const emailHtml = `
+  const leadName = getLeadName(fields);
+
+  const emailHtml = formName === 'roi-calculator'
+    ? `
+    <h2>New ROI Calculator Lead</h2>
+    <p><strong>Name:</strong> ${leadName}</p>
+    <p><strong>Email:</strong> ${fields.email}</p>
+    <hr>
+    <p><small>Submitted: ${new Date().toISOString()}</small></p>
+  `
+    : `
     <h2>New Contact Form Submission</h2>
-    <p><strong>Name:</strong> ${fields.firstName} ${fields.lastName}</p>
+    <p><strong>Name:</strong> ${leadName}</p>
     <p><strong>Email:</strong> ${fields.email}</p>
     <p><strong>Company:</strong> ${fields.company}</p>
     <p><strong>Role:</strong> ${fields.role}</p>
@@ -83,7 +106,7 @@ async function sendEmailViaSendGrid(fields) {
     <p><small>Submitted: ${new Date().toISOString()}</small></p>
   `;
 
-  const emailText = buildPlainText(fields);
+  const emailText = buildPlainText(fields, formName);
 
   try {
     const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
@@ -101,7 +124,9 @@ async function sendEmailViaSendGrid(fields) {
         }],
         from: { email: SENDGRID_FROM, name: 'Lendgismo Contact Form' },
         reply_to: { email: fields.email, name: `${fields.firstName} ${fields.lastName}`.trim() },
-        subject: `New Contact: ${fields.firstName} ${fields.lastName} - ${fields.company}`,
+        subject: formName === 'roi-calculator'
+          ? `New ROI Lead: ${leadName}`
+          : `New Contact: ${leadName} - ${fields.company}`,
         content: [
           { type: 'text/html', value: emailHtml },
           { type: 'text/plain', value: emailText }
@@ -128,13 +153,14 @@ exports.handler = async (event) => {
     const payload = body.payload || {};
     const formName = payload.form_name || payload.formName || payload.form || "";
 
-    // Only handle the public contact form
-    if (formName.toLowerCase() !== "contact") {
+    // Only handle known public lead forms
+    if (!["contact", "roi-calculator"].includes(formName.toLowerCase())) {
       return { statusCode: 200, body: JSON.stringify({ skipped: true, reason: "non-contact-form" }) };
     }
 
     const fields = extractSubmissionFields(payload);
-    const text = buildPlainText(fields);
+    const normalizedFormName = formName.toLowerCase();
+    const text = buildPlainText(fields, normalizedFormName);
 
     const GOOGLE_CHAT_WEBHOOK_URL = process.env.GOOGLE_CHAT_WEBHOOK_URL;
     const INTERNAL_WEBHOOK_URL = process.env.INTERNAL_WEBHOOK_URL;
@@ -142,14 +168,14 @@ exports.handler = async (event) => {
 
     const internalPayload = {
       event: "contact.submission",
-      formName,
+      formName: normalizedFormName,
       receivedAt: new Date().toISOString(),
       data: fields,
       raw: payload,
     };
 
     const [emailRes, chatRes, internalRes] = await Promise.allSettled([
-      sendEmailViaSendGrid(fields),
+      sendEmailViaSendGrid(fields, normalizedFormName),
       postToGoogleChat({ webhookUrl: GOOGLE_CHAT_WEBHOOK_URL, text }),
       postToInternal({ url: INTERNAL_WEBHOOK_URL, payload: internalPayload, secret: INTERNAL_WEBHOOK_SECRET }),
     ]);

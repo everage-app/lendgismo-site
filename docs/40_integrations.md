@@ -23,6 +23,7 @@ Quick links
 - [QuickBooks (Accounting)](#quickbooks-accounting)
 - [DataMerch (Alternative Data)](#datamerch-alternative-data)
 - [DecisionLogic (Credit & Fraud)](#decisionlogic-credit--fraud)
+- [Credit Bureaus (Experian, Equifax, TransUnion)](#credit-bureaus)
 - [Socure/Alloy (Identity Verification)](#socurealloy-identity-verification)
 - [CSV Upload & Onboarding](#csv-upload--onboarding)
 
@@ -1293,6 +1294,56 @@ curl -X POST https://yourdomain.com/.netlify/functions/decisionlogic-fraud-check
 
 ---
 
+## Credit Bureaus (Experian, Equifax, TransUnion)
+
+Status: Scaffolded (ready for configuration)  
+Purpose: Business credit data, fraud signals, and identity verification for underwriting
+
+### Supported bureaus
+
+| Bureau | Primary uses | Notes |
+|--------|--------------|-------|
+| Experian | Credit report + score, identity matching, fraud signals | Server route: `/api/bureaus/experian/report` |
+| Equifax | Credit report + score, risk attributes, identity checks | Server route: `/api/bureaus/equifax/report` |
+| TransUnion | Credit report + score, risk attributes, identity checks | Server route: `/api/bureaus/transunion/report` |
+
+### Environment variables
+
+| Bureau | Required variables |
+|--------|--------------------|
+| Experian | `EXPERIAN_API_KEY` / `EXPERIAN_API_URL` / `EXPERIAN_ENV` |
+| Equifax | `EQUIFAX_API_KEY` / `EQUIFAX_API_URL` / `EQUIFAX_ENV` |
+| TransUnion | `TRANSUNION_API_KEY` / `TRANSUNION_API_URL` / `TRANSUNION_ENV` |
+
+### Suggested endpoints (server-side)
+
+| Action | Endpoint | Notes |
+|--------|----------|-------|
+| Pull Experian report | `POST /api/bureaus/experian/report` | Use after consent capture |
+| Pull Equifax report | `POST /api/bureaus/equifax/report` | Use after consent capture |
+| Pull TransUnion report | `POST /api/bureaus/transunion/report` | Use after consent capture |
+
+### Client integration hooks
+
+- Capture bureau consent and store a timestamp per applicant
+- Trigger bureau pulls on application submit or pre-approval
+- Store bureau summaries per tenant for audit-ready decisions
+- Combine bureau results with internal risk rules and CSV onboarding data
+
+### Testing
+
+- Use sandbox credentials and mock identities from each provider
+- Verify consent capture before requesting reports
+- Validate partial/failed bureau responses are handled gracefully
+
+### Security and compliance
+
+- Follow FCRA and adverse action notice requirements
+- Encrypt PII at rest, minimize logging, and redact SSN/Tax ID fields
+- Restrict bureau access to authorized underwriting roles
+
+---
+
 ## Socure/Alloy (Identity Verification)
 
 Status: Scaffolded (ready for implementation)  
@@ -1366,7 +1417,7 @@ Security
 ## Where everything lives
 
 - Configuration: see `30_configuration.md` for env var matrix
-- Secrets & rotation: see `31_secrets-and-keys.md`
+- Secrets & rotation: follow your internal runbook (not published)
 - Feature flags & capabilities: see `40_features-overview.md`
 - API flows & examples: see `50_api-quickstart.md`
 

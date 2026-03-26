@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="description" content="Production‑ready lending platform codebase. Full source code, docs, demo data, RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid). One‑time code handoff. Deploy fast on Netlify, Vercel, or Azure.">
+    <meta name="description" content="Production‑ready lending platform codebase. Full source code, docs, demo data, RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid, Experian, Equifax, TransUnion). One‑time code handoff. Deploy fast on Netlify, Vercel, or Azure.">
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0b1020" />
     <link rel="canonical" href="https://lendgismo.com/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="fetch" href="/docs/search-index.json" crossorigin>
-  <title>Lendgismo — Lending Platform Codebase (React/TypeScript, RBAC, Plaid, Stripe)</title>
+  <title>Lendgismo — Lending Platform Codebase (React/TypeScript, RBAC, Plaid, Stripe, Credit Bureaus)</title>
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Lendgismo" />
     <meta property="og:title" content="Lendgismo — Lending Platform Codebase" />
-    <meta property="og:description" content="Own the code. Ship faster. Production‑ready lending platform with RBAC, CSV onboarding, analytics, and Plaid/Stripe/Twilio/SendGrid integrations." />
+    <meta property="og:description" content="Own the code. Ship faster. Production‑ready lending platform with RBAC, CSV onboarding, analytics, and Plaid/Stripe/Twilio/SendGrid/Experian/Equifax/TransUnion integrations." />
     <meta property="og:url" content="https://lendgismo.com/" />
     <meta property="og:image" content="/assets/showcase/20251023-0938/02_dashboard--desktop.png" />
     <meta property="og:locale" content="en_US" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lendgismo — Lending Platform Codebase" />
-    <meta name="twitter:description" content="Own the code. Ship faster. Production‑ready lending platform with RBAC, CSV onboarding, analytics, and Plaid/Stripe/Twilio/SendGrid integrations." />
+    <meta name="twitter:description" content="Own the code. Ship faster. Production‑ready lending platform with RBAC, CSV onboarding, analytics, and Plaid/Stripe/Twilio/SendGrid/Experian/Equifax/TransUnion integrations." />
     <meta name="twitter:image" content="/assets/showcase/20251023-0938/02_dashboard--desktop.png" />
     <!-- PWA manifest -->
     <link rel="manifest" href="/site.webmanifest" />
@@ -38,11 +38,33 @@
   <link rel="preconnect" href="https://i9.ytimg.com" crossorigin>
   <link rel="preconnect" href="https://r1---sn-" crossorigin>
   <!-- Note: removed large local MP4 preload to avoid bandwidth contention with YouTube -->
-    <script type="module" crossorigin src="/assets/index-okfPFyWY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D1MnYzAg.css">
+    <script type="module" crossorigin src="/assets/index-DT37OlIb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-FDWzgDz4.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Netlify Forms: hidden registration form for SPA submissions -->
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="firstName" />
+      <input name="lastName" />
+      <input name="email" />
+      <input name="company" />
+      <input name="role" />
+      <input name="phone" />
+      <input name="interest" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <form name="roi-calculator" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="roi-calculator" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" />
+    </form>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
@@ -79,7 +101,7 @@
           "@type": "Brand",
           "name": "Lendgismo"
         },
-        "description": "Production‑ready lending platform codebase with RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid). One‑time code handoff.",
+        "description": "Production‑ready lending platform codebase with RBAC, CSV onboarding, analytics, and integrations (Plaid, Stripe, Twilio, SendGrid, Experian, Equifax, TransUnion). One‑time code handoff.",
         "url": "https://lendgismo.com/",
         "offers": {
           "@type": "Offer",
