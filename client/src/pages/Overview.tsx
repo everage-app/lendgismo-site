@@ -258,7 +258,7 @@ export default function Overview() {
                   {/* Get Lendgismo */}
                   <div className="relative rounded-2xl border-2 border-brand-500/50 bg-gradient-to-br from-brand-500/20 to-brand-600/10 p-6 backdrop-blur">
                     <div className="absolute -top-3 -right-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-glow">
-                      SAVE $350k+
+                      LIMITED-TIME OFFER - ENDS JUNE 30
                     </div>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-brand-500/30 flex items-center justify-center">
@@ -272,7 +272,7 @@ export default function Overview() {
                     <div className="space-y-3 mb-4">
                       <div className="flex justify-between text-sm">
                         <span className="text-zinc-300">Perpetual code license</span>
-                        <span className="text-white font-semibold">$59k</span>
+                        <span className="text-white font-semibold">$19,999</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-zinc-300">Customization (2–4 weeks)</span>
@@ -294,7 +294,7 @@ export default function Overview() {
                     <div className="pt-4 border-t border-brand-500/30">
                       <div className="flex justify-between items-baseline">
                         <span className="text-white font-semibold">Total Investment</span>
-                        <span className="text-2xl font-bold text-gradient">$79–99k</span>
+                        <span className="text-2xl font-bold text-gradient">$40–60k</span>
                       </div>
                       <p className="text-xs text-brand-300 mt-1">Launch in 4–6 weeks</p>
                     </div>
@@ -305,7 +305,7 @@ export default function Overview() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6 border-t border-white/10">
                   <div className="flex items-center gap-8">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-gradient">$650k+</div>
+                      <div className="text-3xl font-bold text-gradient">$390k+</div>
                       <div className="text-xs text-zinc-400 mt-1">You Save</div>
                     </div>
                     <div className="h-12 w-px bg-white/10"></div>

@@ -2,12 +2,18 @@ import type React from "react";
 import { Check, ExternalLink } from "lucide-react";
 
 export default function Pricing() {
+  const offerDeadline = "June 30, 2026";
   const features = [
     "Full source code & documentation",
     "Live code handoff workshop",
     "Integration guidance for your stack",
     "RBAC, tenants, and architecture walkthrough",
     "Deploy anywhere: AWS, Azure, GCP, or self-hosted",
+  ];
+  const handoffSteps = [
+    "Confirm terms, NDA/PO, and delivery format",
+    "Receive GitHub access or secure ZIP within 24 hours",
+    "Walk through setup, deployment, and customization priorities",
   ];
 
   return (
@@ -26,7 +32,8 @@ export default function Pricing() {
           <div className="md:flex md:items-start md:justify-between md:gap-8">
             <div className="mb-6 md:mb-0">
               <div className="text-white text-xl font-semibold">One-time code handoff</div>
-              <div className="text-sm text-brand-300">Everything included</div>
+              <div className="text-sm text-brand-300">Limited-time $19,999 all-in offer</div>
+              <div className="mt-2 text-xs uppercase tracking-wide text-zinc-400">Offer valid through {offerDeadline}</div>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="/contact" className="btn-primary text-center">Request handoff</a>
@@ -44,6 +51,18 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-6 rounded-xl border border-white/10 bg-black/20 p-4">
+            <div className="text-sm font-semibold text-white mb-3">Handoff path</div>
+            <div className="grid md:grid-cols-3 gap-3 text-sm text-zinc-300">
+              {handoffSteps.map((step, index) => (
+                <div key={step} className="rounded-lg border border-white/10 bg-white/5 p-3">
+                  <div className="text-xs uppercase tracking-wide text-brand-300 mb-1">Step {index + 1}</div>
+                  {step}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <p className="text-xs text-zinc-400 mt-4 text-center">

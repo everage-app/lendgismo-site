@@ -83,7 +83,7 @@ function softwareJsonLd(page, brand) {
     name: page.title.replace(/\s*\|\s*Lendgismo/i, ""),
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Contact for pricing/licensing" },
+    offers: { "@type": "Offer", price: "19999", priceCurrency: "USD", priceValidUntil: "2026-06-30", description: "Limited-time $19,999 all-in perpetual code license, valid through June 30, 2026" },
     description: page.description,
     provider: { "@type": "Organization", name: brand.name, url: "https://lendgismo.com" },
     url: page.canonical
@@ -217,7 +217,7 @@ function pageHtml(page, brand) {
         <a class="btn" href="${mailto}">Email sales</a>
         <a class="btn" href="${tel}">Call now</a>
       </div>
-      <p class="trust">Trusted by alt‑lenders, ISOs & fintech teams</p>
+      <p class="trust">Limited-time $19,999 all-in license through June 30, 2026 • full source code • handoff included</p>
     </div>
 
     <div class="grid" style="margin-top:16px">

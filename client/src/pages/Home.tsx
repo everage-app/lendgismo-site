@@ -130,16 +130,37 @@ export default function Home() {
     }
   };
 
+  const offerDeadline = "June 30, 2026";
+  const offerDeadlineIso = "2026-06-30";
+  const pricingInclusions = [
+    "Full source code with perpetual ownership",
+    "Docs, diagrams, and local dev guide",
+    "Demo data, sample tenants, and CSV onboarding",
+    "Core integration scaffolds and demo endpoints",
+    "Live code handoff workshop",
+    "30 days of technical email support",
+  ];
+  const handoffSteps = [
+    { title: "Lock the offer", description: "Confirm license terms, NDA/PO needs, and preferred handoff format." },
+    { title: "Receive the code", description: "Secure ZIP or GitHub access delivered within 24 hours after purchase." },
+    { title: "Run the platform", description: "Live walkthrough covers architecture, local setup, deployment, and customization priorities." },
+  ];
+  const proofBlocks = [
+    { title: "Own the source", metric: "Perpetual", description: "No seat fees, usage caps, vendor lock-in, or recurring platform license.", icon: Package },
+    { title: "Integration-ready", metric: "11+", description: "Plaid, Stripe, QuickBooks, Twilio, SendGrid, bureaus, CSV, and more already mapped.", icon: Workflow },
+    { title: "Launch faster", metric: "24h", description: "Code handoff can start within one business day, with MVP deployment usually measured in weeks.", icon: Clock },
+  ];
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
         "@type": "Question",
-        name: "What exactly do I get with the $59,000 license?",
+        name: "What exactly do I get with the limited-time $19,999 license?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You receive the complete Lendgismo source code with a perpetual license, including frontend components, backend APIs, database schemas, authentication, RBAC, CSV onboarding, documentation, demo data, and a comprehensive handoff session. There are no recurring fees or usage limits.",
+          text: `You receive the complete Lendgismo source code with a perpetual license, including frontend components, backend APIs, database schemas, authentication, RBAC, CSV onboarding, documentation, demo data, and a comprehensive handoff session. The limited-time $19,999 offer is valid through ${offerDeadline}. There are no recurring fees or usage limits.`,
         },
       },
       {
@@ -203,10 +224,12 @@ export default function Home() {
       "Production-ready lending platform codebase with multi-tenant RBAC, Plaid, Stripe, credit bureaus (Experian, Equifax, TransUnion), CSV onboarding, and dashboards.",
     offers: {
       "@type": "Offer",
-      price: "59000",
+      price: "19999",
       priceCurrency: "USD",
+      priceValidUntil: offerDeadlineIso,
       availability: "https://schema.org/InStock",
       url: "https://lendgismo.com/",
+      description: `Limited-time $19,999 all-in perpetual code license. Offer valid through ${offerDeadline}.`,
     },
     brand: {
       "@type": "Brand",
@@ -287,7 +310,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Seo 
         title="Lendgismo — Lending Platform Codebase (React/TypeScript, RBAC, Plaid, Stripe, Credit Bureaus)"
-        description="Own a production-ready lending platform codebase with Next.js/TypeScript, multi-tenant RBAC, Plaid/Stripe integrations, and credit bureaus (Experian, Equifax, TransUnion). Save $390k+ and deploy in 24 hours."
+        description={`Own a production-ready lending platform codebase with Next.js/TypeScript, multi-tenant RBAC, Plaid/Stripe integrations, and credit bureaus (Experian, Equifax, TransUnion). Limited-time $19,999 all-in offer valid through ${offerDeadline}. Save $430k+ and deploy in 24 hours.`}
         url="https://lendgismo.com/"
         image="/assets/showcase/20251023-0938/01_home_app--desktop.png"
       />
@@ -307,7 +330,7 @@ export default function Home() {
               
               {/* Heading */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight" data-testid="text-hero-heading">
-                Save <span className="text-gradient">$390k–$690k+</span><br/>
+                Save <span className="text-gradient">$430k–$730k+</span><br/>
                 and 6 months of dev time
               </h1>
               
@@ -341,7 +364,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <p className="text-sm text-zinc-400 flex items-center gap-2" data-testid="text-hero-value-prop">
                   <CheckCircle size={16} className="text-brand-500" />
-                  $59,000 one-time — Own the code forever
+                  $19,999 through {offerDeadline} — Own the code forever
                 </p>
                 <p className="text-sm text-zinc-400 flex items-center gap-2" data-testid="text-hero-value-prop-2">
                   <CheckCircle size={16} className="text-brand-500" />
@@ -777,7 +800,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-testid="text-roi-heading">
-              The math is simple: <span className="text-gradient">Save $390k–$690k+</span>
+              The math is simple: <span className="text-gradient">Save $430k–$730k+</span>
             </h2>
             <p className="text-lg text-zinc-300" data-testid="text-roi-description">
               See exactly how much your team saves by purchasing vs. building from scratch
@@ -829,7 +852,7 @@ export default function Home() {
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between items-baseline">
                   <span className="text-zinc-400">Lendgismo License</span>
-                  <span className="text-white font-semibold">$59,000 one-time</span>
+                  <span className="text-white font-semibold">$19,999 limited-time</span>
                 </div>
                 <div className="flex justify-between items-baseline">
                   <span className="text-zinc-400">Customization (est.)</span>
@@ -847,7 +870,7 @@ export default function Home() {
               <div className="pt-6 border-t border-white/10">
                 <div className="flex justify-between items-baseline mb-2">
                   <span className="text-lg text-white font-semibold">Total Cost:</span>
-                  <span className="text-3xl font-bold text-gradient">$59k</span>
+                  <span className="text-3xl font-bold text-gradient">$19,999</span>
                 </div>
                 <p className="text-sm text-brand-300">6 months faster to market</p>
               </div>
@@ -859,12 +882,12 @@ export default function Home() {
             <div className="inline-flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 px-8 py-6 backdrop-blur">
               <div>
                 <div className="text-sm uppercase text-zinc-400 mb-1">You Save</div>
-                <div className="text-4xl md:text-5xl font-bold text-gradient">$690k+</div>
+                <div className="text-4xl md:text-5xl font-bold text-gradient">$730k+</div>
               </div>
               <div className="h-16 w-px bg-white/10"></div>
               <div>
                 <div className="text-sm uppercase text-zinc-400 mb-1">ROI</div>
-                <div className="text-4xl md:text-5xl font-bold text-white">3x–5x</div>
+                <div className="text-4xl md:text-5xl font-bold text-white">22x–37x</div>
               </div>
               <div className="h-16 w-px bg-white/10"></div>
               <div>
@@ -986,13 +1009,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
             <div>
+              <div className="badge mb-4">Limited-time offer ends {offerDeadline}</div>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-8" data-testid="text-pricing-heading">
                 One price. <span className="text-gradient">Own it forever.</span>
               </h2>
               
               <div className="space-y-6">
                 {[
-                  { title: 'Simple one-time payment', description: 'Single payment for a perpetual license. Enterprise invoicing and PO supported.' },
+                  { title: 'Simple one-time payment', description: `Single payment for a perpetual license. The $19,999 offer is held through ${offerDeadline}; enterprise invoicing and PO are supported.` },
                   { title: 'Everything included', description: 'Core integrations (Zapier, Plaid, Stripe, QuickBooks, credit bureaus: Experian, Equifax, TransUnion), white‑label deployment assistance, and a live training handoff are included.' },
                   { title: '30-day email support', description: 'Technical questions answered within 24 hours. Extended support packages available.' },
                   { title: 'NDA & IP assignment', description: 'We provide standard NDA and full intellectual property assignment documents upon request.' },
@@ -1013,9 +1037,23 @@ export default function Home() {
             <div className="lg:sticky lg:top-24">
               <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur">
                 <div className="text-sm uppercase tracking-wide text-zinc-400 mb-2" data-testid="text-pricing-label">Purchase</div>
-                <div className="text-5xl font-bold text-white mb-2" data-testid="text-pricing-amount">$59,000</div>
-                <div className="text-sm text-zinc-400 mb-8" data-testid="text-pricing-type">Perpetual code license</div>
-                <div className="text-sm text-brand-300 mb-6">30-day email support included</div>
+                <div className="text-5xl font-bold text-white mb-2" data-testid="text-pricing-amount">$19,999</div>
+                <div className="text-sm text-zinc-400 mb-3" data-testid="text-pricing-type">Limited-time all-in perpetual code license</div>
+                <div className="mb-6 rounded-xl border border-brand-400/25 bg-brand-500/10 px-4 py-3 text-sm text-brand-200" data-testid="text-pricing-deadline">
+                  Offer valid through {offerDeadline}. 30-day email support included.
+                </div>
+
+                <div className="mb-6 rounded-xl border border-white/10 bg-black/20 p-4">
+                  <div className="text-sm font-semibold text-white mb-3">Included in $19,999</div>
+                  <ul className="space-y-2">
+                    {pricingInclusions.map((item, index) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-zinc-300" data-testid={`list-pricing-inclusion-${index}`}>
+                        <CheckCircle size={16} className="text-brand-400 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 
                 <div className="space-y-3">
                   <a 
@@ -1070,6 +1108,45 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-4">
+            {proofBlocks.map((proof, index) => {
+              const ProofIcon = proof.icon;
+              return (
+                <div key={proof.title} className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur" data-testid={`card-offer-proof-${index}`}>
+                  <div className="flex items-center justify-between gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-brand-500/20 flex items-center justify-center text-brand-300">
+                      <ProofIcon size={20} />
+                    </div>
+                    <div className="text-2xl font-bold text-gradient">{proof.metric}</div>
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">{proof.title}</h3>
+                  <p className="text-sm text-zinc-400">{proof.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 md:p-8 backdrop-blur" data-testid="section-handoff-path">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+              <div>
+                <div className="badge mb-3">Buyer path</div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">From request to running code</h3>
+              </div>
+              <p className="text-sm text-zinc-400 max-w-xl">
+                The handoff is designed for a lender, ISO, or fintech team that wants the assets, the walkthrough, and the next technical decisions in one clean motion.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {handoffSteps.map((step, index) => (
+                <div key={step.title} className="rounded-xl border border-white/10 bg-black/20 p-4" data-testid={`card-handoff-step-${index}`}>
+                  <div className="text-xs uppercase tracking-wide text-brand-300 mb-2">Step {index + 1}</div>
+                  <h4 className="text-white font-semibold mb-2">{step.title}</h4>
+                  <p className="text-sm text-zinc-400">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1109,10 +1186,10 @@ export default function Home() {
             <Accordion type="single" collapsible className="w-full" data-testid="accordion-faq">
               <AccordionItem value="item-1" className="border-white/10" data-testid="faq-item-0">
                 <AccordionTrigger className="text-white hover:text-brand-400 hover:no-underline">
-                  What exactly do I get with the $59,000 license?
+                  What exactly do I get with the limited-time $19,999 license?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  You receive the complete Lendgismo source code with a perpetual license, giving you full ownership. This includes all frontend components, backend APIs, database schemas, authentication system, RBAC implementation, CSV onboarding tools, documentation, demo data, and a comprehensive handoff session with our team. There are no recurring fees or usage limits.
+                  You receive the complete Lendgismo source code with a perpetual license, giving you full ownership. This includes all frontend components, backend APIs, database schemas, authentication system, RBAC implementation, CSV onboarding tools, documentation, demo data, and a comprehensive handoff session with our team. The limited-time $19,999 offer is valid through {offerDeadline}. There are no recurring fees or usage limits.
                 </AccordionContent>
               </AccordionItem>
               
@@ -1148,7 +1225,7 @@ export default function Home() {
                   Do you provide ongoing support or updates?
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-300">
-                  The $59,000 license includes a comprehensive handoff session and 30 days of email support for technical questions. Core integrations (Zapier webhooks, Plaid, Stripe, QuickBooks, credit bureaus: Experian, Equifax, TransUnion) and the training handoff are included. If you need more help, extended support packages and customizations are available on request. Since you own the code, you maintain and update it on your own schedule.
+                  The limited-time $19,999 license includes a comprehensive handoff session and 30 days of email support for technical questions. Core integrations (Zapier webhooks, Plaid, Stripe, QuickBooks, credit bureaus: Experian, Equifax, TransUnion) and the training handoff are included. If you need more help, extended support packages and customizations are available on request. Since you own the code, you maintain and update it on your own schedule.
                 </AccordionContent>
               </AccordionItem>
               
