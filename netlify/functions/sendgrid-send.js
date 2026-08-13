@@ -3,10 +3,11 @@ export async function handler(event) {
   const body = event.body ? JSON.parse(event.body) : {};
   const { to, subject, html, text } = body;
   if (!to || !subject || (!html && !text)) return { statusCode: 400, body: 'Missing to, subject or content' };
-  const { SENDGRID_KEY, SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
+  const SENDGRID_KEY = process.env.SENDGRID_KEY || process.env.SENDGRID_API_KEY;
+  const { SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
   if (!SENDGRID_KEY) {
     // Do not fail hard; return a mock response so UI can proceed, but clearly indicate mock.
-    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messageId: 'mock-message', to, subject, mock: true, reason: 'missing SENDGRID_KEY' }) };
+    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messageId: 'mock-message', to, subject, mock: true, reason: 'missing SENDGRID_KEY/SENDGRID_API_KEY' }) };
   }
   try {
     const res = await fetch('https://api.sendgrid.com/v3/mail/send', {

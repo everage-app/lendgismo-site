@@ -1,3 +1,5 @@
+import leadStore from './lead-store.cjs';
+
 const REQUIRED_FORMS = ['contact', 'roi-calculator'];
 
 function parseDate(value) {
@@ -23,14 +25,29 @@ async function netlifyApi({ method, siteId, token }) {
 
 export async function evaluateLeadHealth() {
   const siteId = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
-  const token = process.env.NETLIFY_AUTH_TOKEN;
-  const sendgridConfigured = Boolean(process.env.SENDGRID_KEY);
+  const token = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_API_TOKEN || process.env.NETLIFY_TOKEN;
+  const sendgridConfigured = Boolean(process.env.SENDGRID_KEY || process.env.SENDGRID_API_KEY);
+  const herokuCaptureConfigured = Boolean(process.env.HEROKU_LEAD_CAPTURE_URL || process.env.PLATFORM_LEAD_CAPTURE_URL);
+  const leadDb = await leadStore.getLeadStoreHealth().catch((error) => ({
+    configured: leadStore.directDbCaptureEnabled() && Boolean(process.env.DATABASE_URL),
+    ok: false,
+    error: String(error && error.message || error),
+  }));
 
   const base = {
     generatedAt: new Date().toISOString(),
     siteId: siteId || null,
     requiredForms: REQUIRED_FORMS,
     sendgridConfigured,
+    herokuCaptureConfigured,
+    databaseIsolation: {
+      ok: !leadStore.directDbCaptureEnabled(),
+      netlifyDirectDbWritesEnabled: leadStore.directDbCaptureEnabled(),
+      message: leadStore.directDbCaptureEnabled()
+        ? 'Netlify direct DB writes are explicitly enabled.'
+        : 'Netlify direct DB writes are disabled; Heroku remains the system of record.',
+    },
+    leadDb,
   };
 
   if (!siteId || !token) {
@@ -40,9 +57,11 @@ export async function evaluateLeadHealth() {
       checks: {
         apiAccess: false,
         formsRegistered: null,
+        databaseIsolation: !leadStore.directDbCaptureEnabled(),
+        herokuCaptureConfigured,
         submissionsLast40d: null,
       },
-      warning: 'Missing NETLIFY_SITE_ID/SITE_ID or NETLIFY_AUTH_TOKEN. Set both to enable full health checks.',
+      warning: 'Missing NETLIFY_SITE_ID/SITE_ID or a Netlify API token env var. Set NETLIFY_AUTH_TOKEN, NETLIFY_API_TOKEN, or NETLIFY_TOKEN to enable full health checks.',
       ...base,
     };
   }
@@ -75,6 +94,8 @@ export async function evaluateLeadHealth() {
     checks: {
       apiAccess: true,
       formsRegistered,
+      databaseIsolation: !leadStore.directDbCaptureEnabled(),
+      herokuCaptureConfigured,
       submissionsLast40d: last40.length,
     },
     missingForms,

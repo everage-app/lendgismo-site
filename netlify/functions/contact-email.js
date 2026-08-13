@@ -2,6 +2,8 @@
 // Sends contact form submissions to brysen@lendgismo.com
 // Uses SendGrid API directly (same pattern as sendgrid-send.js)
 
+import leadStore from './lead-store.cjs';
+
 export async function handler(event) {
   if (event.httpMethod === 'OPTIONS') {
     return {
@@ -25,6 +27,7 @@ export async function handler(event) {
       formName = 'contact',
       to = '',
       name = '',
+      submissionId = '',
       firstName = '',
       lastName = '',
       email = '',
@@ -55,6 +58,16 @@ export async function handler(event) {
         body: JSON.stringify({ ok: false, error: 'Missing required field: email' })
       };
     }
+
+    const leadDb = await leadStore.saveLead({
+      formName: normalizedFormName,
+      source: 'contact-email',
+      fields: { submissionId, firstName, lastName, name, email, company, role, phone, interest, message },
+      raw: payload,
+    }).catch((error) => {
+      console.error('Lead DB save failed:', error);
+      return { ok: false, error: String(error && error.message || error) };
+    });
 
     const subject = normalizedFormName === 'roi-calculator'
       ? `Lendgismo ROI lead — ${fullName || 'Unknown name'} (${email})`
@@ -104,7 +117,8 @@ export async function handler(event) {
       <p style="color:#888;font-size:12px">Submitted at ${new Date().toISOString()}</p>
     `;
 
-    const { SENDGRID_KEY, SENDGRID_FROM } = process.env;
+    const SENDGRID_KEY = process.env.SENDGRID_KEY || process.env.SENDGRID_API_KEY;
+    const { SENDGRID_FROM } = process.env;
     // Sensible verified-sender fallbacks if env var isn't set or unverified
     const FALLBACK_FROM_CHAIN = [
       SENDGRID_FROM,
@@ -119,7 +133,7 @@ export async function handler(event) {
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ok: false,
-          error: 'Server email is not configured (missing SENDGRID_KEY)'
+          error: 'Server email is not configured (missing SENDGRID_KEY/SENDGRID_API_KEY)'
         })
       };
     }
@@ -152,7 +166,7 @@ export async function handler(event) {
           return {
             statusCode: 200,
             headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
-            body: JSON.stringify({ ok: true, usedFrom: fromEmail })
+            body: JSON.stringify({ ok: true, usedFrom: fromEmail, leadDb })
           };
         } else {
           lastErrorText = await res.text();

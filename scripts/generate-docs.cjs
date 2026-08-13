@@ -6,6 +6,9 @@ const path = require('path');
 
 const REPO_DOCS_DIR = path.resolve(__dirname, '..', 'docs');
 const PUBLIC_DOCS_DIR = path.resolve(__dirname, '..', 'client', 'public', 'docs');
+const EXCLUDED_DOC_FILES = new Set([
+  'notifications-page.md',
+]);
 
 function ensureDir(p) {
   if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
@@ -47,6 +50,7 @@ function walkDocs(dir, baseDir) {
       if (name.toLowerCase() === 'internal') continue;
       items.push(...walkDocs(full, baseDir));
     } else if (stat.isFile() && name.toLowerCase().endsWith('.md')) {
+      if (EXCLUDED_DOC_FILES.has(name.toLowerCase())) continue;
       items.push({ full, rel });
     }
   }

@@ -4,7 +4,8 @@
 // - Google Chat via incoming webhook (set GOOGLE_CHAT_WEBHOOK_URL)
 // - An internal webhook (set INTERNAL_WEBHOOK_URL and optional INTERNAL_WEBHOOK_SECRET for HMAC signature)
 
-const crypto = require("crypto");
+import crypto from "crypto";
+import leadStore from "./lead-store.cjs";
 
 /**
  * Safely extracts fields we care about from the Netlify submission payload
@@ -13,6 +14,7 @@ function extractSubmissionFields(payload) {
   const d = (payload && (payload.data || payload.body || payload)) || {};
   return {
     firstName: d.firstName || d.first_name || "",
+    submissionId: d.submissionId || d.submission_id || d.leadId || d.lead_id || "",
     lastName: d.lastName || d.last_name || "",
     name: d.name || "",
     email: d.email || "",
@@ -75,8 +77,30 @@ async function postToInternal({ url, payload, secret }) {
   return { ok: res.ok, status: res.status, statusText: res.statusText };
 }
 
+async function forwardToHeroku(payload) {
+  const url = process.env.HEROKU_LEAD_CAPTURE_URL || process.env.PLATFORM_LEAD_CAPTURE_URL;
+  if (!url) return { ok: false, skipped: true, reason: "missing-heroku-lead-capture-url" };
+
+  const headers = { "Content-Type": "application/json" };
+  const token = process.env.HEROKU_LEAD_CAPTURE_TOKEN || process.env.PLATFORM_LEAD_CAPTURE_TOKEN;
+  if (token) headers.Authorization = `Bearer ${token}`;
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    return { ok: false, status: res.status, error: (await res.text()).slice(0, 500) };
+  }
+
+  return { ok: true, status: res.status };
+}
+
 async function sendEmailViaSendGrid(fields, formName) {
-  const { SENDGRID_KEY, SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
+  const SENDGRID_KEY = process.env.SENDGRID_KEY || process.env.SENDGRID_API_KEY;
+  const { SENDGRID_FROM = 'no-reply@lendgismo.com' } = process.env;
   
   if (!SENDGRID_KEY) {
     console.log('SendGrid not configured - skipping email');
@@ -147,7 +171,7 @@ async function sendEmailViaSendGrid(fields, formName) {
   }
 }
 
-exports.handler = async (event) => {
+export async function handler(event) {
   try {
     const body = JSON.parse(event.body || "{}");
     const payload = body.payload || {};
@@ -174,13 +198,29 @@ exports.handler = async (event) => {
       raw: payload,
     };
 
-    const [emailRes, chatRes, internalRes] = await Promise.allSettled([
+    const [herokuRes, leadDbRes, emailRes, chatRes, internalRes] = await Promise.allSettled([
+      forwardToHeroku({
+        source: 'lendgismo-netlify-form-event',
+        event: "contact.submission",
+        formName: normalizedFormName,
+        receivedAt: new Date().toISOString(),
+        data: fields,
+        raw: payload,
+      }),
+      leadStore.saveLead({
+        formName: normalizedFormName,
+        source: 'netlify-submission-created',
+        fields,
+        raw: payload,
+      }),
       sendEmailViaSendGrid(fields, normalizedFormName),
       postToGoogleChat({ webhookUrl: GOOGLE_CHAT_WEBHOOK_URL, text }),
       postToInternal({ url: INTERNAL_WEBHOOK_URL, payload: internalPayload, secret: INTERNAL_WEBHOOK_SECRET }),
     ]);
 
     const result = {
+      heroku: herokuRes.status === "fulfilled" ? herokuRes.value : { ok: false, error: String(herokuRes.reason) },
+      leadDb: leadDbRes.status === "fulfilled" ? leadDbRes.value : { ok: false, error: String(leadDbRes.reason) },
       email: emailRes.status === "fulfilled" ? emailRes.value : { ok: false, error: String(emailRes.reason) },
       chat: chatRes.status === "fulfilled" ? chatRes.value : { ok: false, error: String(chatRes.reason) },
       internal: internalRes.status === "fulfilled" ? internalRes.value : { ok: false, error: String(internalRes.reason) },
@@ -195,4 +235,4 @@ exports.handler = async (event) => {
     console.error("submission-created handler error", err);
     return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(err) }) };
   }
-};
+}

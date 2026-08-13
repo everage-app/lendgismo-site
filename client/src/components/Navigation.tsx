@@ -35,6 +35,9 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
+            <a href="#solutions" onClick={(e) => scrollToSection(e, '#solutions')} className="text-sm text-zinc-300 hover:text-white transition-colors" data-testid="link-solutions">
+              Solutions
+            </a>
             <a 
               href="#features" 
               onClick={(e) => scrollToSection(e, '#features')}
@@ -102,6 +105,9 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3">
+            <a href="#solutions" onClick={(e) => scrollToSection(e, '#solutions')} className="block text-sm text-zinc-300 hover:text-white transition-colors py-2" data-testid="link-mobile-solutions">
+              Solutions
+            </a>
             <a 
               href="#features" 
               onClick={(e) => scrollToSection(e, '#features')}

@@ -119,13 +119,6 @@
     "hidden": false
   },
   {
-    "slug": "notifications-page",
-    "file": "notifications-page.md",
-    "title": "Notifications Page",
-    "updatedAt": "2025-10-17T19:29:51.832Z",
-    "hidden": false
-  },
-  {
     "slug": "README",
     "file": "README.md",
     "title": "Lendgismo Developer Docs",

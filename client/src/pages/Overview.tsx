@@ -76,7 +76,7 @@ export default function Overview() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Frontend', items: ['• Next.js 14 (App Router)', '• React 18', '• TypeScript', '• Tailwind CSS'] },
+              { title: 'Frontend', items: ['• React 18 + Vite', '• TypeScript', '• Tailwind CSS', '• Radix UI primitives'] },
               { title: 'UI Components', items: ['• shadcn/ui patterns', '• Radix UI primitives', '• Lucide icons', '• Class Variance Authority'] },
               { title: 'Forms & Data', items: ['• React Hook Form', '• Zod validation', '• Date-fns utilities', '• CSV parsing'] },
               { title: 'Deployment', items: ['• AWS, Azure, GCP ready', '• Docker & Kubernetes support', '• Self-hosted or cloud', '• CI/CD compatible'] },
@@ -358,7 +358,7 @@ export default function Overview() {
             {[
               { 
                 title: 'Complete Source Code', 
-                desc: 'Full Next.js/React app with TypeScript',
+                desc: 'Full React, Express, and TypeScript application',
                 icon: <Package className="w-6 h-6 text-brand-300" />
               },
               { 
@@ -507,7 +507,7 @@ export default function Overview() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: 'Complete Source Code', description: 'Full Next.js application with all components, utilities, and configurations' },
+              { title: 'Complete Source Code', description: 'Full React and Express application with all components, APIs, utilities, and configurations' },
               { title: 'Documentation', description: 'Setup guides, architecture diagrams, API docs, and deployment instructions' },
               { title: 'Demo Data Sets', description: 'Sample tenants, users, loans, and transactions for testing and development' },
               { title: 'Handoff Session', description: 'Live walkthrough with your team covering architecture, customization, and deployment' }

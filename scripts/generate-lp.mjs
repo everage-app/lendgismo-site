@@ -54,6 +54,8 @@ const inlineCss = `
   .sticky-cta a{color:#fff}
 `;
 
+const analyticsScript = `<script src="https://platform.lendgismo.com/analytics-track.js" async></script>`;
+
 function orgJsonLd(brand) {
   return {
     "@context": "https://schema.org",
@@ -83,7 +85,7 @@ function softwareJsonLd(page, brand) {
     name: page.title.replace(/\s*\|\s*Lendgismo/i, ""),
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    offers: { "@type": "Offer", price: "19999", priceCurrency: "USD", priceValidUntil: "2026-06-30", description: "Limited-time $19,999 all-in perpetual code license, valid through June 30, 2026" },
+    offers: { "@type": "Offer", price: "19999", priceCurrency: "USD", description: "$19,999 all-in perpetual source-code license with no recurring platform license" },
     description: page.description,
     provider: { "@type": "Organization", name: brand.name, url: "https://lendgismo.com" },
     url: page.canonical
@@ -191,6 +193,9 @@ function pageHtml(page, brand) {
 <meta name="twitter:description" content="${desc}" />
 <meta name="twitter:image" content="${ogImg}" />
 
+<!-- Lendgismo Analytics -->
+${analyticsScript}
+
 <style>${inlineCss}</style>
 <script type="application/ld+json">${JSON.stringify(ld[0])}</script>
 <script type="application/ld+json">${JSON.stringify(ld[1])}</script>
@@ -217,7 +222,7 @@ function pageHtml(page, brand) {
         <a class="btn" href="${mailto}">Email sales</a>
         <a class="btn" href="${tel}">Call now</a>
       </div>
-      <p class="trust">Limited-time $19,999 all-in license through June 30, 2026 • full source code • handoff included</p>
+      <p class="trust">$19,999 one-time perpetual source license • full source code • handoff included</p>
     </div>
 
     <div class="grid" style="margin-top:16px">
@@ -347,7 +352,10 @@ async function main() {
   const indexHtml = `<!doctype html><html lang="en"><head>
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Lendgismo — SEO Landing Pages</title>
-  <meta name="robots" content="index,follow"/><style>${inlineCss}</style>
+  <meta name="robots" content="index,follow"/>
+  <!-- Lendgismo Analytics -->
+  ${analyticsScript}
+  <style>${inlineCss}</style>
   </head><body><div class="wrap">
   <h1>SEO Landing Pages</h1>
   <p class="lead">Internal index of landing pages. Keep this unlinked in your main nav.</p>

@@ -4,6 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
+import { trackMarketingConversion } from "@/lib/analytics";
 import { CheckCircle, Loader2 } from "lucide-react";
 
 export default function Contact() {
@@ -23,15 +24,15 @@ export default function Contact() {
   const [lastEmail, setLastEmail] = useState<string>("");
   const successRef = useRef<HTMLDivElement>(null);
 
-  const mirrorLeadEmail = async (payload: Record<string, string>) => {
+  const captureLead = async (payload: Record<string, string>) => {
     try {
-      await fetch('/api/contact/email', {
+      await fetch('/api/lead/capture', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
     } catch (err) {
-      console.error('Lead mirror email failed', err);
+      console.error('Lead capture failed', err);
     }
   };
 
@@ -58,9 +59,13 @@ export default function Contact() {
     setSubmitting(true);
     setSubmitError(null);
     try {
+      const submissionId = typeof crypto !== 'undefined' && 'randomUUID' in crypto
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
       const formEncoded = new URLSearchParams({
         'form-name': 'contact',
         'bot-field': '',
+        submissionId,
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
@@ -81,7 +86,8 @@ export default function Contact() {
         throw new Error(`Form submit failed (${res.status})`);
       }
 
-      void mirrorLeadEmail({ formName: 'contact', ...formData });
+      trackMarketingConversion('contact');
+      void captureLead({ formName: 'contact', submissionId, ...formData });
 
       setLastEmail(formData.email);
       setSubmitted(true);

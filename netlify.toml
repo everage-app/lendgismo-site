@@ -64,6 +64,16 @@
   to = "/.netlify/functions/lead-health"
   status = 200
 
+[[redirects]]
+  from = "/api/lead/capture"
+  to = "/.netlify/functions/lead-capture"
+  status = 200
+
+[[redirects]]
+  from = "/api/lead/internal"
+  to = "/.netlify/functions/internal-leads"
+  status = 200
+
 # SPA fallback must come last
 [[redirects]]
   from = "/*"
